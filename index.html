@@ -5,16 +5,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/assets/css/layout/header.css">
+    <link rel="stylesheet" href="/assets/css/base/reset.css">
     <title>Document</title>
 </head>
 
 <body>
     <!--  -->
     <header class="header">
-        <div class="header_top"></div>
+        <div class="header_top">
+            <div class="header_top_left">
+                <img src="assets/image/logo.png" alt="">
+                <img src="assets/image/thuonghieu.png" alt="">
+            </div>
+            <div class="header_top_mid">
+                <form class="search" action="">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Hãy nhập tên sản phẩm">
+
+                    <div class="search_loc">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                            aria-labelledby="filterTitle" focusable="false">
+                            <title id="filterTitle">Filter</title>
+                            <path d="M3 4h18l-7 8v6l-4 2v-8L3 4z" fill="currentColor" />
+                        </svg>
+                        <span>Lọc</span>
+                        
+                    </div>
+
+                </form>
+            </div>
+            <div class="header_top_right">
+                <div class="header_top_right_taikhoan">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="header_top_right_taikhoan_span">Tài khoản</span>
+                    <span class="header_top_right_taikhoan_name">Nguyễn Hoài bảo</span>
+                </div>
+
+
+                <div class="header_top_right_giohang">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span>Giỏ hàng</span>
+                </div>
+            </div>
+
+        </div>
+        </div>
         <div class="header_bottom">
-            <div class="topMenu"></div>
+            <nav class="topMenu">
+                <ul class="topMenu_list">
+                    <li class="topMenu_list_item">Điện thoại</li>
+                    <li class="topMenu_list_item">LapTop</li>
+                    <li class="topMenu_list_item">Tai nghe</li>
+                    <li class="topMenu_list_item">Đồng hồ</li>
+                    <li class="topMenu_list_item">Tablet</li>
+                    <li class="topMenu_list_item">SmartWatch</li>
+                    <li class="topMenu_list_item">Màn hình</li>
+                    <li class="topMenu_list_item">Bàn phím</li>
+                    <li class="topMenu_list_item">Chuột</li>
+                    <li class="topMenu_list_item">Khác</li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!--  -->
