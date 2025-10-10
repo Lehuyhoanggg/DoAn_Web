@@ -60,6 +60,7 @@
     height: 80%;
     border-radius: 20px;
     align-items: center;
+    background-color: #F2F2F2;
 }
 
 .search input {
