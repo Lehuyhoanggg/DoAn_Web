@@ -1,7 +1,12 @@
+.header.active {
+    position: fixed;
+    z-index: 10;
+}
+
 .header_top {
     margin: auto;
     height: 70px;
-    width: 75%;
+    width: 76%;
     display: flex;
     padding-top: 15px;
 }
@@ -18,6 +23,7 @@
 
 
 .header_top_left img {
+    cursor: pointer;
     height: 60%;
     max-width: 50%;
 }
@@ -42,8 +48,9 @@
     background-color: #00B050;
     color: white;
     width: 80px;
-    height: 70%;
+    height: 80%;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .search_loc svg {
@@ -61,6 +68,7 @@
     border-radius: 20px;
     align-items: center;
     background-color: #F2F2F2;
+
 }
 
 .search input {
@@ -84,6 +92,7 @@
 }
 
 .header_top_right_taikhoan {
+    cursor: pointer;
     position: relative;
     display: flex;
     align-items: end;
@@ -103,13 +112,17 @@
     font-size: 15px;
 }
 
+.header_top_right_giohang {
+    cursor: pointer;
+}
+
 .header_bottom {
     height: 50px;
-    width: 75%;
+    width: 76%;
     margin: auto;
     display: flex;
     padding: 0 20px;
-    box-shadow: 1px 1px 1px rgba(167, 142, 142, 0.2);
+    box-shadow: 0 1px 1px rgba(167, 142, 142, 0.2);
 }
 
 /* ul */
@@ -135,6 +148,7 @@
     transition: border-color 0.3s ease;
     border-bottom: 3px solid transparent;
     box-sizing: content-box;
+    cursor: pointer;
 }
 
 .topMenu_list_item::after {

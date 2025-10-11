@@ -5,7 +5,22 @@
     font-family: sans-serif, Arial, Helvetica;
 }
 
+html,
+body {
+    min-height: 100dvh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 ul {
     margin: 0;
     padding: 0;
 }
+
