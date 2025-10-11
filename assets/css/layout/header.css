@@ -1,6 +1,18 @@
-.header.active {
-    position: fixed;
+.header_ctn {
+    height: 130px;
+    position: relative;
+    width: 100%;
+    background-color: red;
+}
+
+.header {
+    height: 120px;
+    width: 100%;
     z-index: 10;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: white;
 }
 
 .header_top {
