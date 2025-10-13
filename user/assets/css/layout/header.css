@@ -13,6 +13,11 @@
     left: 0;
     position: fixed;
     background-color: white;
+    transition: height 0.3s ease;
+}
+
+.header.colai {
+    height: 70px;
 }
 
 .header_top {
@@ -135,6 +140,11 @@
     display: flex;
     padding: 0 20px;
     box-shadow: 0 1px 1px rgba(167, 142, 142, 0.2);
+    background-color: white;
+}
+
+.header_bottom.bienmat {
+    display: none;
 }
 
 /* ul */
@@ -152,7 +162,7 @@
     position: relative;
     font-size: 17px;
     font-weight: 300;
-    min-width: 85px;
+    min-width: 11%;
     height: 100%;
     display: flex;
     justify-content: center;

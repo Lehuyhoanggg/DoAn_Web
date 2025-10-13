@@ -5,11 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/layout/header.css">
-    <link rel="stylesheet" href="/assets/css/base/reset.css">
-    <link rel="stylesheet" href="/assets/css/layout/main.css">
-    <link rel="stylesheet" href="/assets/css/layout/footer.css">
-    <title>Document</title>
+    <link rel="preload" href="user/assets/css/layout/header.css" as="style">
+    <link rel="stylesheet" href="user/assets/css/layout/header.css">
+    <link rel="stylesheet" href="user/assets/css/base/reset.css">
+    <link rel="stylesheet" href="user/assets/css/layout/main.css">
+    <link rel="stylesheet" href="user/assets/css/layout/footer.css">
+    <link rel="stylesheet" href="user/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="user/assets/css/taisudung/thongbao.css">
+    <link rel="icon" type="image/png" href="/user/assets/image/logo.png">
+
+    <title>Bao store</title>
 </head>
 
 <body>
@@ -19,8 +24,8 @@
 
             <div class="header_top">
                 <div class="header_top_left">
-                    <img src="assets/image/logo.png" alt="">
-                    <img src="assets/image/thuonghieu.png" alt="">
+                    <img src="user/user/assets/image/logo.png" alt="">
+                    <img src="user/assets/image/thuonghieu.png" alt="">
                 </div>
 
                 <div class="header_top_mid">
@@ -87,44 +92,151 @@
                 </nav>
             </div>
         </header>
+
+
+
     </div>
 
 
     <!--  -->
-
     <main class="main">
 
         <div class="home">
             <section class="home_banner">
-                <img src="assets/image/banner/banner2.png" alt="">
+                <img src="user/assets/image/banner/banner2.png" alt="">
             </section>
             <section class="home_sanpham">
                 <h2 class="home_sanpham_tieude">
                     <span>Khám phá sản phẩm của chúng tôi</span>
                 </h2>
                 <ul class="home_sanpham_list">
-
-
                 </ul>
-                <script src="/assets/js/mang.js">
-                </script>
-                <script src="/assets/js/main.js">
-                </script>
+
                 <div class="home_sanpham_phantrang">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
                 </div>
             </section>
-            <section class="home_spnoibat"></section>
-            <section class="tintuc"></section>
+
+            <section class="home_spnoibat">
+                <div class="home_spnoibat_top">
+                    <h2> Sản phẩm nổi bật</h2>
+                </div>
+
+                <div class="home_spnoibat_bottom">
+
+                    <img class="home_spnoibat_bottom_img" src="user/assets/image/banner/vuottroi.png" alt="">
+                    <ul class="home_spnoibat_bottom_list">
+                        <li class="home_spnoibat_bottom_list_item"> <img src="user/assets/image/sanpham/sp1.png" alt="">
+                            <div class="sanpham_bottom_ctn">
+
+                                <p class="sanpham_name">lap top vip pro</p>
+                                <p class="sanpham_prime">9999999999</p>
+                                <p class="sanpham_giamgia">9999999999</p>
+                                <div>
+                                    <span>Hd</span>
+                                    <span>4k</span>
+                                </div>
+                                <p>5s da ban</p>
+                                <button class="sanpham_muangay">
+                                    <svg width="25" height="25" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100" height="100" fill="transparent" />
+                                        <g fill="none" stroke="white" stroke-width="7" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M10 40 H 40" />
+                                            <path d="M15 50 H 35" />
+                                            <path d="M40 23 L 45 28 H 85 L 77 58 H 50 L 45 73" />
+                                            <path d="M77 58 L 82 73" />
+                                            <circle cx="50" cy="80" r="5" />
+                                            <circle cx="82" cy="80" r="5" />
+                                        </g>
+                                    </svg> Mua ngay
+                                </button>
+                            </div>
+
+                        </li>
+                        <li class="home_spnoibat_bottom_list_item"></li>
+                        <li class="home_spnoibat_bottom_list_item"></li>
+                        <li class="home_spnoibat_bottom_list_item"></li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+            <section class="home_tintuc">
+                <h2>Tin tức</h2>
+                <ul class="home_tintuc_list">
+                    <li class="home_tintuc_list_item"></li>
+                    <li class="home_tintuc_list_item"></li>
+                    <li class="home_tintuc_list_item"></li>
+                    <li class="home_tintuc_list_item"></li>
+                </ul>
+            </section>
         </div>
     </main>
 
     <footer>
+        <div class="footercontainer">
+            <div class="footer-main">
+                <div class="footer-column">
+                    <span>Tổng đài hỗ trợ</span>
+                    <p><strong>Hotline: </strong>0867512145</p>
+                    <p><strong>Địa chỉ: </strong>333 hòa trung, EaNa, DakLak </p>
+                    <p><strong>Email: </strong>Baonguthe@gmail.com</p>
+                </div>
+                <div class="footer-column">
+                    <span>Liên hệ</span>
+                    <a href="">liên hệ</a>
+                    <a href="">Hệ thống cửa hàng</a>
+                    <a href="">Câu truyện thương hiệu</a>
+                    <a href="">Ưu đãi thành viên</a>
+                    <a href="">Tin tức</a>
+                    <a href="">Tuyển dụng</a>
+                </div>
+                <div class="footer-column">
+                    <span>Chính sách</span>
+                    <a href="">Hướng dẫn mua hàng</a>
+                    <a href="">Chính sách mua hàng</a>
+                    <a href="">Chính sách bảo mật</a>
+                    <a href="">Điều khoảng điều kiện</a>
+                </div>
+                <div class="footer-column">
+                    <span>Đăng kí nhận tin</span>
+                    <p>Nhận thông tin sản phẩm mới nhất, tin khuyến mãi và nhiều hơn nữa.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email của bạn">
+                        </div>
+                        <button type="submit">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-icons">
+                    <a href="https://www.facebook.com/bao.nguyenhoai.123829?locale=vi_VN" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ?si=6epqx8AcpgoieYL6" aria-label="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
 
+                <p>&copy; copy right Huy Hoang</p>
+                <div class="logo"><img
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRH3w083m600TgHq1e64l0zAlfeosu2TKhVO0RFsGkzuimTfrLYjL7imzwjIGzoQvPYt7GzdNJvApaZZ5fwi92MhOo8JxeJoScxHfUdopvolSBbvSKX4XzrwdYJnnuavAjJq4GcdBcmU4/s16000/payment_1.png"
+                        alt="" class="anh"></div>
+            </div>
     </footer>
+
+
+
+    <script src="user/assets/js/header.js"> </script>
+
+    <script src="user/assets/js/mang.js">
+    </script>
+
+    <script src="user//assets/js/main.js">
+    </script>
 </body>
 
 </html>

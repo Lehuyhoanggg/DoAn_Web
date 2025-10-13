@@ -1,0 +1,231 @@
+.main {
+    width: 75%;
+    margin: auto;
+
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home_banner {
+    height: 390px;
+    width: 100%;
+    background-color: red;
+}
+
+.home_banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home_sanpham {
+    background-color: white;
+}
+
+.home_sanpham_list {
+    min-height: 400px;
+    width: 93%;
+    margin: auto;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.home_sanpham_list_item {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    background-color: #F9F6EE;
+    border: 1px solid rgb(221, 218, 218);
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    gap: 10px;
+    align-items: center;
+}
+
+.sanpham_bottom_ctn{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.sanpham_name {
+    word-wrap: break-word;
+    min-height: 50px;
+}
+
+.sanpham_prime {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sanpham_giamgia{
+    color: #9d9c99;
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.home_sanpham_list_item_img {
+    height: 250px;
+    border-radius: inherit;
+    width: 250px;
+}
+
+.sanpham_muangay {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.home_sanpham_phantrang {
+    display: flex;
+    gap: 20px;
+    height: 70px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_sanpham_phantrang button {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.home_sanpham_phantrang button:hover {
+    background-color: #00B050;
+    color: white;
+}
+
+.home_sanpham_phantrang button.nhan {
+    background-color: #00B050;
+    color: white;
+}
+
+.home_sanpham_tieude {
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    line-height: 80px;
+}
+
+.home_sanpham_tieude span {
+    position: relative;
+    padding: 5px;
+}
+
+.home_sanpham_tieude span::after {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    content: "";
+    height: 3px;
+    width: 80%;
+    background-color: #00B050;
+}
+
+.sanpham_muangay {
+    width: 70%;
+    height: 30px;
+    background-color: #00B050;
+    margin: auto;
+}
+
+.home_spnoibat {
+    background-color: white;
+}
+
+.home_spnoibat_top {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_spnoibat_top h2 {
+    position: relative;
+    height: 30px;
+}
+
+.home_spnoibat_top h2::after {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    content: "";
+    height: 3px;
+    width: 80%;
+    background-color: #00B050;
+}
+
+.home_spnoibat_bottom {
+    display: flex;
+    height: 500px;
+    width: 100%;
+}
+
+.home_spnoibat_bottom_img {
+    height: 500px;
+    width: 380px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.home_spnoibat_bottom_list {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_spnoibat_bottom_list_item {
+    height: 100%;
+    flex: 1;
+    background-color: #F9F6EE;
+    border: 1px solid rgb(221, 218, 218);
+}
+
+.home_spnoibat_bottom_list_item img {
+    width: 100%;
+}
+
+.home_tintuc {
+    background-color: white;
+}
+
+.home_tintuc h2 {
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.home_tintuc_list {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    gap: 10px;
+}
+
+.home_tintuc_list_item {
+    background-color: red;
+    flex: 1;
+    height: 150px;
+}

@@ -1,0 +1,131 @@
+footer{
+    margin-top: 10px;
+}
+
+.footer-main {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /*  */
+    padding: 20px 60px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    min-height: 280px;
+    flex-direction: column;
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+}
+
+.footer-column span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.footer-column p {
+    color: white;
+}
+
+.footer-column a:hover {
+    color: #00B050;
+    text-decoration: underline;
+}
+
+/* bottom */
+.footer-bottom {
+    background-color: #00B050;
+    min-height: 100px;
+    position: relative;
+}
+
+.footer-bottom-icons {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-bottom-icons i {
+    border: 2px solid white;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    background-color: #00B050;
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom-icons a {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 22px;
+    text-decoration: none;
+
+}
+
+.footer-bottom-icons i:hover {
+    color: #00B050;
+    background-color: white;
+    border: 2px solid #00B050;
+    border-radius: 50%;
+}
+
+.newsletter-form input,
+
+.newsletter-form button {
+    background-color: #00B050;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    /* bien con tro thanh ban tay khi nhan vao */
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 40px;
+}
+
+.newsletter-form input {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 40px;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+}
+
+.newsletter-form button:hover {
+    background-color: #00993d;
+}
+
+.footer-bottom p {
+    color: white;
+    padding-left: 200px;
+    padding-top: 50px;
+    font-size: 20px;
+    position: absolute;
+}
+.footer-bottom .logo .anh {
+    width: 400px;
+    position: absolute;
+    right: 100px;
+    top: 30%;
+}

@@ -13,6 +13,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    background-color: #ECEEF1;
 }
 
 main {
@@ -23,4 +24,3 @@ ul {
     margin: 0;
     padding: 0;
 }
-
