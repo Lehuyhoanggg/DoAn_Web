@@ -36,16 +36,31 @@ topmenu.addEventListener('click', function (e) {
         themspvaolist();
         let mangbutton = phantrang.children;
         if (mangbutton[0]) mangbutton[0].classList.add("nhan");
-        cuonUser = false;
+        cuon = false;
         window.scrollTo({
             top: 410,
             behavior: "smooth" // thêm hiệu ứng cuộn mượt
         });
         setTimeout(() => {
-            cuonUser = true;
+            cuon = true;
         }, 500);
     }
 });
+
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= 410 && window.scrollY <= 800) {
+        const header_bottom = document.querySelector(".header_bottom");
+        const header = document.querySelector(".header");
+        cuon = false;
+        header.classList.remove("colai");
+        header_bottom.classList.remove("bienmat");
+    }
+    else {
+        cuon = true;
+    }
+});
+
 
 function fomatgiatien(gia) {
     return gia + "đ";
