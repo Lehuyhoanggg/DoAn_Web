@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: antiquewhite;
+
+        }
+
+        body * {
+            filter: blur(5px);
+        }
+
+        .giohang {
+            filter: blur(0px) !important;
+            width: 25%;
+            height: 98%;
+            background-color: white;
+            position: fixed;
+            right: 0;
+            margin: auto 5px;
+            padding: 0 15px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .giohang * {
+            filter: blur(0px) !important;
+        }
+
+        .giohang_top {
+            height: 8%;
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .giohang_top_huy {
+            height: 28px;
+            width: 28px;
+            font-size: 18px;
+            border-radius: 100%;
+            position: absolute;
+            right: 0;
+            margin: auto 0;
+        }
+
+        .giohang_mid {
+            height: 75%;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .giohang_mid_donhang {
+            border-bottom: 1px solid;
+            height: 100px;
+            width: 100%;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: end;
+            padding: 10px;
+        }
+
+        .giohang_mid_donhang_top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .giohang_mid_donhang_ghichu {
+            display: flex;
+            gap: 3px;
+        }
+
+        .giohang_mid_donhang_ghichu_p {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .giohang_mid_donhang_chucnang {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .giohang_mid_donhang_chucnang_xoa {
+            width: 60px;
+            background-color: #00B050;
+            color: white;
+        }
+
+        .giohang_mid_donhang_chucnang_soluong {
+            display: flex;
+            gap: 2px;
+        }
+
+        .giohang_mid_donhang_chucnang_soluong button {
+            height: 20px;
+            width: 20px;
+
+        }
+
+        .giohang_mid_donhang_chucnang_soluong_value {
+            height: 20px;
+            width: 20px;
+            border: 1px solid;
+            text-align: center;
+        }
+
+        .giohang_bottom {
+            height: 15%;
+        }
+
+        .giohang_bottom_top {
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .giohang_bottom_bottom {
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .giohang_bottom_bottom button {
+            width: 48%;
+            height: 70%;
+            background-color: #00B050;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="giohang">
+        <div class="giohang_top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" role="img"
+                aria-label="Giỏ hàng">
+                <title>Giỏ hàng</title>
+                <g fill="none" stroke="#00B050" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3h2l1.6 9.6A2 2 0 0 0 8.5 15h8.9a2 2 0 0 0 2-1.6L22 6H6" />
+                    <circle cx="10" cy="19" r="1.4" />
+                    <circle cx="18" cy="19" r="1.4" />
+                </g>
+            </svg>
+
+            <span>Giỏ hàng</span>
+            <button class="giohang_top_huy">x</button>
+        </div>
+        <div class="giohang_mid">
+            <div class="giohang_mid_donhang">
+
+                <div class="giohang_mid_donhang_top">
+                    <span class="giohang_mid_donhang_top_ten">Súp bào ngư vi cá</span>
+                    <span class="giohang_mid_donhang_top_gia">500000đ</span>
+                </div>
+                <div class="giohang_mid_donhang_ghichu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" role="img"
+                        aria-label="Cây bút">
+                        <title>Cây bút</title>
+                        <path fill="currentColor"
+                            d="M16.7 2.3a1 1 0 0 1 1.4 0l3.6 3.6a1 1 0 0 1 0 1.4l-2 2L14.7 4.3l2-2zM13.3 5.7L3 16v5h5l10.3-10.3-5-5z" />
+                    </svg>
+                    <span class="giohang_mid_donhang_ghichu_p">Không có ghi chú</span>
+                </div>
+                <div class="giohang_mid_donhang_chucnang">
+
+                    <button class="giohang_mid_donhang_chucnang_xoa">Xóa</button>
+                    <div class="giohang_mid_donhang_chucnang_soluong">
+                        <button class="giamsoluong">-</button>
+                        <div class="giohang_mid_donhang_chucnang_soluong_value">
+                            1
+                        </div>
+                        <button class="tangsoluong">+</button>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="giohang_bottom">
+            <div class="giohang_bottom_top">
+                <span>Thành tiền : </span>
+                <div class="giohang_bottom_top_thanhtien">
+                    999999đ
+                </div>
+            </div>
+            <div class="giohang_bottom_bottom">
+                <button class="giohang_bottom_bottom_them">+ Thêm món</button>
+                <button class="giohang_bottom_bottom_thanhtoan">Thanh toán</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

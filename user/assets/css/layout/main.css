@@ -28,26 +28,27 @@
 
 .home_sanpham_list {
     min-height: 400px;
-    width: 93%;
+    width: 94%;
     margin: auto;
     display: flex;
     list-style: none;
-    justify-content: start;
+    justify-content :start;
     flex-wrap: wrap;
-    gap: 20px;
+    padding: 0 12px;
+    gap: 12px;
 }
 
 .home_sanpham_list_item {
-    width: 250px;
-    height: 400px;
+    flex-basis: 19%;
+    height: 350px;
     display: flex;
-    background-color: #F9F6EE;
     border: 1px solid rgb(221, 218, 218);
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
     gap: 10px;
     align-items: center;
+    padding-bottom: 5px;
 }
 
 .sanpham_bottom_ctn{
@@ -57,8 +58,11 @@
 }
 
 .sanpham_name {
+    margin: 5px 0;
     word-wrap: break-word;
     min-height: 50px;
+    font-size: 15px;
+    font-weight: 200;
 }
 
 .sanpham_prime {
@@ -69,14 +73,34 @@
 
 .sanpham_giamgia{
     color: #9d9c99;
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: line-through;
 }
+.sanpham_thongso{
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+}
+.sanpham_daban{
+    font-size: 13px;
+    font-weight: 100;
+}
+.sanpham_thongso_item{
+    background-color: #f1f1f1;
+}
+
+.sanpham_muangay {
+    width: 150px;
+    height: 30px;
+    background-color: #00B050;
+    margin: auto;
+}
+
 
 .home_sanpham_list_item_img {
-    height: 250px;
+    height: 50%;
     border-radius: inherit;
-    width: 250px;
+    width: 100%;
 }
 
 .sanpham_muangay {
@@ -136,12 +160,6 @@
     background-color: #00B050;
 }
 
-.sanpham_muangay {
-    width: 70%;
-    height: 30px;
-    background-color: #00B050;
-    margin: auto;
-}
 
 .home_spnoibat {
     background-color: white;
@@ -197,13 +215,29 @@
 .home_spnoibat_bottom_list_item {
     height: 100%;
     flex: 1;
-    background-color: #F9F6EE;
     border: 1px solid rgb(221, 218, 218);
+}
+
+
+.home_spnoibat_bottom_list_item .sanpham_prime {
+    margin: 10px 0;
+}
+.home_spnoibat_bottom_list_item .sanpham_giamgia{
+    margin: 8px 0;
+}
+.home_spnoibat_bottom_list_item .sanpham_thongso{
+    margin: 10px 0;
+}
+
+.home_spnoibat_bottom_list_item .sanpham_daban{
+    margin: 10px 0;
 }
 
 .home_spnoibat_bottom_list_item img {
     width: 100%;
 }
+
+
 
 .home_tintuc {
     background-color: white;
