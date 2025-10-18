@@ -3,6 +3,11 @@
     position: relative;
     width: 100%;
     background-color: red;
+    user-select: none;
+}
+
+.header * {
+    user-select: none;
 }
 
 .header {
@@ -188,16 +193,22 @@
 }
 
 /* menu dang nhap */
-.menu_dangnhap li a i{
+.menu_dangnhap li a i {
     margin: 7px;
     color: #00B050;
 }
+
 .header_top_right_taikhoan_name {
     font-size: 15px;
     position: relative;
     z-index: 1px;
 }
-.menu_dangnhap{
+
+.header_top_right_taikhoan_name_span {
+    font-size: 12px;
+}
+
+.menu_dangnhap {
     position: absolute;
     z-index: 20;
     list-style: none;
@@ -205,23 +216,27 @@
     padding: 0;
     margin-top: 5px;
     border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     min-width: 180px;
     background-color: white;
     top: 10px;
 }
-.menu_dangnhap li:hover{
+
+.menu_dangnhap li:hover {
     background-color: #F1F1F1;
 }
-.menu_dangnhap li a:hover{
+
+.menu_dangnhap li a:hover {
     color: black;
 }
-.menu_dangnhap a{
+
+.menu_dangnhap a {
     color: black;
     text-decoration: none;
     display: block;
     margin: 0 15px;
 }
-.header_top_right_taikhoan_name:hover .menu_dangnhap{
+
+.header_top_right_taikhoan_name:hover .menu_dangnhap {
     display: block;
 }
