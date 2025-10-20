@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif, Arial, Helvetica;
+    user-select: none;
 }
 
 html,
@@ -31,7 +32,7 @@ ul {
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(2px); /* làm mờ nền */
+    backdrop-filter: blur(1px); /* làm mờ nền */
     background: rgba(0, 0, 0, 0.3); /* thêm tối nhẹ */
     z-index: 9998;
     display: none;

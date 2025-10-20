@@ -1,5 +1,20 @@
 const btnLogin = document.querySelector('.open_login'); // nút đăng nhập
 const overlay = document.querySelector('.overlay');
+function disableScroll() {
+    window.addEventListener('scroll', preventScroll);
+    window.addEventListener('wheel', preventScroll, { passive: false });
+    window.addEventListener('touchmove', preventScroll, { passive: false });
+}
+
+function enableScroll() {
+    window.removeEventListener('scroll', preventScroll);
+    window.removeEventListener('wheel', preventScroll);
+    window.removeEventListener('touchmove', preventScroll);
+}
+
+function preventScroll(e) {
+    e.preventDefault();
+}
 btnLogin.addEventListener('click', function () {
     let loginModal = document.querySelector(".login_modal");
 
@@ -17,12 +32,13 @@ btnLogin.addEventListener('click', function () {
                     closeButton.addEventListener('click', () => {
                         loginModal.style.display = 'none';
                         overlay.style.display = 'none';
+                        enableScroll();
                     });
 
+                    disableScroll();
                     overlay.style.display = 'block';
 
-
-
+                    document.body
                     const loiSDT = document.querySelector('#loi_sodienthoai');
                     const loiMatKhau = document.querySelector('#loi_matkhau');
                     const loginForm = document.querySelector('.login_modal form');
@@ -88,6 +104,7 @@ btnLogin.addEventListener('click', function () {
     else {
         loginModal.style.display = 'block';
         overlay.style.display = 'block';
+        disableScroll();
     }
 });
 
