@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang quản lí - BAO STORE</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="modal"></div>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo-wrapper">
+          <img src="../user/assets/image/logo.png" alt="logo" class="logo" />
+          <img
+            src="../user/assets/image/thuonghieu.png"
+            alt="brand"
+            class="brand"
+          />
+        </div>
+
+        <ul class="sidebar-list-item"></ul>
+      </div>
+
+      <!-- Content -->
+      <div class="container">
+        <!-- Home Page -->
+        <div class="home-wrapper">
+          <div class="main-header">Trang Tổng Quan</div>
+          <div class="home-container">
+            <div class="month-wrapper">
+              <label for="month">Chọn tháng</label>
+              <select name="month" id="month">
+                <option value="all">Tất cả</option>
+                <option value="1">Tháng 1</option>
+                <option value="2">Tháng 2</option>
+                <option value="3">Tháng 3</option>
+                <option value="4">Tháng 4</option>
+                <option value="5">Tháng 5</option>
+                <option value="6">Tháng 6</option>
+                <option value="7">Tháng 7</option>
+                <option value="8">Tháng 8</option>
+                <option value="9">Tháng 9</option>
+                <option value="10">Tháng 10</option>
+                <option value="11">Tháng 11</option>
+                <option value="12">Tháng 12</option>
+              </select>
+
+              <span>2025</span>
+            </div>
+
+            <div class="home-info-list">
+              <div class="home-info-item">
+                <span class="title">Doanh Thu</span>
+                <i class="fa-solid fa-money-bill"></i>
+                <span class="number">1.000.000.000</span>
+              </div>
+
+              <div class="home-info-item">
+                <span class="title">Khách hàng</span>
+                <i class="fa-solid fa-users"></i>
+                <span class="number">1.000.000</span>
+              </div>
+
+              <div class="home-info-item">
+                <span class="title">Đơn hàng</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="number">100.000.000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Product Page -->
+        <div class="product-wrapper">
+          <!-- Product Header -->
+          <div class="main-header">Trang Quản Lý Sản Phẩm</div>
+          <!-- Product content -->
+          <div class="product-container">
+            <!-- Product content header -->
+              <div class="product-header">
+                <select name="categories" id="product-filter"></select>
+                <div class="product-search">
+                  <input
+                    type="text"
+                    class="product-search-input"
+                    placeholder="Tìm kiếm sản phẩm"
+                  />
+                  <button class="product-search-btn"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+                </div>
+                <button class="product-reload-btn"><i class="fa-solid fa-rotate-right"></i>Làm mới</button>
+                <button class="product-create-btn"><i class="fa-solid fa-plus"></i>Thêm sản phẩm</button>
+              </div>
+
+              <!-- Product content body -->
+              <div class="product-content">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Tên sản phẩm</th>
+                      <th>Giá</th>
+                      <th>Trạng thái</th>
+                      <th>Thời gian tạo</th>
+                      <th>Thời gian cập nhật</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+
+                  <tbody></tbody>
+                </table>
+               </div>
+            </div>
+          </div>
+
+
+
+
+            <!-- User Page -->
+          <div class="user-wrapper">
+              <div class="main-header">Trang quản lý khách hàng</div>
+                <div class="product-container">
+                  <div class="product-header">
+                    <select name="status" id="user-status">
+                      <option value="all">Tất cả</option>
+                      <option value="true">Hoạt động</option>
+                      <option value="false">Đã khóa</option>
+                    </select>
+                    <div class="product-search">
+                      <input
+                        type="text"
+                        class="product-search-input"
+                        placeholder="Tìm kiếm sản phẩm"
+                      />
+                      <button class="product-search-btn"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+                    </div>
+                    <button class="product-reload-btn"><i class="fa-solid fa-rotate-right"></i>Làm mới</button>
+                    <button class="product-create-btn"><i class="fa-solid fa-plus"></i>Thêm sản phẩm</button>
+                  </div>
+                  <div class="product-content">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Tên khách hàng</th>
+                        <th>Email</th>
+                        <th>SĐT</th>
+                        <th>Trạng thái</th>
+                        <th>Thời gian tạo</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>Nguyễn Văn A</td>
+                        <td>abc@gmail.com</td>
+                        <td>0123456789</td>
+                        <td>Hoạt động</td>
+                        <td>00:00:00 12/12/1234</td>
+                        <td><button class="product-detail-btn"><i class="fa-solid fa-eye"></i></button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
+
+
+
+
+
+
+
+          
+        </div>
+      </div>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

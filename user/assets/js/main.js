@@ -49,7 +49,7 @@ topmenu.addEventListener('click', function (e) {
 
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY >= 410 && window.scrollY <= 800) {
+    if (window.scrollY >= 410 && window.scrollY <= 1000) {
         const header_bottom = document.querySelector(".header_bottom");
         const header = document.querySelector(".header");
         cuon = false;
