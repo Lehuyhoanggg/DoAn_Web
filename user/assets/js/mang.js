@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let mangsp = [
     {
         anh: "user/assets/image/sanpham/sp1.png",
@@ -124,12 +125,17 @@ let mangtk = [
         quyenhang: "quanly"
     },
 ]
+=======
+export let mangsp = JSON.parse(localStorage.getItem("mangsanpham")) || [];
+>>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 
+export function setListItem() {
+    localStorage.setItem("mangsanpham", JSON.stringify(mangsp));
+}
 
-function taoListSanPham() {
-    if (localStorage.getItem("mangsanpham") === null) {
-        localStorage.setItem("mangsanpham", JSON.stringify(mangsp));
-    }
+export function getListItem() {
+  const data = JSON.parse(localStorage.getItem("mangsanpham"));
+  return data || [];
 }
 function taoListTaiKhoan() {
     if (localStorage.getItem("mangtaikhoan") === null) {
