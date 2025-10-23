@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 /* dang ki */
 .thongBaoLoi {
     color: red; 
@@ -8,31 +6,6 @@
     height: 1em;
     font-weight: 500;
 }
-=======
-/* chung */
-body{
-    background-color: blue;
-    margin: 0;
-    padding: 0;
-    background-position: center;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    display: flex;
-}
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-/* dang ki */
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 .signup_modal{
     background-color: #fff;
     text-align: center;
@@ -42,11 +15,7 @@ body::before {
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-<<<<<<< HEAD
     padding: 20px;
-=======
-    padding: 10px;
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 .close_button{
     background-color: #aaa;
@@ -67,7 +36,6 @@ body::before {
 .signup_modal{
     background-color: #fff;
     text-align: center;
-<<<<<<< HEAD
     z-index: 9999;
     width: 400px;   
     max-width: 30%;
@@ -82,29 +50,16 @@ body::before {
 }
 .signup_modal * {
     filter: blur(0px) !important;
-=======
-    z-index: 2;
-    width: 400px;
-    max-width: 43%;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 20px;
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 .signup_modal p{
     margin-bottom: 30px;
     color: #666;
-<<<<<<< HEAD
     font-size: 12px;
 }
 .signup_modal h2{
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 24px;
-=======
-    font-size: 14px;
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 .signup_modal form label{
     font-weight: bold;
@@ -112,40 +67,28 @@ body::before {
 }
 .form_dangki{
     text-align: left;
-<<<<<<< HEAD
     margin-bottom: 10px;
 }
 .checkbox {
     text-align: left;
     margin-top: 10px; /* Thêm chút khoảng cách cho đẹp */
-=======
-    margin-bottom: 5px;
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 #tick{
     color: black;
     font-weight: 100;
-<<<<<<< HEAD
     font-size: 13px;
     text-align: left;
-=======
-    font-size: 16px;
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 #tick a{
     text-decoration: none;
     color : #00B050;
-<<<<<<< HEAD
     font-size: 13px;
 
-=======
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 #tick a:hover{
     color : #00993d;
 }
 .signup_modal form label input{
-<<<<<<< HEAD
     margin-bottom: 10px;
     margin-top: 5px ;
     display: block;
@@ -160,20 +103,6 @@ body::before {
 .form_dangki input::placeholder {
     color: #aaa;
     font-size: 16px;
-=======
-    margin-bottom: 5px;
-    margin-top: 5px ;
-    display: block;
-    width: 100%;
-    font-size: 25px ;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.form_dangki input::placeholder {
-    color: #aaa;
-    font-size: 15px;
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 .form_dangki input:focus {
     border: 2px solid #00B050;
@@ -186,29 +115,19 @@ body::before {
     border: none;
     cursor: pointer;
     width: 100%;
-<<<<<<< HEAD
     font-size: 16px;
     font-weight: bold;
     padding: 14px;
     border-radius: 5px;
     height: 40px;
     margin: 10px 0;
-=======
-    font-size: 12px;
-    font-weight: bold;
-    padding: 14px;
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 .signup_button:hover {
     background-color: #00993d;
 }
 #DangNhap{
     color: black;
-<<<<<<< HEAD
     font-size: 15px;
-=======
-    font-size: 18px;
->>>>>>> 36061268135b0f18d9a54c0dddad13e20ba9e3c1
 }
 #DangNhap a{
     text-decoration: none;
