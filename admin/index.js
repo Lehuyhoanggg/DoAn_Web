@@ -1,5 +1,12 @@
-import { mangsp, getListItem, setListItem } from "../user/assets/js/mang.js";
+import {
+  // mangsp,
+  getListItem,
+  setListItem,
+  initialData,
+} from "../user/assets/js/mang.js";
 window.productPage = productPage;
+initialData();
+let mangsp = getListItem();
 
 const sidebarItemsArrayy = [
   {
@@ -131,8 +138,9 @@ function productPage() {
                     <span class="slider"></span>
                   </label>
               </td>
-              <td>${e.createAt}</td>
-              <td>${e.createAt}</td>
+              <td>${e.category}</td>
+              <td>${e.createdAt}</td>
+              <td>${e.updatedAt}</td>
               <td><button class="product-detail-btn"><i class="fa-solid fa-eye"></i></button></td>
               <td><button class="product-delete-btn"><i class="fa-solid fa-trash"></i></button></td>
             </tr>
@@ -187,20 +195,27 @@ function productPage() {
       return Math.random().toString(36).substring(2, 10);
     };
 
+    // lấy categories
+    const productFilter = document.querySelector("#product-filter");
     // Handle create product
     const inputs = modal.querySelectorAll("input");
-    const now = new Date();
-    const data = {
-      id: createID(),
-      status: true,
-      createAt: now.toLocaleString(),
-    };
+
     const handleSubmit = () => {
+      let categoryValue = productFilter.value;
+      const now = new Date();
+      const data = {
+        id: createID(),
+        status: true,
+        img: "../user/assets/image/sanpham/sp1.png",
+        category: categoryValue,
+        createdAt: now.toLocaleString(),
+        updatedAt: now.toLocaleString(),
+      };
       inputs.forEach((input) => {
         data[input.name] = input.value;
       });
       mangsp.push(data);
-      setListItem();
+      setListItem(mangsp);
       modal.style.display = "none";
       productPage();
     };
@@ -219,11 +234,11 @@ function productPage() {
             <button class="createModal-close-btn"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="product-detail-modal-body">
-            <img src="${mangsp[index].img}" alt="img">
+            <img src=${mangsp[index].img} alt="img">
             <div class="product-detail-modal-info">
-              <span><b>Tên sản phẩm: </b><input value="${mangsp[index].name}"/> </span><br>
-              <span><b>Giá sản phẩm: </b><input value="${mangsp[index].price}"/></span><br>
-              <span><b>Dung lượng sản phẩm: </b><input value="256GB"/></span><br>
+              <span><b>Tên sản phẩm: </b><input value="${mangsp[index].name} name="name"/> </span><br>
+              <span><b>Giá sản phẩm: </b><input value="${mangsp[index].price}" name="price"/></span><br>
+              <span><b>Dung lượng sản phẩm: </b><input value="256GB" name="store"/></span><br>
               <span><b>Danh mục sản phẩm: </b><select name="categories" id="product-filter"></select></span><br>
 
               <div class="product-detail-modal-btn">
@@ -237,9 +252,28 @@ function productPage() {
     `;
       loadFilter();
       modal.style.display = "block";
+      // handle close btn
       const closeBtn = document.querySelector(".createModal-close-btn");
       closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
+      });
+      // handle category detail
+      const category = modal.querySelector("select");
+      category.value = mangsp[index].category;
+      // handle update product
+      const saveBtn = modal.querySelector(".product-detail-modal-save-btn");
+      saveBtn.addEventListener("click", () => {
+        const inputs = modal.querySelectorAll("input");
+        const categoryChange = modal.querySelector("select");
+        inputs.forEach((input) => {
+          mangsp[index][input.name] = input.value;
+        });
+        mangsp[index].category = categoryChange.value;
+        const now = new Date();
+        mangsp[index].updatedAt = now.toLocaleString();
+        modal.style.display = "none";
+        setListItem(mangsp);
+        productPage();
       });
     })
   );
@@ -249,9 +283,19 @@ function productPage() {
     e.addEventListener("click", () => {
       if (confirm("Bạn có chắc chắn muốn xóa")) {
         mangsp.splice(index, 1);
-        setListItem();
+        setListItem(mangsp);
         productPage();
       }
+    })
+  );
+  // Status Btn
+  const statusBtn = document.querySelectorAll(".toggle-wrapper input");
+  statusBtn.forEach((e, index) =>
+    e.addEventListener("click", () => {
+      mangsp[index].status = !mangsp[index].status;
+      setListItem(mangsp);
+      productPage();
+      console.log(mangsp[index]);
     })
   );
 }
