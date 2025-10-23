@@ -204,8 +204,9 @@
     z-index: 1px;
 }
 
-.header_top_right_taikhoan_name_span {
+.header_top_right_taikhoan_name_span_muiten {
     font-size: 12px;
+
 }
 
 .menu_dangnhap {
@@ -219,6 +220,8 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     min-width: 180px;
     background-color: white;
+    margin-top: 12px;
+    left: -30px;
     top: 10px;
 }
 
@@ -235,6 +238,7 @@
     text-decoration: none;
     display: block;
     margin: 0 15px;
+    white-space: nowrap;
 }
 
 .header_top_right_taikhoan_name:hover .menu_dangnhap {

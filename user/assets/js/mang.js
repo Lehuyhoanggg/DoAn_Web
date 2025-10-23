@@ -114,10 +114,25 @@ let mangsp = [
         danhmuc: "Lap top"
     }
 ];
+let mangtk = [
+    {
+        hoten: "hoang",
+        sdt: "0000000001",
+        mk : "hoang123",
+        gmail : "tieubaobao@gmail.com",
+        diachi: "hoa dong",
+        quyenhang: "quanly"
+    },
+]
 
 
 function taoListSanPham() {
     if (localStorage.getItem("mangsanpham") === null) {
         localStorage.setItem("mangsanpham", JSON.stringify(mangsp));
+    }
+}
+function taoListTaiKhoan() {
+    if (localStorage.getItem("mangtaikhoan") === null) {
+        localStorage.setItem("mangtaikhoan", JSON.stringify(mangtk));
     }
 }

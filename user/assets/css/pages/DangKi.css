@@ -1,0 +1,139 @@
+
+/* dang ki */
+.thongBaoLoi {
+    color: red; 
+    font-size: 0.9em;
+    margin-top: 2px;
+    height: 1em;
+    font-weight: 500;
+}
+.signup_modal{
+    background-color: #fff;
+    text-align: center;
+    z-index: 2;
+    width: 400px;
+    max-width: 43%;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+}
+.close_button{
+    background-color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    line-height: 1;
+    font-size: 26px;
+    border-radius: 50%;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup_modal{
+    background-color: #fff;
+    text-align: center;
+    z-index: 9999;
+    width: 400px;   
+    max-width: 30%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 25px;  
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    filter: blur(0px) !important;
+}
+.signup_modal * {
+    filter: blur(0px) !important;
+}
+.signup_modal p{
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 12px;
+}
+.signup_modal h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.signup_modal form label{
+    font-weight: bold;
+    font-size: 16px;
+}
+.form_dangki{
+    text-align: left;
+    margin-bottom: 10px;
+}
+.checkbox {
+    text-align: left;
+    margin-top: 10px; /* Thêm chút khoảng cách cho đẹp */
+}
+#tick{
+    color: black;
+    font-weight: 100;
+    font-size: 13px;
+    text-align: left;
+}
+#tick a{
+    text-decoration: none;
+    color : #00B050;
+    font-size: 13px;
+
+}
+#tick a:hover{
+    color : #00993d;
+}
+.signup_modal form label input{
+    margin-bottom: 10px;
+    margin-top: 5px ;
+    display: block;
+    width: 100%;
+    font-size: 16px ;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 35px;
+    padding: 0 10px;
+}
+.form_dangki input::placeholder {
+    color: #aaa;
+    font-size: 16px;
+}
+.form_dangki input:focus {
+    border: 2px solid #00B050;
+    outline: none;
+}
+.signup_button{
+    background-color: #00B050;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 5px;
+    height: 40px;
+    margin: 10px 0;
+}
+.signup_button:hover {
+    background-color: #00993d;
+}
+#DangNhap{
+    color: black;
+    font-size: 15px;
+}
+#DangNhap a{
+    text-decoration: none;
+    color: #00B050;
+}
+#DangNhap a:hover{
+    color: #00993d;
+}

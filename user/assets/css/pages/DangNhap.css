@@ -104,7 +104,6 @@
    .form_dangnhap input::placeholder {
        color: #aaa;
        font-size: 15px;
-
    }
 
    .form_dangnhap input:focus {

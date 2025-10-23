@@ -1,5 +1,7 @@
 const btnLogin = document.querySelector('.open_login'); // nút đăng nhập
 const overlay = document.querySelector('.overlay');
+
+// chan nguoi dung cuon 
 function disableScroll() {
     window.addEventListener('scroll', preventScroll);
     window.addEventListener('wheel', preventScroll, { passive: false });
@@ -15,6 +17,7 @@ function enableScroll() {
 function preventScroll(e) {
     e.preventDefault();
 }
+
 btnLogin.addEventListener('click', function () {
     let loginModal = document.querySelector(".login_modal");
 
@@ -26,7 +29,7 @@ btnLogin.addEventListener('click', function () {
 
 
                 requestAnimationFrame(() => {
-                    let loginModal = document.querySelector(".login_modal");
+                    loginModal = document.querySelector(".login_modal");
                     const closeButton = loginModal.querySelector(".close_button");
 
                     closeButton.addEventListener('click', () => {
@@ -38,7 +41,6 @@ btnLogin.addEventListener('click', function () {
                     disableScroll();
                     overlay.style.display = 'block';
 
-                    document.body
                     const loiSDT = document.querySelector('#loi_sodienthoai');
                     const loiMatKhau = document.querySelector('#loi_matkhau');
                     const loginForm = document.querySelector('.login_modal form');
@@ -51,6 +53,9 @@ btnLogin.addEventListener('click', function () {
                             //xoa khoang trang 
                             const sdt = sdtInput.value.trim();
                             const mk = mkInput.value.trim();
+                            //xoa thong bao cu 
+                            loiSDT.textContent = '';
+                            loiMatKhau.textContent = '';
                             //kiem tra da nhap sdt mk chua
                             const phoneRegex = /^0\d{9}$/;
                             let kiemtra = false;
@@ -87,7 +92,9 @@ btnLogin.addEventListener('click', function () {
                             });
                             if (acc) {
                                 alert('Đăng nhập thành công! Xin chào ' + acc.ten);
+                                localStorage.setItem('taikhoandangnhap', JSON.stringify(acc));
                                 window.location.href = "/index.html";
+                                
                             }
                             else {
                                 alert('tài khoản hoặc mật khẩu không chính xác!');
@@ -108,3 +115,56 @@ btnLogin.addEventListener('click', function () {
     }
 });
 
+// hiển thị trạng thái người dùng 
+document.addEventListener('DOMContentLoaded',function(){
+    const userData = localStorage.getItem('taikhoandangnhap');
+    const taikhoanSpan = document.querySelector('.header_top_right_taikhoan_span');
+    const menusaudangnhap = document.querySelector('.header_top_right_taikhoan_name ul.menu_dangnhap');
+    const name = document.querySelector('.header_top_right_taikhoan_name_span');
+
+    if(userData && taikhoanSpan && menusaudangnhap){
+        const user = JSON.parse(userData);
+        //hien thi ten nguoi dung 
+        taikhoanSpan.textContent = `Tài khoản`;
+        name.textContent = `${user.hoten}`;
+        //thay doi menu dang nhap
+        let menuHTML = `
+            <li><a href="#"><i class="fa-solid fa-user"></i> Tài khoảng của tôi</a></li>
+            <li><a href="#"><i class="fa-solid fa-box"></i> Đơn hàng đã mua</a></li>
+        `;
+            //neu la quan ly thi them chuc nang quang ly
+        if(user.quyenhang === "quanly"){
+            menuHTML += `<li><a href="#"><i class="fa-solid fa-user"></i> Quản lí cửa hàng</a></li>`;
+        }
+        menuHTML += `<li><a href="#" id="logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a></li>`;
+         
+        menusaudangnhap.innerHTML = menuHTML;
+        //xu ly dang xuat
+        const logoutBtn = document.getElementById('logout');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                localStorage.removeItem('taikhoandangnhap');
+                alert('Bạn đã đăng xuất.');
+                window.location.reload();
+            });
+        }
+    } 
+
+});
+
+//dang ki ngay
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dangkingay")) {
+        e.preventDefault();
+        //dong dang nhap
+        const signupModal = document.querySelector(".login_modal");
+        const overlay = document.querySelector(".overlay");
+        if (signupModal) signupModal.style.display = "none";
+        //mo dang nhap
+        const btnLogin = document.querySelector(".open_signup");
+        if (btnLogin) {
+            btnLogin.click();
+        }
+    }
+});
