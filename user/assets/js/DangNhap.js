@@ -93,7 +93,7 @@ btnLogin.addEventListener('click', function () {
                             if (acc) {
                                 alert('Đăng nhập thành công! Xin chào ' + acc.ten);
                                 localStorage.setItem('taikhoandangnhap', JSON.stringify(acc));
-                                window.location.href = "/index.html";
+                                window.location.reload();
                                 
                             }
                             else {
@@ -126,13 +126,13 @@ document.addEventListener('DOMContentLoaded',function(){
         const user = JSON.parse(userData);
         //hien thi ten nguoi dung 
         taikhoanSpan.textContent = `Tài khoản`;
-        name.textContent = `${user.hoten}`;
+        name.textContent = `${user.ten}`;
         //thay doi menu dang nhap
         let menuHTML = `
-            <li><a href="#"><i class="fa-solid fa-user"></i> Tài khoảng của tôi</a></li>
+            <li><a href="#" class="open_account"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
             <li><a href="#"><i class="fa-solid fa-box"></i> Đơn hàng đã mua</a></li>
         `;
-            //neu la quan ly thi them chuc nang quang ly
+            //neu la quan ly thi them chuc nang quan ly
         if(user.quyenhang === "quanly"){
             menuHTML += `<li><a href="#"><i class="fa-solid fa-user"></i> Quản lí cửa hàng</a></li>`;
         }

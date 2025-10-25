@@ -1,5 +1,3 @@
-
-
 let danhmuc;
 let mangsanpham;
 let page_number;
