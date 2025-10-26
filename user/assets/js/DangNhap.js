@@ -102,7 +102,7 @@ btnLogin.addEventListener('click', function () {
                                 return account.sdt === sdt && account.mk === mk;
                             });
                             if (acc) {
-                                alert('Đăng nhập thành công! Xin chào ' + acc.ten);
+                                alert('Đăng nhập thành công! Xin chào ' + acc.hoten);
                                 localStorage.setItem('taikhoandangnhap', JSON.stringify(acc));
                                 window.location.reload();
                                 
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded',function(){
         const user = JSON.parse(userData);
         //hien thi ten nguoi dung 
         taikhoanSpan.textContent = `Tài khoản`;
-        name.textContent = `${user.ten}`;
+        name.textContent = `${user.hoten}`;
         //thay doi menu dang nhap
         let menuHTML = `
             <li><a href="#" class="open_account"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
