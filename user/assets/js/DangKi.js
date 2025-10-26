@@ -16,10 +16,18 @@ bntsignup.addEventListener('click',function(){
                     closeButton.addEventListener('click', () => {
                         signupModal.style.display = 'none';
                         overlay.style.display = 'none';
-                        loiTen.textContent = '';
-                        loiSDT.textContent = '';
-                        loiMatKhau.textContent = '';
-                        loiNhapLai.textContent = '';
+
+                        const loiTen = signupModal.querySelector('#loi_tendaydu');
+                        const loiSDT = signupModal.querySelector('#loi_sodienthoai');
+                        const loiMatKhau = signupModal.querySelector('#loi_matkhau');
+                        const loiNhapLai = signupModal.querySelector('#loi_nhaplaimatkhau');
+                        if (loiTen) loiTen.textContent = '';
+                        if (loiSDT) loiSDT.textContent = '';
+                        if (loiMatKhau) loiMatKhau.textContent = '';
+                        if (loiNhapLai) loiNhapLai.textContent = '';
+
+                        const form = signupModal.querySelector('form');
+                        if (form) form.reset();
                         enableScroll();
                     });
 
@@ -85,7 +93,7 @@ bntsignup.addEventListener('click',function(){
                             const newAccount = {
                             sdt: sodienthoai,
                             mk: matkhau,
-                            ten: fullName,
+                            hoten: fullName,
                             gmail: "",
                             diachi: ""
                             };

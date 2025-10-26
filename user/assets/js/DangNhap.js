@@ -35,8 +35,17 @@ btnLogin.addEventListener('click', function () {
                     closeButton.addEventListener('click', () => {
                         loginModal.style.display = 'none';
                         overlay.style.display = 'none';
+                        //xoa thong tin khi an tat
+                        const loiSDT = document.querySelector('#loi_sodienthoai');
+                        const loiMatKhau = document.querySelector('#loi_matkhau');
+                        const loginForm = document.querySelector('.login_modal form');
                         loiSDT.textContent = '';
                         loiMatKhau.textContent = '';
+            
+                        const sdtInput = loginModal.querySelector('.sodienthoai input');
+                        const mkInput = loginModal.querySelector('.matkhau input');
+                        if (sdtInput) sdtInput.value = '';
+                        if (mkInput) mkInput.value = '';
                         enableScroll();
                     });
 
@@ -128,11 +137,10 @@ document.addEventListener('DOMContentLoaded',function(){
         const user = JSON.parse(userData);
         //hien thi ten nguoi dung 
         taikhoanSpan.textContent = `Tài khoản`;
-        name.textContent = `${user.ten}`;
+        name.textContent = `${user.hoten}`;
         //thay doi menu dang nhap
         let menuHTML = `
             <li><a href="#" class="open_account"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
-            <li><a href="#"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
             <li><a href="#"><i class="fa-solid fa-box"></i> Đơn hàng đã mua</a></li>
         `;
             //neu la quan ly thi them chuc nang quan ly
