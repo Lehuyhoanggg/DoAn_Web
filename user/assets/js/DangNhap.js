@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded',function(){
         const user = JSON.parse(userData);
         //hien thi ten nguoi dung 
         taikhoanSpan.textContent = `Tài khoản`;
-        name.textContent = `${user.hoten}`;
+        name.textContent = `${user.ten}`;
         //thay doi menu dang nhap
         let menuHTML = `
             <li><a href="#" class="open_account"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
