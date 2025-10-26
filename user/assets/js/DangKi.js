@@ -16,6 +16,10 @@ bntsignup.addEventListener('click',function(){
                     closeButton.addEventListener('click', () => {
                         signupModal.style.display = 'none';
                         overlay.style.display = 'none';
+                        loiTen.textContent = '';
+                        loiSDT.textContent = '';
+                        loiMatKhau.textContent = '';
+                        loiNhapLai.textContent = '';
                         enableScroll();
                     });
 
@@ -69,10 +73,6 @@ bntsignup.addEventListener('click',function(){
                                 loiNhapLai.textContent = 'Mật khẩu nhập lại không khớp.';
                                 kiemtra = true;
                             }
-                            if (!isTermsChecked) {
-                                alert('Bạn phải đồng ý với chính sách của trang web để đăng ký.');
-                                return;
-                            }
                             const tonTai = mangtaikhoan.some(acc => acc.sdt === sodienthoai);
                             if (tonTai) {
                                 loiSDT.textContent = 'Số điện thoại này đã được đăng ký.';
@@ -92,7 +92,7 @@ bntsignup.addEventListener('click',function(){
                             
                             mangtaikhoan.push(newAccount);
                             localStorage.setItem("mangtaikhoan", JSON.stringify(mangtaikhoan));
-                            alert('Đăng ký thành công!');
+                            
                             form.reset();//xoa du lieu trong form 
 
                         });

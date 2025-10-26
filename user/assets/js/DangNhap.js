@@ -35,6 +35,8 @@ btnLogin.addEventListener('click', function () {
                     closeButton.addEventListener('click', () => {
                         loginModal.style.display = 'none';
                         overlay.style.display = 'none';
+                        loiSDT.textContent = '';
+                        loiMatKhau.textContent = '';
                         enableScroll();
                     });
 
@@ -130,6 +132,7 @@ document.addEventListener('DOMContentLoaded',function(){
         //thay doi menu dang nhap
         let menuHTML = `
             <li><a href="#" class="open_account"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
             <li><a href="#"><i class="fa-solid fa-box"></i> Đơn hàng đã mua</a></li>
         `;
             //neu la quan ly thi them chuc nang quan ly
@@ -145,7 +148,6 @@ document.addEventListener('DOMContentLoaded',function(){
             logoutBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 localStorage.removeItem('taikhoandangnhap');
-                alert('Bạn đã đăng xuất.');
                 window.location.reload();
             });
         }

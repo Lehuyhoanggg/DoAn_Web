@@ -1,18 +1,3 @@
-const Initial = [
-  {
-    id: "hiqdqkr2", // đặt 6 kí tự chữ và số bất kì k để trùng là đc
-    category: "Điện thoại",
-    img: "../user/assets/image/sanpham/sp1.png", //path y như v
-    name: "IPhone 17 Pro Max2",
-    price: "30000000",
-    status: true, //auto để true
-    stock: "10",
-    store: "256GB",
-    createdAt: "10/24/2025, 12:25:55 AM", // nhập giờ nào cũng đc nhưng cú pháp y như v
-    updatedAt: "10/24/2025, 12:25:55 AM", // nhập giờ nào cũng đc nhưng cú pháp y như v
-  },
-];
-
 let mangtk = [
   {
     hoten: "hoang",

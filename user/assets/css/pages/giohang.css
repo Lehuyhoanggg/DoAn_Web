@@ -1,0 +1,135 @@
+
+.giohang {
+    width: 25%;
+    height: 98%;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    margin: auto 5px;
+    padding: 0 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 9999;
+
+}
+
+
+.giohang_top {
+    height: 8%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.giohang_top_huy {
+    background-color: #aaa;
+    position: absolute;
+    margin: auto 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    line-height: 1;
+    z-index: 10;
+    border: none;
+    outline: none;
+}
+
+.giohang_mid {
+    height: 75%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.giohang_mid_donhang {
+    border-bottom: 1px solid;
+    height: 100px;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: end;
+    padding: 10px;
+}
+
+.giohang_mid_donhang_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.giohang_mid_donhang_ghichu {
+    display: flex;
+    gap: 3px;
+}
+
+.giohang_mid_donhang_ghichu_p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 300px;
+    overflow: hidden;
+}
+
+.giohang_mid_donhang_chucnang {
+    display: flex;
+    justify-content: space-between;
+}
+
+.giohang_mid_donhang_chucnang_xoa {
+    width: 60px;
+    background-color: #00B050;
+    color: white;
+}
+
+.giohang_mid_donhang_chucnang_soluong {
+    display: flex;
+    gap: 2px;
+}
+
+.giohang_mid_donhang_chucnang_soluong button {
+    height: 20px;
+    width: 20px;
+
+}
+
+.giohang_mid_donhang_chucnang_soluong_value {
+    height: 20px;
+    width: 20px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.giohang_bottom {
+    height: 15%;
+}
+
+.giohang_bottom_top {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.giohang_bottom_bottom {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.giohang_bottom_bottom button {
+    width: 48%;
+    height: 70%;
+    background-color: #00B050;
+    color: white;
+}

@@ -1,21 +1,3 @@
-   /* chung */
-   .open_button {
-       background-color: #aaa;
-       position: absolute;
-       top: 15px;
-       right: 15px;
-       cursor: pointer;
-       line-height: 1;
-       font-size: 26px;
-       border-radius: 50%;
-       color: #fff;
-       width: 30px;
-       height: 30px;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       z-index: 999;
-   }
 
    /* dang nhap  */
    .thongBaoLoi {
@@ -39,14 +21,7 @@
        top: 50vh;
        left: 50vw;
        transform: translate(-50%, -50%);
-       filter: blur(0px) !important;
-
    }
-
-   .login_modal * {
-       filter: blur(0px) !important;
-   }
-
 
    .close_button {
        background-color: #aaa;
