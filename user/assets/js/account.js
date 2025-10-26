@@ -105,7 +105,7 @@ class AccountManager {
 
         // Dien thong tin vso form
         const inputs = {
-            hoTen: userInfo.ten || '',
+            hoTen: userInfo.hoten || '',
             soDienThoai: userInfo.sdt || '',
             email: userInfo.gmail || '',
             diaChi: userInfo.diachi || ''
@@ -132,7 +132,7 @@ class AccountManager {
         let mangtaikhoan = JSON.parse(localStorage.getItem("mangtaikhoan")) || [];
 
         const newInfo = {
-            ten: form.querySelector("#hoTen").value.trim(),
+            hoten: form.querySelector("#hoTen").value.trim(),
             gmail: form.querySelector("#email").value.trim(),
             diachi: form.querySelector("#diaChi").value.trim()
         };
@@ -145,7 +145,7 @@ class AccountManager {
             
             //Cap nhat hien thi ten khach hang
             const nameSpan = document.querySelector('.header_top_right_taikhoan_name_span');
-            if (nameSpan) nameSpan.textContent = newInfo.ten;
+            if (nameSpan) nameSpan.textContent = newInfo.hoten;
             
             alert("Cập nhật thông tin thành công!");
         }
