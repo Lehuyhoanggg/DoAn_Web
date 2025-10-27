@@ -146,7 +146,7 @@ function khongtimthaysp(ctn) {
   ctn_tb.appendChild(tb1);
   ctn_tb.appendChild(tb2);
 
-  ctn_tb.innerHTML += `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64" role="img" aria-label="Mặt buồn">
+  ctn_tb.innerHTML += `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 64 64" role="img" aria-label="Mặt buồn">
   <g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
     <!-- Viền mặt -->
     <circle cx="32" cy="32" r="26" />
