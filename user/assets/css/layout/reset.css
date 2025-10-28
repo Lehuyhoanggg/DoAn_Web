@@ -26,14 +26,25 @@ ul {
     padding: 0;
 }
 
+li {
+    cursor: pointer;
+}
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(1px); /* làm mờ nền */
-    background: rgba(0, 0, 0, 0.3); /* thêm tối nhẹ */
+    backdrop-filter: blur(1px);
+    /* làm mờ nền */
+    background: rgba(0, 0, 0, 0.3);
+    /* thêm tối nhẹ */
     z-index: 999;
     display: none;
+}
+
+.main {
+    width: 75%;
+    margin: auto;
 }

@@ -10,6 +10,7 @@
     border-radius: 20px;
     overflow: hidden;
     z-index: 9999;
+    transition: 0.2s ease;
 }
 
 
@@ -21,10 +22,12 @@
     gap: 10px;
     position: relative;
 }
-.giohang_top_icon{
+
+.giohang_top_icon {
     height: 25px;
     width: 25px;
 }
+
 .giohang_top_huy {
     background-color: #aaa;
     position: absolute;
@@ -74,10 +77,12 @@
     display: flex;
     gap: 3px;
 }
-.giohang_mid_donhang_ghichu_icon{
+
+.giohang_mid_donhang_ghichu_icon {
     height: 20px;
     width: 20px;
 }
+
 .giohang_mid_donhang_ghichu_p {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -94,6 +99,8 @@
     width: 60px;
     background-color: #00B050;
     color: white;
+    font-weight: 300;
+    font-size: 13px;
 }
 
 .giohang_mid_donhang_chucnang_soluong {
@@ -111,7 +118,10 @@
     height: 20px;
     width: 20px;
     border: 1px solid;
-    text-align: center;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .giohang_bottom {
@@ -132,15 +142,17 @@
 }
 
 .giohang_bottom_bottom_thanhtoan {
-    font-size: 15px;
+    font-size: 13px;
     border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
 }
 
 .giohang_bottom_bottom_them {
-    font-size: 15px;
+    font-size: 13px;
     border: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    /* bóng nhẹ */
+    font-weight: 600;
 }
 
 .giohang_bottom_bottom button {

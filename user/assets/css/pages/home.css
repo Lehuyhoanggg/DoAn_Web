@@ -1,9 +1,3 @@
-.main {
-    width: 75%;
-    margin: auto;
-
-}
-
 .home {
     display: flex;
     flex-direction: column;
@@ -51,6 +45,9 @@
     padding-bottom: 5px;
 }
 
+.home_sanpham_list_item .sanpham_name{
+    padding: 0 10px;
+}
 .sanpham_bottom_ctn {
     width: 90%;
     height: 100%;
@@ -61,7 +58,7 @@
     margin: 5px 0;
     word-wrap: break-word;
     min-height: 50px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 200;
 }
 
@@ -97,8 +94,12 @@
     height: 30px;
     background-color: #00B050;
     margin: auto;
+    color: white;
+    font-weight: 400;
 }
-
+.sanpham_muangay:hover{
+    background-color: #067d3c;
+}
 
 .home_sanpham_list_item_img {
     height: 50%;
@@ -297,7 +298,7 @@
 
 .xemthem a {
     font-size: 15px;
-    color: #1a73e8;
+    color: #00B050;
 }
 
 .home_tintuc_xemthem a:hover {

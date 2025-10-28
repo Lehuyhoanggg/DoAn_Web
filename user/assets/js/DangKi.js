@@ -7,8 +7,6 @@ bntsignup.addEventListener('click',function(){
             .then(res => res.text())
             .then(html => {
                 document.body.insertAdjacentHTML('beforeend', html); // thêm vào cuối body
-
-
                 requestAnimationFrame(() => {
                     signupModal = document.querySelector(".signup_modal");
                     const closeButton = signupModal.querySelector('.close_button');

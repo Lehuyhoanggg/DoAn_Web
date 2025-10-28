@@ -32,7 +32,7 @@ class AccountManager {
 
     async loadAccountModal() {
         try {
-            const response = await fetch('user/pages/account.html');
+            const response = await fetch('user/pages/Account.html');
             const html = await response.text();
             document.body.insertAdjacentHTML('beforeend', html);
 
