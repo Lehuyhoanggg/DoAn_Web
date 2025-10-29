@@ -198,15 +198,17 @@ document.querySelector(".main").innerHTML = ` <div class="home">
 
             </section>
 
-        </div>`
+        </div>`;
 
 let danhmuc;
 let mangsanpham;
 let page_number;
+import { initialData, taoListTaiKhoan } from "./mang.js";
 
 window.onload = () => {
   page_number = 1;
-  taoListSanPham();
+  taoListTaiKhoan();
+  initialData();
   if (home_sp_list.children.length === 0) {
     danhmuc = "Điện thoại";
     mangsanpham = JSON.parse(localStorage.getItem("mangsanpham"));
@@ -310,7 +312,7 @@ function themButtonPhanTrang() {
     return sanpham.danhmuc === danhmuc;
   });
 
-  lenghtSanPham = mangThoaMan.length;
+  let lenghtSanPham = mangThoaMan.length;
 
   let soNut = lenghtSanPham / 8 + (lenghtSanPham % 8 > 0 ? 1 : 0);
   for (let i = 1; i <= soNut; i++) {
