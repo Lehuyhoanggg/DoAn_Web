@@ -3,10 +3,15 @@ import {
   setListItem,
   initialData,
 } from "../user/assets/js/mang.js";
+import { getStoreList, setStoreList, initStoreList } from "./store.js";
+
 window.productPage = productPage;
 window.userPage = userPage;
+window.storePage = storePage;
 initialData();
+initStoreList();
 let mangsp = getListItem();
+let StoreList = getStoreList();
 
 const sidebarItemsArrayy = [
   {
@@ -30,7 +35,7 @@ const sidebarItemsArrayy = [
     Page: "order",
   },
   {
-    label: "Thống kê",
+    label: "Quản lý danh mục",
     icon: "fa-solid fa-chart-simple",
     Page: "chart",
   },
@@ -156,8 +161,7 @@ function productPage() {
                 <td>${e.color}</td>
                 <td>${e.storage}</td>
                 <td>${e.ram}</td>
-                <td>${e.price}</td>
-                <td>${e.stock}</td>
+                <td>${e.price.toLocaleString("vi-VN")}</td>
                 <td>${e.sold}</td>
                 <td>${e.rating}</td>
                 <td>
@@ -216,9 +220,6 @@ function productPage() {
 
             <label for="ram">RAM sản phẩm</label>
             <input type="text" name="ram" placeholder="Nhập RAM sản phẩm VD: 12GB" >
-
-            <label for="stock">Số lượng sản phẩm</label>
-            <input type="number" name="stock" placeholder="Nhập số lượng sản phẩm" >
 
             <label for="color">Màu sản phẩm</label>
             <input type="String" name="color" placeholder="Nhập màu sản phẩm VD: Cam Vũ Trụ" >
@@ -284,9 +285,6 @@ function productPage() {
         document.querySelector("[name='price']").value.trim()
       );
       const storage = document.querySelector("[name='store']").value.trim();
-      const stock = Number(
-        document.querySelector("[name='stock']").value.trim()
-      );
       const color = document.querySelector("[name='color']").value.trim();
       const category = document.querySelector("[name='categories']").value;
       const rating = document.querySelector("[name='rating']").value;
@@ -323,7 +321,7 @@ function productPage() {
         (c) => c.color.toLowerCase() === color.toLowerCase()
       );
       if (!colorCheck) {
-        colorCheck = { color, price, stock, rating, sold, status: true };
+        colorCheck = { color, price, rating, sold, status: true };
         version.colors.push(colorCheck);
       } else {
         colorCheck.stock += stock;
@@ -636,7 +634,7 @@ function userPage() {
         }
       });
     });
-  // Toggle trạng thái user: lắng nghe trực tiếp trên input checkbox
+
   document
     .querySelectorAll("#user-content .toggle-wrapper input")
     .forEach((ip, index) => {
@@ -649,4 +647,286 @@ function userPage() {
         userPage();
       });
     });
+}
+
+function storePage() {
+  // load dữ liệu
+  const storeTable = document.querySelector("#store-content tbody");
+  storeTable.innerHTML = StoreList.map((e) => {
+    const total = e.products.reduce(
+      (acc, curr) => acc + curr.priceProduct * curr.stock,
+      0
+    );
+    return `
+      <tr>
+        <td>${e.date}</td>
+        <td>${total.toLocaleString("vi-VN")}</td>
+        <td>Chưa xác nhận</td>
+        <td><button class="product-detail-btn"><i class="fa-solid fa-eye"></i></button></td>
+        <td><button class="product-delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+      </tr>
+    `;
+  }).join("");
+
+  // tạo phiếu nhập hàng
+  document
+    .querySelector(".store-wrapper .product-create-btn")
+    .addEventListener("click", () => {
+      let getListItem = JSON.parse(localStorage.getItem("mangsanpham"));
+      modal.style.display = "block";
+      modal.innerHTML = `
+      <div class="createModal">
+          <div class="createModal-header">
+            <span class="createModal-title">Tạo sản phẩm</span>
+            <button class="createModal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="createModal-body">
+            <label for="name">Tên sản phẩm</label>
+            <select name="name">
+              <option>-- Chọn sản phẩm --</option>
+              ${getListItem
+                .map(
+                  (p, index) => `<option value="${p.name}">${p.name}</option>`
+                )
+                .join("")}
+            </select>
+
+            <label for="brand">Hãng sản phẩm</label>
+            <input type="text" name="brand"/>
+            
+            <label for="storage">Dung lượng sản phẩm</label>
+            <select name="storage">
+              <option>-- Chọn dung lượng --</option>
+            </select>
+
+
+            <label for="ram">RAM sản phẩm</label>
+            <select name="ram">
+              <option>-- Chọn RAM --</option>
+            </select>
+            
+            <label for="color">Màu sản phẩm</label>
+            <select name="color">
+              <option>-- Chọn màu --</option>
+            </select>
+
+            <label for="price">Giá sản phẩm</label>
+            <input type="text" name="price"/>
+
+
+            <label for="category">Danh mục sản phẩm</label>
+            <input type="text" name="category"/>
+
+            <label for="stock">Số lượng</label>
+            <input type="number" name="stock"/>
+
+          </div>
+          <div class="createModal-footer">
+            <button class="createModal-accept-btn">Xác nhận</button>
+          </div>
+        </div>
+      `;
+// auto điền thông tin
+      document
+        .querySelector("select[name='name']")
+        .addEventListener("change", (e) => {
+          const value = e.target.value;
+          const getListItem =
+            JSON.parse(localStorage.getItem("mangsanpham")) || [];
+          let itemProduct = getListItem.find((p) => p.name === value);
+          document.querySelector("input[name='brand']").value =
+            itemProduct.brand;
+
+          document.querySelector("input[name='category']").value =
+            itemProduct.category;
+
+          const uniqueStorage = [
+            ...new Set(itemProduct.versions.map((p) => p.storage)),
+          ];
+
+          const storageSelect = document.querySelector(
+            "select[name='storage']"
+          );
+          const ramSelect = document.querySelector("select[name='ram']");
+          const colorSelect = document.querySelector("select[name='color']");
+
+          storageSelect.innerHTML = `<option value="">-- Chọn dung lượng --</option>`;
+          ramSelect.innerHTML = `<option value="">-- Chọn RAM --</option>`;
+          colorSelect.innerHTML = `<option value="">-- Chọn màu --</option>`;
+
+          storageSelect.innerHTML += uniqueStorage
+            .map((v) => `<option value="${v}">${v}</option>`)
+            .join("");
+
+          storageSelect.onchange = (e) => {
+            const storageValue = e.target.value;
+
+            const versions = itemProduct.versions.filter(
+              (v) => v.storage === storageValue
+            );
+
+            ramSelect.innerHTML = `<option value="">-- Chọn RAM --</option>`;
+            colorSelect.innerHTML = `<option value="">-- Chọn màu --</option>`;
+
+            const uniqueRam = [...new Set(versions.map((v) => v.ram))];
+            ramSelect.innerHTML += uniqueRam
+              .map((r) => `<option value="${r}">${r}</option>`)
+              .join("");
+
+            ramSelect.onchange = (e) => {
+              const ramValue = e.target.value;
+              const colorList = versions.find((v) => v.ram === ramValue);
+
+              colorSelect.innerHTML = `<option value="">-- Chọn màu --</option>`;
+              colorSelect.innerHTML += colorList.colors
+                .map((c) => `<option value="${c.color}">${c.color}</option>`)
+                .join("");
+
+              colorSelect.onchange = (e) => {
+                const colorValue = e.target.value;
+                const price = document.querySelector("input[name='price']");
+                const finalObj = colorList.colors.find(
+                  (v) => v.color == colorValue
+                );
+                price.value = finalObj.price * 0.8;
+              };
+            };
+          };
+        });
+// đóng modal
+      const closeModal = () => {
+        modal.style.display = "none";
+      };
+
+      document
+        .querySelector(".createModal-close-btn")
+        .addEventListener("click", () => closeModal());
+// Xử lí submit khi tạo phiếu nhập hàng
+      document
+        .querySelector(".createModal-accept-btn")
+        .addEventListener("click", () => {
+          const nameProduct = document.querySelector(
+            "select[name='name']"
+          ).value;
+          const ramProduct =
+            document.querySelector("select[name='ram']").value || "";
+          const storageProduct =
+            document.querySelector("select[name='storage']").value || "";
+          const priceProduct = document.querySelector(
+            "input[name='price']"
+          ).value;
+          const colorProduct =
+            document.querySelector("select[name='color']").value || "";
+          const stock = document.querySelector("input[name='stock']").value;
+          const now = new Date();
+          const date = now.toLocaleDateString("vi-VN");
+          const product = {
+            nameProduct,
+            ramProduct,
+            storageProduct,
+            stock,
+            colorProduct,
+            priceProduct,
+          };
+          const data = { date, products: [product] };
+          const check = StoreList.find((p) => p.date == date);
+          if (check) {
+            const isExist = check.products.find(
+              (p) =>
+                p.nameProduct == nameProduct &&
+                p.ramProduct == ramProduct &&
+                p.storageProduct == storageProduct &&
+                p.stock == stock &&
+                p.colorProduct == colorProduct &&
+                p.priceProduct == priceProduct
+            );
+            if (isExist) {
+              Number(isExist.stock) += Number(products.stock);
+              return;
+            }
+
+            check.products.push(product);
+          } else {
+            StoreList.push(data);
+          }
+          closeModal();
+          storePage();
+          setStoreList(StoreList);
+        });
+    });
+    // Xử lí detail
+document.querySelectorAll(".store-wrapper .product-detail-btn").forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    const pI = index;
+    modal.style.display = "block";
+    modal.innerHTML = `
+      <div class="createModal">
+        <div class="createModal-header">
+          <span class="createModal-title">Thông tin khách hàng</span>
+          <button class="createModal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="createModal-body">
+          <table class="detail-store-table">
+            <thead>
+              <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Trạng thái</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="product-tbody"></tbody>
+          </table>
+        </div>
+
+        <div class="createModal-footer">
+          <button class="createModal-accept-btn">Xác nhận</button>
+        </div>
+      </div>
+    `;
+
+    document.querySelector(".createModal-close-btn")
+      .addEventListener("click", () => modal.style.display = "none");
+
+    const tbody = document.querySelector(".detail-store-table tbody");
+    tbody.innerHTML = StoreList[index].products.map(e => `
+      <tr>
+        <td>
+          ${e.nameProduct} 
+          ${e.ramProduct ? " - " + e.ramProduct : ''} 
+          ${e.storageProduct ? " - " + e.storageProduct : ''} 
+          ${e.colorProduct ? " - " + e.colorProduct : ''}
+        </td>
+        <td><input type="number" value="${e.stock}" class="stock"/></td>
+        <td>
+          <label class="toggle-wrapper">
+            <input type="checkbox" ${e.status ? "checked" : ""}/>
+            <span class="slider"></span>
+          </label>
+        </td>
+        <td><button class="product-delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+      </tr>
+    `).join("");
+    modal.querySelector(".createModal-accept-btn").addEventListener("click", () => {
+        document.querySelectorAll(".detail-store-table input[type='checkbox']").forEach((e, index) => {
+          e.addEventListener("change", () => {
+            const element = StoreList[pI].products[index];
+            element.status = e.checked;
+          })
+          const inputValue = document.querySelector("input[name='stock']").value;
+          StoreList[pI].products[index].stock = inputValue;
+          setStoreList(StoreList);
+        })
+    })
+    document.querySelectorAll(".detail-store-table .product-delete-btn").forEach((e, index) => {
+      e.addEventListener("click", () => {
+
+      })
+    })
+  });
+});
+
+    // Xử lí delete
+    document.querySelectorAll(".store-wrapper .product-delete-btn")
 }
