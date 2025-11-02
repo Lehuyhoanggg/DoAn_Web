@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .donhang {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid;
+            padding: 20px;
+        }
+
+        .donhang_text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .donhang_text-title {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .donhang_text-desc {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .donhang_list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .donhang_item {
+            border: 1px solid;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+
+        .donhang_sanpham-list {
+            border-bottom: 1px solid;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .donhang_sanpham {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .donhang_sanpham_left {
+            display: flex;
+            height: 100px;
+            gap: 10px;
+        }
+
+        .donhang_sanpham_left img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .donhang_sanpham_left div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .donhang_tongtien {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .donhang_sanpham-thuonghieu {
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        .donhang_sanpham-name {
+            font-size: 14;
+            font-family: Arial;
+        }
+
+        .donhang_sanpham-soluong {
+            font-size: 14;
+            color: #00B050;
+        }
+
+        .donhang_sanpham_thanhtien,
+        .donhang_thanhtien {
+            color: red;
+        }
+
+        .donvi {
+            color: red;
+            text-decoration: underline;
+            font-size: 14px;
+            margin: 2px;
+        }
+        .donhang_tongtien_top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .donhang_trangthai{
+            background-color: #00B050;
+            height: 30px;
+            color: white;
+            border: 1px solid;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .donhang_xemchitiet{
+            height: 30px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="donhang">
+
+        <div class="donhang_text">
+            <p class="donhang_text-title">Quản lí đơn hàng của bạn</p>
+            <p class="donhang_text-desc">Xem chi tiết, trạng thái của những đơn hàng đã đặt.</p>
+        </div>
+
+        <ul class="donhang_list">
+
+        
+            <li class="donhang_item">
+
+                <ul class="donhang_sanpham-list">
+                    <li class="donhang_sanpham">
+
+                        <div class="donhang_sanpham_left">
+                            <img src="" alt="">
+                            <div>
+                                <span class="donhang_sanpham-name">Iphone 17 pro max</span>
+                                <span class="donhang_sanpham-thuonghieu">Quả táo</span>
+                                <span class="donhang_sanpham-soluong">x2</span>
+                            </div>
+
+                        </div>
+
+                        <div class="donhang_sanpham-right">
+                            <span class="donhang_sanpham_thanhtien">999999<span class="donvi">đ</span></span>
+                        </div>
+
+                    </li>
+
+                    <li class="donhang_sanpham">
+
+                        <div class="donhang_sanpham_left">
+                            <img src="" alt="">
+                            <div>
+                                <span class="donhang_sanpham-name">Iphone 17 pro max</span>
+                                <span class="donhang_sanpham-thuonghieu">Quả táo</span>
+                                <span class="donhang_sanpham-soluong">x2</span>
+                            </div>
+
+                        </div>
+
+                        <div class="donhang_sanpham-right">
+                            <span class="donhang_sanpham_thanhtien">999999<span class="donvi">đ</span></span>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <div class="donhang_tongtien">
+                    <div class="donhang_tongtien_top">
+                        <span class="donhang_trangthai">Đang xử lí</span>
+                        <button class="donhang_xemchitiet">Xem chi tiết</button>
+                    </div>
+
+                    <div>
+                        <span>Tổng tiền :</span>
+                        <span class="donhang_thanhtien">9999999<span class="donvi">đ</span></span>
+                    </div>
+                </div>
+            </li>
+
+              <li class="donhang_item">
+
+                <ul class="donhang_sanpham-list">
+                    <li class="donhang_sanpham">
+
+                        <div class="donhang_sanpham_left">
+                            <img src="" alt="">
+                            <div>
+                                <span class="donhang_sanpham-name">Iphone 17 pro max</span>
+                                <span class="donhang_sanpham-thuonghieu">Quả táo</span>
+                                <span class="donhang_sanpham-soluong">x2</span>
+                            </div>
+
+                        </div>
+
+                        <div class="donhang_sanpham-right">
+                            <span class="donhang_sanpham_thanhtien">999999<span class="donvi">đ</span></span>
+                        </div>
+
+                    </li>
+
+                    <li class="donhang_sanpham">
+
+                        <div class="donhang_sanpham_left">
+                            <img src="" alt="">
+                            <div>
+                                <span class="donhang_sanpham-name">Iphone 17 pro max</span>
+                                <span class="donhang_sanpham-thuonghieu">Quả táo</span>
+                                <span class="donhang_sanpham-soluong">x2</span>
+                            </div>
+
+                        </div>
+
+                        <div class="donhang_sanpham-right">
+                            <span class="donhang_sanpham_thanhtien">999999<span class="donvi">đ</span></span>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <div class="donhang_tongtien">
+                    <div class="donhang_tongtien_top">
+                        <span class="donhang_trangthai">Đang xử lí</span>
+                        <button class="donhang_xemchitiet">Xem chi tiết</button>
+                    </div>
+
+                    <div>
+                        <span>Tổng tiền :</span>
+                        <span class="donhang_thanhtien">9999999<span class="donvi">đ</span></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+</body>
+
+</html>

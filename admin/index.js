@@ -1,12 +1,12 @@
 import {
-  getListItem,
-  setListItem,
-  initialData,
-} from "../user/assets/js/mang.js";
+  getListSanPham,
+  setListSanPham,
+  initialSanPham,
+} from "../user/assets/js/database.js";
 window.productPage = productPage;
 window.userPage = userPage;
-initialData();
-let mangsp = getListItem();
+initialSanPham();
+let mangsp = getListSanPham();
 
 const sidebarItemsArrayy = [
   {
@@ -162,25 +162,19 @@ function productPage() {
                 <td>${e.rating}</td>
                 <td>
                     <label class="toggle-wrapper">
-                      <input type="checkbox" ${
-                        e.status ? "checked" : ""
-                      } data-productIndex=${e.pI} data-versionIndex=${
-          e.vI
-        } data-colorIndex=${e.cI}
+                      <input type="checkbox" ${e.status ? "checked" : ""
+          } data-productIndex=${e.pI} data-versionIndex=${e.vI
+          } data-colorIndex=${e.cI}
         />
                       <span class="slider"></span>
                     </label>
                 </td>
-                <td><button class="product-detail-btn" data-productIndex=${
-                  e.pI
-                } data-versionIndex=${e.vI} data-colorIndex=${
-          e.cI
-        }><i class="fa-solid fa-eye"></i></button></td>
-                <td><button class="product-delete-btn" data-productIndex=${
-                  e.pI
-                } data-versionIndex=${e.vI} data-colorIndex=${
-          e.cI
-        }><i class="fa-solid fa-trash"></i></button></td>
+                <td><button class="product-detail-btn" data-productIndex=${e.pI
+          } data-versionIndex=${e.vI} data-colorIndex=${e.cI
+          }><i class="fa-solid fa-eye"></i></button></td>
+                <td><button class="product-delete-btn" data-productIndex=${e.pI
+          } data-versionIndex=${e.vI} data-colorIndex=${e.cI
+          }><i class="fa-solid fa-trash"></i></button></td>
               </tr>
   `
       )
@@ -341,7 +335,7 @@ function productPage() {
       });
 
       product.infoDetail = infoDetail;
-      setListItem(mangsp);
+      setListSanPham(mangsp);
 
       modal.style.display = "none";
       productPage();
@@ -370,54 +364,45 @@ function productPage() {
           <div class="product-detail-modal-body">
             <img src=${product.img || ""} alt="img">
             <div class="product-detail-modal-info">
-              <span><b>Tên sản phẩm: </b><input value="${
-                product.name
-              }" name="name"/> </span><br>
+              <span><b>Tên sản phẩm: </b><input value="${product.name
+      }" name="name"/> </span><br>
 
-              <span><b>Hãng sản phẩm: </b><input value="${
-                product.brand
-              }" name="brand"/></span><br>
+              <span><b>Hãng sản phẩm: </b><input value="${product.brand
+      }" name="brand"/></span><br>
 
-              <span><b>Màu sản phẩm: </b><input value="${
-                colorItem.color
-              }" name="color"/></span><br>
+              <span><b>Màu sản phẩm: </b><input value="${colorItem.color
+      }" name="color"/></span><br>
 
-              <span><b>Dung lượng sản phẩm: </b><input value="${
-                version.storage
-              }" name="storage"/></span><br>
+              <span><b>Dung lượng sản phẩm: </b><input value="${version.storage
+      }" name="storage"/></span><br>
 
-              <span><b>RAM  sản phẩm: </b><input value="${
-                version.ram
-              }" name="ram"/></span><br>
+              <span><b>RAM  sản phẩm: </b><input value="${version.ram
+      }" name="ram"/></span><br>
 
-              <span><b>Giá sản phẩm: </b><input value="${
-                colorItem.price
-              }" name="price"/></span><br>
-              <span><b>hàng tồn: </b><input value="${
-                colorItem.stock
-              }" name="stock"/></span><br>
-              <span><b>Đã mua: </b><input value="${
-                colorItem.sold
-              }" name="sold"/></span><br>
-              <span><b>Đánh giá sản phẩm: </b><input value="${
-                colorItem.rating
-              }" name="rating"/></span><br>
+              <span><b>Giá sản phẩm: </b><input value="${colorItem.price
+      }" name="price"/></span><br>
+              <span><b>hàng tồn: </b><input value="${colorItem.stock
+      }" name="stock"/></span><br>
+              <span><b>Đã mua: </b><input value="${colorItem.sold
+      }" name="sold"/></span><br>
+              <span><b>Đánh giá sản phẩm: </b><input value="${colorItem.rating
+      }" name="rating"/></span><br>
               <span><b>Danh mục sản phẩm: </b><select name="categories" id="product-filter"></select></span><br>
 
             <div class="dynamic-form">
               <label>Thông tin chi tiết sản phẩm</label>
                   <div id="info-container">
                     ${Object.entries(mangsp[pI].infoDetail || {})
-                      .map(
-                        ([key, value]) => `
+        .map(
+          ([key, value]) => `
                           <div class="info-row">
                             <input type="text" class="key-input" value="${key}">
                             <input type="text" class="value-input" value="${value}">
                             <button type="button" class="remove-btn">−</button>
                           </div>
                         `
-                      )
-                      .join("")}
+        )
+        .join("")}
                   </div>
               <button type="button" id="add-btn">+ Thêm dòng</button>
             </div>

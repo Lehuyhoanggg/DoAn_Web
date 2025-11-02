@@ -89,7 +89,7 @@ btnLogin.addEventListener("click", function () {
               }
 
               //lay danh sach tk trong local storage
-              const storedAccounts = localStorage.getItem("mangtaikhoan");
+              const storedAccounts = localStorage.getItem("listTaiKhoan");
               if (!storedAccounts) {
                 alert("tài khoản hoặc mật khẩu không chính xác!");
                 return;
@@ -113,7 +113,7 @@ btnLogin.addEventListener("click", function () {
           }
         });
       })
-      .catch((err) => {});
+      .catch((err) => { });
   } else {
     loginModal.style.display = "block";
     overlay.style.display = "block";

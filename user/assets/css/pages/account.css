@@ -11,9 +11,6 @@
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    filter: blur(0px) !important;
-
-
     max-height: 90vh;
     overflow-y: auto;
 }

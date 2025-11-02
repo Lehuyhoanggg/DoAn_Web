@@ -1,0 +1,242 @@
+ .chitietsanpham {
+     display: none;
+     align-items: stretch;
+     padding: 20px;
+     background-color: white;
+     gap: 20px;
+ }
+
+ .chitietsanpham-left {
+     width: 60%;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .chitietsanpham_img {
+     aspect-ratio: 16 / 9;
+     width: 100%;
+     background-color: rgb(138, 146, 146);
+     position: relative;
+     overflow: hidden;
+ }
+
+ .chitietsanpham_img-list {
+     position: absolute;
+     display: flex;
+     flex-wrap: nowrap;
+     height: 100%;
+     left: 0;
+     transition: left 0.5s ease;
+     overflow: hidden;
+ }
+
+ .chitietsanpham_img-item {
+     width: 100%;
+     height: 100%;
+     aspect-ratio: 16 / 9;
+ }
+
+ .chitietsanpham_img-mini_list {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     display: flex;
+     gap: 10px;
+     overflow: hidden;
+
+ }
+
+ .chitietsanpham_img-mini_item {
+     height: 40px;
+     width: 40px;
+     flex-shrink: 0;
+ }
+
+ .chitietsanpham_img-mini_item.hienthi {
+     border: 2px solid #bbddfd;
+ }
+
+ .chitietsanpham-right {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     flex: 1;
+ }
+
+ .chitietsanpham_name {
+     font-size: 18px;
+     margin-bottom: 50px;
+ }
+
+ .chitietsanpham_luachonphienban {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .chitietsanpham_luachonphienban-list {
+     display: flex;
+     gap: 20px;
+ }
+
+ .chitietsanpham_luachonmau-list {
+     display: flex;
+     gap: 20px;
+ }
+
+ .chitietsanpham_luachonphienban-item {
+     min-width: 60px;
+     height: 25px;
+     padding: 5px;
+     font-size: 15px;
+     border-radius: 5px;
+     background-color: white;
+     border: 1px solid #ddd;
+ }
+
+ .chitietsanpham_luachonphienban-item.hienthi {
+     background-color: #f1f8fe;
+     color: #2a87eb;
+     border: 2px solid #bbddfd;
+ }
+
+ .chitietsanpham_luachonmau-item {
+     min-width: 60px;
+     height: 28px;
+     padding: 5px;
+     font-size: 15px;
+     border-radius: 20px;
+     background-color: white;
+     border: 1px solid #ddd;
+ }
+
+ .chitietsanpham_luachonmau-item.hienthi {
+     background-color: #f1f8fe;
+     color: #2a87eb;
+     border: 2px solid #bbddfd;
+ }
+
+ .chitietsanpham-right_mua {
+     display: flex;
+     gap: 30px;
+ }
+
+ .chitietsanpham_giohang {
+     height: 50px;
+     width: 40%;
+     border-radius: 10px;
+     border: 1px solid #00B050;
+     color: #00B050;
+     background-color: white;
+     font-size: 15px;
+ }
+
+ .chitietsanpham_muangay {
+     height: 50px;
+     width: 40%;
+     border-radius: 10px;
+     font-size: 15px;
+     background-color: #00B050;
+     color: white;
+ }
+
+ .chitietsanpham_muangay img {
+     height: 20px;
+     width: 20px;
+ }
+
+ .donvi {
+     color: red;
+     text-decoration: underline;
+     font-size: 14px;
+     margin: 2px;
+ }
+
+ .donvi-sale {
+     color: #999999;
+     text-decoration: line-through;
+     font-size: 14px;
+     margin: 2px;
+ }
+
+ .chitietsanpham_gia-sale {
+     color: #999999;
+     font-size: 15px;
+     margin-top: -10px;
+     margin-bottom: 20px;
+     text-decoration: line-through;
+ }
+
+ .chitietsanpham_gia {
+     color: red;
+     font-size: 18px;
+     margin-top: 10px;
+ }
+
+ .chitietsanpham-left_button {
+     padding: 0 30px;
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+
+ .chitietsanpham-left_button button {
+     width: 45%;
+     height: 30px;
+
+ }
+
+ .chitietsanpham_thongso {
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
+
+ .chitietsanpham_thongso li {
+     display: flex;
+     justify-content: space-between;
+     border-bottom: 1px solid;
+     padding: 10px;
+ }
+
+ .chitietsanpham_thongso li span {
+     flex: 1;
+ }
+
+ .chitietsanpham_thongtin {
+     display: none;
+     min-height: 400px;
+     font-size: 17px;
+ }
+
+ .chitietsanpham_thongtin img {
+     width: 90%;
+     margin: 10px auto;
+     background-color: red;
+ }
+
+ .chitietsanpham_img_button-left {
+     position: absolute;
+     top: 50%;
+     left: 5px;
+     font-size: 30px;
+     background-color: #e0e0ea;
+     color: #b3b2bd;
+     padding: 3px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+     border: none;
+ }
+
+ .chitietsanpham_img_button-right {
+     position: absolute;
+     top: 50%;
+     right: 5px;
+     font-size: 30px;
+     background-color: #e0e0ea;
+     color: #b3b2bd;
+     padding: 3px;
+     border: none;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+ }
