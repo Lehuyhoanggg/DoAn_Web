@@ -1,3 +1,23 @@
+// Lấy overlay từ DOM
+const overlay = document.querySelector('.overlay');
+
+// Các hàm phụ trợ
+function preventScroll(e) {
+    e.preventDefault();
+}
+
+function disableScroll() {
+    window.addEventListener('scroll', preventScroll);
+    window.addEventListener('wheel', preventScroll, { passive: false });
+    window.addEventListener('touchmove', preventScroll, { passive: false });
+}
+
+function enableScroll() {
+    window.removeEventListener('scroll', preventScroll);
+    window.removeEventListener('wheel', preventScroll);
+    window.removeEventListener('touchmove', preventScroll);
+}
+
 class AccountManager {
     constructor() {
         this.accountModal = null;
@@ -32,7 +52,7 @@ class AccountManager {
 
     async loadAccountModal() {
         try {
-            const response = await fetch('user/pages/Account.html');
+            const response = await fetch('user/pages/account.html');
             const html = await response.text();
             document.body.insertAdjacentHTML('beforeend', html);
 
@@ -93,6 +113,12 @@ class AccountManager {
 
     loadUserInfo() {
         const currentUser = JSON.parse(localStorage.getItem("taikhoandangnhap"));
+        if (!currentUser) {
+            alert("Lỗi: Không tìm thấy thông tin người dùng đang đăng nhập.");
+            this.closeModal();
+            return;
+        }
+
         const mangtaikhoan = JSON.parse(localStorage.getItem("mangtaikhoan")) || [];
         const userInfo = mangtaikhoan.find(user => user.sdt === currentUser.sdt);
 
@@ -103,7 +129,7 @@ class AccountManager {
             return;
         }
 
-        // Dien thong tin vso form
+        // Điền thông tin vào form
         const inputs = {
             hoTen: userInfo.hoten || '',
             soDienThoai: userInfo.sdt || '',
@@ -139,7 +165,15 @@ class AccountManager {
 
         const userIndex = mangtaikhoan.findIndex(user => user.sdt === currentUser.sdt);
         if (userIndex > -1) {
-            mangtaikhoan[userIndex] = { ...mangtaikhoan[userIndex], ...newInfo };
+            // Giữ lại các thông tin cũ không thay đổi
+            mangtaikhoan[userIndex] = { 
+                ...mangtaikhoan[userIndex],
+                hoten: newInfo.hoten,
+                gmail: newInfo.gmail,
+                diachi: newInfo.diachi,
+                updatedAt: new Date().toLocaleString()
+            };
+            
             localStorage.setItem("mangtaikhoan", JSON.stringify(mangtaikhoan));
             localStorage.setItem("taikhoandangnhap", JSON.stringify(mangtaikhoan[userIndex]));
             
