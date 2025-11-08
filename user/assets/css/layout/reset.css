@@ -40,8 +40,6 @@ p{
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(1px);
-    /* làm mờ nền */
     background: rgba(0, 0, 0, 0.3);
     /* thêm tối nhẹ */
     z-index: 999;

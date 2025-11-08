@@ -1,0 +1,196 @@
+.checkout_ctn {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    background-color: white;
+    display: none;
+}
+
+.checkout_model {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    background: #fff;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 40px;
+    z-index: 10000;
+}
+
+.header_checkout {
+    position: relative;
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.checkout_model h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #00B050;
+}
+
+/* ==== CỘT TRÁI ==== */
+.checkout_left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.checkout_left>span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #00B050;
+}
+
+.checkout_left input,
+.checkout_left select,
+.checkout_left textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+}
+
+.address_group {
+    display: flex;
+    gap: 10px;
+}
+
+.checkout_note {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkout_note span,
+.checkout_date span {
+    color: #333;
+    font-weight: 500;
+}
+
+.checkout_note textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+/* ==== CỘT PHẢI ==== */
+.checkout_right {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.checkout_right>span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #00B050;
+}
+
+.checkout_row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.checkout_row.total span:last-child {
+    font-weight: 700;
+    color: #00B050;
+}
+
+.checkout_payment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment_options {
+    display: flex;
+    gap: 10px;
+}
+
+.payment_option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.payment_option.active {
+    border-color: #00B050;
+    background: #e6f7ed;
+    color: #00B050;
+}
+
+.payment_qr {
+    text-align: center;
+    background: #e6f7ed;
+    border: 1.5px dashed #00B050;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.payment_qr img {
+    width: 180px;
+    height: 180px;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Nút đặt hàng */
+.checkout_submit {
+    margin-top: 10px;
+    background: #00B050;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.checkout_submit:hover {
+    background: #009146;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .checkout_model {
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkout_close {
+    width: 25px;
+    height: 25px;
+    background-color: #aaa;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+}

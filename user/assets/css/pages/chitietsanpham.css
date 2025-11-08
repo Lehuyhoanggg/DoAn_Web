@@ -139,6 +139,7 @@
      font-size: 15px;
      background-color: #00B050;
      color: white;
+     border: 1px solid #ddd;
  }
 
  .chitietsanpham_muangay img {
@@ -184,7 +185,7 @@
  .chitietsanpham-left_button button {
      width: 45%;
      height: 30px;
-
+    font-size: 14px;
  }
 
  .chitietsanpham_thongso {
@@ -197,7 +198,7 @@
  .chitietsanpham_thongso li {
      display: flex;
      justify-content: space-between;
-     border-bottom: 1px solid;
+     border-bottom: 1px solid #e0e0e0;
      padding: 10px;
  }
 
@@ -207,14 +208,14 @@
 
  .chitietsanpham_thongtin {
      display: none;
+     flex-direction: column;
      min-height: 400px;
      font-size: 17px;
+
  }
 
  .chitietsanpham_thongtin img {
-     width: 90%;
-     margin: 10px auto;
-     background-color: red;
+     width: 100%;
  }
 
  .chitietsanpham_img_button-left {
@@ -239,4 +240,42 @@
      padding: 3px;
      border: none;
      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+ }
+
+ .display_img {
+     height: 100vh;
+     width: 100vw;
+     z-index: 10;
+     background: rgba(0, 0, 0, 0.3);
+     position: fixed;
+     top: 0;
+     left: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .display_img img {
+     height: 85%;
+     aspect-ratio: 16 / 9;
+     background-color: red;
+ }
+
+ .display_img button {
+     background-color: transparent;
+     color: white;
+     border: none;
+     font-size: 40px;
+ }
+
+ .display_button-left {
+     position: fixed;
+     top: 50%;
+     left: 100px;
+ }
+
+ .display_button-right {
+     position: fixed;
+     top: 50%;
+     right: 100px;
  }

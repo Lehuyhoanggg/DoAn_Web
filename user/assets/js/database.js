@@ -7,7 +7,7 @@ const Initial = [
     thumbnail: "../user/assets/image/sanpham/sp1.png",
     price: 3499000,
     salebefore: 3999000,
-    baseprice : 2000000, // giá nhập vào 
+    baseprice: 2000000, // giá nhập vào 
     listVersions: [
       { name: "ram", option: ["6GB", "12GB", "24GB"] },
       { name: "dung lượng", option: ["128GB", "256GB"] }
@@ -15,33 +15,31 @@ const Initial = [
     listColors: ["Cam Vũ Trụ", "Xanh Đậm", "Bạc"],
     versions: [
       {
-        storage: "256GB",
-        colors: [
-          {
-            color: "Cam Vũ Trụ",
-            price: 34990000,
-            stock: 10,
-            status: true,
-            sold: "4.3k",
-            version: ["6GB", "128GB"],
-          },
-          {
-            color: "Xanh Đậm",
-            price: 34990000,
-            stock: 20,
-            status: false,
-            sold: "4.9k",
-            version: ["12GB", "256GB"],
-          },
-          {
-            color: "Bạc",
-            price: 34990000,
-            stock: 30,
-            status: false,
-            sold: "4.6k",
-            version: ["6GB", "256GB"],
-          },
-        ],
+        id: "1-cam-6-128",
+        color: "Cam Vũ Trụ",
+        price: 34990000,
+        stock: 10,
+        status: true,
+        sold: "4.3k",
+        version: ["6GB", "128GB"],
+      },
+      {
+        id: "1-xanh-12-256",
+        color: "Xanh Đậm",
+        price: 34990000,
+        stock: 20,
+        status: false,
+        sold: "4.9k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "1-bac-6-256",
+        color: "Bạc",
+        price: 34990000,
+        stock: 30,
+        status: false,
+        sold: "4.6k",
+        version: ["6GB", "256GB"],
       },
     ],
     imgDetail: [
@@ -77,10 +75,9 @@ const Initial = [
                     realme 14T 5G trang bị bộ vi xử lý Dimensity 6300 5G mạnh mẽ, được sản xuất trên tiến trình 6 nm
                     tiên tiến, mang lại tốc độ xử lý 2.4 GHz và tối ưu hóa điện năng. Với kết nối 5G siêu tốc, bạn có
                     thể tải xuống nhanh chóng với tốc độ lên đến 3.3 Gb/s. Hiệu năng chơi game cũng được cải thiện, mượt
-                    mà hơn 10% so với thế hệ trước, mang đến trải nghiệm giải trí liên tục và không gián đoạn.` ,
-
-  }
-
+                    mà hơn 10% so với thế hệ trước, mang đến trải nghiệm giải trí liên tục và không gián đoạn.    
+                     <img src="/user/assets/image/sanpham/1/thongtin.jpg" alt="" > `  ,
+  },
 ];
 let listTaiKhoan = [
   {
@@ -93,6 +90,39 @@ let listTaiKhoan = [
     status: true,
   },
 ];
+
+
+export function timPhienBanSanPham(id) {
+  const listSanPham = getListSanPham();
+  for (let sp of listSanPham) {
+    for (let sanpham of sp.versions) {
+      if (sanpham.id === id) {
+        return sanpham;
+      }
+    }
+  }
+  return null;
+}
+
+
+export function timSanPhamTheoTen(ten){
+  
+}
+
+export function laySanPhamBangLuaChon(id, listpb, mau) {
+  let sanpham = timSanPham(id);
+  for (let sp of sanpham.versions) {
+    if (sp.color === mau && sp.version.length === listpb.length &&
+      sp.version.every((v, i) => v === listpb[i])) {
+      if (sp.stock <= 0) {
+          return;
+        }
+        sp.stock--;
+      return sp;
+    }
+  }
+  return null;
+}
 
 export function setListSanPham(mangsp) {
   localStorage.setItem("listSanPham", JSON.stringify(mangsp));
@@ -115,7 +145,7 @@ export function initialTaiKhoan() {
 }
 
 export function timSanPham(id) {
-  const listsp = getListSanPham(); // giả sử trả về mảng sản phẩm
+  const listsp = getListSanPham();
   for (const sanpham of listsp) {
     if (sanpham.id === id) {
       return sanpham;

@@ -100,7 +100,7 @@
 
 
 .form_group input:focus {
-    border-color: #d9534f;
+    border-color: #00B050;
     outline: none;
     box-shadow: 0 0 5px rgba(217, 83, 79, 0.3);
 }

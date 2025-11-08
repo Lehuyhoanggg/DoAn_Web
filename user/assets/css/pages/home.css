@@ -35,86 +35,99 @@
 
 .home_sanpham_list_item {
     flex-basis: 19%;
-    height: 350px;
+    height: 360px;
     display: flex;
     border: 1px solid rgb(221, 218, 218);
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
     gap: 10px;
-    align-items: center;
-    padding-bottom: 5px;
 }
 
-.home_sanpham_list_item .sanpham_name{
-    padding: 0 10px;
-}
-.sanpham_bottom_ctn {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-}
 
 .sanpham_name {
     margin: 5px 0;
     word-wrap: break-word;
-    min-height: 50px;
+    min-height: 28px;
     font-size: 14px;
     font-weight: 200;
+    padding: 0 10px;
 }
 
 .sanpham_prime {
     color: red;
     font-size: 18px;
     font-weight: bold;
+    margin: 0 10px;
 }
 
 .sanpham_giamgia {
     color: #9d9c99;
     font-size: 15px;
     text-decoration: line-through;
+    padding: 0 10px;
+    margin-top: -5px;
 }
 
 .sanpham_thongso {
     display: flex;
     gap: 10px;
     font-size: 16px;
+    padding: 0 10px;
 }
 
 .sanpham_daban {
     font-size: 13px;
     font-weight: 100;
+    padding: 0 10px;
+}
+
+.donvi {
+    color: red;
+    vertical-align: top;
+    text-decoration: underline;
+    font-size: 13px;
+}
+
+.donvi-sale {
+    color: #9d9c99;
+    vertical-align: top;
+    text-decoration: underline;
+    font-size: 13px;
+}
+
+.sanpham_muangay {
+    width: 90%;
+    height: 30px;
+    background-color: #00B050;
+    font-size: 16px;
+    border: 1px solid rgb(221, 218, 218);
+    box-shadow: 0 1px 4px rgba(127, 125, 125, 0.4);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 auto;
 }
 
 .sanpham_thongso_item {
     background-color: #f1f1f1;
 }
 
-.sanpham_muangay {
-    width: 150px;
-    height: 30px;
-    background-color: #00B050;
-    margin: auto;
-    color: white;
-    font-weight: 400;
-}
-.sanpham_muangay:hover{
+
+.sanpham_muangay:hover {
     background-color: #067d3c;
 }
 
 .home_sanpham_list_item_img {
-    height: 50%;
+    width:  100%;
     border-radius: inherit;
-    width: 100%;
+
 }
 
-.sanpham_muangay {
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
 
 .home_sanpham_phantrang {
     display: flex;
@@ -131,6 +144,9 @@
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
+    border: 2px solid rgb(221, 218, 218);
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .home_sanpham_phantrang button:hover {
@@ -199,109 +215,127 @@
     width: 100%;
 }
 
-.home_spnoibat_bottom_img {
-    height: 500px;
-    width: 380px;
-    object-fit: cover;
-    object-position: top;
-}
-
-.home_spnoibat_bottom_list {
-    display: flex;
+.home_spnoibat_bottom .home_sanpham_list{
+     display: flex;
     list-style: none;
     height: 100%;
     width: 100%;
     gap: 10px;
     padding: 10px;
-    align-items: center;
-    justify-content: center;
 }
 
-.home_spnoibat_bottom_list_item {
+
+.home_spnoibat_bottom .home_sanpham_list_item_img {
+    height: 185px;
+    width: 185px;
+}
+
+.home_spnoibat_bottom .home_sanpham_list_item {
     height: 100%;
-    flex: 1;
-    border: 1px solid rgb(221, 218, 218);
+    min-width: 185px;
 }
-
-
-.home_spnoibat_bottom_list_item .sanpham_prime {
-    margin: 10px 0;
-}
-
-.home_spnoibat_bottom_list_item .sanpham_giamgia {
-    margin: 8px 0;
-}
-
-.home_spnoibat_bottom_list_item .sanpham_thongso {
-    margin: 10px 0;
-}
-
-.home_spnoibat_bottom_list_item .sanpham_daban {
-    margin: 10px 0;
-}
-
-.home_spnoibat_bottom_list_item img {
-    width: 100%;
-}
-
-
 
 .home_tintuc {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
 }
 
 .home_tintuc h2 {
-    height: 40px;
-    display: flex;
-    justify-content: start;
-    padding: 0 10px;
-    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.home_tintuc h2::after {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    content: "";
+    height: 3px;
+    width: 80%;
+    background-color: #00B050;
 }
 
 .home_tintuc_list {
     display: flex;
-    list-style: none;
-    padding: 10px;
-    justify-content: space-evenly;
-    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .home_tintuc_list_item {
-    width: 24%;
-    height: 220px;
+    width: calc(25% - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home_tintuc_list_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .home_tintuc_list_item img {
-    
-    aspect-ratio: 16 / 9;
     width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.home_tintuc_list_item-tieude {
-    width: 100%;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
+.home_tintuc_list_item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.home_tintuc_list_item p {
     font-size: 14px;
+    color: #444;
 }
 
-.xemthem {
-    display: block;
-    font-weight: 600;
-    margin: 10px auto;
-    margin-top: 0;
-    text-align: center;
+.home_tintuc_list_item a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-.xemthem a {
-    font-size: 15px;
-    color: #00B050;
-}
-
-.home_tintuc_xemthem a:hover {
+.home_tintuc_list_item a:hover {
+    color: #0056b3;
     text-decoration: underline;
+}
+
+.xem-them {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.xem-them a {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #00B050;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.xem-them a:hover {
+    background-color: #00993d;
+}
+
+.news-list {
+    display: none;
 }

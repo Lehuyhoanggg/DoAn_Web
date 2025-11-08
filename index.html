@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/user/assets/image/logo.png">
     <link rel="preload" href="user/assets/css/layout/header.css" as="style">
     <link rel="stylesheet" href="user/assets/css/layout/header.css">
     <link rel="stylesheet" href="user/assets/css/layout/reset.css">
@@ -12,18 +13,20 @@
     <link rel="stylesheet" href="user/assets/css/layout/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="user/assets/css/taisudung/thongbao.css">
-    <link rel="icon" type="image/png" href="/user/assets/image/logo.png">
     <link rel="stylesheet" href="user/assets/css/pages/DangNhap.css">
     <link rel="stylesheet" href="user/assets/css/pages/DangKi.css">
     <link rel="stylesheet" href="user/assets/css/pages/giohang.css">
     <link rel="stylesheet" href="user/assets/css/pages/account.css">
     <link rel="stylesheet" href="user/assets/css/pages/chitietsanpham.css">
+    <link rel="stylesheet" href="user/assets/css/pages/timkiem.css">
+    <link rel="stylesheet" href="user/assets/css/pages/danhsachtintuc.css">
+    <link rel="stylesheet" href="./user/assets/css/pages/thanhtoan.css">
     <title>Bao store</title>
 </head>
 
 <body>
     <div class="overlay"></div>
-    <div style=" min-height: 120px"></div>
+
     <header class="header">
 
         <div class="header_top">
@@ -77,6 +80,7 @@
 
 
                 <div class="header_top_right_giohang">
+                    <div class="header_top_right_giohang_sosanpham"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="9" cy="21" r="1"></circle>
@@ -108,7 +112,7 @@
     </header>
     <!--  -->
     <main class="main">
-        <!-- ////////////////////// home -->
+
 
         <div class="home">
             <section class="home_banner">
@@ -133,22 +137,21 @@
                 <div class="home_spnoibat_bottom">
 
                     <img class="home_spnoibat_bottom_img" src="user/assets/image/banner/vuottroi.png" alt="">
-                    <ul class="home_spnoibat_bottom_list">
-                        <li class="home_spnoibat_bottom_list_item">
-                            <img src="user/assets/image/sanpham/sp1.png" alt="">
-                            <div class="sanpham_bottom_ctn">
+                    <ul class="home_sanpham_list">
 
-                                <p class="sanpham_name">Samsung Galaxy S25 FE 5G 8GB/256GB</p>
-                                <div class="sanpham_thongso">
-                                    <span class="sanpham_thongso_item">Full HD+</span>
-                                    <span class="sanpham_thongso_item">6.7'</span>
-                                </div>
+                        <li data-id="1" class="home_sanpham_list_item">
+                            <img class="home_sanpham_list_item_img" src="user/assets/image/sanpham/sp1.png" alt="">
 
-                                <span class="sanpham_prime">9999999999</span>
-                                <span class="sanpham_giamgia">13772777</span>
+                            <p class="sanpham_name">Samsung Galaxy S25 FE 5G 8GB/256GB</p>
+                            <div class="sanpham_thongso">
+                                <span class="sanpham_thongso_item">Full HD+</span>
+                                <span class="sanpham_thongso_item">6.7'</span>
+                            </div>
 
-                                <p class="sanpham_daban">Đã bán 7k</p>
+                            <span class="sanpham_prime">9999999<span class="donvi">đ</span> </span>
+                            <span class="sanpham_giamgia">8888888<span class="donvi-sale">đ</span> </span>
 
+                            <p class="sanpham_daban">Đã bán 7k</p>
                                 <button class="sanpham_muangay">
                                     <svg width="25" height="25" viewBox="0 0 100 100"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -167,210 +170,20 @@
                             </div>
 
                         </li>
-                        <li class="home_spnoibat_bottom_list_item">
-                            <img src="user/assets/image/sanpham/sp1.png" alt="">
-                            <div class="sanpham_bottom_ctn">
 
-                                <p class="sanpham_name">Samsung Galaxy S25 FE 5G 8GB/256GB</p>
-                                <div class="sanpham_thongso">
-                                    <span class="sanpham_thongso_item">Full HD+</span>
-                                    <span class="sanpham_thongso_item">6.7'</span>
-                                </div>
 
-                                <span class="sanpham_prime">9999999999</span>
-                                <span class="sanpham_giamgia">13772777</span>
-
-                                <p class="sanpham_daban">Đã bán 7k</p>
-
-                                <button class="sanpham_muangay">
-                                    <svg width="25" height="25" viewBox="0 0 100 100"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100" height="100" fill="transparent" />
-                                        <g fill="none" stroke="white" stroke-width="7" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M10 40 H 40" />
-                                            <path d="M15 50 H 35" />
-                                            <path d="M40 23 L 45 28 H 85 L 77 58 H 50 L 45 73" />
-                                            <path d="M77 58 L 82 73" />
-                                            <circle cx="50" cy="80" r="5" />
-                                            <circle cx="82" cy="80" r="5" />
-                                        </g>
-                                    </svg> Mua ngay
-                                </button>
-                            </div>
-
-                        </li>
-                        <li class="home_spnoibat_bottom_list_item">
-                            <img src="user/assets/image/sanpham/sp1.png" alt="">
-                            <div class="sanpham_bottom_ctn">
-
-                                <p class="sanpham_name">Samsung Galaxy S25 FE 5G 8GB/256GB</p>
-                                <div class="sanpham_thongso">
-                                    <span class="sanpham_thongso_item">Full HD+</span>
-                                    <span class="sanpham_thongso_item">6.7'</span>
-                                </div>
-
-                                <span class="sanpham_prime">9999999999</span>
-                                <span class="sanpham_giamgia">13772777</span>
-
-                                <p class="sanpham_daban">Đã bán 7k</p>
-
-                                <button class="sanpham_muangay">
-                                    <svg width="25" height="25" viewBox="0 0 100 100"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100" height="100" fill="transparent" />
-                                        <g fill="none" stroke="white" stroke-width="7" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M10 40 H 40" />
-                                            <path d="M15 50 H 35" />
-                                            <path d="M40 23 L 45 28 H 85 L 77 58 H 50 L 45 73" />
-                                            <path d="M77 58 L 82 73" />
-                                            <circle cx="50" cy="80" r="5" />
-                                            <circle cx="82" cy="80" r="5" />
-                                        </g>
-                                    </svg> Mua ngay
-                                </button>
-                            </div>
-
-                        </li>
-                        <li class="home_spnoibat_bottom_list_item">
-                            <img src="user/assets/image/sanpham/sp1.png" alt="">
-                            <div class="sanpham_bottom_ctn">
-
-                                <p class="sanpham_name">Samsung Galaxy S25 FE 5G 8GB/256GB</p>
-                                <div class="sanpham_thongso">
-                                    <span class="sanpham_thongso_item">Full HD+</span>
-                                    <span class="sanpham_thongso_item">6.7'</span>
-                                </div>
-
-                                <span class="sanpham_prime">9999999999</span>
-                                <span class="sanpham_giamgia">13772777</span>
-
-                                <p class="sanpham_daban">Đã bán 7k</p>
-
-                                <button class="sanpham_muangay">
-                                    <svg width="25" height="25" viewBox="0 0 100 100"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100" height="100" fill="transparent" />
-                                        <g fill="none" stroke="white" stroke-width="7" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M10 40 H 40" />
-                                            <path d="M15 50 H 35" />
-                                            <path d="M40 23 L 45 28 H 85 L 77 58 H 50 L 45 73" />
-                                            <path d="M77 58 L 82 73" />
-                                            <circle cx="50" cy="80" r="5" />
-                                            <circle cx="82" cy="80" r="5" />
-                                        </g>
-                                    </svg> Mua ngay
-                                </button>
-                            </div>
-
-                        </li>
                     </ul>
 
                 </div>
 
             </section>
-            <section class="home_tintuc">
-                <h2>Tin tức</h2>
-                <ul class="home_tintuc_list">
-                    <li class="home_tintuc_list_item">
-                        <img src="user/assets/image/tintuc/tintuc1.jpg" alt="">
-                        <p class="home_tintuc_list_item-tieude">
-                            So sánh các loại iPad: Pro, Air, Mini, Gen - Chọn iPad nào phù hợp?
-                        </p>
-                    </li>
-                    <li class="home_tintuc_list_item">
-                        <img src="user/assets/image/tintuc/tintuc1.jpg" alt="">
-                        <p class="home_tintuc_list_item-tieude">
-                            So sánh các loại iPad: Pro, Air, Mini, Gen - Chọn iPad nào phù hợp?
-                        </p>
-                    </li>
-                    <li class="home_tintuc_list_item">
-                        <img src="user/assets/image/tintuc/tintuc1.jpg" alt="">
-                        <p class="home_tintuc_list_item-tieude">
-                            So sánh các loại iPad: Pro, Air, Mini, Gen - Chọn iPad nào phù hợp?
-                        </p>
-                    </li>
-                    <li class="home_tintuc_list_item">
-                        <img src="user/assets/image/tintuc/tintuc1.jpg" alt="">
-                        <p class="home_tintuc_list_item-tieude">
-                            So sánh các loại iPad: Pro, Air, Mini, Gen - Chọn iPad nào phù hợp?
-                        </p>
-                    </li>
-                </ul>
-                <div class="xemthem">
-                    <a>Xem thêm ></a>
-                </div>
-
-            </section>
-
-            <section class="home_goiy">
-
-            </section>
 
         </div>
-        <!-- ////////////// home  -->
 
-        <!-- ///////// chi tiet san pham -->
-        <div class="chitietsanpham">
-            <div class="chitietsanpham-left">
-                <div class="chitietsanpham_img">
-                    <div class="chitietsanpham_img-list">
-                     
-                    </div>
 
-                    <button class="chitietsanpham_img_button-left">  < </button>
-                    <button class="chitietsanpham_img_button-right"> > </button>
-
-                </div>
-                <div class="chitietsanpham_img-mini">
-                    <div class="chitietsanpham_img-mini_list">
-                     
-                    </div>
-                </div>
-                <div class="chitietsanpham-left_button">
-                    <button class="chitietsanpham_thongso-button">Thông số sản phẩm</button>
-                    <button class="chitietsanpham_thongtin-button">Thông tin sản phẩm</button>
-                </div>
-                <ul class="chitietsanpham_thongso">
-                    
-                </ul>
-                <p class="chitietsanpham_thongtin">
-
-                </p>
-            </div>
-            <div class="chitietsanpham-right">
-                <p class="chitietsanpham_name"></p>
-
-                <div class="chitietsanpham_luachonphienban">
-                    <!-- <div class="chitietsanpham_luachonphienban-list">
-                        <button class="chitietsanpham_luachonphienban-item">64GB</button>
-                        <button class="chitietsanpham_luachonphienban-item">128GB</button>
-                    </div>
-                    <div class="chitietsanpham_luachonphienban-list">
-                        <button class="chitietsanpham_luachonphienban-item">Ram 4</button>
-                        <button class="chitietsanpham_luachonphienban-item">Ram 6</button>
-                        <button class="chitietsanpham_luachonphienban-item">Ram 12</button>
-                    </div> -->
-                </div>
-                <div class="chitietsanpham_luachonmau">
-                    <div class="chitietsanpham_luachonmau-list">
-                       
-                    </div>
-                </div>
-
-                <p class="chitietsanpham_gia"></p>
-                <p class="chitietsanpham_gia-sale"></p>
-                <div class="chitietsanpham-right_mua">
-                    <button class="chitietsanpham_giohang">Thêm vào giỏ</button>
-                    <button class="chitietsanpham_muangay"> Mua Ngay</button>
-                </div>
-                <p> Gọi đặt mua 01234587559 (8:00 - 21:30)</p>
-            </div>
-        </div>
 
     </main>
+    
     <footer>
         <div class="footercontainer">
             <div class="footer-main">
@@ -422,24 +235,16 @@
                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRH3w083m600TgHq1e64l0zAlfeosu2TKhVO0RFsGkzuimTfrLYjL7imzwjIGzoQvPYt7GzdNJvApaZZ5fwi92MhOo8JxeJoScxHfUdopvolSBbvSKX4XzrwdYJnnuavAjJq4GcdBcmU4/s16000/payment_1.png"
                         alt="" class="anh"></div>
             </div>
-
-            <!-- ////// chi tiet san pham  -->
-
-
-
-
-
+        </div>
     </footer>
 
-    <!-- <script> localStorage.clear()</script> -->
+    <!-- <script> localStorage.clear() </script> -->
 
-
+    <script src="user/assets/js/home.js" type="module"></script>
 
     <script src="user/assets/js/header.js" type="module"> </script>
 
     <script src="user/assets/js/database.js" type="module"></script>
-
-    <script src="user/assets/js/home.js" type="module"></script>
 
     <script src="user/assets/js/chitietsanpham.js" type="module"></script>
 
@@ -450,6 +255,10 @@
     <script src="user/assets/js/account.js" type="module"></script>
 
     <script src="user/assets/js/GioHang.js" type="module"></script>
+
+    <script src="user/assets/js/thanhtoan.js" type="module"></script>
+
+    <script src="user/assets/js/danhsachtintuc.js" type="module"></script>
 
 </body>
 

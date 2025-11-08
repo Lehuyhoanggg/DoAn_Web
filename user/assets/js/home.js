@@ -7,8 +7,10 @@ import {
 
 import { tatCuon } from "./header.js";
 
+
+
+
 window.onload = () => {
-    localStorage.clear();
     initialTaiKhoan(); // thêm vào local nếu chưa có
     initialSanPham(); /// thêm vào local nếu chưa 
     listSanPham = getListSanPham(); /// lấy list sản phẩm
@@ -17,6 +19,11 @@ window.onload = () => {
     hienThiSanPham();
     taoThanhPhanTrang();
 };
+
+
+document.querySelector(".header_top_left").addEventListener('click', function () {
+    window.location.reload()
+});
 
 /// tạo 1 thẻ sản phẩm và vứt vào list sản phẩm ở home
 const home_sp_list = document.querySelector(".home_sanpham_list");
@@ -37,16 +44,18 @@ function them1sanpham(sanpham) {
 
     let primeDv = document.createElement("span");
     primeDv.textContent = "đ";
-    primeDv.style.fontSize = "13px";
-    primeDv.style.textDecoration = "underline";
-    primeDv.style.verticalAlign = "top";
+    primeDv.className = "donvi";
 
+    let price_sale = document.createElement('SPAN');
+    price_sale.textContent = sanpham.salebefore;
+    price_sale.innerHTML += `<span class="donvi-sale">đ</span>`;
+    price_sale.className = "sanpham_giamgia";
     sanpham_item_prime.appendChild(primeDv);
-
 
     sanpham_item.appendChild(sanpham_item_img);
     sanpham_item.appendChild(sanpham_item_name);
     sanpham_item.appendChild(sanpham_item_prime);
+    sanpham_item.appendChild(price_sale);
 
     const nutMuaNgayHTML = `
         <button class="sanpham_muangay">
@@ -61,7 +70,8 @@ function them1sanpham(sanpham) {
                     <circle cx="82" cy="80" r="5" />
                 </g>
             </svg> Mua ngay
-        </button>`;
+        </button>
+            `;
     sanpham_item.setAttribute("data-id", sanpham.id);
     sanpham_item.innerHTML += nutMuaNgayHTML;
     home_sp_list.appendChild(sanpham_item);
@@ -93,13 +103,13 @@ function taoThanhPhanTrang() {
 /// khi ấn vào danh mục menu thì cuộn tới sản phẩm để xem sản phẩm
 const topmenu = document.querySelector(".topMenu_list");
 topmenu.addEventListener("click", function (e) {
-    if (home.style.display==='none' && e.target.textContent!="Trang chủ"){
+    if (home.style.display === 'none' && e.target.textContent != "Trang chủ") {
         return;
     }
     if (e.target.className === "topMenu_list_item") {
         danhmuc = e.target.textContent;
         if (danhmuc === "Trang chủ") {
-            window.location.href = "index.html";
+            window.location.reload();
         }
         page_number = 1;
         hienThiSanPham();
@@ -122,16 +132,15 @@ function hienThiSanPham() {
     // làm mới
     home_sp_list.innerHTML = ``;
     // lọc sản phẩm theo danh mục
-    const mangThoaMan = listSanPham.filter((sanpham) => {
+    const mangThoaMan = listSanPham.filter(sanpham => {
         return sanpham.category === danhmuc;
     });
-
     if (mangThoaMan.length === 0) { // hiệu ứng không tìm thấy sản phẩm
         khongtimthaysp(home_sp_list);
     }
 
     for (let i = 0; i < 10; i++) {
-        let index = (page_number - 1) * 8 + i;
+        let index = (page_number - 1) * 10 + i;
         if (index < mangThoaMan.length) {
             them1sanpham(mangThoaMan[index]);
         }
@@ -185,24 +194,29 @@ function khongtimthaysp(ctn) {
 const home = document.querySelector(".home");
 const chitietsanpham = document.querySelector(".chitietsanpham");
 import { timSanPham } from "./database.js";
-import {themThongTinSpVaoGiaoDien} from"./chitietsanpham.js";
+import { themThongTinSpVaoGiaoDien } from "./chitietsanpham.js";
 function hienThiChiTietSanPham(sp) { /// sp la 1 the li
     const sanpham = timSanPham(sp.dataset.id);
     if (sanpham === null) {
         return;
     }
     home.style.display = 'none';
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+
     chitietsanpham.style.display = 'flex';
     themThongTinSpVaoGiaoDien(sanpham);
 }
 
 
-const listsanpham = document.querySelector(".home_sanpham_list");
-listsanpham.addEventListener('click', function (e) {
-    if (e.target.closest(".sanpham_muangay")) { /// nếu nhấn vào mua ngay thì chặn lại
-        return;
-    }
-    if (e.target.closest(".home_sanpham_list_item")) {
-        hienThiChiTietSanPham(e.target.closest(".home_sanpham_list_item"));
-    }
+const listsanpham = document.querySelectorAll(".home_sanpham_list");
+listsanpham.forEach(list => {
+    list.addEventListener('click', function (e) {
+        if (e.target.closest(".home_sanpham_list_item")) {
+            hienThiChiTietSanPham(e.target.closest(".home_sanpham_list_item"));
+        }
+    });
 });

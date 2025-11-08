@@ -11,6 +11,7 @@
     overflow: hidden;
     z-index: 9999;
     transition: 0.2s ease;
+    right: -600px;
 }
 
 
@@ -63,9 +64,8 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    justify-content: end;
-    padding: 10px;
+    padding: 15px 0;
+    justify-content: space-between;
 }
 
 .giohang_mid_donhang_top {
@@ -73,21 +73,9 @@
     justify-content: space-between;
 }
 
-.giohang_mid_donhang_ghichu {
-    display: flex;
-    gap: 3px;
-}
-
-.giohang_mid_donhang_ghichu_icon {
-    height: 20px;
-    width: 20px;
-}
-
-.giohang_mid_donhang_ghichu_p {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 300px;
-    overflow: hidden;
+.giohang_mid_donhang_top_gia {
+    color: red;
+    font-weight: bold;
 }
 
 .giohang_mid_donhang_chucnang {
@@ -101,6 +89,15 @@
     color: white;
     font-weight: 300;
     font-size: 13px;
+    border: 1px solid rgb(221, 218, 218);
+    box-shadow: 0 1px 4px rgba(127, 125, 125, 0.4);
+}
+
+.donvi {
+    color: red;
+    text-decoration: underline;
+    font-size: 14px;
+    margin: 2px;
 }
 
 .giohang_mid_donhang_chucnang_soluong {
@@ -155,9 +152,26 @@
     font-weight: 600;
 }
 
+.giohang_bottom_top_thanhtien {
+    color: red;
+    font-weight: bold;
+}
+
 .giohang_bottom_bottom button {
-    width: 48%;
+    width: 100%;
     height: 70%;
     background-color: #00B050;
     color: white;
+}
+
+.giohang_trong {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+.giohang_mid_donhang_phienban{
+    font-size: 14px;
 }

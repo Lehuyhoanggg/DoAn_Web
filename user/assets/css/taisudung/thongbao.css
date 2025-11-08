@@ -1,25 +1,25 @@
 .kotimthaysp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    width: 100%;
-    padding: 40px 20px;
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .kotimthaysp1 {
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
 }
 
 .kotimthaysp2 {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
 }
 
 @keyframes fadeIn {
@@ -27,8 +27,83 @@
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* box thông báo đăng nhập đăng kí */
+.boxThongBao {
+  background-color: #fff;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 99999;
+  min-width: 350px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 15px 20px;
+  display: none;
+
+
+  opacity: 1;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.boxThongBao_noidung h4 {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.boxThongBao_noidung p {
+  color: #666;
+  font-size: 16px;
+}
+
+.boxThongBao_icon {
+  font-size: 24px;
+  color: #00B050;
+  margin-right: 15px;
+}
+
+.boxThongBao_dong {
+  background-color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 26px;
+  border-radius: 50%;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.progress-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  transition: width 3s linear;
+  border-radius: 0 0 8px 8px;
+}
+
+.boxThongBao.hide {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 }
