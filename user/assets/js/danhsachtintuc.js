@@ -1,11 +1,95 @@
 const newsData = [
     {
-        id : "1",
+        id: "1",
         img: "user/assets/image/tintuc/news7.png",
         title: "Motorola Razr 60 sở hữu thiết kế gập vỏ sò cao cấp, camera 50MP màu chuẩn Pantone.",
         meta: "Hồ Xuân Lý • 6/11/2025",
         desc: "Motorola đánh dấu sự trở lại mạnh mẽ tại thị trường Việt Nam với mẫu smartphone gập, motorola Razr 60 và là sản phẩm cao cấp nhất trong lần ra mắt này.",
-        link: "#"
+        link: `<h2>Samsung Galaxy S25 Ultra có gì mới?</h2>
+                    <h4>Hiệu năng vượt trội với Snapdragon 8 Elite, RAM 12GB, bộ nhớ 1TB</h4>
+                    <p>Samsung Galaxy S25 Ultra được trang bị chip Snapdragon 8 Elite for Galaxy, phiên bản ép xung mạnh
+                        mẽ, đem lại hiệu năng hàng đầu, xử lý nhanh chóng hầu hết các tác vụ nặng, từ công việc hàng
+                        ngày đến chơi game đồ họa cao, chỉnh sửa video 4K.
+
+                        RAM 12GB, bộ nhớ trong lên đến 1TB cho phép bạn lưu trữ khối lượng lớn dữ liệu và đảm bảo khả
+                        năng đa nhiệm mượt mà, chuyển đổi giữa các ứng dụng nhanh chóng mà không lo giật, lag. Máy chạy
+                        Android 15 và tích hợp nhiều tính năng AI thông minh, hỗ trợ công việc và giải trí hiệu quả.
+                    </p>
+                    <h4>Camera 200MP, zoom 5x siêu nét</h4>
+                    <p>Samsung Galaxy S25 Ultra được trang bị hệ thống camera đột phá, mang đến trải nghiệm nhiếp ảnh và
+                        quay phim chuyên nghiệp. Camera chính 200MP, tích hợp công nghệ chống rung quang học OIS nâng
+                        cấp. Nhờ cảm biến và thuật toán được nâng cấp, khả năng chụp ảnh trong điều kiện thiếu sáng được
+                        cải thiện đáng kể, giúp ảnh sáng rõ và giữ lại nhiều chi tiết hơn. Camera góc siêu rộng 50MP mở
+                        rộng khung hình, cho phép bạn ghi lại toàn cảnh một cách sống động. Hai camera telephoto 10MP và
+                        50MP, hỗ trợ zoom quang học 3x và 5x, kết hợp với công nghệ AI, cho phép chụp ảnh rõ nét các chủ
+                        thể ở xa.
+
+                        Chế độ Nightography được cải tiến, tối ưu chụp đêm, mang lại ảnh chụp sáng rõ, chi tiết. Tính
+                        năng ProVideo cho phép quay video 8K 60fps, chống rung OIS, ghi lại mọi khoảnh khắc chất lượng
+                        cao. Sự kết hợp hoàn hảo giữa phần cứng và phần mềm, cùng công nghệ AI tiên tiến, biến Galaxy
+                        S25 Ultra thành một studio di động mạnh mẽ.</p>
+                    <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
+                            src="/user/assets/image/tintuc/samsung3.jpg" alt="?"></div>
+                    <h4>Thiết kế tinh tế, khung titan siêu bền</h4>
+                    <p>Samsung Galaxy S25 Ultra kế thừa thiết kế tinh tế của Samsung Galaxy S24 Ultra nhưng được nâng
+                        cấp đáng kể. Khung viền titanium không chỉ mang lại vẻ ngoài sang trọng, cao cấp mà còn bền bỉ
+                        hơn nhôm thông thường. Mặt lưng kính mờ hạn chế bám vân tay, cho cảm giác cầm nắm thoải mái.
+
+                        Độ mỏng giảm 15% so với thế hệ trước, thuận tiện khi cầm nắm và mang theo. Kính cường lực
+                        Gorilla Glass Victus 2 bảo vệ màn hình, giảm thiểu nứt vỡ. Sự đa dạng về màu sắc giúp người dùng
+                        thể hiện phong cách cá nhân.</p>
+                    <h4>Pin lớn 5000mAh, sạc nhanh 45W, sạc ngược không dây tiện lợi</h4>
+                    <p>Samsung Galaxy S25 Ultra sở hữu viên pin dung lượng lớn 5000mAh, có thể đáp ứng tốt nhu cầu sử
+                        dụng trong ngày với các tác vụ thông thường. Việc tích hợp chip Snapdragon 8 Elite for Galaxy
+                        tiết kiệm năng lượng càng tối ưu hóa thời lượng pin, kéo dài thời gian trải nghiệm.
+
+                        Hơn nữa, công nghệ sạc nhanh 45W qua cổng Type-C giúp nạp đầy pin nhanh chóng, tiết kiệm thời
+                        gian chờ đợi. Ngoài ra, S25 Ultra còn hỗ trợ sạc không dây và sạc ngược không dây, mang đến sự
+                        tiện lợi và linh hoạt cho người dùng</p>
+                    <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
+                            src="/user/assets/image/tintuc/samsung3.jpg" alt="?"></div>
+                    <h4>Màn hình lớn, sắc nét, hiển thị sống động</h4>
+                    <p>Samsung Galaxy S25 Ultra được trang bị màn hình Dynamic AMOLED 2X kích thước 6.8 inch, độ phân
+                        giải QHD+
+                        (3200 x 1440 pixels) cho hình ảnh sắc nét, chi tiết. Tần số quét 120Hz mang lại trải nghiệm
+                        mượt mà khi cuộn trang, chơi game và xem video.
+
+                        Công nghệ HDR10+ nâng cao độ tương phản, tái tạo màu sắc sống động và chân thực hơn. Màn hình
+                        cong tràn viền Infinity-O không chỉ tạo nên thiết kế hiện đại mà còn tối ưu hóa không gian hiển
+                        thị,
+                        mang lại trải nghiệm thị giác ấn tượng.</p>
+                    <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
+                            src="/user/assets/image/tintuc/samsung4.jpg" alt="?"></div>
+                    <h4>Tính năng AI mới trên Samsung Galaxy S25 Ultra</h4>
+                    <p>Samsung Galaxy S25 Ultra không chỉ là một flagship mạnh mẽ về phần cứng mà còn là một thiết bị
+                        tiên phong trong cuộc đua AI trên smartphone:
+
+                        Bixby nâng cấp: Trợ lý ảo Bixby được cải tiến, hiểu và phản hồi các ngữ cảnh phức tạp hơn, giúp
+                        bạn tương tác với điện thoại một cách tự nhiên và hiệu quả hơn.
+
+                        Hỗ trợ sắc thái giao tiếp: AI hỗ trợ phân tích và đưa ra gợi ý về sắc thái giao tiếp dựa trên
+                        văn bản hoặc giọng nói, giúp bạn giao tiếp hiệu quả hơn.
+
+                        Seamless Actions across Apps (thực hiện tác vụ liên ứng dụng bằng lời nói): Điều khiển điện
+                        thoại bằng giọng nói để thực hiện các tác vụ phức tạp trên nhiều ứng dụng.
+                    </p>
+                    <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
+                            src="/user/assets/image/tintuc/samsung5.jpg" alt="?"></div>
+                    <p>
+                        Khoanh vùng tìm kiếm: Nhanh chóng tìm kiếm thông tin bằng cách khoanh vùng nội dung trên màn
+                        hình.
+                        Tự động tạo ghi chú từ cuộc họp: AI tự động ghi chú những thông tin quan trọng trong cuộc họp,
+                        giúp bạn tiết kiệm thời gian và công sức.
+
+                        Dịch thuật theo thời gian thực: Dịch ngôn ngữ nhanh chóng, chính xác, hỗ trợ giao tiếp với người
+                        nước ngoài.
+
+                        Dự đoán nhu cầu người dùng: AI học hỏi thói quen sử dụng của bạn và dự đoán nhu cầu, đưa ra gợi
+                        ý phù hợp, cá nhân hóa trải nghiệm.
+
+                        Với những tính năng AI tiên tiến này, Samsung Galaxy S25 Ultra không chỉ là một chiếc smartphone
+                        mạnh mẽ mà còn là một trợ lý thông minh và công cụ sáng tạo đắc lực, mang đến trải nghiệm người
+                        dùng vượt trội.</p>`,
     },
     {
         img: "user/assets/image/tintuc/news8.png",
@@ -77,7 +161,7 @@ const div = document.createElement('DIV');
 div.className = "home_tintuc";
 div.innerHTML = ` <h2>Tin tức</h2>
                 <ul class="home_tintuc_list">
-                    <li class="home_tintuc_list_item">
+                    <li data-id="1" class="home_tintuc_list_item">
                         <img src="user/assets/image/tintuc/news1.png" alt="MacBook Pro M5">
                         <div class=tintuc_info>
                             <h3>Apple ra mắt MacBook mới</h3>
@@ -88,7 +172,7 @@ div.innerHTML = ` <h2>Tin tức</h2>
                         </div>
                     </li>
 
-                    <li class="home_tintuc_list_item">
+                    <li data-id="1" class="home_tintuc_list_item">
                         <img src="user/assets/image/tintuc/news2.png" alt="Samsung Galaxy S25 Ultra">
                         <div class="tintuc_info">
                             <h3>Samsung Galaxy S25 Ultra lộ diện</h3>
@@ -253,7 +337,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function timTinTuc(id) {
+    for (let tin of newsData) {
+        if (id === tin.id) {
+            return tin;
+        }
+    }
+    return null;
+}
 
-const div = document.createElement('DIV');
-div.className="tintuc";
+const tintuc = document.createElement('DIV');
+tintuc.className = "tintuc";
+tintuc.innerHTML = ``;
+document.querySelector(".main").appendChild(tintuc);
 
+const tintuc_item = document.querySelectorAll(".home_tintuc_list_item");
+tintuc_item.forEach(item => {
+    item.addEventListener('click', function () {
+        let news = timTinTuc(item.dataset.id);
+        tintuc.innerHTML = news.link;
+        tintuc.style.display = 'block';
+        document.querySelector(".home").style.display = 'none';
+    });
+});

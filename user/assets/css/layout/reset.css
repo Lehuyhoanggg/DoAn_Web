@@ -49,4 +49,5 @@ p{
 .main {
     width: 75%;
     margin: auto;
+    position: relative;
 }
