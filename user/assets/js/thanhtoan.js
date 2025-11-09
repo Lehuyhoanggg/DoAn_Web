@@ -37,15 +37,15 @@ div.innerHTML = `
             </div>
 
             <div class="checkout_row">
-                <span>Tiền hàng (1 món)</span><span>180.000 đ</span>
+                <span>Tổng tiền hàng</span> <span class="checkout_tiensp"></span>
             </div>
 
             <div class="checkout_row">
-                <span>Phí vận chuyển</span><span>30.000 đ</span>
+                <span>Phí vận chuyển</span><span>30.000đ</span>
             </div>
 
             <div class="checkout_row total">
-                <span>Tổng tiền</span><span>210.000 đ</span>
+                <span>Tổng tiền</span><span class="checkout_thanhtien"></span>
             </div>
 
             <hr>
@@ -55,7 +55,7 @@ div.innerHTML = `
                 <span>HÌNH THỨC THANH TOÁN</span>
                 <div class="payment_options">
                     <div class="payment_option active" data-type="Trực tiếp">Thanh toán khi nhận hàng</div>
-                    <div class="payment_option" data-type="Online">Thanh toán online</div>
+                    <div class="payment_option" data-type="online">Thanh toán online</div>
                 </div>
 
                 <div class="payment_qr hidden">
@@ -70,22 +70,25 @@ div.innerHTML = `
     </div>`;
 document.body.appendChild(div);
 
-// chọn hình thức thanh toán
-const paymentOptions = document.querySelectorAll('.payment_option');
-const qrBox = document.querySelector('.payment_qr');
 
-paymentOptions.forEach(opt => {
-    opt.addEventListener('click', () => {
-        paymentOptions.forEach(o => o.classList.remove('active'));
-        opt.classList.add('active');
-        if (opt.dataset.type === 'online') {
-            qrBox.classList.remove('hidden');
-        } else {
-            qrBox.classList.add('hidden');
-        }
+window.addEventListener('DOMContentLoaded', function () {
+    const paymentOptions = document.querySelectorAll('.payment_option');
+    const qrBox = document.querySelector('.payment_qr');
+
+    paymentOptions.forEach(opt => {
+        opt.addEventListener('click', () => {
+
+            paymentOptions.forEach(o => o.classList.remove('active'));
+            opt.classList.add('active');
+            if (opt.dataset.type === 'online') {
+                console.log("dqdq");
+                qrBox.classList.remove('hidden');
+            } else {
+                qrBox.classList.add('hidden');
+            }
+        });
     });
 });
-
 
 
 
@@ -94,7 +97,8 @@ const home = document.querySelector(".home");
 const chitietsanpham = document.querySelector(".chitietsanpham");
 export function moThanhToan() {
     thanhtoan.style.display = 'block';
-    home.style.display = 'none';
+    tachetgiaodien();
+
 }
 export function dongThanhToan() {
     thanhtoan.style.display = 'none';
@@ -104,13 +108,17 @@ export function dongThanhToan() {
 
 export function xulidathang(e) {
     moThanhToan();
+    document.querySelector(".checkout_tiensp").textContent = e.thanhtien + "đ";
+    document.querySelector(".checkout_thanhtien").textContent = (Number(e.thanhtien) + 30000) + "đ";
     const sumit = document.querySelector('.checkout_submit');
     sumit.addEventListener('click', function () {
         luuDonhangLenLocal(e);
     });
 }
-import { kiemtraLuaChon } from "./chitietsanpham.js";
+import { kiemtraLuaChon, sanphamhethang } from "./chitietsanpham.js";
 import { hienThongBao } from "./DangNhap.js";
+import { tacThanhDanhMuc, tatCuon, vohieuCuon, vohieuGiuCuon } from "./header.js";
+import { tachetgiaodien } from "./home.js";
 document.addEventListener("DOMContentLoaded", function () {
     let taikhoan = JSON.parse(localStorage.getItem("taikhoandangnhap"));
     const thanhtoanGh = document.querySelector(".giohang_bottom_bottom_thanhtoan");
@@ -131,12 +139,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const chitietsp_muangay = document.querySelector(".chitietsanpham_muangay");
     chitietsp_muangay.addEventListener('click', function () {
-        if (!kiemtraLuaChon() || localStorage.getItem("taikhoandangnhap") === null) {
-            return;
-        }
         setTimeout(function () {
-            const muangay = JSON.parse(localStorage.getItem("muangay"));
-            xulidathang(muangay);////
+            if (!kiemtraLuaChon() || localStorage.getItem("taikhoandangnhap") === null || sanphamhethang()) {
+                return;
+            }
+            console.log("dqdq");
+            setTimeout(function () {
+                const muangay = JSON.parse(localStorage.getItem("muangay"));
+                xulidathang(muangay);////
+            }, 200);
         }, 200);
 
     });
@@ -172,11 +183,25 @@ function luuDonhangLenLocal(giohang) {
         sanpham: giohang,
         thanhtien: giohang.thanhtien,
     };
+
+
     let don = JSON.parse(localStorage.getItem("donhang")) || [];
     don.push(thongTinDonHang);
     localStorage.setItem("donhang", JSON.stringify(don));
-    hienThongBao("access", "Đã đặt hàng thành công", "access");
+    hienThongBao("success", "Đã đặt hàng thành công", "success");
     setTimeout(function () {
+        let listgiohang = JSON.parse(localStorage.getItem("giohang"));
+        if (listgiohang === null) {
+            window.location.reload();
+            return;
+        }
+        for (let i = 0; i < listgiohang.length; i++) {
+            if (listgiohang[i].sdt === taikhoan.sdt) {
+                listgiohang.splice(i, 1);
+                break;
+            }
+        }
+        localStorage.setItem("giohang", JSON.stringify(listgiohang));
         window.location.reload();
     }, 500);
 }

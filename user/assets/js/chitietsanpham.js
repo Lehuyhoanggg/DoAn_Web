@@ -296,6 +296,7 @@ export function themThongTinSpVaoGiaoDien(sanpham) {
         const phienbanname = document.createElement('SPAN');
         phienbanname.style.fontSize = `17px`;
         phienbanname.textContent = version.name + " :";
+        phienbanname.className="textphienban";
         listPhieuBan.appendChild(phienbanname);
         for (let luachon of version.option) {
             const button = document.createElement('BUTTON');
@@ -313,6 +314,7 @@ export function themThongTinSpVaoGiaoDien(sanpham) {
     chitietsanpham_listMau.className = "chitietsanpham_luachonmau-list";
     const phienbanname = document.createElement('SPAN');
     phienbanname.style.fontSize = `17px`;
+    phienbanname.className="textmau";
     phienbanname.textContent = "Màu :";
     chitietsanpham_listMau.appendChild(phienbanname);
     for (let mau of sanpham.listColors) {
@@ -391,6 +393,13 @@ export function kiemtraLuaChon() {
     return true;
 
 }
+
+let hethang = false;
+
+export function sanphamhethang() {
+    return hethang;
+}
+
 import { hienThongBao } from "./DangNhap.js"
 import { laySanPhamBangLuaChon, timSanPham } from "./database.js";
 
@@ -413,8 +422,12 @@ document.addEventListener('click', function (e) {
             return;
         }
         let sanpham = laySanPhamBangLuaChon(chitietsanpham.dataset.id, listLuaChon, mau);
+        if (sanpham) {
+            hethang = false;
+        }
         let sp = timSanPham(chitietsanpham.dataset.id);
         if (sanpham === null) {
+            hethang = true;
             hienThongBao("error", "Phiên bản của sản phẩm dã hết hàng", "error");
             return;
         }

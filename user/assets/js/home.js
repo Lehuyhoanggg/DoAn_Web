@@ -148,22 +148,10 @@ function hienThiSanPham() {
 
 }
 
-/// sự kiện khi nhấn vào các nút phân trang
-phantrang.addEventListener("click", function (e) {
-    if (e.target.tagName == "BUTTON") {
-        let mangbutton = phantrang.children;
-        mangbutton[page_number - 1].classList.remove("nhan"); // bỏ
-        page_number = e.target.textContent; // cập lại page number
-        hienThiSanPham();
-        cuonListSanPham();
-        mangbutton[page_number - 1].classList.add("nhan"); // thêm hiện ứng
-    }
-});
-
 /// ////////////
 
 
-function khongtimthaysp(ctn) {
+export function khongtimthaysp(ctn) {
     const tb1 = document.createElement("p");
     tb1.textContent = "Không tìm thấy sản phẩm";
     tb1.className = "kotimthaysp1";
@@ -191,6 +179,16 @@ function khongtimthaysp(ctn) {
     ctn.appendChild(ctn_tb);
 }
 
+
+
+export function tachetgiaodien() {
+    const elements = document.querySelectorAll('.home, .donhang, .tinkiem_model, .chitietsanpham');
+    elements.forEach(el => {
+        el.style.display = 'none';
+    });
+}
+
+
 const home = document.querySelector(".home");
 const chitietsanpham = document.querySelector(".chitietsanpham");
 import { timSanPham } from "./database.js";
@@ -200,7 +198,7 @@ function hienThiChiTietSanPham(sp) { /// sp la 1 the li
     if (sanpham === null) {
         return;
     }
-    home.style.display = 'none';
+    tachetgiaodien();
 
     window.scrollTo({
         top: 0,
@@ -212,11 +210,31 @@ function hienThiChiTietSanPham(sp) { /// sp la 1 the li
 }
 
 
-const listsanpham = document.querySelectorAll(".home_sanpham_list");
-listsanpham.forEach(list => {
-    list.addEventListener('click', function (e) {
-        if (e.target.closest(".home_sanpham_list_item")) {
-            hienThiChiTietSanPham(e.target.closest(".home_sanpham_list_item"));
+function gansukien() {
+    const listsanpham = document.querySelectorAll(".home_sanpham_list");
+    listsanpham.forEach(list => {
+        list.addEventListener('click', function (e) {
+            if (e.target.closest(".home_sanpham_list_item")) {
+                hienThiChiTietSanPham(e.target.closest(".home_sanpham_list_item"));
+            }
+        });
+    });
+
+
+
+    /// sự kiện khi nhấn vào các nút phân trang
+    phantrang.addEventListener("click", function (e) {
+        if (e.target.tagName == "BUTTON") {
+            let mangbutton = phantrang.children;
+            mangbutton[page_number - 1].classList.remove("nhan"); // bỏ
+            page_number = e.target.textContent; // cập lại page number
+            hienThiSanPham();
+            cuonListSanPham();
+            mangbutton[page_number - 1].classList.add("nhan"); // thêm hiện ứng
         }
     });
-});
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+    gansukien();
+})

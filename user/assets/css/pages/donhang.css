@@ -5,6 +5,7 @@
     padding: 20px;
     background-color: white;
     display: none;
+    min-height: 200px;
 }
 
 .donhang_text {
@@ -181,4 +182,8 @@
     border-bottom: 1px solid rgb(231, 231, 224);
     text-align: start;
     padding: 10px;
+}
+.donhangtrong_icon{
+    width: 140px;
+    height: 140px;
 }

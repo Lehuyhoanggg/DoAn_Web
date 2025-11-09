@@ -5,51 +5,291 @@ const Initial = [
     brand: "Apple",
     category: "Điện thoại",
     thumbnail: "../user/assets/image/sanpham/sp1.png",
-    price: 3499000,
-    salebefore: 3999000,
-    baseprice: 2000000, // giá nhập vào 
+    price: 37990000,
+    salebefore: 39990000,
+    baseprice: 25000000, // giá nhập vào 
     listVersions: [
-      { name: "ram", option: ["6GB", "12GB", "24GB"] },
-      { name: "dung lượng", option: ["128GB", "256GB"] }
+      { name: "ram", option: ["12GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB", "1TB", "2TB"] }
     ],
     listColors: ["Cam Vũ Trụ", "Xanh Đậm", "Bạc"],
     versions: [
       {
-        id: "1-cam-6-128",
+        id: "1-cam-12-256",
         color: "Cam Vũ Trụ",
-        price: 34990000,
-        stock: 10,
+        price: 37990000,
+        stock: 200,
         status: true,
-        sold: "4.3k",
-        version: ["6GB", "128GB"],
+        sold: "5.5k",
+        version: ["12GB", "256GB"],
       },
+
       {
         id: "1-xanh-12-256",
         color: "Xanh Đậm",
-        price: 34990000,
-        stock: 20,
-        status: false,
+        price: 37990000,
+        stock: 500,
+        status: true,
         sold: "4.9k",
         version: ["12GB", "256GB"],
       },
+
       {
-        id: "1-bac-6-256",
+        id: "1-bac-12-256",
         color: "Bạc",
-        price: 34990000,
-        stock: 30,
+        price: 37990000,
+        stock: 400,
+        status: true,
+        sold: "3.8k",
+        version: ["12GB", "256GB"],
+      },
+
+      {
+        id: "1-cam-12-512",
+        color: "Cam Vũ Trụ",
+        price: 44490000,
+        stock: 200,
+        status: true,
+        sold: "10.3k",
+        version: ["12GB", "512GB"],
+      },
+
+      {
+        id: "1-xanh-12-512",
+        color: "Xanh Đậm",
+        price: 44490000,
+        stock: 300,
+        status: true,
+        sold: "4.9k",
+        version: ["12GB", "512GB"],
+      },
+
+      {
+        id: "1-bac-12-512",
+        color: "Bạc",
+        price: 44490000,
+        stock: 100,
+        status: true,
+        sold: "3.6k",
+        version: ["12GB", "512GB"],
+      },
+
+      {
+        id: "1-cam-12-1",
+        color: "Cam Vũ Trụ",
+        price: 50990000,
+        stock: 100,
+        status: true,
+        sold: "11.3k",
+        version: ["12GB", "1TB"],
+      },
+      {
+        id: "1-xanh-12-1",
+        color: "Xanh Đậm",
+        price: 50990000,
+        stock: 100,
+        status: true,
+        sold: "7k",
+        version: ["12GB", "1TB"],
+      },
+
+      {
+        id: "1-bac-12-1",
+        color: "Bạc",
+        price: 50990000,
+        stock: 100,
+        status: true,
+        sold: "5.3k",
+        version: ["12GB", "1TB"],
+      },
+      {
+        id: "1-cam-12-2",
+        color: "Cam Vũ Trụ",
+        price: 63990000,
+        stock: 0,
         status: false,
-        sold: "4.6k",
-        version: ["6GB", "256GB"],
+        sold: "3k",
+        version: ["12GB", "2TB"],
+      },
+
+      {
+        id: "1-xanh-12-2",
+        color: "Xanh Đậm",
+        price: 63990000,
+        stock: 100,
+        status: true,
+        sold: "2k",
+        version: ["12GB", "2TB"],
+      },
+
+      {
+        id: "1-bac-12-2",
+        color: "Bạc",
+        price: 63990000,
+        stock: 100,
+        status: true,
+        sold: "1.4k",
+        version: ["12GB", "2TB"],
       },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/1/16-9-1.png",
-      "../user/assets/image/sanpham/1/16-9-2.jpg",
+      "../user/assets/image/sanpham/1/16-9-2.png",
       "../user/assets/image/sanpham/1/16-9-3.png",
-      "../user/assets/image/sanpham/1/16-9-4.jpg",
-      "../user/assets/image/sanpham/1/16-9-5.jpg",
-      "../user/assets/image/sanpham/1/16-9-6.jpg",
-      "../user/assets/image/sanpham/1/16-9-7.jpg",
+      "../user/assets/image/sanpham/1/16-9-4.png",
+      "../user/assets/image/sanpham/1/16-9-5.png",
+      "../user/assets/image/sanpham/1/16-9-6.png",
+      "../user/assets/image/sanpham/1/16-9-7.png",
+      "../user/assets/image/sanpham/1/16-9-8.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "iOS 26",
+      "Chip xử lý (CPU)": "Apple A19 Pro 6 nhân",
+      "Chip đồ họa (GPU)": "Apple GPU 6 nhân",
+      "RAM": "12GB",
+      "Bộ nhớ trong": "256GB/ 512GB/ 1TB",
+      "Màn hình": "6.9 inch Super Retina XDR",
+      "Camera trước": "18MP TrueDepth",
+      "Camera sau": "Chính 48 MP & Phụ 48 MP, 48 MP",
+      "Pin": "5088mAh, sạc nhanh 40W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth v6.0",
+      "Bảo mật": "Face ID, Touch ID",
+      "Trọng lượng": "231g",
+      "Màu sắc": "Xanh Đậm, Bạc, Cam Vũ Trụ",
+    },
+    overview: `<h2>iPhone 17 Pro Max là phiên bản cao cấp nhất trong dòng sản phẩm iPhone 17 series, được định vị là thiết bị tập trung vào công nghệ màn hình, 
+    hiệu năng xử lý và khả năng nhiếp ảnh. Phiên bản này giới thiệu một loạt nâng cấp về phần cứng và các tính năng đi kèm, hướng đến việc cung cấp một công cụ có cấu hình mạnh mẽ cho các nhu cầu sử dụng từ cơ bản đến chuyên sâu.</h2>
+    <p>iPhone 17 Pro Max được thiết kế để vừa đẹp mắt, vừa bền bỉ. Khung máy làm từ nhôm nguyên khối, tăng cường độ cứng cáp cho thiết bị. Mặt trước của máy được phủ một lớp Ceramic Shield 2 tiên tiến, còn mặt sau được bảo vệ bằng kính Ceramic Shield, giúp thiết bị chống trầy xước hiệu quả. Máy có ba tùy chọn màu sắc là Silver (Bạc), Deep Blue (Xanh đậm), và Cosmic Orange (Cam vũ trụ).</p>
+          <img src="/user/assets/image/sanpham/1/thongtin1.png" alt=""> 
+    <p>Ở mặt sau, cụm ba camera có thiết kế được làm mới, trông rộng và lồi hơn so với thế hệ trước. Về các nút bấm vật lý, máy vẫn giữ lại nút tác vụ (Action Button) và bổ sung thêm nút điều khiển Camera (Camera Control) chuyên dụng.</p><br>
+    <p>Màn hình của iPhone có kích thước 6.9 inch, sử dụng tấm nền Super Retina XDR cho khả năng hiển thị màu sắc và độ tương phản cao. Với độ sáng tối đa có thể đạt 3000 nits, màn hình cho phép người dùng xem nội dung rõ hơn khi ở ngoài trời. Công nghệ ProMotion tiếp tục được trang bị, với khả năng điều chỉnh tần số quét thích ứng lên đến 120 Hz.</p><br>
+    <p>Để vận hành màn hình và các tác vụ khác, điện thoại được trang bị chip A19 Pro. Con chip này được xây dựng trên tiến trình mới, bao gồm CPU và GPU 6 lõi, được thiết kế để cải thiện hiệu suất xử lý đồ họa và các tác vụ học máy (AI) trực tiếp trên thiết bị. Hệ thống tản nhiệt bằng buồng hơi cũng được tích hợp để duy trì hiệu suất ổn định khi máy xử lý các tác vụ nặng.</p>
+          <img src="/user/assets/image/sanpham/1/thongtin2.png" alt="">
+    <p>Hệ thống camera sau của iPhone 17 Pro Max là một trong những khu vực có nhiều nâng cấp. Cả ba ống kính, bao gồm camera chính, camera siêu rộng (Ultra Wide) và camera tele, đều được trang bị cảm biến có độ phân giải 48MP. Việc nâng cấp đồng bộ này cho phép thu nhận nhiều ánh sáng và chi tiết hơn trên toàn dải tiêu cự. Đặc biệt, camera tele được cải tiến với khả năng zoom quang học lên đến 8x, mở rộng các tùy chọn bố cục khi chụp từ xa.
+    Camera trước Center Stage 18 MP của iPhone 17 Pro Max mang đến nhiều tính năng sáng tạo. Bạn có thể mở rộng trường ảnh hoặc xoay khung hình dễ dàng.</p><br>
+          <img src="/user/assets/image/sanpham/1/thongtin3.png" alt="">
+    <ul>Nhờ sức mạnh từ chip A19 Pro cùng các Neural Accelerators, iPhone 17 Pro Max mang trí tuệ nhân tạo lên một tầm cao mới, biến mọi trải nghiệm hằng ngày của bạn trở nên mượt mà và hiệu quả hơn. Những điểm nổi bật bao gồm:
+    <li>Trí tuệ hình ảnh (Visual Intelligence): Cho phép bạn tìm kiếm, đặt câu hỏi và thực hiện hành động với nội dung hiển thị ngay trên màn hình.</li>
+    <li>Dịch thuật trực tiếp (Live Translation): Tự động dịch văn bản trong Tin nhắn, dịch phụ đề trực tiếp trong các cuộc gọi FaceTime và dịch giọng nói trong ứng dụng Điện thoại.</li>
+    <li>Công cụ dọn dẹp (Clean Up): Dễ dàng xóa bỏ các đối tượng, người hoặc chi tiết không mong muốn ra khỏi ảnh của bạn chỉ với một lần chạm.</li>
+    <li>Genmoji: Sáng tạo các biểu tượng cảm xúc độc đáo ngay trên bàn phím chỉ bằng cách cung cấp mô tả.</li>
+    <li>Công cụ viết lách (Writing Tools): Hỗ trợ bạn kiểm tra lại, viết lại văn bản với các văn phong khác nhau và tóm tắt nội dung đã chọn một cách nhanh chóng.</li>
+    </ul>
+
+          `  ,
+  },
+
+  {
+    id: "2",
+    name: "IPhone 17 Pro",
+    brand: "Apple",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp2.png",
+    price: 34990000,
+    salebefore: 39990000,
+    baseprice: 20000000, // giá nhập vào 
+    listVersions: [
+      { name: "ram", option: ["12GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] }
+    ],
+    listColors: ["Cam Vũ Trụ", "Xanh Đậm", "Bạc"],
+    versions: [
+      {
+        id: "2-cam-12-256",
+        color: "Cam Vũ Trụ",
+        price: 34990000,
+        stock: 110,
+        status: true,
+        sold: "7.3k",
+        version: ["12GB", "256GB"],
+      },
+
+      {
+        id: "2-xanh-12-256",
+        color: "Xanh Đậm",
+        price: 34990000,
+        stock: 200,
+        status: true,
+        sold: "6.9k",
+        version: ["12GB", "256GB"],
+      },
+
+      {
+        id: "2-bac-12-256",
+        color: "Bạc",
+        price: 34990000,
+        stock: 243,
+        status: true,
+        sold: "2.6k",
+        version: ["12GB", "256GB"],
+      },
+
+      {
+        id: "2-cam-12-512",
+        color: "Cam Vũ Trụ",
+        price: 41490000,
+        stock: 0,
+        status: false,
+        sold: "8.3k",
+        version: ["12GB", "512GB"],
+      },
+
+      {
+        id: "2-xanh-12-512",
+        color: "Xanh Đậm",
+        price: 41490000,
+        stock: 20,
+        status: true,
+        sold: "5.9k",
+        version: ["12GB", "512GB"],
+      },
+
+      {
+        id: "2-bac-12-512",
+        color: "Bạc",
+        price: 41490000,
+        stock: 60,
+        status: true,
+        sold: "3.6k",
+        version: ["12GB", "512GB"],
+      },
+
+      {
+        id: "2-cam-12-1",
+        color: "Cam Vũ Trụ",
+        price: 47990000,
+        stock: 100,
+        status: true,
+        sold: "3.3k",
+        version: ["12GB", "1TB"],
+      },
+
+      {
+        id: "2-xanh-12-1",
+        color: "Xanh Đậm",
+        price: 47990000,
+        stock: 20,
+        status: true,
+        sold: "2.9k",
+        version: ["12GB", "1TB"],
+      },
+
+      {
+        id: "2-bac-12-1",
+        color: "Bạc",
+        price: 47990000,
+        stock: 60,
+        status: true,
+        sold: "1.6k",
+        version: ["12GB", "1TB"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/2/16-9-1.png",
+      "../user/assets/image/sanpham/2/16-9-2.png",
+      "../user/assets/image/sanpham/2/16-9-3.png",
+      "../user/assets/image/sanpham/2/16-9-4.png",
+      "../user/assets/image/sanpham/2/16-9-5.png",
     ],
     infoDetail: {
       "Hệ điều hành": "iOS 26",
@@ -57,28 +297,2826 @@ const Initial = [
       "Chip đồ họa (GPU)": "Apple GPU 6 nhân",
       "RAM": "12GB",
       "Bộ nhớ trong": "256GB",
-      "Màn hình": "6.8 inch Super Retina XDR",
-      "Camera trước": "12MP TrueDepth",
-      "Camera sau": "108MP + 12MP + 12MP",
-      "Pin": "4500mAh, sạc nhanh 45W",
-      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.3",
+      "Màn hình": "6.3 inch Super Retina XDR",
+      "Camera trước": "18MP TrueDepth",
+      "Camera sau": "Chính 48 MP & Phụ 48 MP, 48 MP",
+      "Pin": "4252mAh, sạc nhanh 40W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth v6.0",
       "Bảo mật": "Face ID, Touch ID",
-      "Trọng lượng": "238g",
+      "Trọng lượng": "204g",
       "Màu sắc": "Xanh Đậm, Bạc, Cam Vũ Trụ",
     },
-    overview: `realme 14T 5G 8GB/256GB nổi bật trong phân khúc tầm trung với chip Dimensity 6300 5G mạnh mẽ, RAM
-                    khủng đến 18 GB và màn hình AMOLED 120 Hz sắc nét. Pin 6000 mAh và sạc nhanh 45W đảm bảo thời gian
-                    sử dụng cả ngày. Thiết kế mỏng nhẹ, bền bỉ với chuẩn kháng nước và bụi IP69, realme 14T 5G là lựa
-                    chọn lý tưởng cho game thủ và những ai đòi hỏi hiệu suất cao.
-
-                    Chiến game cực đỉnh, đa nhiệm siêu mượt mà
-                    realme 14T 5G trang bị bộ vi xử lý Dimensity 6300 5G mạnh mẽ, được sản xuất trên tiến trình 6 nm
-                    tiên tiến, mang lại tốc độ xử lý 2.4 GHz và tối ưu hóa điện năng. Với kết nối 5G siêu tốc, bạn có
-                    thể tải xuống nhanh chóng với tốc độ lên đến 3.3 Gb/s. Hiệu năng chơi game cũng được cải thiện, mượt
-                    mà hơn 10% so với thế hệ trước, mang đến trải nghiệm giải trí liên tục và không gián đoạn.    
-                     <img src="/user/assets/image/sanpham/1/thongtin.jpg" alt="" > `  ,
+    overview: `
+    <h2>iPhone 17 Pro là phiên bản mới nhất của Apple, mang đến nhiều nâng cấp tập trung vào hiệu năng, hệ thống camera và vật liệu thiết kế. Sản phẩm này giới thiệu những công nghệ mới nhằm cải thiện các tính năng cốt lõi và trải nghiệm sử dụng hàng ngày.</h2>
+    <p>iPhone 17 Pro được thiết kế lại toàn diện từ trong ra ngoài với nhiều cải tiến về cấu hình và độ bền. Điểm nhấn của thiết kế mới là khung máy nguyên khối làm từ nhôm rèn nhiệt giúp tăng độ bền. iPhone 17 Pro sẽ có ba tùy chọn màu sắc: Bạc (Silver), Cam vũ trụ (Cosmic Orange) và Xanh đậm (Deep Blue).</p>
+    <img src="/user/assets/image/sanpham/2/thongtin1.png" alt="">
+    <p>Điểm nhấn nổi bật nhất của iPhone chính là cụm camera sau được làm mới hoàn toàn. Vẫn giữ cấu hình 3 ống kính quen thuộc nhưng nay camera trở nên to, lồi và rộng hơn, tạo nên dấu ấn khác biệt rõ rệt. Trong khi đó, mặt trước vẫn trung thành với Dynamic Island, hỗ trợ các thông báo và hoạt động trực tiếp trên màn hình.</p>
+    <img src="/user/assets/image/sanpham/2/thongtin2.png" alt="">
+    <p>iPhone 17 Pro trang bị màn hình Super Retina XDR 6.3 inch cho khả năng hiển thị tốt hơn. Độ sáng tối đa của màn hình đạt 3000 nits, giúp nội dung hiển thị rõ nét hơn dưới ánh nắng. Công nghệ ProMotion 120 Hz giúp các thao tác cuộn lướt và chuyển động hình ảnh diễn ra mượt mà.</p>
+    <img src="/user/assets/image/sanpham/2/thongtin3.png" alt="">
+    <p>iPhone 17 Pro được trang bị chip A19 Pro, phù hợp cho các tác vụ đòi hỏi cấu hình cao như chơi game. Con chip này có CPU và GPU 6 lõi, tập trung vào khả năng xử lý đồ họa và các thuật toán AI. Đáng chú ý, Neural Accelerator tích hợp trực tiếp vào từng lõi GPU giúp máy xử lý AI ngay trên thiết bị nhanh hơn, mở ra nhiều trải nghiệm thông minh mới.</p><br>
+    <p>Apple trang bị công nghệ buồng hơi hàn laser kết hợp cùng khung nhôm nguyên khối giúp tối ưu tản nhiệt cho chip A19 Pro. Bên trong buồng hơi, nước khử ion hấp thụ và phân tán nhiệt hiệu quả, giữ cho máy luôn ổn định. Nhờ vậy, iPhone 17 Pro có thể duy trì hiệu suất cao liên tục mà không lo quá nhiệt hay tụt hiệu năng.</p>
+    <img src="/user/assets/image/sanpham/2/thongtin4.png" alt="">
+    <p>Hệ thống camera 48MP Pro Fusion, một nâng cấp đáng chú ý, mang đến nhiều tùy chọn hơn cho việc chụp ảnh và quay phim ngay trên chiếc điện thoại của bạn. Không chỉ camera chính, mà cả camera Ultra Wide và camera Telephoto Zoom cũng đều được nâng cấp lên 48MP. Đặc biệt, camera Telephoto còn được trang bị khả năng zoom quang học lên đến 4x và 8x, mở ra nhiều góc chụp đa dạng và chi tiết hơn. Nâng cấp này cho phép người dùng ghi lại hình ảnh có độ chi tiết cao trong nhiều điều kiện khác nhau.</p>
+    <img src="/user/assets/image/sanpham/2/thongtin5.png" alt="">
+    `  ,
   },
+
+  {
+    id: "3",
+    name: "Samsung Galaxy S25 FE 5G",
+    brand: "Apple",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp3.png",
+    price: 14390000,
+    salebefore: 16690000,
+    baseprice: 12000000, // giá nhập vào 
+    listVersions: [
+      { name: "ram", option: ["8GB"] },
+      { name: "dung lượng", option: ["128GB", "256GB", "512GB"] }
+    ],
+    listColors: ["Xanh Dương Nhạt", "Trắng", "Đen"],
+    versions: [
+      {
+        id: "3-xanh-8-128",
+        color: "Xanh Dương Nhạt",
+        price: 14390000,
+        stock: 100,
+        status: true,
+        sold: "1k",
+        version: ["8GB", "128GB"],
+      },
+      {
+        id: "3-trang-8-128",
+        color: "Trắng",
+        price: 14390000,
+        stock: 220,
+        status: true,
+        sold: "1.4k",
+        version: ["8GB", "128GB"],
+      },
+      {
+        id: "3-den-8-128",
+        color: "Đen",
+        price: 14390000,
+        stock: 130,
+        status: true,
+        sold: "2.6k",
+        version: ["8GB", "128GB"],
+      },
+
+
+      {
+        id: "3-xanh-8-256",
+        color: "Xanh Dương Nhạt",
+        price: 16990000,
+        stock: 210,
+        status: true,
+        sold: "2.3k",
+        version: ["8GB", "256GB"],
+      },
+      {
+        id: "3-trang-8-256",
+        color: "Trắng",
+        price: 16990000,
+        stock: 120,
+        status: true,
+        sold: "1.9k",
+        version: ["8GB", "256GB"],
+      },
+      {
+        id: "3-den-8-256",
+        color: "Đen",
+        price: 16990000,
+        stock: 310,
+        status: true,
+        sold: "1.6k",
+        version: ["8GB", "256GB"],
+      },
+
+      {
+        id: "3-xanh-8-512",
+        color: "Xanh Dương Nhạt",
+        price: 21990000,
+        stock: 110,
+        status: true,
+        sold: "1.3k",
+        version: ["8GB", "512GB"],
+      },
+      {
+        id: "3-trang-8-512",
+        color: "Trắng",
+        price: 21990000,
+        stock: 220,
+        status: true,
+        sold: "1.9k",
+        version: ["8GB", "512GB"],
+      },
+      {
+        id: "3-den-8-512",
+        color: "Đen",
+        price: 21990000,
+        stock: 305,
+        status: true,
+        sold: "1.6k",
+        version: ["8GB", "512GB"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/3/16-9-1.png",
+      "../user/assets/image/sanpham/3/16-9-2.png",
+      "../user/assets/image/sanpham/3/16-9-3.png",
+      "../user/assets/image/sanpham/3/16-9-4.png",
+      "../user/assets/image/sanpham/3/16-9-5.png",
+      "../user/assets/image/sanpham/3/16-9-6.png",
+      "../user/assets/image/sanpham/3/16-9-7.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 16",
+      "Chip xử lý (CPU)": "Exynos 2400 10 nhân",
+      "Chip đồ họa (GPU)": "Đang cập nhật",
+      "RAM": "8GB",
+      "Bộ nhớ trong": "128GB/ 256GB/ 512GB",
+      "Màn hình": "6.7 inch Dynamic AMOLED 2X",
+      "Camera trước": "12MP",
+      "Camera sau": "Chính 50 MP & Phụ 12 MP, 8 MP",
+      "Pin": "4900mAh, sạc nhanh 45W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.3",
+      "Bảo mật": "Vân tay, Sinh trắc học",
+      "Trọng lượng": "190g",
+      "Màu sắc": "Xanh Dương Nhạt, Trắng, Đen",
+    },
+    overview: `
+    <h2>Samsung Galaxy S25 FE không chỉ là bản nâng cấp phần cứng, mà còn là dấu mốc quan trọng cho trải nghiệm di động tương lai. Thiết bị kết hợp hiệu năng mạnh mẽ với trí tuệ nhân tạo Galaxy AI, mang đến một trợ lý cá nhân thông minh, luôn thấu hiểu và chủ động hỗ trợ. Đồng thời, đây cũng là mẫu FE mỏng nhẹ nhất, kết hợp thiết kế tinh tế cùng nhiều tính năng hiện đại.</h2>
+    <p>Galaxy S25 FE được thiết kế mỏng chỉ 7.4 mm và nhẹ 190g, trở thành mẫu FE gọn gàng nhất từ trước đến nay. Viền màn hình được làm mỏng giúp hiển thị rộng rãi hơn, trong khi vẫn giữ cảm giác cầm chắc tay và thoải mái. Người dùng có thể dễ dàng sử dụng máy bằng một tay, ngay cả khi sở hữu màn hình lớn. Thiết kế camera quen thuộc của dòng Galaxy S tiếp tục được giữ lại.</p>
+    <img src="/user/assets/image/sanpham/3/thongtin1.png" alt="">
+    <p>Màn hình Galaxy S25 FE sử dụng tấm nền Dynamic AMOLED 2X kích thước 6.7 inch, độ phân giải FHD+, mang đến không gian hiển thị rộng rãi và sắc nét cho cả giải trí lẫn công việc. Điểm nhấn là tần số quét thích ứng 120 Hz, giúp thao tác cuộn, chuyển cảnh hay chơi game mượt mà, gần như loại bỏ giật lag, đem lại trải nghiệm hình ảnh ổn định và thoải mái.</p>
+    <img src="/user/assets/image/sanpham/3/thongtin2.png" alt="">
+    <p>Chiếc điện thoại Samsung này được trang bị vi xử lý Exynos 2400, con chip mạnh mẽ của Samsung, mang đến khả năng xử lý vượt trội cho mọi tác vụ. Không chỉ dựa vào sức mạnh tính toán, máy còn tối ưu trải nghiệm bằng công nghệ Ray-tracing, giúp tái hiện ánh sáng, bóng đổ và phản chiếu trong game sống động, nâng chất lượng đồ họa lên tầm cao mới, đặc biệt hấp dẫn với game thủ.</p>
+    <img src="/user/assets/image/sanpham/3/thongtin3.png" alt="">
+    <p>Galaxy AI đưa việc sáng tạo hình ảnh và video lên tầm mới. Với Photo Assist, các công cụ như Generative Edit, Suggest Erases và Auto Trim giúp xóa chi tiết thừa, cắt gọn video và giữ lại khoảnh khắc đẹp nhất, tất cả đều thực hiện ngay trên điện thoại, đơn giản và trực quan. Không chỉ dừng ở hình ảnh, Galaxy AI còn hỗ trợ mạnh mẽ cho công việc và kết nối. Browsing Assist tóm tắt, dịch web nhanh chóng; Writing Assist giúp soạn thảo gọn gàng; trong khi Audio Eraser loại bỏ tiếng ồn, mang lại âm thanh rõ ràng. Tất cả đều nhằm tiết kiệm thời gian và công sức.</p>
+    `  ,
+  },
+
+  {
+    id: "4",
+    name: "OPPO Find X8 Pro",
+    brand: "OPPO",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp4.png",
+    price: 28990000,
+    salebefore: 30990000,
+    baseprice: 21000000,
+    listVersions: [
+      { name: "ram", option: ["12GB", "16GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB"] }
+    ],
+    listColors: ["Đen", "Trắng", "Xanh Lục"],
+    versions: [
+      { id: "4-den-12-256", color: "Đen", price: 28990000, stock: 200, status: true, sold: "2.8k", version: ["12GB", "256GB"] },
+      { id: "4-trang-12-256", color: "Trắng", price: 28990000, stock: 150, status: true, sold: "1.9k", version: ["12GB", "256GB"] },
+      { id: "4-xanh-12-256", color: "Xanh Lục", price: 28990000, stock: 100, status: true, sold: "1.2k", version: ["12GB", "256GB"] },
+      { id: "4-den-12-512", color: "Đen", price: 31990000, stock: 100, status: true, sold: "1.5k", version: ["16GB", "512GB"] },
+      { id: "4-trang-12-512", color: "Trắng", price: 31990000, stock: 80, status: true, sold: "1k", version: ["16GB", "512GB"] },
+      { id: "4-xanh-12-512", color: "Xanh Lục", price: 31990000, stock: 70, status: true, sold: "900", version: ["16GB", "512GB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/4/16-9-1.png",
+      "../user/assets/image/sanpham/4/16-9-2.png",
+      "../user/assets/image/sanpham/4/16-9-3.png",
+      "../user/assets/image/sanpham/4/16-9-4.png",
+      "../user/assets/image/sanpham/4/16-9-5.png",
+      "../user/assets/image/sanpham/4/16-9-6.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 15, ColorOS 15",
+      "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
+      "RAM": "12GB/16GB",
+      "Bộ nhớ trong": "256GB/512GB",
+      "Màn hình": "6.82 inch AMOLED QHD+ 120Hz",
+      "Camera trước": "32MP",
+      "Camera sau": "50MP + 64MP + 48MP",
+      "Pin": "5000mAh, sạc nhanh 100W",
+      "Bảo mật": "Vân tay dưới màn hình",
+      "Kết nối": "5G, Wi-Fi 7, NFC, Bluetooth 5.3",
+      "Trọng lượng": "218g",
+      "Màu sắc": "Đen, Trắng, Xanh Lục"
+    },
+    overview: `
+      <h2>OPPO Find X8 Pro – Cân bằng giữa hiệu năng và nhiếp ảnh.</h2>
+      <p>OPPO Find X8 Pro mang đến trải nghiệm chụp ảnh HDR cực tốt và màn hình siêu sáng.</p>
+      <img src="/user/assets/image/sanpham/4/thongtin1.png" alt="">
+      <p>Thiết kế cong mềm mại, hiệu năng mượt mà với chip Snapdragon 8 Gen 3.</p>
+      <img src="/user/assets/image/sanpham/4/thongtin2.png" alt="">
+    `
+  },
+  {
+    id: "5",
+    name: "Vivo X200 Pro",
+    brand: "Vivo",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp5.png",
+    price: 24990000,
+    salebefore: 26990000,
+    baseprice: 18000000,
+    listVersions: [
+      { name: "ram", option: ["12GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB"] }
+    ],
+    listColors: ["Đen", "Trắng", "Hồng"],
+    versions: [
+      { id: "5-den-12-256", color: "Đen", price: 24990000, stock: 300, status: true, sold: "3.3k", version: ["12GB", "256GB"] },
+      { id: "5-trang-12-256", color: "Trắng", price: 24990000, stock: 200, status: true, sold: "2.2k", version: ["12GB", "256GB"] },
+      { id: "5-hong-12-256", color: "Hồng", price: 24990000, stock: 150, status: true, sold: "1.5k", version: ["12GB", "256GB"] },
+      { id: "5-den-12-512", color: "Đen", price: 27990000, stock: 100, status: true, sold: "1.8k", version: ["12GB", "512GB"] },
+      { id: "5-trang-12-512", color: "Trắng", price: 27990000, stock: 80, status: true, sold: "1.2k", version: ["12GB", "512GB"] },
+      { id: "5-hong-12-512", color: "Hồng", price: 27990000, stock: 50, status: true, sold: "900", version: ["12GB", "512GB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/5/16-9-1.png",
+      "../user/assets/image/sanpham/5/16-9-2.png",
+      "../user/assets/image/sanpham/5/16-9-3.png",
+      "../user/assets/image/sanpham/5/16-9-4.png",
+
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 15, FuntouchOS 15",
+      "Chip xử lý (CPU)": "Dimensity 9400",
+      "RAM": "12GB",
+      "Bộ nhớ trong": "256GB/512GB",
+      "Màn hình": "6.78 inch AMOLED LTPO 120Hz",
+      "Camera trước": "32MP",
+      "Camera sau": "50MP + 50MP + 64MP",
+      "Pin": "5100mAh, sạc nhanh 120W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
+      "Bảo mật": "Vân tay quang học dưới màn hình",
+      "Trọng lượng": "210g",
+      "Màu sắc": "Đen, Trắng, Hồng"
+    },
+    overview: `
+      <h2>Vivo X200 Pro – Flagship mới của Vivo với camera 64MP.</h2>
+      <p>Hiệu năng mạnh mẽ nhờ chip Dimensity 9400 và hệ thống camera ZEISS ấn tượng.</p>
+      <img src="/user/assets/image/sanpham/5/thongtin1.png" alt="">
+      <p>Màn hình AMOLED LTPO 120Hz siêu mượt, pin 5100mAh với sạc nhanh 120W.</p>
+    `
+  },
+
+  {
+    id: "6",
+    name: "Realme GT7 Pro",
+    brand: "Realme",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp6.png",
+    price: 18990000,
+    salebefore: 19990000,
+    baseprice: 15000000,
+    listVersions: [
+      { name: "ram", option: ["8GB", "12GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB"] }
+    ],
+    listColors: ["Đen", "Trắng", "Cam"],
+    versions: [
+      { id: "6-den-8-256", color: "Đen", price: 18990000, stock: 250, status: true, sold: "2.4k", version: ["8GB", "256GB"] },
+      { id: "6-trang-8-256", color: "Trắng", price: 18990000, stock: 200, status: true, sold: "1.8k", version: ["8GB", "256GB"] },
+      { id: "6-cam-8-256", color: "Cam", price: 18990000, stock: 100, status: true, sold: "1.2k", version: ["8GB", "256GB"] },
+
+      { id: "6-den-8-512", color: "Đen", price: 18990000, stock: 250, status: true, sold: "2.4k", version: ["8GB", "512GB"] },
+      { id: "6-trang-8-512", color: "Trắng", price: 18990000, stock: 200, status: true, sold: "1.8k", version: ["8GB", "512GB"] },
+      { id: "6-cam-8-512", color: "Cam", price: 18990000, stock: 100, status: true, sold: "1.2k", version: ["8GB", "512GB"] },
+
+      { id: "6-den-12-512", color: "Đen", price: 20990000, stock: 150, status: true, sold: "1.5k", version: ["12GB", "512GB"] },
+      { id: "6-trang-12-512", colorcolor: "Trắng", price: 20990000, stock: 100, status: true, sold: "900", version: ["12GB", "512GB"] },
+      { id: "6-cam-12-512", colorcolor: "Cam", price: 20990000, stock: 80, status: true, sold: "700", version: ["12GB", "512GB"] },
+
+      { id: "6-den-12-256", color: "Đen", price: 20990000, stock: 150, status: true, sold: "1.5k", version: ["12GB", "256GB"] },
+      { id: "6-trang-12-256", colorcolor: "Trắng", price: 20990000, stock: 100, status: true, sold: "900", version: ["12GB", "256GB"] },
+      { id: "6-cam-12-256", colorcolor: "Cam", price: 20990000, stock: 80, status: true, sold: "700", version: ["12GB", "256GB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/6/16-9-1.png",
+      "../user/assets/image/sanpham/6/16-9-2.png",
+      "../user/assets/image/sanpham/6/16-9-3.png",
+      "../user/assets/image/sanpham/6/16-9-4.png",
+      "../user/assets/image/sanpham/6/16-9-5.png",
+      "../user/assets/image/sanpham/6/16-9-6.png",
+      "../user/assets/image/sanpham/6/16-9-7.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 15, Realme UI 6",
+      "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
+      "RAM": "8GB/12GB",
+      "Bộ nhớ trong": "256GB/512GB",
+      "Màn hình": "6.7 inch AMOLED 120Hz",
+      "Camera trước": "32MP",
+      "Camera sau": "50MP + 8MP + 2MP",
+      "Pin": "5000mAh, sạc nhanh 100W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.3",
+      "Bảo mật": "Vân tay dưới màn hình",
+      "Màu sắc": "Đen, Trắng, Cam"
+    },
+    overview: `
+    <h2>Realme GT7 Pro – Sức mạnh flagship giá tầm trung.</h2>
+    <p>Trang bị Snapdragon 8 Gen 3, pin 5000mAh, sạc nhanh 100W, thiết kế trẻ trung hiện đại.</p>
+    <img src="/user/assets/image/sanpham/6/thongtin1.png" alt="">
+    <p>Hiệu năng ổn định, camera sắc nét và màn hình AMOLED 120Hz mượt mà.</p>
+  `
+  },
+  {
+    id: "7",
+    name: "Asus ROG Phone 8",
+    brand: "Asus",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp7.png",
+    price: 32990000,
+    salebefore: 34990000,
+    baseprice: 25000000,
+    listVersions: [
+      { name: "ram", option: ["16GB"] },
+      { name: "dung lượng", option: ["512GB", "1TB"] }
+    ],
+    listColors: ["Đen", "Xanh Navy"],
+    versions: [
+      { id: "7-den-16-512", colorcolor: "Đen", price: 32990000, stock: 120, status: true, sold: "2.2k", version: ["16GB", "512GB"] },
+      { id: "7-xanh-16-512", colorcolor: "Xanh Navy", price: 32990000, stock: 80, status: true, sold: "1.6k", version: ["16GB", "512GB"] },
+
+      { id: "7-den-16-1", colorcolor: "Đen", price: 35990000, stock: 50, status: true, sold: "1k", version: ["16GB", "1TB"] },
+      { id: "7-xanh-16-1", colorcolor: "Xanh Navy", price: 35990000, stock: 40, status: true, sold: "700", version: ["16GB", "1TB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/7/16-9-1.png",
+      "../user/assets/image/sanpham/7/16-9-2.png",
+      "../user/assets/image/sanpham/7/16-9-3.png",
+      "../user/assets/image/sanpham/7/16-9-4.png",
+      "../user/assets/image/sanpham/7/16-9-5.png",
+      "../user/assets/image/sanpham/7/16-9-6.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 14, ROG UI",
+      "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
+      "RAM": "16GB",
+      "Bộ nhớ trong": "512GB/1TB",
+      "Màn hình": "6.78 inch AMOLED 165Hz",
+      "Camera trước": "32MP",
+      "Camera sau": "50MP + 13MP + 5MP",
+      "Pin": "6000mAh, sạc nhanh 65W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
+      "Bảo mật": "Vân tay quang học dưới màn hình",
+      "Màu sắc": "Đen, Xanh Navy"
+    },
+    overview: `
+    <h2>Asus ROG Phone 8 – Gaming phone hiệu năng cực đỉnh.</h2>
+    <p>Được thiết kế dành riêng cho game thủ với Snapdragon 8 Gen 3, màn hình 165Hz và pin khủng 6000mAh.</p>
+    <img src="/user/assets/image/sanpham/7/thongtin1.png" alt="">
+    <p>Hệ thống tản nhiệt tối ưu, trải nghiệm chơi game cực mượt, RGB tùy chỉnh độc quyền ROG.</p>
+  `
+  },
+  {
+    id: "8",
+    name: "OnePlus 13 Pro",
+    brand: "OnePlus",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp8.png",
+    price: 25990000,
+    salebefore: 27990000,
+    baseprice: 19000000,
+    listVersions: [
+      { name: "ram", option: ["12GB", "16GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB"] }
+    ],
+    listColors: ["Đen", "Trắng", "Xanh Lá"],
+    versions: [
+      { id: "8-den-12-256", color: "Đen", price: 25990000, stock: 180, status: true, sold: "2k", version: ["12GB", "256GB"] },
+      { id: "8-trang-12-256", color: "Trắng", price: 25990000, stock: 150, status: true, sold: "1.6k", version: ["12GB", "256GB"] },
+      { id: "8-xanh-12-256", color: "Xanh Lá", price: 25990000, stock: 150, status: true, sold: "1.6k", version: ["12GB", "256GB"] },
+
+      { id: "8-den-12-512", color: "Đen", price: 25990000, stock: 180, status: true, sold: "2k", version: ["12GB", "512GB"] },
+      { id: "8-trang-12-512", color: "Trắng", price: 25990000, stock: 150, status: true, sold: "1.6k", version: ["12GB", "512GB"] },
+      { id: "8-trang-12-512", color: "Xanh Lá", price: 25990000, stock: 150, status: true, sold: "1.6k", version: ["12GB", "512GB"] },
+
+      { id: "8-den-16-512", color: "Đen", price: 28990000, stock: 100, status: true, sold: "1k", version: ["16GB", "512GB"] },
+      { id: "8-trang-16-512", color: "Trắng", price: 28990000, stock: 80, status: true, sold: "900", version: ["16GB", "512GB"] },
+      { id: "8-xanh-16-512", color: "Xanh Lá", price: 28990000, stock: 80, status: true, sold: "900", version: ["16GB", "512GB"] },
+
+      { id: "8-den-16-256", color: "Đen", price: 28990000, stock: 100, status: true, sold: "1k", version: ["16GB", "256GB"] },
+      { id: "8-trang-16-256", color: "Trắng", price: 28990000, stock: 80, status: true, sold: "900", version: ["16GB", "256GB"] },
+      { id: "8-trang-16-256", color: "Xanh Lá", price: 28990000, stock: 80, status: true, sold: "900", version: ["16GB", "256GB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/8/16-9-1.png",
+      "../user/assets/image/sanpham/8/16-9-2.png",
+      "../user/assets/image/sanpham/8/16-9-3.png",
+      "../user/assets/image/sanpham/8/16-9-4.png",
+      "../user/assets/image/sanpham/8/16-9-5.png",
+      "../user/assets/image/sanpham/8/16-9-6.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 15, OxygenOS 15",
+      "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
+      "RAM": "12GB/16GB",
+      "Bộ nhớ trong": "256GB/512GB",
+      "Màn hình": "6.8 inch AMOLED LTPO 2.0 120Hz",
+      "Camera trước": "32MP",
+      "Camera sau": "50MP + 48MP + 64MP",
+      "Pin": "5000mAh, sạc nhanh 100W",
+      "Kết nối": "5G, Wi-Fi 7, NFC, Bluetooth 5.4",
+      "Bảo mật": "Vân tay dưới màn hình",
+      "Màu sắc": "Đen, Trắng, Xanh Lá"
+    },
+    overview: `
+    <h2>OnePlus 13 Pro – Sự cân bằng hoàn hảo giữa tốc độ và phong cách.</h2>
+    <p>Chip Snapdragon 8 Gen 3 mạnh mẽ, camera Hasselblad chất lượng cao và sạc siêu nhanh 100W.</p>
+    <img src="/user/assets/image/sanpham/8/thongtin1.png" alt="">
+    <p>Thiết kế tinh tế, khung viền bo tròn mềm mại và màn hình LTPO AMOLED 120Hz.</p>
+  `
+  },
+
+  {
+    id: "9",
+    name: "Google Pixel 9 Pro",
+    brand: "Google",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp9.png",
+    price: 29990000,
+    salebefore: 31990000,
+    baseprice: 23000000,
+    listVersions: [
+      { name: "ram", option: ["12GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB"] }
+    ],
+    listColors: ["Xám", "Đen", "Xanh Bạc Hà"],
+    versions: [
+      { id: "9-xam-12-256", color: "Xám", price: 29990000, stock: 200, status: true, sold: "2.5k", version: ["12GB", "256GB"] },
+      { id: "9-den-12-256", color: "Đen", price: 29990000, stock: 150, status: true, sold: "1.9k", version: ["12GB", "256GB"] },
+      { id: "9-xanh-12-256", color: "Xanh Bạc Hà", price: 29990000, stock: 150, status: true, sold: "1.9k", version: ["12GB", "256GB"] },
+
+      { id: "9-xanh-12-512", color: "Xanh Bạc Hà", price: 32990000, stock: 120, status: true, sold: "1.2k", version: ["12GB", "512GB"] },
+      { id: "9-xam-12-512", color: "Xám", price: 32990000, stock: 100, status: true, sold: "800", version: ["12GB", "512GB"] },
+      { id: "9-den-12-512", color: "Đen", price: 32990000, stock: 100, status: true, sold: "800", version: ["12GB", "512GB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/9/16-9-1.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 15",
+      "Chip xử lý (CPU)": "Google Tensor G4",
+      "RAM": "12GB",
+      "Bộ nhớ trong": "256GB/512GB",
+      "Màn hình": "6.7 inch OLED LTPO 120Hz",
+      "Camera trước": "24MP",
+      "Camera sau": "50MP + 48MP + 48MP",
+      "Pin": "5100mAh, sạc nhanh 45W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.3",
+      "Bảo mật": "Face Unlock + Vân tay",
+      "Màu sắc": "Xám, Đen, Xanh Bạc Hà"
+    },
+    overview: `
+    <h2>Google Pixel 9 Pro – Trải nghiệm thuần Google, AI cực mạnh.</h2>
+    <p>Trang bị Tensor G4, camera HDR siêu thực và khả năng xử lý AI thông minh vượt trội.</p>
+    <img src="/user/assets/image/sanpham/9/thongtin1.png" alt="">
+    <p>Thiết kế thanh lịch, nhẹ tay, cùng giao diện Android tinh gọn, tối ưu trải nghiệm người dùng.</p>
+  `
+  },
+  {
+    id: "10",
+    name: "Samsung Galaxy Z Fold 6",
+    brand: "Samsung",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp10.png",
+    price: 44990000,
+    salebefore: 46990000,
+    baseprice: 35000000,
+    listVersions: [
+      { name: "ram", option: ["12GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] }
+    ],
+    listColors: ["Xám Titan", "Kem", "Xanh"],
+    versions: [
+      { id: "10-xam-12-256", color: "Xám Titan", price: 44990000, stock: 150, status: true, sold: "3.1k", version: ["12GB", "256GB"] },
+      { id: "10-kem-12-256", color: "Kem", price: 44990000, stock: 100, status: true, sold: "2.4k", version: ["12GB", "256GB"] },
+      { id: "10-xanh-12-256", color: "Xanh", price: 44990000, stock: 100, status: true, sold: "2.4k", version: ["12GB", "256GB"] },
+
+      { id: "10-xanh-12-512", color: "Xanh", price: 48990000, stock: 80, status: true, sold: "1.2k", version: ["12GB", "512GB"] },
+      { id: "10-kem-12-512", color: "Kem", price: 48990000, stock: 60, status: true, sold: "900", version: ["12GB", "512GB"] },
+      { id: "10-xam-12-512", color: "Xám Titan", price: 48990000, stock: 60, status: true, sold: "900", version: ["12GB", "512GB"] },
+
+      { id: "10-xam-12-1", color: "Xám Titan", price: 53990000, stock: 60, status: true, sold: "900", version: ["12GB", "1TB"] },
+      { id: "10-kem-12-1", color: "Kem", price: 53990000, stock: 30, status: true, sold: "900", version: ["12GB", "1TB"] },
+      { id: "10-xanh-12-1", color: "Xanh", price: 53990000, stock: 80, status: true, sold: "1200", version: ["12GB", "1TB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/10/16-9-1.png",
+      "../user/assets/image/sanpham/10/16-9-2.png",
+      "../user/assets/image/sanpham/10/16-9-3.png",
+      "../user/assets/image/sanpham/10/16-9-4.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 15, One UI 7",
+      "Chip xử lý (CPU)": "Snapdragon 8 Gen 3 for Galaxy",
+      "RAM": "12GB",
+      "Bộ nhớ trong": "256GB/512GB/1TB",
+      "Màn hình": "7.6 inch Dynamic AMOLED 2X, 120Hz",
+      "Camera trước": "16MP dưới màn hình",
+      "Camera sau": "50MP + 12MP + 10MP",
+      "Pin": "4600mAh, sạc nhanh 45W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
+      "Bảo mật": "Vân tay cạnh viền, nhận diện khuôn mặt",
+      "Màu sắc": "Xám Titan, Kem, Xanh"
+    },
+    overview: `
+    <h2>Galaxy Z Fold6 – Smartphone gập đỉnh cao của Samsung.</h2>
+    <p>Galaxy Z Fold6 linh hoạt chuyển đổi với thiết kế mỏng hơn và khối lượng nhẹ hơn, nhưng vẫn giữ được độ bền đáng tin cậy. Bộ khung nhôm kim loại được cải tiến, màn hình được trang bị lớp cường lực và tiêu chuẩn IP48, giúp máy kháng bụi và nước tốt hơn so với các thế hệ trước.</p>
+    <img src="/user/assets/image/sanpham/10/thongtin1.png" alt="">
+    <p>Trải nghiệm màn hình gập bền hơn, chip Snapdragon 8 Gen 3 cực mạnh và camera đỉnh cao.</p>
+    <p>Galaxy Z Fold6 được trang bị vi xử lý Snapdragon 8 Gen 3 for Galaxy, phát triển trên tiến trình 4 nm, mang đến hiệu suất vượt trội và tiết kiệm năng lượng tối ưu. So với thế hệ trước (Galaxy Z Fold5), hiệu suất của máy đã được cải thiện hơn 18%, giúp máy xử lý tốt cho các tác vụ hằng ngày một cách mượt mà, nhanh chóng.</p>
+    <p>Giao diện tối ưu cho đa nhiệm, S Pen hỗ trợ làm việc chuyên nghiệp, gập mở mượt mà.</p>
+    <img src="/user/assets/image/sanpham/10/thongtin2.png" alt="">
+  `
+  },
+  {
+    id: "11",
+    name: "Xiaomi 15 Ultra",
+    brand: "Xiaomi",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp11.png",
+    price: 27990000,
+    salebefore: 28990000,
+    baseprice: 21000000,
+    listVersions: [
+      { name: "ram", option: ["12GB", "16GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB"] }
+    ],
+    listColors: ["Đen", "Trắng", "Xanh"],
+    versions: [
+
+      { id: "11-den-12-256", color: "Đen", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["12GB", "256GB"] },
+      { id: "11-trang-12-256", color: "Trắng", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["12GB", "256GB"] },
+      { id: "11-xanh-12-256", color: "Xanh", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["12GB", "256GB"] },
+
+      { id: "11-den-16-256", color: "Đen", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["16GB", "256GB"] },
+      { id: "11-trang-16-256", color: "Trắng", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["16GB", "256GB"] },
+      { id: "11-xanh-16-256", color: "Xanh", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["16GB", "256GB"] },
+
+      { id: "11-den-16-512", color: "Đen", price: 30990000, stock: 120, status: true, sold: "1.1k", version: ["16GB", "512GB"] },
+      { id: "11-trang-16-512", color: "Trắng", price: 30990000, stock: 120, status: true, sold: "1.1k", version: ["16GB", "512GB"] },
+      { id: "11-xanh-16-512", color: "Xanh", price: 30990000, stock: 100, status: true, sold: "900", version: ["16GB", "512GB"] },
+
+      { id: "11-den-12-512", color: "Đen", price: 30990000, stock: 120, status: true, sold: "1.1k", version: ["12GB", "512GB"] },
+      { id: "11-trang-12-512", color: "Trắng", price: 30990000, stock: 120, status: true, sold: "1.1k", version: ["12GB", "512GB"] },
+      { id: "11-xanh-12-512", color: "Xanh", price: 30990000, stock: 100, status: true, sold: "900", version: ["12GB", "512GB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/11/16-9-1.png",
+      "../user/assets/image/sanpham/11/16-9-2.png",
+      "../user/assets/image/sanpham/11/16-9-3.png",
+      "../user/assets/image/sanpham/11/16-9-4.png",
+      "../user/assets/image/sanpham/11/16-9-5.png",
+      "../user/assets/image/sanpham/11/16-9-6.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "HyperOS, Android 15",
+      "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
+      "RAM": "12GB/16GB",
+      "Bộ nhớ trong": "256GB/512GB",
+      "Màn hình": "6.73 inch AMOLED WQHD+ 120Hz",
+      "Camera trước": "32MP",
+      "Camera sau": "50MP + 50MP + 50MP + 50MP",
+      "Pin": "5000mAh, sạc nhanh 90W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
+      "Bảo mật": "Vân tay quang học dưới màn hình",
+      "Màu sắc": "Đen, Trắng, Xanh"
+    },
+    overview: `
+    <h2>Xiaomi 15 Ultra – Camera Leica chuyên nghiệp, hiệu năng mạnh mẽ.</h2>
+    <p>Xiaomi 15 Ultra 5G tiếp tục khẳng định vị thế của dòng điện thoại cao cấp với thiết kế lấy cảm hứng từ máy ảnh chuyên nghiệp, đem đến một ngoại hình tinh tế nhưng vẫn mang nét hiện đại cho máy. Đặc biệt, viền camera còn được hoàn thiện với hiệu ứng ba chiều, không chỉ nâng cao tính thẩm mỹ mà còn mang lại sự hài hòa cho tổng thể thiết bị.</p>
+    <img src="/user/assets/image/sanpham/11/thongtin1.png" alt="">
+    <p>Xiaomi 15 Ultra 5G được trang bị vi xử lý Snapdragon 8 Elite, mang đến hiệu suất mạnh mẽ nhờ tiến trình 3 nm tiên tiến và CPU Oryon. Với tần số lõi chính đạt 4,32 GHz, chiếc điện thoại chơi game này có thể xử lý mượt mà từ các tác vụ thông thường đến những yêu cầu phức tạp như chơi game đồ họa cao hay chỉnh sửa video.</p>
+    <img src="/user/assets/image/sanpham/11/thongtin2.png" alt="">
+    <p>Cụm camera của máy bao gồm ống kính góc siêu rộng với cảm biến 50 MP, cho phép chụp cảnh rộng với độ chi tiết cao. Camera chính HDR 50 MP sử dụng cảm biến Sony LYT-900 kích thước 1 inch, khẩu độ lớn f/1,63 giúp thu sáng tốt hơn, cải thiện hiệu suất trong môi trường thiếu sáng.</p>
+    <img src="/user/assets/image/sanpham/11/thongtin3.png" alt="">
+    <p>Ống kính tele 70 mm và siêu tele 100 mm không chỉ hỗ trợ chụp chân dung tự nhiên mà còn giúp ghi lại những khoảnh khắc từ xa với độ sắc nét cao. Đặc biệt, camera siêu tele với khẩu độ f/2,6 và cảm biến 200 MP sẽ mang đến khả năng phóng đại hình ảnh vượt trội cho người dùng, trong khi vẫn giữ nguyên độ chi tiết và màu sắc chân thực.</p>
+    <p>Bên cạnh chụp ảnh, điện thoại Xiaomi AI còn hỗ trợ quay video chuyên nghiệp với khả năng quay 4K 60 fps ở toàn bộ dải tiêu cự. Đối với những nhà làm phim hoặc người dùng đam mê sáng tạo nội dung, chế độ quay video Log và hỗ trợ chuẩn màu ACES giúp đảm bảo chất lượng hình ảnh đạt mức tối ưu.</p>
+  `
+  },
+
+  {
+    id: "12",
+    name: "Nothing Phone 3",
+    brand: "Nothing",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp12.png",
+    price: 19990000,
+    salebefore: 20990000,
+    baseprice: 16000000,
+    listVersions: [
+      { name: "ram", option: ["12GB"] },
+      { name: "dung lượng", option: ["256GB"] }
+    ],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+
+      { id: "12-den-12-256", color: "Đen", price: 19990000, stock: 100, status: true, sold: "1.1k", version: ["12GB", "256GB"] },
+      { id: "12-trang-12-256", color: "Trắng", price: 19990000, stock: 80, status: true, sold: "900", version: ["12GB", "256GB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/12/16-9-1.png",
+      "../user/assets/image/sanpham/12/16-9-2.png",
+      "../user/assets/image/sanpham/12/16-9-3.png",
+      "../user/assets/image/sanpham/12/16-9-4.png",
+      "../user/assets/image/sanpham/12/16-9-5.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Nothing OS 3.0",
+      "Chip xử lý (CPU)": "Snapdragon 8s Gen 4",
+      "RAM": "12GB",
+      "Bộ nhớ trong": "256GB",
+      "Màn hình": "6.7 inch OLED 120Hz",
+      "Camera trước": "32MP",
+      "Camera sau": "50MP + 50MP",
+      "Pin": "4700mAh, sạc nhanh 45W",
+      "Kết nối": "5G, Wi-Fi 7",
+      "Bảo mật": "Vân tay quang học dưới màn hình",
+      "Màu sắc": "Đen, Trắng"
+    },
+    overview: `
+    <h2>Nothing Phone (3) – Tối giản nhưng nổi bật.</h2>
+    <p>Điện thoại Nothing Phone 3 mang đến nhiều cải tiến về phần cứng và tính năng đáng chú ý. Các yếu tố như camera cao cấp và hiệu năng mạnh mẽ được xem là điểm nhấn giúp thế hệ Nothing Phone này trở nên nổi bật trên thị trường điện thoại tầm trung.</p>
+    <p>Smartphone Nothing Phone 3 được trang bị con chip Snapdragon 8s Gen 4 nhờ đó sản phẩm dễ dàng đáp ứng mượt mà các tác vụ nặng. Việc tích hợp chip xử lý mạnh sẽ giúp người dùng giảm thiểu tối đa được tình trạng giật lag khi thao tác nhiều ứng dụng cùng lúc.</p>
+    <img src="/user/assets/image/sanpham/12/thongtin1.png" alt="">
+    <p>Nothing Phone 3 được trang bị không gian hiển thị cao cấp với màn hình AMOLED 6,67 inch, độ phân giải 1.260 x 2.800 pixel, cùng tần số quét cao 120Hz, đảm bảo khả năng mang lại hình ảnh mượt mà và sắc nét.</p>
+    <p>Ấn tượng nhất là máy có độ sáng tối đa lên đến 4.500 nits – đây là mức đỉnh cực cao trong điều kiện ngoài trời nắng, hỗ trợ hiển thị HDR, thông số chuẩn cao cấp vượt mặt các mẫu smartphone hàng đầu như Galaxy S24 Ultra (2.600 nit) và iPhone 15 Pro Max (~2.000 nit).</p>
+    <img src="/user/assets/image/sanpham/12/thongtin2.png" alt="">
+  `
+  },
+  {
+    id: "13",
+    name: "Sony Xperia 1 VI",
+    brand: "Sony",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp13.png",
+    price: 33990000,
+    salebefore: 35990000,
+    baseprice: 27000000,
+    listVersions: [
+      { name: "ram", option: ["12GB"] },
+      { name: "dung lượng", option: ["512GB"] }
+    ],
+    listColors: ["Đen", "Xanh Rêu", "Bạc"],
+    versions: [
+
+      { id: "13-den-12-512", color: "Đen", price: 33990000, stock: 90, status: true, sold: "800", version: ["12GB", "512GB"] },
+      { id: "13-xanh-12-512", color: "Xanh Rêu", price: 33990000, stock: 90, status: true, sold: "800", version: ["12GB", "512GB"] },
+      { id: "13-bac-12-512", color: "Bạc", price: 33990000, stock: 70, status: true, sold: "600", version: ["12GB", "512GB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/13/16-9-1.png",
+      "../user/assets/image/sanpham/13/16-9-2.png",
+      "../user/assets/image/sanpham/13/16-9-3.png",
+      "../user/assets/image/sanpham/13/16-9-4.png",
+      "../user/assets/image/sanpham/13/16-9-5.png",
+      "../user/assets/image/sanpham/13/16-9-6.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 15",
+      "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
+      "RAM": "12GB",
+      "Bộ nhớ trong": "512GB",
+      "Màn hình": "6.5 inch 4K HDR OLED 120Hz",
+      "Camera trước": "12MP",
+      "Camera sau": "48MP + 12MP + 12MP",
+      "Pin": "5000mAh, sạc nhanh 30W",
+      "Kết nối": "5G, Wi-Fi 6E, NFC",
+      "Bảo mật": "Cảm biến vân tay cạnh viền",
+      "Màu sắc": "Đen, Xanh Rêu, Bạc"
+    },
+    overview: `
+    <h2>Sony Xperia 1 VI – Đỉnh cao quay phim và nhiếp ảnh chuyên nghiệp.</h2>
+    <p>Trang bị màn hình 4K HDR độc quyền, camera cảm biến Exmor RS, trải nghiệm điện ảnh thực thụ.</p>
+    <img src="/user/assets/image/sanpham/13/thongtin1.png" alt="">
+  `
+  },
+
+  {
+    id: "14",
+    name: "Samsung Galaxy S25 Ultra",
+    brand: "Samsung",
+    category: "Điện thoại",
+    thumbnail: "../user/assets/image/sanpham/sp14.png",
+    price: 33990000,
+    salebefore: 36990000,
+    baseprice: 22000000,
+    listVersions: [
+      { name: "ram", option: ["12GB"] },
+      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] }
+    ],
+    listColors: ["Đen Titan", "Trắng Sương", "Xanh Băng"],
+    versions: [
+
+      { id: "14-den-12-256", color: "Đen Titan", price: 33990000, stock: 300, status: true, sold: "7.1k", version: ["12GB", "256GB"] },
+      { id: "14-trang-12-256", color: "Trắng Sương", price: 33990000, stock: 250, status: true, sold: "6.4k", version: ["12GB", "256GB"] },
+      { id: "14-xanh-12-256", color: "Xanh Băng", price: 33990000, stock: 300, status: true, sold: "4.3k", version: ["12GB", "256GB"] },
+
+      { id: "14-den-12-512", color: "Đen Titan", price: 38990000, stock: 200, status: true, sold: "8.2k", version: ["12GB", "512GB"] },
+      { id: "14-trang-12-512", color: "Trắng Sương", price: 38990000, stock: 150, status: true, sold: "3.5k", version: ["12GB", "512GB"] },
+      { id: "14-xanh-12-512", color: "Xanh Băng", price: 38990000, stock: 100, status: true, sold: "2.8k", version: ["12GB", "512GB"] },
+
+      { id: "14-den-12-1", color: "Đen Titan", price: 41990000, stock: 50, status: true, sold: "5.2k", version: ["12GB", "1TB"] },
+      { id: "14-trang-12-1", color: "Trắng Sương", price: 41990000, stock: 50, status: true, sold: "3.2k", version: ["12GB", "1TB"] },
+      { id: "14-xanh-12-1", color: "Xanh Băng", price: 41990000, stock: 50, status: true, sold: "2.4k", version: ["12GB", "1TB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/14/16-9-1.png",
+      "../user/assets/image/sanpham/14/16-9-2.png",
+      "../user/assets/image/sanpham/14/16-9-3.png",
+      "../user/assets/image/sanpham/14/16-9-4.png",
+      "../user/assets/image/sanpham/14/16-9-5.png",
+      "../user/assets/image/sanpham/14/16-9-6.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Android 15, One UI 7",
+      "Chip xử lý (CPU)": "Snapdragon 8 Gen 4 for Galaxy",
+      "Chip đồ họa (GPU)": "Adreno 830",
+      "RAM": "12GB",
+      "Bộ nhớ trong": "256GB/512GB/1TB",
+      "Màn hình": "6.8 inch QHD+ Dynamic AMOLED 2X, 120Hz",
+      "Camera trước": "12MP",
+      "Camera sau": "200MP + 50MP + 12MP + 10MP",
+      "Pin": "5000mAh, sạc nhanh 45W",
+      "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
+      "Bảo mật": "Vân tay siêu âm, Nhận diện khuôn mặt",
+      "Trọng lượng": "233g",
+      "Màu sắc": "Đen Titan, Trắng Sương, Xanh Băng"
+    },
+    overview: `
+      <h2>Galaxy S25 Ultra – Định nghĩa lại sức mạnh flagship Android.</h2>
+      <p>Samsung Galaxy S25 Ultra trang bị chip Snapdragon 8 Gen 4 for Galaxy, 
+      camera chính 200MP và bút S-Pen đi kèm. Thiết kế khung titan và khả năng quay video 8K giúp máy trở thành lựa chọn hàng đầu của giới sáng tạo nội dung.</p>
+      <img src="/user/assets/image/sanpham/14/thongtin1.png" alt="">
+      <p>Màn hình AMOLED 2X QHD+ 120Hz mang đến màu sắc rực rỡ, độ sáng cao và độ tương phản tuyệt vời trong mọi điều kiện.</p>
+      <p>Tần số quét màn hình 120 Hz được duy trì, mang lại trải nghiệm mượt mà khi cuộn trang hoặc chơi game. Hơn nữa, công nghệ Vision Booster được cải tiến sẽ tối ưu hóa độ sáng và màu sắc cùng màu đen sâu dựa trên điều kiện ánh sáng xung quanh, giúp nội dung trên màn hình trở nên sống động hơn.</p>
+      <p>Snapdragon 8 Elite For Galaxy chính thức được xác nhận là vi xử lý của siêu phẩm này. Đây là chip tùy chỉnh đặc biệt từ Qualcomm, độc quyền cho Samsung, mang lại hiệu suất vượt trội hơn 20% so với thế hệ trước. Đồng thời, khả năng tối ưu năng lượng được cải thiện đáng kể, giúp kéo dài thời lượng pin và nâng cao trải nghiệm sử dụng.</p>
+      <img src="/user/assets/image/sanpham/14/thongtin2.png" alt="">
+    `
+  },
+
+  {
+    id: "16",
+    name: "MacBook Pro M3 14 inch",
+    brand: "Apple",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp16.png",
+    price: 47990000,
+    salebefore: 49990000,
+    baseprice: 39000000,
+    listVersions: [
+      { name: "ram", option: ["16GB", "32GB"] },
+      { name: "dung lượng", option: ["512GB", "1TB"] }
+    ],
+    listColors: ["Xám Vũ Trụ", "Bạc"],
+    versions: [
+
+      { id: "16-xam-16-512", color: "Xám Vũ Trụ", price: 47990000, stock: 200, status: true, sold: "4.2k", version: ["16GB", "512GB"] },
+      { id: "16-bac-16-512", color: "Bạc", price: 47990000, stock: 300, status: true, sold: "3.8k", version: ["16GB", "512GB"] },
+
+      { id: "16-den-32-512", color: "Xám Vũ Trụ", price: 47990000, stock: 200, status: true, sold: "4.2k", version: ["32GB", "512GB"] },
+      { id: "16-xam-32-512", color: "Bạc", price: 47990000, stock: 300, status: true, sold: "3.8k", version: ["32GB", "512GB"] },
+
+      { id: "16-xam-32-1", color: "Xám Vũ Trụ", price: 51990000, stock: 100, status: true, sold: "2.3k", version: ["32GB", "1TB"] },
+      { id: "16-bac-32-1", colorcolor: "Bạc", price: 51990000, stock: 100, status: true, sold: "1.9k", version: ["32GB", "1TB"] },
+
+      { id: "16-xam-16-1", color: "Xám Vũ Trụ", price: 51990000, stock: 100, status: true, sold: "2.3k", version: ["16GB", "1TB"] },
+      { id: "16-bac-16-1", color: "Bạc", price: 51990000, stock: 100, status: true, sold: "1.9k", version: ["16GB", "1TB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/16/16-9-1.png",
+      "../user/assets/image/sanpham/16/16-9-2.png",
+      "../user/assets/image/sanpham/16/16-9-3.png",
+      "../user/assets/image/sanpham/16/16-9-4.png",
+      "../user/assets/image/sanpham/16/16-9-5.png",
+      "../user/assets/image/sanpham/16/16-9-6.png",
+      "../user/assets/image/sanpham/16/16-9-7.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "macOS Sequoia",
+      "CPU": "Apple M3 Pro",
+      "GPU": "16 nhân",
+      "RAM": "16GB / 32GB",
+      "Ổ cứng": "512GB / 1TB SSD",
+      "Màn hình": "14.2 inch Liquid Retina XDR",
+      "Trọng lượng": "1.55kg",
+      "Pin": "18 giờ phát video",
+      "Cổng kết nối": "HDMI, Thunderbolt 4, MagSafe 3",
+      "Bảo mật": "Touch ID",
+      "Màu sắc": "Bạc, Xám Vũ Trụ"
+    },
+    overview: `
+  <h2>MacBook Pro M3 – Sức mạnh vượt trội trong thiết kế sang trọng</h2>
+  <p>MacBook Pro M3 mang lại hiệu năng cực khủng với chip M3 Pro, màn hình Retina XDR tuyệt đẹp, thời lượng pin lâu và hệ sinh thái Apple liền mạch.</p>
+  <p>Chip Apple M3 Pro đại diện cho bước ngoặt trong hiệu năng và khả năng tiết kiệm năng lượng. Với công nghệ sản xuất 3 nm và hơn 37 tỷ bóng bán dẫn, nó cung cấp hiệu suất ưu việt và tuổi thọ pin cao. Chip này kết hợp hoàn hảo giữa CPU đa lõi và GPU mạnh mẽ, đặc biệt được tối ưu hóa cho các công việc đòi hỏi sự vượt trội trong đồ họa, lập trình và sáng tạo.</p>
+  <p>Sở hữu sức mạnh siêu khủng của chip Apple silicon với 11 nhân CPU cung cấp một hiệu năng đáng kể cho các tác vụ đa luồng và công việc đòi hỏi xử lý nhanh. Đặc biệt hữu ích cho lập trình viên, những người làm việc với ứng dụng đòi hỏi cao như làm video, kỹ thuật đồ họa, các nhiệm vụ liên quan đến công nghiệp sáng tạo.</p>
+  <img src="/user/assets/image/sanpham/16/thongtin1.png" alt="">
+  <p>Sản phẩm trang bị màn hình 14.2 inch cùng độ phân giải Liquid Retina XDR display (3024 x 1964) với khả năng hiển thị độ sáng liên tục 1000 nits cho XDR và độ sáng tối đa lên đến 1600 nits cho nội dung HDR, nó mang đến một trải nghiệm xem ảnh và video tuyệt vời. Tỷ lệ tương phản cao giữa ánh sáng và bóng tối làm cho mọi hình ảnh trong tầm mắt trở nên sắc nét và sống động hơn bao giờ hết.</p>
+  <p>Màn hình Liquid Retina XDR cũng xuất sắc trong việc tái hiển thị màu bởi công nghệ Wide color và 1 tỷ màu sắc. Nó đem lại cho bạn gam màu sống động, chính xác và tươi sáng giúp nội dung trở nên chân thực và cuốn hút.</p>  
+  <img src="/user/assets/image/sanpham/16/thongtin2.png" alt="">
+  `
+  },
+  {
+    id: "17",
+    name: "ASUS ROG Zephyrus G14 (2025)",
+    brand: "ASUS",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp17.png",
+    price: 39990000,
+    salebefore: 42990000,
+    baseprice: 33000000,
+    listVersions: [
+      { name: "ram", option: ["16GB", "32GB"] },
+      { name: "dung lượng", option: ["512GB", "1TB"] }
+    ],
+    listColors: ["Trắng", "Xám"],
+    versions: [
+
+      { id: "17-trang-16-512", color: "Trắng", price: 39990000, stock: 200, status: true, sold: "2.5k", version: ["16GB", "512GB"] },
+      { id: "17-xam-16-512", color: "Xám", price: 39990000, stock: 200, status: true, sold: "3.1k", version: ["16GB", "512GB"] },
+
+      { id: "17-trang-32-512", color: "Trắng", price: 39990000, stock: 200, status: true, sold: "2.5k", version: ["32GB", "512GB"] },
+      { id: "17-xam-32-512", color: "Xám", price: 39990000, stock: 200, status: true, sold: "3.1k", version: ["32GB", "512GB"] },
+
+      { id: "17-trang-32-1", color: "Trắng", price: 44990000, stock: 150, status: true, sold: "1.8k", version: ["32GB", "1TB"] },
+      { id: "17-xam-32-1", color: "Xám", price: 44990000, stock: 100, status: true, sold: "1.2k", version: ["32GB", "1TB"] },
+
+      { id: "17-trang-16-1", color: "Trắng", price: 44990000, stock: 150, status: true, sold: "1.8k", version: ["16GB", "1TB"] },
+      { id: "17-xam-16-1", color: "Xám", color: "Xám", price: 44990000, stock: 100, status: true, sold: "1.2k", version: ["16GB", "1TB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/17/16-9-1.png",
+      "../user/assets/image/sanpham/17/16-9-2.png",
+      "../user/assets/image/sanpham/17/16-9-3.png",
+      "../user/assets/image/sanpham/17/16-9-4.png",
+      "../user/assets/image/sanpham/17/16-9-5.png",
+      "../user/assets/image/sanpham/17/16-9-6.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11 Home",
+      "CPU": "AMD Ryzen 9 8945HS",
+      "GPU": "NVIDIA RTX 4070 8GB",
+      "RAM": "16GB / 32GB",
+      "Ổ cứng": "512GB / 1TB SSD",
+      "Màn hình": "14 inch QHD+ 165Hz",
+      "Trọng lượng": "1.6kg",
+      "Pin": "76Wh",
+      "Cổng kết nối": "USB-C, HDMI, Jack 3.5mm",
+      "Bảo mật": "Mở khóa khuôn mặt",
+      "Màu sắc": "Trắng, Xám"
+    },
+    overview: `
+  <h2>ASUS ROG Zephyrus G14 – Hiệu năng mạnh mẽ cho game thủ và nhà sáng tạo</h2>
+  <p>Chiếc Lap top gaming gọn nhẹ nhất với hiệu năng cao, GPU RTX 4070 và màn hình QHD+ 165Hz. Hoàn hảo cho cả chơi game và làm việc.</p>
+  <p>Kích thước 31.1 x 22.0 x 1.59 ~ 1.63 cm và trọng lượng 1.50 kg (3.31 lbs) làm cho thiết bị này trở thành một lựa chọn phù hợp cho người dùng thường xuyên di chuyển. Với thiết kế nhỏ gọn, bạn có thể dễ dàng mang theo trong túi xách hoặc balo mà không cảm thấy nặng nề.</p>
+  <p>Độ dày từ 1.59 cm đến 1.63 cm mang lại sự thanh mảnh, phù hợp cho các không gian làm việc hiện đại hoặc những chuyến công tác dài ngày. Bên cạnh đó, laptop Asus Gaming ROG Zephyrus G14 GA403UU-QS135W có màu xám sang trọng là điểm nhấn, tạo cảm giác tinh tế và chuyên nghiệp cho thiết bị. </p>
+  <p>Trang bị màn hình 14-inch kết hợp độ phân giải 3K (2880 x 1800) , từ đó đem đến hông gian hiển thị rõ nét. Công nghệ OLED tiên tiến giúp tái tạo màu sắc sống động, chân thực và đạt độ sáng tối đa lên đến 500 nits, đảm bảo hiển thị tốt trong mọi điều kiện ánh sáng.</p>
+  <p>Tốc độ làm mới 120Hz và thời gian phản hồi 0.2ms (G2G) giúp hình ảnh chuyển động nhanh nhạy, giảm thiểu hiện tượng nhòe, phù hợp cho các tác vụ đòi hỏi tốc độ cao. Laptop Asus Gaming ROG Zephyrus G14 GA403UU-QS135W trang bị góc nhìn rộng 85/85 đảm bảo hình ảnh không bị biến dạng dù nhìn từ nhiều hướng.</p>
+  <img src="/user/assets/image/sanpham/17/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "18",
+    name: "Dell XPS 13 Plus (2025)",
+    brand: "Dell",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp18.png",
+    price: 42990000,
+    salebefore: 45990000,
+    baseprice: 36000000,
+    listVersions: [
+      { name: "ram", option: ["16GB", "32GB"] },
+      { name: "dung lượng", option: ["512GB", "1TB"] }
+    ],
+    listColors: ["Bạc", "Đen Carbon"],
+    versions: [
+
+      { id: "18-bac-16-512", color: "Bạc", price: 42990000, stock: 250, status: true, sold: "2.1k", version: ["16GB", "512GB"] },
+      { id: "18-den-16-512", color: "Đen Carbon", price: 42990000, stock: 200, status: true, sold: "1.9k", version: ["16GB", "512GB"] },
+
+      { id: "18-bac-32-512", color: "Bạc", price: 42990000, stock: 250, status: true, sold: "2.1k", version: ["32GB", "512GB"] },
+      { id: "18-den-32-512", color: "Đen Carbon", price: 42990000, stock: 200, status: true, sold: "1.9k", version: ["32GB", "512GB"] },
+
+      { id: "18-bac-16-1", color: "Bạc", price: 47990000, stock: 100, status: true, sold: "1.2k", version: ["16GB", "1TB"] },
+      { id: "18-den-16-1", color: "Đen Carbon", price: 47990000, stock: 100, status: true, sold: "1.5k", version: ["16GB", "1TB"] },
+
+      { id: "18-bac-32-1", color: "Bạc", price: 47990000, stock: 100, status: true, sold: "1.2k", version: ["32GB", "1TB"] },
+      { id: "18-den-32-1", color: "Đen Carbon", price: 47990000, stock: 100, status: true, sold: "1.5k", version: ["32GB", "1TB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/18/16-9-1.png",
+      "../user/assets/image/sanpham/18/16-9-2.png",
+      "../user/assets/image/sanpham/18/16-9-3.png",
+      "../user/assets/image/sanpham/18/16-9-4.png",
+      "../user/assets/image/sanpham/18/16-9-5.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11 Pro",
+      "CPU": "Intel Core Ultra 7 155H",
+      "GPU": "Intel Arc tích hợp",
+      "RAM": "16GB / 32GB LPDDR5",
+      "Ổ cứng": "512GB / 1TB SSD",
+      "Màn hình": "13.4 inch OLED 3.2K",
+      "Trọng lượng": "1.23kg",
+      "Pin": "55Wh",
+      "Cổng kết nối": "2x Thunderbolt 4, USB-C",
+      "Bảo mật": "Cảm biến vân tay",
+      "Màu sắc": "Bạc, Đen Carbon"
+    },
+    overview: `
+  <h2>Dell XPS 13 Plus – Sang trọng, mạnh mẽ, và tối giản</h2>
+  <p>Vẻ ngoài được trang hoàng với lớp vỏ nhôm cứng cáp đi kèm với tông màu bạc sáng, vừa mang đến sự sang trọng, hiện đại, vừa đảm bảo được tính bền bỉ vốn có cho những mẫu sản phẩm cao cấp. Hơn nữa, với những người đam mê đồ công nghệ chắc chắn sẽ rất mê mẩn với chiếc TouchPad "tàng hình" được tích hợp chung với chiếu nghỉ tay và các nút phím chức năng dạng cảm ứng điện dung, mang đến trải nghiệm đầy mới lạ và thích thú cho bạn.</p>
+  <p>Mẫu Ultrabook đến từ nhà Dell này còn sở hữu một khối lượng khá linh hoạt chỉ vỏn vẹn 1.26 kg, dễ dàng để bạn bỏ trong balo và mang theo đến bất cứ đâu. Đèn nền bàn phím phù hợp cho những buổi chạy deadline vào đêm khuya. Ngoài ra, laptop cũng có đa dạng các tính năng bảo mật quyền riêng tư và thông tin hình ảnh cho bạn như bảo mật vân tay và mở khoá khuôn mặt.</p>
+  <img src="/user/assets/image/sanpham/18/thongtin1.png" alt="">
+  <p>Laptop Dell XPS được trang bị bộ vi xử lý Intel Core i5 1340P có xung nhịp cao nhất lên đến 4.6 GHz đi kèm với card Intel Iris Xe Graphics hỗ trợ vận hành hoàn hảo mọi công việc văn phòng nâng cao trên Office hay Google, ngoài ra với thông số trên bạn cũng có thể nhẹ nhàng thao tác với việc thiết kế đồ hoạ 2D, thiết kế poster, banner,...</p>
+  <p>Bộ nhớ RAM 16 GB LPDDR5 có tốc độ Bus cao 6000 MHz mang đến quá trình đa nhiệm trơn tru, bạn hoàn toàn có thể mở cùng lúc nhiều tác vụ như: LINE, Photoshop, Chrome,... liên tục chuyển qua lại giữa các ứng dụng mà không lo bị giật lag. Ổ cứng SSD 512 GB NVMe PCIe rút ngắn tốc độ truy xuất và ghi đọc dữ liệu còn lại chỉ vài giây, dung lượng lưu trữ thoải mái có thể nâng lên tối đa tận 2 TB.</p>
+  <img src="/user/assets/image/sanpham/18/thongtin2.png" alt="">
+  <p>Màn hình laptop Dell sở hữu kích thước 13.4 inch sử dụng tấm nền WVA cho góc nhìn rộng rãi hơn, thoải mái quan sát đa dạng nội dung khi làm việc hay giải trí. Thêm vào đó, tính năng cảm ứng đa điểm còn giúp người dùng dễ dàng sử dụng hơn với các thao tác kéo thả, di vuốt trực tiếp lên màn hình.</p>
+  <p>Độ phân giải 3.5K (3456 x 2160) - OLED mang đến sắc độ màu rực rỡ, độ sâu màu cao tái hiện những khung hình chi tiết và rõ nét nhất cho người dùng, không chỉ nâng cao các trải nghiệm giải trí thêm đã mắt mà còn giúp ích rất tốt cho việc làm thiết kế, đồ hoạ.</p>
+  `
+  },
+
+  {
+    id: "19",
+    name: "HP Spectre x360 14 (2025)",
+    brand: "HP",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp19.png",
+    price: 38990000,
+    salebefore: 40990000,
+    baseprice: 31000000,
+    listVersions: [
+      { name: "ram", option: ["16GB", "32GB"] },
+      { name: "dung lượng", option: ["512GB", "1TB"] }
+    ],
+    listColors: ["Xanh Midnight", "Bạc"],
+    versions: [
+
+      { id: "19-xanh-16-512", color: "Xanh Midnight", price: 38990000, stock: 200, status: true, sold: "2.8k", version: ["16GB", "512GB"] },
+      { id: "19-bac-16-512", color: "Bạc", price: 38990000, stock: 150, status: true, sold: "1.5k", version: ["16GB", "512GB"] },
+
+      { id: "19-xanh-32-512", color: "Xanh Midnight", price: 38990000, stock: 200, status: true, sold: "2.8k", version: ["32GB", "512GB"] },
+      { id: "19-bac-32-512", color: "Bạc", price: 38990000, stock: 150, status: true, sold: "1.5k", version: ["32GB", "512GB"] },
+
+      { id: "19-xanh-16-1", color: "Xanh Midnight", price: 42990000, stock: 100, status: true, sold: "1.1k", version: ["16GB", "1TB"] },
+      { id: "19-bac-16-1", color: "Bạc", price: 42990000, stock: 100, status: true, sold: "900", version: ["16GB", "1TB"] },
+
+      { id: "19-xanh-32-1", color: "Xanh Midnight", price: 42990000, stock: 100, status: true, sold: "1.1k", version: ["32GB", "1TB"] },
+      { id: "19-bac-32-1", color: "Bạc", price: 42990000, stock: 100, status: true, sold: "900", version: ["32GB", "1TB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/19/16-9-1.png",
+      "../user/assets/image/sanpham/19/16-9-2.png",
+      "../user/assets/image/sanpham/19/16-9-3.png",
+      "../user/assets/image/sanpham/19/16-9-4.png",
+      "../user/assets/image/sanpham/19/16-9-5.png",
+      "../user/assets/image/sanpham/19/16-9-6.png",
+      "../user/assets/image/sanpham/19/16-9-7.png",
+      "../user/assets/image/sanpham/19/16-9-8.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11 Home",
+      "CPU": "Intel Core Ultra 7 155H",
+      "GPU": "Intel Arc tích hợp",
+      "RAM": "16GB / 32GB",
+      "Ổ cứng": "512GB / 1TB SSD",
+      "Màn hình": "14 inch OLED 2.8K cảm ứng",
+      "Trọng lượng": "1.36kg",
+      "Pin": "66Wh",
+      "Bảo mật": "Cảm biến vân tay, camera IR",
+      "Màu sắc": "Xanh Midnight, Bạc"
+    },
+    overview: `
+  <h2>HP Spectre x360 – Linh hoạt và thời thượng</h2>
+  <p>Laptop HP sở hữu thiết kế mỏng nhẹ, tinh tế và sang trọng, là sự kết hợp hoàn hảo giữa tính di động và đẳng cấp khi được chế tác từ vỏ kim loại cao cấp có độ hoàn thiện cao. Khối lượng chỉ 1.44 kg cùng độ mỏng 16.9 mm cho phép bạn cất gọn máy vào balo, túi xách mang theo bất cứ lúc nào mà không gặp trở ngại về cân nặng.</p>
+  <p>Thiết kế bản lề 360 độ độc đáo mang đến sự linh hoạt và đa dụng, giúp bạn dễ dàng chuyển đổi giữa các chế độ sử dụng như laptop, máy tính bảng, lều và trình chiếu, nâng tầm trải nghiệm làm việc, giải trí.</p>
+  <p>Chiếc laptop cao cấp - sang trọng này mang đến hiệu năng ấn tượng với sự kết hợp mạnh mẽ giữa CPU Intel Core Ultra 7 155H và card đồ họa Intel Arc Graphics. Dù là các tác vụ văn phòng nặng nhọc, chỉnh sửa ảnh, render video ngắn, xem phim chất lượng cao hay chơi game giải trí,... máy đều có thể xử lý mượt mà, trơn tru, giúp bạn hoàn thành mọi công việc một cách hiệu quả và tiết kiệm thời gian.</p>
+  <p>Sở hữu màn hình 14 inch viền siêu mỏng với những thông số khủng như tấm nền OLED cao cấp, độ phân giải lên đến 2.8K (2880 x 1800) đi cùng chuẩn màu 100% DCI-P3, laptop cung cấp chất lượng hiển thị chuẩn điện ảnh với màu sắc rực rỡ, độ tương phản cao, màu đen sâu cùng khả năng tái tạo sắc nét đến từng khung hình, mở ra cho bạn không gian giải trí sống động ngay trước mắt mà không cần phải đi đến rạp chiếu phim.</p>
+  <img src="/user/assets/image/sanpham/19/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "20",
+    name: "Lenovo Yoga Pro 9i (2025)",
+    brand: "Lenovo",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp20.png",
+    price: 36990000,
+    salebefore: 38990000,
+    baseprice: 30000000,
+    listVersions: [
+      { name: "ram", option: ["16GB", "32GB"] },
+      { name: "dung lượng", option: ["512GB", "1TB"] }
+    ],
+    listColors: ["Xanh biển", "Xám bạc"],
+    versions: [
+
+      { id: "20-xanh-16-512", color: "Xanh biển", price: 36990000, stock: 150, status: true, sold: "2.1k", version: ["16GB", "512GB"] },
+      { id: "20-xam-16-512", color: "Xám bạc", price: 36990000, stock: 200, status: true, sold: "1.8k", version: ["16GB", "512GB"] },
+
+      { id: "20-xanh-32-512", color: "Xanh biển", price: 36990000, stock: 150, status: true, sold: "2.1k", version: ["32GB", "512GB"] },
+      { id: "20-xam-32-512", color: "Xám bạc", price: 36990000, stock: 200, status: true, sold: "1.8k", version: ["32GB", "512GB"] },
+
+      { id: "20-xanh-16-1", color: "Xanh biển", price: 40990000, stock: 100, status: true, sold: "1.2k", version: ["16GB", "1TB"] },
+      { id: "20-xam-16-1", color: "Xám bạc", price: 40990000, stock: 100, status: true, sold: "950", version: ["16GB", "1TB"] },
+
+      { id: "20-xanh-32-1", color: "Xanh biển", price: 40990000, stock: 100, status: true, sold: "1.2k", version: ["32GB", "1TB"] },
+      { id: "20-xam-32-1", color: "Xám bạc", price: 40990000, stock: 100, status: true, sold: "950", version: ["32GB", "1TB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/20/16-9-1.png",
+      "../user/assets/image/sanpham/20/16-9-2.png",
+      "../user/assets/image/sanpham/20/16-9-3.png",
+      "../user/assets/image/sanpham/20/16-9-4.png",
+      "../user/assets/image/sanpham/20/16-9-5.png",
+      "../user/assets/image/sanpham/20/16-9-6.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11 Home",
+      "CPU": "Intel Core Ultra 9 185H",
+      "GPU": "NVIDIA RTX 4060 8GB",
+      "RAM": "16GB / 32GB",
+      "Ổ cứng": "512GB / 1TB SSD",
+      "Màn hình": "16 inch 3.2K 165Hz Mini LED",
+      "Trọng lượng": "1.7kg",
+      "Pin": "75Wh",
+      "Cổng kết nối": "USB-C, HDMI, Thunderbolt 4",
+      "Màu sắc": "Xanh biển, Xám bạc"
+    },
+    overview: `
+  <h2>Lenovo Yoga Pro 9i – Đỉnh cao sáng tạo và hiệu suất</h2>
+  <p>Chiếc Yoga Pro 9i có màu xám nhạt thanh lịch với thiết kế tối giản, nhưng vẫn toát lên vẻ sang trọng và hiện đại. Các cạnh máy được bo tròn tinh tế, tạo nên sự mềm mại và thanh lịch. Phần vỏ máy được hoàn thiện kỹ càng, từ công đoạn phun cát cho đến xử lý anot hóa và đánh bóng ở nhiệt độ cao, giúp bề mặt máy nhẵn mịn, chống xước và ít bám dấu vân tay.</p>
+  <p>Mặc dù có màn hình lớn 16 inch, Lenovo Yoga Pro 9i vẫn giữ được tính di động cao nhờ thiết kế mỏng nhẹ. Máy có trọng lượng khoảng 2.2kg, cùng kích thước 7.9mm x 362.72mm x 253.69mm, giúp người dùng dễ dàng mang theo bên mình khi di chuyển mà không cảm thấy cồng kềnh hay nặng nề.</p>
+  <p>Chiếc laptop Lenovo này được trang bị màn hình Mini LED 3.2K với độ phân giải cao, mang lại hình ảnh cực kỳ sắc nét và chi tiết. Kích thước 16 inch với tỷ lệ 16:10 giúp mở rộng không gian hiển thị, giúp bạn làm việc, giải trí thoải mái hơn, đặc biệt là khi xem nội dung đa phương tiện hoặc làm việc với nhiều cửa sổ cùng lúc.</p>
+  <img src="/user/assets/image/sanpham/20/thongtin1.png" alt="">
+  <p>Màn hình này còn có tần số quét 165Hz, giúp hình ảnh chuyển động mượt mà, đặc biệt hữu ích cho những ai thường xuyên chơi game hay xem video chất lượng cao. Bên cạnh đó, độ phủ màu 100% sRGB đảm bảo màu sắc hiển thị chân thực, sống động, lý tưởng cho công việc sáng tạo như thiết kế đồ họa hoặc chỉnh sửa hình ảnh. Với độ sáng 400 nits, màn hình vẫn đảm bảo hiển thị tốt trong điều kiện ánh sáng mạnh, giúp bạn làm việc ngoài trời hoặc trong không gian có nhiều ánh sáng mà không lo bị chói.</p>
+  `
+  },
+  {
+    id: "21",
+    name: "MSI Stealth 16 Studio (2025)",
+    brand: "MSI",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp21.png",
+    price: 49990000,
+    salebefore: 52990000,
+    baseprice: 41000000,
+    listVersions: [
+      { name: "ram", option: ["32GB"] },
+      { name: "dung lượng", option: ["1TB"] }
+    ],
+    listColors: ["Trắng Bạc", "Đen"],
+    versions: [
+
+      { id: "21-trang-32-1", color: "Trắng Bạc", price: 49990000, stock: 120, status: true, sold: "2.4k", version: ["32GB", "1TB"] },
+      { id: "21-den-32-1", color: "Đen", price: 49990000, stock: 100, status: true, sold: "1.9k", version: ["32GB", "1TB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/21/16-9-1.png",
+      "../user/assets/image/sanpham/21/16-9-2.png",
+      "../user/assets/image/sanpham/21/16-9-3.png",
+      "../user/assets/image/sanpham/21/16-9-4.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11 Pro",
+      "CPU": "Intel Core Ultra 9 185H",
+      "GPU": "NVIDIA RTX 4070 8GB",
+      "RAM": "32GB LPDDR5",
+      "Ổ cứng": "1TB SSD",
+      "Màn hình": "16 inch QHD+ OLED 240Hz",
+      "Trọng lượng": "1.99kg",
+      "Pin": "90Wh",
+      "Cổng kết nối": "HDMI, USB-C, Thunderbolt 4",
+      "Bảo mật": "Cảm biến vân tay",
+      "Màu sắc": "Đen, Trắng Bạc"
+    },
+    overview: `
+  <h2>MSI Stealth 16 Studio – Lap top mỏng nhẹ dành cho sáng tạo chuyên nghiệp</h2>
+  <p>MSI Stealth 16 Studio A13V mang trong mình ngôn ngữ thiết kế tối giản nhưng không thiếu đi vẻ mạnh mẽ cần thiết của những chiếc laptop gaming. Với vẻ ngoài có phần vuông vức, góc cạnh được làm tỉ mỉ cũng là yếu tố giúp MSI chiếm được nhiều cảm tình từ người dùng. Bên cạnh đó là sự kết hợp tài tình của logo MSI ở chính giữa mặt lưng càng làm tôn lên sự ấn tượng cho chiếc laptop gaming này.</p>
+  <p>Trọng lượng của máy là 1.99kg và kích thước lần lượt 355mm x 259mm x 19.9mm. Phải thừa nhận rằng, đây là một con số khá lý tưởng so với mặt bằng chung của những chiếc laptop gaming hiện nay. Do đó, việc di chuyển hay mang vác cũng trở nên dễ dàng và tiện lợi hơn phần nào.</p>
+  <img src="/user/assets/image/sanpham/21/thongtin1.png" alt="">
+  <p>Màn hình là một phần rất quan trọng, nhất là đối với laptop gaming, MSI Stealth 16 Studio A13V sở hữu màn hình có độ phân giải cao, cùng nhiều các tùy chọn đáng chú ý như:</p>
+  <ul>
+  <li>16 inch - IPS - QHD+ (2560 x 1600 px) - 240Hz.</li>
+  <li>16 inch - IPS - UHD+ (3840 x 2400 px) - 120Hz.</li>
+  <li>16 inch - IPS - FHD+ (1920 x 1200 px) - 165Hz.</li>
+  </ul>
+  <p>Về hiệu năng tổng thể, MSI Stealth 16 Studio A13V vẫn cho thấy được sự nổi trội hơn nhiều so với “những bạn bè đồng trang lứa” bởi máy được trang bị hàng loạt các thành phần linh kiện hàng đầu hiện nay. Máy được trang bị sức mạnh đáng nể tới từ con chip Intel Gen 13th.</p>
+  <img src="/user/assets/image/sanpham/21/thongtin2.png" alt="">
+  `
+  },
+  {
+    id: "22",
+    name: "Acer Swift Go 14 (2025)",
+    brand: "Acer",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp22.png",
+    price: 28990000,
+    salebefore: 30990000,
+    baseprice: 23000000,
+    listVersions: [
+      { name: "ram", option: ["16GB"] },
+      { name: "dung lượng", option: ["512GB"] }
+    ],
+    listColors: ["Bạc", "Hồng ánh kim"],
+    versions: [
+
+      { id: "22-bac-16-512", color: "Bạc", price: 28990000, stock: 300, status: true, sold: "3.1k", version: ["16GB", "512GB"] },
+      { id: "22-hong-16-512", color: "Hồng ánh kim", price: 28990000, stock: 150, status: true, sold: "2.4k", version: ["16GB", "512GB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/22/16-9-1.png",
+      "../user/assets/image/sanpham/22/16-9-2.png",
+      "../user/assets/image/sanpham/22/16-9-3.png",
+      "../user/assets/image/sanpham/22/16-9-4.png",
+      "../user/assets/image/sanpham/22/16-9-5.png",
+      "../user/assets/image/sanpham/22/16-9-6.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11 Home",
+      "CPU": "Intel Core Ultra 5 125H",
+      "GPU": "Intel Arc tích hợp",
+      "RAM": "16GB LPDDR5",
+      "Ổ cứng": "512GB SSD",
+      "Màn hình": "14 inch OLED 2.8K 90Hz",
+      "Trọng lượng": "1.25kg",
+      "Pin": "65Wh",
+      "Cổng kết nối": "USB-C, HDMI, USB-A",
+      "Màu sắc": "Bạc, Hồng ánh kim"
+    },
+    overview: `
+  <h2>Acer Swift Go 14 – Lap top di động cho sinh viên và dân văn phòng</h2>
+  <p>Laptop Acer Swift Go 14 AI SFG14 được trang bị bộ vi xử lý Intel Core Ultra 5 Meteor Lake - 125H với 14 nhân và 18 luồng, tốc độ tối đa lên đến 4.5 GHz nhờ Turbo Boost, mang lại hiệu năng mạnh mẽ để xử lý các tác vụ văn phòng, học tập và giải trí một cách mượt mà. NPU Intel AI Boost giúp tăng cường khả năng xử lý các tác vụ liên quan đến trí tuệ nhân tạo, tối ưu hóa hiệu suất làm việc. Card đồ họa tích hợp Intel Arc Graphics cho phép bạn chỉnh sửa ảnh, video cơ bản và chơi các tựa game nhẹ nhàng.</p>
+  <p>Máy có RAM 16 GB LPDDR5X tốc độ 6400 MHz giúp bạn thoải mái mở nhiều ứng dụng cùng lúc mà không lo giật lag. Ổ cứng 512 GB SSD NVMe PCIe cho tốc độ đọc/ghi nhanh chóng, giúp khởi động máy và mở ứng dụng chỉ trong tích tắc. Bạn cũng có thể nâng cấp ổ cứng lên tối đa 2 TB nếu có nhu cầu lưu trữ lớn hơn.</p>
+  <img src="/user/assets/image/sanpham/22/thongtin1.png" alt="">
+  <p>Laptop học tập - văn phòng sở hữu màn hình 14 inch độ phân giải 2.8K (2880 x 1800) mang đến hình ảnh sắc nét, sống động và chi tiết. Tần số quét 120 Hz giúp các thao tác cuộn trang, chuyển động trở nên mượt mà hơn. Độ phủ màu 100% sRGB đảm bảo màu sắc hiển thị chính xác, phù hợp cho các công việc liên quan đến thiết kế đồ họa. Tấm nền IPS cho góc nhìn rộng, Acer ComfyView chống chói giúp bạn làm việc thoải mái trong mọi điều kiện ánh sáng. Độ sáng 400 nits giúp màn hình hiển thị rõ ràng ngay cả khi ở ngoài trời.</p>
+  <img src="/user/assets/image/sanpham/22/thongtin2.png" alt="">
+  <p>Công nghệ Acer Purified Voice và Acer TrueHarmony mang đến trải nghiệm âm thanh rõ ràng, sống động. DTS:X ULTRA giúp tăng cường âm bass, tạo hiệu ứng âm thanh vòm, giúp bạn tận hưởng trọn vẹn những bộ phim và bản nhạc yêu thích. Webcam QHD cho chất lượng hình ảnh sắc nét khi gọi video.</p>
+  <p>Laptop Acer Swift Go 14 AI SFG14 73 53X7 có độ dày 14.9 mm và khối lượng chỉ 1.32 kg, rất mỏng nhẹ và dễ dàng mang theo bên mình. Vỏ máy được làm từ kim loại nhôm chắc chắn, sang trọng và bền bỉ. Bản lề mở 180 độ giúp bạn dễ dàng chia sẻ màn hình với người đối diện. Bàn phím có đèn nền đơn sắc màu trắng giúp bạn làm việc trong điều kiện thiếu sáng. Touchpad rộng rãi, độ nhạy cao giúp bạn thao tác thoải mái. Máy còn được trang bị cảm biến vân tay giúp bảo mật dữ liệu cá nhân.</p>
+  <img src="/user/assets/image/sanpham/22/thongtin3.png" alt="">
+  `
+  },
+  {
+    id: "23",
+    name: "Gigabyte AORUS 17X (2025)",
+    brand: "Gigabyte",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp23.png",
+    price: 65990000,
+    salebefore: 69990000,
+    baseprice: 52000000,
+    listVersions: [
+      { name: "ram", option: ["32GB"] },
+      { name: "dung lượng", option: ["2TB"] }
+    ],
+    listColors: ["Đen"],
+    versions: [
+
+      { id: "23-den-32-2", color: "Đen", price: 65990000, stock: 180, status: true, sold: "1.2k", version: ["32GB", "2TB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/23/16-9-1.png",
+      "../user/assets/image/sanpham/23/16-9-2.png",
+      "../user/assets/image/sanpham/23/16-9-3.png",
+      "../user/assets/image/sanpham/23/16-9-4.png",
+      "../user/assets/image/sanpham/23/16-9-5.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11 Pro",
+      "CPU": "Intel Core i9 14900HX",
+      "GPU": "NVIDIA RTX 4090 16GB",
+      "RAM": "32GB DDR5",
+      "Ổ cứng": "2TB SSD",
+      "Màn hình": "17.3 inch QHD 240Hz",
+      "Trọng lượng": "2.8kg",
+      "Pin": "99Wh",
+      "Cổng kết nối": "USB-C, HDMI, LAN",
+      "Màu sắc": "Đen"
+    },
+    overview: `
+  <h2>Gigabyte AORUS 17X – Quái thú gaming thực thụ</h2>
+  <p>AORUS 17X hoàn toàn mới định nghĩa lại máy tính xách tay chơi game cao cấp. Kết hợp hiệu năng mạnh mẽ và tính di động với Bộ xử lý Intel® Core™ i9 HX-Series thế hệ thứ 12 mới nhất và GPU máy tính xách tay NVIDIA® GeForce RTX™ 30 Series, hãy cảm nhận sức mạnh để chạy mượt mà mọi trò chơi AAA. Bảng điều khiển chơi game 360Hz với tỷ lệ màn hình trên thân máy cao, cho phép game thủ đắm chìm trong hình ảnh mượt mà, chất lượng cao giống như rạp chiếu phim hoặc phòng thể thao điện tử hàng đầu.</p>
+  <img src="/user/assets/image/sanpham/23/thongtin1.png" alt="">
+  <p>Thân máy mỏng của AORUS 17X giúp tăng tính di động đáng kể. Tỷ lệ màn hình trên thân máy cực cao giúp chiếc máy tính xách tay mỏng này có màn hình 17 inch, vượt xa mức cân nặng của nó. Dễ dàng trượt máy tính xách tay vào ba lô của bạn và đắm chìm trong trải nghiệm chơi game thể thao điện tử mở rộng mọi lúc, mọi nơi.</p>
+  <p>AORUS 17X có màn hình viền siêu mỏng bốn cạnh cho trải nghiệm đắm chìm hoàn hảo với bữa tiệc thị giác mượt mà một cách tinh xảo và gam màu rộng lộng lẫy. Tốc độ làm mới cao giúp loại bỏ mọi hiện tượng bóng ma, cho phép người chơi tận hưởng hình ảnh tuyệt vời trong khi thống trị chiến trường.</p>
+  <img src="/user/assets/image/sanpham/23/thongtin2.png" alt="">
+  <p>AORUS 17X được trang bị bộ xử lý Intel® Core™ i9 16 lõi thế hệ thứ 12, bao gồm 8 lõi hiệu suất và 8 lõi hiệu suất, giúp tăng hiệu suất lên 14% so với thế hệ trước. Nó có thể đạt tốc độ xung nhịp tối đa 5.0GHz, cho phép chạy mượt mà với các trò chơi đòi hỏi khắt khe và tải tác vụ nặng.</p>
+  <p>AORUS 17X giới thiệu công nghệ chuyển đổi MUX, cho phép người chơi chọn chế độ chỉ GPU rời để cải thiện hiệu suất bổ sung. Thông qua giao diện đơn giản của Trung tâm điều khiển GIGABYTE, GPU có thể được xuất trực tiếp ra màn hình chỉ bằng một cú nhấp chuột, điều này có thể dễ dàng cải thiện hiệu suất trò chơi. Trong trò chơi yêu cầu hiệu năng nặng, tốc độ khung hình có thể tăng lên tới 84% Trung bình.</p>
+  <p>Máy tính xách tay chơi game AORUS được hưởng lợi từ công nghệ làm mát tốt nhất độc quyền trên thị trường. Công nghệ làm mát WINDFORCE Infinity có 2 quạt với 84 cánh quạt, 6 ống dẫn nhiệt và nhiều cánh tản nhiệt có thể loại bỏ nhiệt do CPU và GPU tạo ra một cách hiệu quả, giữ cho máy tính xách tay luôn mát mẻ và duy trì hiệu suất cao trong suốt khối lượng công việc.</p>
+  `
+  },
+
+  {
+    id: "24",
+    name: "Samsung Galaxy Book3 Pro 360",
+    brand: "Samsung",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp24.png",
+    price: 28990000,
+    salebefore: 31990000,
+    baseprice: 19000000,
+    listVersions: [
+      { name: "CPU", option: ["Intel Core i7"] },
+      { name: "RAM", option: ["16GB"] },
+      { name: "Storage", option: ["512GB"] }
+    ],
+    listColors: ["Graphite", "Burgundy"],
+    versions: [
+      { id: "24-graphite-16-512", color: "Graphite", price: 28990000, stock: 90, status: true, sold: "1k", version: ["16GB", "512GB"] },
+      { id: "24-burgundy-16-512", color: "Burgundy", price: 28990000, stock: 100, status: true, sold: "2k", version: ["16GB", "512GB"] }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/24/16-9-1.png",
+      "../user/assets/image/sanpham/24/16-9-2.png",
+      "../user/assets/image/sanpham/24/16-9-3.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11",
+      "CPU": "Intel Core i7",
+      "GPU": "Intel Iris Xe",
+      "RAM": "16GB",
+      "Bộ nhớ trong": "512GB SSD",
+      "Màn hình": "13.3 inch AMOLED, cảm ứng",
+      "Pin": "Up to 14 hours",
+      "Kết nối": "USB-C, S Pen support",
+      "Trọng lượng": "1.1 kg"
+    },
+    overview: `<h2>Galaxy Book3 Pro 360 — mỏng nhẹ, xoay 360°, hỗ trợ S Pen.</h2>
+    <p>Giống với người tiền nhiệm của mình, Galaxy Book 3 Pro 360 là một laptop hai trong một linh hoạt. Điều đó có nghĩa là bạn có thể dễ dàng chuyển đổi thiết bị từ trạng thái laptop sang máy tính bảng một cách dễ dàng, nhanh chóng. Chế độ máy tính bảng sẽ đặc biệt hữu ích khi bạn sử dụng với bút S Pen được tặng kèm, còn chế độ lều sẽ rất thích hợp cho việc xem nội dung đa phương tiện.</p>
+    <p>Dù là một laptop lớn nhưng Galaxy Book 3 Pro 360 lại tương đối nhẹ, cụ thể, máy có kích thước 35.31 x 25.15 x 1.27 cm và nặng 1.68 kg. Một trong những lý do để tác giả yêu thích dòng Galaxy Book trước đây của Samsung là vì các sản phẩm này rất mỏng và nhẹ. Và rất đáng mừng khi ưu điểm này vẫn được giữ lại trên Galaxy Book 3 Pro 360.</p>
+    <img src="/user/assets/image/sanpham/24/thongtin1.png" alt="">
+    <p>Màn hình AMOLED 16 inch với độ phân giải 2K+ (2.880 x 1.800 pixels) và tỷ lệ khung hình 16:10 của Galaxy Book 3 Pro 360 thực sự rất phù hợp cho cả công việc và giải trí.</p>
+    `
+  },
+
+  {
+    id: "25",
+    name: "LG Gram 17 (2025)",
+    brand: "LG",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp25.png",
+    price: 39990000,
+    salebefore: 43990000,
+    baseprice: 26000000,
+    listVersions: [
+      { name: "CPU", option: ["Intel Core i7"] },
+      { name: "RAM", option: ["16GB"] },
+      { name: "Storage", option: ["1TB"] }
+    ],
+    listColors: ["Trắng"],
+    versions: [
+
+      { id: "25-trang-16-1", color: "Trắng", price: 39990000, stock: 45, status: true, sold: "250", version: ["16GB", "1TB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/25/16-9-1.png",
+      "../user/assets/image/sanpham/25/16-9-2.png",
+      "../user/assets/image/sanpham/25/16-9-3.png",
+      "../user/assets/image/sanpham/25/16-9-4.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11",
+      "CPU": "Intel Core i7",
+      "GPU": "Intel Iris Xe",
+      "RAM": "16GB",
+      "Bộ nhớ trong": "1TB SSD",
+      "Màn hình": "17 inch WQXGA",
+      "Pin": "Up to 17 hours",
+      "Kết nối": "USB-C, HDMI, microSD",
+      "Trọng lượng": "1.35 kg"
+    },
+    overview: `<h2>LG Gram 17 — Lap top 17 inch siêu nhẹ dành cho di động cao cấp.</h2>
+    <p>Gram 17 mang đến màn hình lớn nhưng vẫn giữ trọng lượng cực nhẹ, phù hợp người cần màn hình rộng mà vẫn phải di chuyển. Thời lượng pin vượt trội và cấu hình đủ mạnh cho công việc văn phòng nâng cao, đa nhiệm và chỉnh sửa nhẹ.</p>
+    <img src="/user/assets/image/sanpham/25/thongtin1.png" alt="">
+    `
+  },
+
+  {
+    id: "26",
+    name: "Huawei MateBook X Pro",
+    brand: "Huawei",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp26.png",
+    price: 28990000,
+    salebefore: 31990000,
+    baseprice: 18000000,
+    listVersions: [
+      { name: "CPU", option: ["Intel Core i5", "Intel Core i7"] },
+      { name: "RAM", option: ["8GB", "16GB"] },
+      { name: "Storage", option: ["512GB"] }
+    ],
+    listColors: ["Mystic Silver", "Space Gray"],
+    versions: [
+
+      { id: "26-mysticsilver-8-512", color: "Mystic Silver", price: 28990000, stock: 110, status: true, sold: "980", version: ["8GB", "512GB"] },
+      { id: "26-spacegray-8-512", color: "Space Gray", price: 28990000, stock: 60, status: true, sold: "1.5k", version: ["8GB", "512GB"] },
+      { id: "26-mysticsilver-16-512", color: "Mystic Silver", price: 28990000, stock: 110, status: true, sold: "980", version: ["16GB", "512GB"] },
+      { id: "26-spacegray-16-512", color: "Space Gray", price: 28990000, stock: 60, status: true, sold: "1.5k", version: ["16GB", "512GB"] },
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/26/16-9-1.png",
+      "../user/assets/image/sanpham/26/16-9-2.png",
+      "../user/assets/image/sanpham/26/16-9-3.png",
+      "../user/assets/image/sanpham/26/16-9-4.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11",
+      "CPU": "Intel Core i5/i7",
+      "GPU": "Intel Iris Xe",
+      "RAM": "8GB / 16GB",
+      "Bộ nhớ trong": "512GB SSD",
+      "Màn hình": "13.9 inch, 3K LTPS",
+      "Pin": "Up to 10 hours",
+      "Kết nối": "USB-C, Thunderbolt 4",
+      "Trọng lượng": "1.26 kg"
+    },
+    overview: `<h2>MateBook X Pro — thiết kế tinh tế, màn hình sắc nét.</h2>
+    <p>MateBook X Pro là lựa chọn cho người ưu tiên thẩm mỹ thiết kế và chất lượng hiển thị cao. Khung kim loại nguyên khối, touchpad lớn, bàn phím good travel và camera ẩn. Thích hợp cho người làm sáng tạo nội dung và công việc văn phòng cao cấp.</p>
+    <img src="/user/assets/image/sanpham/26/thongtin1.png" alt="">
+    `
+  },
+
+  {
+    id: "27",
+    name: "Microsoft Surface Lap top 5",
+    brand: "Microsoft",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp27.png",
+    price: 25990000,
+    salebefore: 28990000,
+    baseprice: 16000000,
+    listVersions: [
+      { name: "CPU", option: ["Intel Core i5", "Intel Core i7"] },
+      { name: "RAM", option: ["8GB", "16GB"] },
+      { name: "Storage", option: ["512GB"] }
+    ],
+    listColors: ["Platinum", "Matte Black"],
+    versions: [
+
+      { id: "27-platium-8-512", color: "Platinum", price: 25990000, stock: 130, status: true, sold: "1.5k", version: ["8GB", "512GB"] },
+      { id: "27-matteblack-8-512", color: "Matte Black", price: 25990000, stock: 110, status: true, sold: "980", version: ["8GB", "512GB"] },
+
+      { id: "27-platium-16-512", color: "Platinum", price: 25990000, stock: 130, status: true, sold: "1.5k", version: ["16GB", "512GB"] },
+      { id: "27-matteblack-16-512", color: "Matte Black", price: 25990000, stock: 110, status: true, sold: "980", version: ["16GB", "512GB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/27/16-9-1.png",
+      "../user/assets/image/sanpham/27/16-9-2.png",
+      "../user/assets/image/sanpham/27/16-9-3.png"
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11",
+      "CPU": "Intel Core i5/i7",
+      "GPU": "Intel Iris Xe",
+      "RAM": "8GB / 16GB",
+      "Bộ nhớ trong": "256GB / 512GB",
+      "Màn hình": "13.5 inch PixelSense",
+      "Pin": "Up to 13 hours",
+      "Kết nối": "USB-C, USB-A, Surface Connect",
+      "Trọng lượng": "1.25 kg"
+    },
+    overview: `<h2>Surface Laptop 5 — sang trọng, tối giản và mượt mà cho công việc.</h2>
+    <p>Surface Lap top 5 đề cao trải nghiệm người dùng với màn hình chất lượng, bàn phím êm và trackpad chính xác. Máy phù hợp học sinh, sinh viên và nhân viên văn phòng muốn một máy tính mỏng, đẹp, hoạt động ổn định với Windows.</p>
+    <img src="/user/assets/image/sanpham/27/thongtin1.png" alt="">
+    `
+  },
+
+  {
+    id: "28",
+    name: "Xiaomi RedmiBook Pro 16",
+    brand: "Xiaomi",
+    category: "Lap top",
+    thumbnail: "../user/assets/image/sanpham/sp28.png",
+    price: 18990000,
+    salebefore: 20990000,
+    baseprice: 12000000,
+    listVersions: [
+      { name: "CPU", option: ["Intel Core i5", "Intel Core i7"] },
+      { name: "RAM", option: ["8GB", "16GB"] },
+      { name: "Storage", option: ["512GB"] }
+    ],
+    listColors: ["Xám Vũ Trụ"],
+    versions: [
+
+      { id: "28-xam-8-512", color: "Xám Vũ Trụ", price: 18990000, stock: 210, status: true, sold: "1.9k", version: ["8GB", "512GB"] },
+
+      { id: "28-xam-16-512", color: "Xám Vũ Trụ", price: 18990000, stock: 210, status: true, sold: "1.9k", version: ["16GB", "512GB"] }
+
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/28/16-9-1.png",
+      "../user/assets/image/sanpham/28/16-9-2.png",
+      "../user/assets/image/sanpham/28/16-9-3.png",
+    ],
+    infoDetail: {
+      "Hệ điều hành": "Windows 11",
+      "CPU": "Intel Core i5/i7",
+      "GPU": "Intel Iris Xe",
+      "RAM": "8GB / 16GB",
+      "Bộ nhớ trong": "512GB SSD",
+      "Màn hình": "16 inch, 2.5K",
+      "Pin": "Up to 9 hours",
+      "Kết nối": "USB-C, HDMI",
+      "Trọng lượng": "1.8 kg"
+    },
+    overview: `<h2>RedmiBook Pro 16 — hiệu năng tốt trong tầm giá, màn hình lớn.</h2>
+    <p>Nhìn từ bên ngoài, Redmi Book 16 2025 có thể tạo cho bạn một cảm giác rất quen thuộc. Bởi vì, chiếc laptop này sử dụng phong cách thiết kế mỏng gọn, thường thấy trên những chiếc Ultrabook đã có mặt trên thị trường. Thiết bị được hoàn thiện chắc chắn từ nhôm nguyên khối và sử dụng tông màu xám, bạc làm chủ đạo. Vậy nên, sản phẩm có thể tạo được cảm giác sang trọng khi nhìn vào.</p>
+    <p>Các cạnh của Redmi Book 16 2025 được đều được cắt CNC rất đẹp, thể hiện tính tỉ mỉ của nhà sản xuất. Thêm nữa, 4 góc của máy còn được bo cong mềm mại, nhờ thế mà các bạn không phải lo về vấn đề bị cấn góc khi bỏ vào balo. Bên cạnh đó, thiết bị có kích thước tổng thể chỉ 355.2 × 248.5 x 15.9 mm, cân nặng khoảng 1.68 kg, nên các bạn có thể thoải mái bỏ chiếc laptop này vào balo để mang đi làm/đi học cả ngày dài.</p>
+    <img src="/user/assets/image/sanpham/28/thongtin1.png" alt="">
+    <p>Redmi Book 16 2025 được trang bị màn hình lớn 16 inch, hoạt động trên tấm nền IPS LCD, độ phân giải 2.5K và tần số quét 120 Hz. Đây là những thông số rất tốt đối với một chiếc laptop, nhờ vậy mà thiết bị có thể mang lại được trải nghiệm hiển thị rất sắc nét, màu sắc chân thật và mượt mà. Thêm nữa, màn hình của thiết bị này lại còn có tỉ lệ 16:10, nên không gian hiển thị cũng rộng rãi hơn để bạn làm việc, giải trí thoải mái.</p>
+    <p>Ở bên trong, Redmi Book 16 2025 được trang bị hệ thống bàn phím 75% quen thuộc, giúp người dùng có thể nhanh chóng làm quen ngay từ lần đầu trải nghiệm máy. Redmi Book 16 2024 được trang bị bàn di chuột có kích thước lớn, do đó người dùng có thể thực hiện các thao tác vuốt, chạm, điều hướng mà không gặp vấn đề gì cản trở. Phần bàn di chuột này được đánh giá là có độ nhạy cao (Bấm phát ăn ngay) và mang lại cảm giác di chuột mượt mà.</p>
+    <img src="/user/assets/image/sanpham/28/thongtin2.png" alt="">
+    `
+  },
+
+  {
+    id: "31",
+    name: "AirPods Pro (Gen 2) MagSafe",
+    brand: "Apple",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp31.png",
+    price: 5990000,
+    salebefore: 6990000,
+    baseprice: 6990000,
+    listVersions: [],
+    listColors: ["Trắng"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Trắng", price: 5990000, stock: 80, status: true, sold: "450", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/31/16-9-1.png",
+      "../user/assets/image/sanpham/31/16-9-2.png",
+      "../user/assets/image/sanpham/31/16-9-3.png",
+    ],
+    infoDetail: {
+      "Thiết kế": "Công nghệ chống ồn chủ động (ANC) thông minh, loại bỏ tiếng ồn môi trường.",
+      "Chip": "Chip Apple H2 tối ưu hiệu năng và chất lượng âm thanh.",
+      "Pin": "Thời lượng pin lên đến 6 giờ, hộp sạc thêm 24 giờ.",
+      "Cổng sạc": "Sạc nhanh qua cổng USB-C hoặc sạc không dây MagSafe."
+    },
+    overview: `
+    <h2>AirPods Pro sở hữu thiết kế mang đậm chất thương hiệu Apple, màu sắc sang trọng, đi cùng nhiều công nghệ cho các iFan: chip Apple H2, chống bụi, chống ồn chủ động,... hứa hẹn mang đến trải nghiệm âm thanh sống động, chinh phục người dùng.</h2>
+    <p>Apple AirPods Pro Gen 2 mang đến trải nghiệm nghe nhạc cao cấp với công nghệ chống ồn chủ động thông minh. Âm thanh trong trẻo, chi tiết, cùng thiết kế nhỏ gọn, thoải mái khi đeo cả ngày.</p>
+    <p>Chip Apple H2 tối ưu hóa âm thanh và thời lượng pin. Hộp sạc MagSafe hỗ trợ sạc không dây và có cổng USB-C tiện lợi.</p>
+    <img src="/user/assets/image/sanpham/31/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "32",
+    name: "Sony WH-1000XM5 Wireless",
+    brand: "Sony",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp32.png",
+    price: 8990000,
+    salebefore: 10490000,
+    baseprice: 10490000,
+    listVersions: [],
+    listColors: ["Đen", "Bạc"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Đen", price: 8990000, stock: 60, status: true, sold: "310", version: [] },
+          { color: "Bạc", price: 8990000, stock: 50, status: true, sold: "270", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/32/16-9-1.png",
+      "../user/assets/image/sanpham/32/16-9-2.png",
+      "../user/assets/image/sanpham/32/16-9-3.png",
+    ],
+    infoDetail: {
+      "Công nghệ": "Công nghệ chống ồn chủ động hàng đầu từ Sony.",
+      "Pin": "Thời lượng pin đến 40 giờ, sạc nhanh 3 phút nghe 3 giờ.",
+      "Trải nghiệm": "Âm thanh độ phân giải cao (Hi-Res Audio).",
+      "Hỗ trợ": "Tích hợp trợ lý giọng nói Google Assistant và Alexa."
+    },
+    overview: `
+    <h2>Tai nghe Sony WH-1000XM5 - Chống ồn dịu tai, sử dụng thoải mái</h2>
+    <p>Sony WH-1000XM5 là tai nghe không dây chống ồn cao cấp, mang đến chất âm đỉnh cao cùng khả năng lọc tạp âm vượt trội.</p>
+    <p>Thiết kế sang trọng, nhẹ, thoải mái và pin cực trâu 30 giờ giúp bạn tận hưởng âm nhạc suốt cả ngày dài.</p>
+    <img src="/user/assets/image/sanpham/32/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "33",
+    name: "JBL Tune 520BT Wireless",
+    brand: "JBL",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp33.png",
+    price: 1590000,
+    salebefore: 1790000,
+    baseprice: 1790000,
+    listVersions: [],
+    listColors: ["Đen", "Xanh", "Hồng"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Đen", price: 1590000, stock: 90, status: true, sold: "400", version: [] },
+          { color: "Xanh", price: 1590000, stock: 70, status: true, sold: "320", version: [] },
+          { color: "Hồng", price: 1590000, stock: 60, status: true, sold: "280", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/33/16-9-1.png",
+      "../user/assets/image/sanpham/33/16-9-2.png",
+      "../user/assets/image/sanpham/33/16-9-3.png",
+    ],
+    infoDetail: {
+      "Công nghệ": "Công nghệ âm thanh Pure Bass độc quyền từ JBL.",
+      "Pin": "Pin lên đến 57 giờ, sạc nhanh 5 phút nghe 3 giờ.",
+      "Kết nối": "Kết nối Bluetooth 5.3 ổn định, độ trễ thấp.",
+      "Thiết kế": "Thiết kế nhẹ, có thể gập gọn dễ mang theo."
+    },
+    overview: `
+    <h2>JBL Tune 520BT là dạng tai nghe chụp tai (tai nghe on ear) với diện mạo thời thượng, nhiều gam màu đẹp mắt, âm thanh phong phú và sống động, kết nối nhanh chóng, dung lượng pin khủng, hứa hẹn mang đến cho bạn những trải nghiệm tối ưu.</h2>
+    <p>JBL Tune 520BT mang lại trải nghiệm âm trầm mạnh mẽ và thiết kế năng động phù hợp mọi lứa tuổi.</p>
+    <p>Pin cực lâu và khả năng sạc nhanh giúp bạn luôn sẵn sàng thưởng thức âm nhạc mọi lúc mọi nơi.</p>
+    <img src="/user/assets/image/sanpham/33/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "34",
+    name: "Samsung Galaxy Buds2 Pro",
+    brand: "Samsung",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp34.png",
+    price: 4990000,
+    salebefore: 5490000,
+    baseprice: 5490000,
+    listVersions: [],
+    listColors: ["Tím", "Trắng", "Xanh Đen"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Tím", price: 4990000, stock: 80, status: true, sold: "310", version: [] },
+          { color: "Trắng", price: 4990000, stock: 70, status: true, sold: "270", version: [] },
+          { color: "Xanh Đen", price: 4990000, stock: 60, status: true, sold: "240", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/34/16-9-1.png",
+      "../user/assets/image/sanpham/34/16-9-2.png",
+      "../user/assets/image/sanpham/34/16-9-3.png",
+    ],
+    infoDetail: {
+      "Trải nghiệm": "Âm thanh Hi-Fi 24 bit, trải nghiệm không gian 360°.",
+      "Công nghệ": "Chống ồn chủ động ANC thế hệ mới, Kháng nước chuẩn IPX7",
+      "Pin": "Pin 5 giờ + hộp sạc 18 giờ.",
+      "Thiết kế": "Thiết kế nhỏ gọn, ôm tai thoải mái."
+    },
+    overview: `
+    <h2>Tai nghe Bluetooth True Wireless Samsung Galaxy Buds 2 Pro R510N. Bên cạnh thiết kế cải tiến, Galaxy Buds 2 Pro còn sở hữu nhiều tính năng đáng giá. Đây chắc hẳn chính là món phụ kiện tuyệt vời dành cho các SamFans.</h2>
+    <p>Samsung Galaxy Buds2 Pro mang đến âm thanh sống động và khả năng chống ồn vượt trội. Tai nghe kết nối mượt mà với điện thoại Galaxy, hỗ trợ âm thanh không gian 360 độ.</p>
+    <p>Thiết kế tinh tế, nhỏ gọn và kháng nước tốt, phù hợp sử dụng hằng ngày.</p>
+    <img src="/user/assets/image/sanpham/34/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "35",
+    name: "Soundcore Liberty 4 NC",
+    brand: "Anker",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp35.png",
+    price: 2990000,
+    salebefore: 3490000,
+    baseprice: 3490.000,
+    listVersions: [],
+    listColors: ["Trắng", "Xanh Dương", "Đen"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Trắng", price: 2990000, stock: 70, status: true, sold: "250", version: [] },
+          { color: "Xanh Dương", price: 2990000, stock: 60, status: true, sold: "220", version: [] },
+          { color: "Đen", price: 2990000, stock: 80, status: true, sold: "300", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/35/16-9-1.png",
+      "../user/assets/image/sanpham/35/16-9-2.png",
+      "../user/assets/image/sanpham/35/16-9-3.png",
+
+    ],
+    infoDetail: {
+      "Công nghệ": "Chống ồn chủ động tới 98%, lọc tiếng gió hiệu quả.",
+      "Âm thanh": "Âm thanh Hi-Res Wireless, hỗ trợ LDAC.",
+      "Pin": "Pin 10 giờ + hộp sạc thêm 40 giờ.",
+      "Kết nối": "Ứng dụng Soundcore App tùy chỉnh EQ và ANC."
+    },
+    overview: `
+    <h2>Tai nghe bluetooth Anker Soundcore Liberty 4 - Âm thanh hoàn hảo 360 độ</h2>
+    <p>Soundcore Liberty 4 NC là lựa chọn tai nghe không dây tầm trung cực kỳ đáng giá, mang đến khả năng chống ồn vượt trội và chất âm tinh tế.</p>
+    <p>Pin lâu, sạc nhanh và nhiều tùy chỉnh thông minh qua app Soundcore.</p>
+    <img src="/user/assets/image/sanpham/35/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "36",
+    name: "Baseus Bowie E3 True Wireless",
+    brand: "Baseus",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp36.png",
+    price: 890000,
+    salebefore: 1190000,
+    baseprice: 1190000,
+    listVersions: [],
+    listColors: ["Trắng", "Đen"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Trắng", price: 890000, stock: 90, status: true, sold: "400", version: [] },
+          { color: "Đen", price: 890000, stock: 70, status: true, sold: "330", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/36/16-9-1.png",
+      "../user/assets/image/sanpham/36/16-9-2.png",
+    ],
+    infoDetail: {
+      "Kết nối": "Bluetooth 5.0, độ trễ thấp khi chơi game.",
+      "Công nghệ": "Chống ồn ENC, mic kép đàm thoại rõ ràng.",
+      "Pin": "Pin 5 giờ, kèm hộp sạc 20 giờ.",
+      "Thiết kế": "Thiết kế gọn nhẹ, cảm ứng điều khiển tiện lợi."
+    },
+    overview: `
+    <h2>Tai nghe không dây Baseus Bowie E3 - Âm thanh thư giãn dành trọn cho bạn</h2>
+    <p><b>Baseus Bowie E3</b> là tai nghe không dây giá rẻ nhưng mang đến chất lượng âm thanh tốt, độ trễ thấp và thời lượng pin ổn định.</p>
+    <p>Thiết kế trẻ trung, nhỏ gọn, phù hợp cho người dùng năng động.</p>
+    <img src="/user/assets/image/sanpham/36/thongtin1.png" alt="">
+  `
+  },
+
+  {
+    id: "37",
+    name: "Huawei FreeBuds 5i",
+    brand: "Huawei",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp37.png",
+    price: 2190000,
+    salebefore: 2490000,
+    baseprice: 2490000,
+    listVersions: [],
+    listColors: ["Xanh Dương", "Đen", "Trắng"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Xanh Dương", price: 2190000, stock: 60, status: true, sold: "210", version: [] },
+          { color: "Đen", price: 2190000, stock: 70, status: true, sold: "230", version: [] },
+          { color: "Trắng", price: 2190000, stock: 65, status: true, sold: "250", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/37/16-9-1.png",
+      "../user/assets/image/sanpham/37/16-9-2.png",
+      "../user/assets/image/sanpham/37/16-9-3.png",
+      "../user/assets/image/sanpham/37/16-9-4.png",
+      "../user/assets/image/sanpham/37/16-9-5.png",
+    ],
+    infoDetail: {
+      "Công nghệ": "Chống ồn chủ động 42 dB, âm thanh Hi-Res, Kháng nước IP54",
+      "Pin": "Pin 7.5 giờ, hộp sạc thêm 28 giờ.",
+      "Kết nối": "Kết nối đa thiết bị.",
+      "Thiết kế": "Thiết kế gọn nhẹ, tiện mang theo."
+    },
+    overview: `
+    <h2>Huawei Freebuds 5i: Thiết kế thời thượng, chất âm tốt, pin dùng lâu</h2>
+    <p><b>Huawei FreeBuds 5i</b> mang đến âm thanh chất lượng cao và khả năng chống ồn vượt trội trong tầm giá. Hỗ trợ Hi-Res Audio và kết nối đa điểm tiện lợi.</p>
+    <p>Thích hợp cho người dùng hay di chuyển, muốn trải nghiệm nghe nhạc và gọi điện ổn định.</p>
+    <img src="/user/assets/image/sanpham/37/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "38",
+    name: "Beats Studio Buds Plus",
+    brand: "Apple",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp38.png",
+    price: 4990000,
+    salebefore: 5990000,
+    baseprice: 5990000,
+    listVersions: [],
+    listColors: ["Trong Suốt", "Đen", "Vàng Cát"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Trong Suốt", price: 4990000, stock: 50, status: true, sold: "260", version: [] },
+          { color: "Đen", price: 4990000, stock: 60, status: true, sold: "280", version: [] },
+          { color: "Vàng Cát", price: 4990000, stock: 55, status: true, sold: "200", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/38/16-9-1.png",
+      "../user/assets/image/sanpham/38/16-9-2.png",
+      "../user/assets/image/sanpham/38/16-9-3.png",
+    ],
+    infoDetail: {
+      "Kết nối": "Chip Apple, tương thích Android & iOS.",
+      "Công nghệ": "Chống ồn chủ động (ANC) và chế độ xuyên âm.",
+      "Pin": "Pin 9 giờ + hộp sạc 27 giờ.",
+      "Thiết kế": "Thiết kế nhỏ gọn, thời trang."
+    },
+    overview: `
+    <h2>Tai nghe Beats Studio Buds + - Thiết kế bắt mắt với thời lượng pin vượt trội</h2>
+    <p><b>Beats Studio Buds Plus</b> mang đến âm thanh mạnh mẽ, hiện đại cùng thiết kế trong suốt độc đáo.</p>
+    <p>Chống ồn chủ động thông minh và pin siêu trâu giúp bạn tận hưởng âm nhạc trọn vẹn cả ngày.</p>
+    <img src="/user/assets/image/sanpham/38/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "39",
+    name: "Marshall Major IV Bluetooth",
+    brand: "Marshall",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp39.png",
+    price: 3990000,
+    salebefore: 4490000,
+    baseprice: 4490000,
+    listVersions: [],
+    listColors: ["Đen", "Nâu"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Đen", price: 3990000, stock: 40, status: true, sold: "200", version: [] },
+          { color: "Nâu", price: 3990000, stock: 35, status: true, sold: "180", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/39/16-9-1.png",
+      "../user/assets/image/sanpham/39/16-9-2.png",
+      "../user/assets/image/sanpham/39/16-9-3.png",
+    ],
+    infoDetail: {
+      "Trải nghiệm": "Âm thanh đặc trưng Marshall mạnh mẽ.",
+      "Pin": "Thời lượng pin cực khủng 80 giờ.",
+      "Sạc": "Hỗ trợ sạc không dây và sạc nhanh USB-C.",
+      "Thiết kế": "Thiết kế cổ điển, chất liệu cao cấp."
+    },
+    overview: `
+    <h2>Không chỉ là sự kết hợp hoàn hảo giữa thiết kế và công nghệ, tai nghe Bluetooth chụp tai Marshall Major IV còn là một tuyệt tác âm thanh dành cho những tín đồ âm nhạc. Mang trong mình phong cách cổ điển đặc trưng của Marshall, cùng chất lượng âm thanh đỉnh cao, Major IV hứa hẹn sẽ mang đến cho bạn những trải nghiệm âm nhạc tuyệt vời nhất.</h2>
+    <p><b>Marshall Major IV</b> là biểu tượng phong cách rock cổ điển kết hợp công nghệ hiện đại. Âm thanh đậm chất Marshall cùng thời lượng pin siêu khủng 80 giờ.</p>
+    <p>Marshall Major IV là người bạn đồng hành lý tưởng cho những ai yêu thích âm nhạc mọi lúc mọi nơi. Với khoảng 80 giờ chơi nhạc không dây liên tục, bạn có thể đắm chìm trong thế giới âm thanh yêu thích của mình mà không lo bị gián đoạn. Khả năng sạc nhanh chỉ 15 phút cho 15 giờ nghe cũng giúp bạn luôn sẵn sàng cho mọi cuộc phiêu lưu bất tận.</p>
+    <p>Tai nghe chụp tai nhà Marshall mang đến cho bạn trải nghiệm âm thanh tuyệt đỉnh với Driver 40 mm và công nghệ Marshall Signature Sound trứ danh, giúp tái tạo âm thanh một cách chính xác và chi tiết. Mỗi nốt nhạc, dù là những giai điệu du dương nhẹ nhàng hay những bản rock cuồng nhiệt sôi động, đều được thể hiện một cách chân thực và sống động như chính bạn đang hòa mình vào sân khấu âm nhạc.</p>
+    <img src="/user/assets/image/sanpham/39/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "40",
+    name: "Edifier W820NB Plus",
+    brand: "Edifier",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp40.png",
+    price: 2290000,
+    salebefore: 2690000,
+    baseprice: 2690000,
+    listVersions: [],
+    listColors: ["Xanh Dương", "Trắng", "Đen"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Xanh Dương", price: 2290000, stock: 65, status: true, sold: "190", version: [] },
+          { color: "Trắng", price: 2290000, stock: 60, status: true, sold: "170", version: [] },
+          { color: "Đen", price: 2290000, stock: 50, status: true, sold: "150", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/40/16-9-1.png",
+      "../user/assets/image/sanpham/40/16-9-2.png",
+      "../user/assets/image/sanpham/40/16-9-3.png",
+    ],
+    infoDetail: {
+      "Công nghệ": "Chống ồn chủ động ANC, âm thanh Hi-Res.",
+      "Pin": "Pin 49 giờ, sạc nhanh 10 phút nghe 7 giờ.",
+      "Kết nối": "Kết nối Bluetooth 5.2 ổn định.",
+      "Thiết kế": "Thiết kế nhẹ, thoải mái khi đeo lâu."
+    },
+    overview: `
+    <h2>Tai nghe Bluetooth Edifier W820NB Plus - Thiết kế trẻ trung, tinh tế</h2>
+    <p>Tai nghe <b>Edifier W820NB Plus</b> được thiết kế nhỏ gọn, một số đường góc cạnh bo tròn nhẹ, tạo nên sự tinh tế. Bên cạnh đó, sản phẩm có trọng lượng không quá nặng, đem lại cảm giác dễ chịu khi đeo lên tai. Chưa kể, phần đệm của thiết bị này mềm mại, bao trùm cả tai, âm thanh không bị lọt ra ngoài. Từ đó, người dùng sẽ nghe được trọn vẹn những bản nhạc yêu thích.</p>
+    <p><b>Edifier W820NB Plus</b> là tai nghe chụp tai chất lượng cao, có khả năng chống ồn và pin cực lâu. Âm thanh trung thực, chi tiết và êm ái khi nghe lâu.</p>
+    <p>Phù hợp với người cần tai nghe học tập, làm việc và giải trí.</p>
+    <img src="/user/assets/image/sanpham/40/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "41",
+    name: "Xiaomi Redmi Buds 5 Pro",
+    brand: "Xiaomi",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp41.png",
+    price: 1690000,
+    salebefore: 1990000,
+    baseprice: 1990000,
+    listVersions: [],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Đen", price: 1690000, stock: 90, status: true, sold: "400", version: [] },
+          { color: "Trắng", price: 1690000, stock: 70, status: true, sold: "320", version: [] },
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/41/16-9-1.png",
+      "../user/assets/image/sanpham/41/16-9-2.png",
+      "../user/assets/image/sanpham/41/16-9-3.png",
+    ],
+    infoDetail: {
+      "Công nghệ": "Chống ồn chủ động đến 52 dB, mic kép AI lọc tạp âm.",
+      "Trải nghiệm": "Âm thanh Hi-Res Wireless, codec LHDC 5.0.",
+      "Pin": "Pin 10 giờ + hộp sạc thêm 38 giờ.",
+      "Kết nối": "Kết nối Bluetooth 5.3, chống nước IP54."
+    },
+    overview: `
+    <h2>Xiaomi vừa trình làng mẫu tai nghe True Wireless mới nhất của mình mang tên Xiaomi Redmi Buds 5 Pro. Mang nhiều công nghệ đáng chú ý như giảm tiếng ồn lên đến 52 dB và chặn 99.5% tiếng ồn xung quanh, tích hợp thuật toán AI, sạc siêu nhanh, đi cùng thời lượng pin ấn tượng,... hứa hẹn đáp ứng tối ưu mọi nhu cầu sử dụng của người dùng.</h2>
+    <p><b>Redmi Buds 5 Pro</b> là tai nghe tầm trung với khả năng chống ồn ấn tượng, chất âm Hi-Res và pin cực lâu. Phù hợp với người yêu công nghệ và âm nhạc chất lượng cao.</p>
+    <img src="/user/assets/image/sanpham/41/thongtin1.png" alt="">
+  `
+  },
+  {
+    id: "42",
+    name: "SoundPEATS Air3 Deluxe HS",
+    brand: "SoundPEATS",
+    category: "Tai nghe",
+    thumbnail: "../user/assets/image/sanpham/sp42.png",
+    price: 1390000,
+    salebefore: 1590000,
+    baseprice: 1590000,
+    listVersions: [],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        storage: "",
+        colors: [
+          { color: "Đen", price: 1390000, stock: 80, status: true, sold: "290", version: [] },
+          { color: "Trắng", price: 1390000, stock: 90, status: true, sold: "310", version: [] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/42/16-9-1.png",
+      "../user/assets/image/sanpham/42/16-9-2.png",
+    ],
+    infoDetail: {
+      "Trải nghiệm": "Âm thanh Hi-Res, codec LDAC, driver 14.2mm.",
+      "Thiết kế": "Thiết kế mở, đeo thoải mái lâu dài.",
+      "Pin": "Pin 5 giờ + hộp sạc 20 giờ.",
+      "Kết nối": "Kết nối Bluetooth 5.2 ổn định."
+    },
+    overview: `
+    <h2>Tai Nghe SoundPEATS Air 3 Deluxe HS – Âm thanh sống động, chân thật</h2>
+    <p><b>SoundPEATS Air3 Deluxe HS</b> mang đến chất lượng âm thanh Hi-Res trong một thiết kế nhỏ gọn, nhẹ nhàng. Kết nối ổn định và đeo thoải mái, phù hợp sử dụng hằng ngày.</p>
+    <img src="/user/assets/image/sanpham/42/thongtin1.png" alt="">
+  `
+  },
+
+  {
+    id: "43",
+    name: "Rolex Submariner Date 126610LN",
+    brand: "Rolex",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp43.png",
+    price: 315000000,
+    salebefore: 329000000,
+    baseprice: 280000000,
+    listVersions: [
+      { name: "Loại máy", option: ["Automatic"] },
+      { name: "Kích thước", option: ["41mm"] }
+    ],
+    listColors: ["Bạch Kim"],
+    versions: [
+      {
+        storage: "41mm",
+        colors: [
+          { color: "Bạch Kim", price: 315000000, stock: 5, status: true, sold: "250", version: ["Automatic", "41mm"] },
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/43/16-9-1.png",
+      "../user/assets/image/sanpham/43/16-9-2.png",
+    ],
+    infoDetail: {
+      "Loại máy": "Automatic",
+      "Kích thước mặt": "41mm",
+      "Chất liệu vỏ": "Thép không gỉ 904L",
+      "Mặt kính": "Sapphire chống trầy",
+      "Kháng nước": "300m",
+      "Dây đeo": "Thép Oyster",
+      "Năng lượng dự trữ": "70 giờ",
+      "Xuất xứ": "Thụy Sĩ"
+    },
+    overview: `<h2>Rolex Submariner Date 126610LN là chiếc đồng hồ huyền thoại của giới sưu tầm.</h2>
+      <p>Với thiết kế biểu tượng, khả năng kháng nước đến 300m và bộ máy tự động Calibre 3235 chính xác, Submariner luôn nằm trong danh sách mong muốn của mọi tín đồ đồng hồ cơ.</p>`
+  },
+  {
+    id: "44",
+    name: "Omega Seamaster Diver 300M Co-Axial",
+    brand: "Omega",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp44.png",
+    price: 165000000,
+    salebefore: 179000000,
+    baseprice: 140000000,
+    listVersions: [
+      { name: "Loại máy", option: ["Automatic"] },
+      { name: "Kích thước", option: ["42mm"] }
+    ],
+    listColors: ["Xanh Dương", "Đen"],
+    versions: [
+      {
+        storage: "42mm",
+        colors: [
+          { color: "Xanh Dương", price: 165000000, stock: 10, status: true, sold: "420", version: ["Automatic", "42mm"] },
+          { color: "Đen", price: 167000000, stock: 8, status: true, sold: "310", version: ["Automatic", "42mm"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/44/16-9-1.png",
+      "../user/assets/image/sanpham/44/16-9-2.png",
+    ],
+    infoDetail: {
+      "Loại máy": "Automatic Co-Axial 8800",
+      "Kích thước mặt": "42mm",
+      "Chất liệu vỏ": "Thép không gỉ",
+      "Mặt kính": "Sapphire",
+      "Kháng nước": "300m",
+      "Dây đeo": "Thép không gỉ",
+      "Năng lượng dự trữ": "55 giờ",
+      "Xuất xứ": "Thụy Sĩ"
+    },
+    overview: `<h2>Seamaster Diver 300M là biểu tượng của Omega.</h2><p>Với thiết kế sóng đặc trưng và hiệu suất vượt trội, đây là lựa chọn hàng đầu cho những ai yêu thích sự sang trọng pha lẫn thể thao.</p>`
+  },
+  {
+    id: "45",
+    name: " MVW 41 mm Nam MS081-01",
+    brand: "MVW",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp45.png",
+    price: 22000000,
+    salebefore: 24900000,
+    baseprice: 18000000,
+    listVersions: [
+      { name: "Loại máy", option: ["Pin (Quartz)"] },
+      { name: "Kích thước", option: ["41mm"] }
+    ],
+    listColors: ["Bạc"],
+    versions: [
+      {
+        storage: "41mm",
+        colors: [
+          { color: "Bạc", price: 22000000, stock: 40, status: true, sold: "1.2k", version: ["Pin (Quartz)", "41mm"] },
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/45/16-9-1.png",
+      "../user/assets/image/sanpham/45/16-9-2.png",
+      "../user/assets/image/sanpham/45/16-9-3.png"
+    ],
+    infoDetail: {
+      "Loại máy": "Pin (Quartz)",
+      "Kích thước mặt": "41mm",
+      "Chất liệu vỏ": "Thép không gỉ 304",
+      "Mặt kính": "Kính khoáng Mineral",
+      "Kháng nước": "5 ATM - Đi mưa, tắm",
+      "Dây đeo": "Thép không gỉ 304",
+      "Pin": "Khoảng 2 năm",
+      "Xuất xứ": "Trung Quốc"
+    },
+    overview: `<h2>Thương hiệu MVW đến từ Việt Nam</h2>
+    <p>Chiếc đồng hồ nam này đến từ thương hiệu MVW nổi tiếng của Việt Nam. Đồng hồ sở hữu đường kính mặt 41 mm, độ rộng dây 20 mm. Đồng hồ MVW được trang bị khung viền và dây đeo được làm bằng thép không gỉ 304 có độ cứng cao, khả năng chịu lực tốt giúp bảo vệ tốt các chi tiết bên trong.Nước đã không còn là vấn đề lo ngại khi bạn có thể đeo đồng hồ ngay cả khi rửa tay, đi mưa hay đi tắm nhờ vào thông số chống nước 5 ATM tối ưu. Lưu ý: không đeo khi đi bơi, lặn. Đồng hồ hỗ trợ lịch ngày giúp người dùng chủ động theo dõi thời gian một cách thuận tiện.</p>`
+  },
+  {
+    id: "46",
+    name: "Citizen NH8350-59A Automatic",
+    brand: "Citizen",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp46.png",
+    price: 7500000,
+    salebefore: 8900000,
+    baseprice: 6000000,
+    listVersions: [
+      { name: "Loại máy", option: ["Automatic"] },
+      { name: "Kích thước", option: ["40mm"] }
+    ],
+    listColors: ["Bạc"],
+    versions: [
+      {
+        storage: "40mm",
+        colors: [
+          { color: "Bạc", price: 7500000, stock: 170, status: true, sold: "1.3k", version: ["Automatic", "40mm"] },
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/46/16-9-1.png",
+      "../user/assets/image/sanpham/46/16-9-2.png",
+      "../user/assets/image/sanpham/46/16-9-3.png"
+    ],
+    infoDetail: {
+      "Loại máy": "Automatic 8210",
+      "Kích thước mặt": "40mm",
+      "Chất liệu vỏ": "Thép không gỉ",
+      "Mặt kính": "Kính khoáng Mineral",
+      "Kháng nước": "50m",
+      "Dây đeo": "Thép",
+      "Năng lượng dự trữ": "40 giờ",
+      "Xuất xứ": "Nhật Bản"
+    },
+    overview: `<h2>Citizen NH8350 là chiếc đồng hồ cơ nổi bật với thiết kế cổ điển.</h2><p>Giá thành hợp lý, bộ máy bền bỉ và mặt kính sapphire chống trầy, đây là lựa chọn tốt cho người mới bắt đầu chơi đồng hồ cơ.</p>
+    <img src="/user/assets/image/sanpham/46/thongtin1.png" alt="">`
+  },
+  {
+    id: "47",
+    name: "Casio 40 mm Nam MTP-1303DD-7AVDF",
+    brand: "Seiko",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp47.png",
+    price: 1350000,
+    salebefore: 1500000,
+    baseprice: 800000,
+    listVersions: [
+      { name: "Loại máy", option: ["Pin (Quartz)"] },
+      { name: "Kích thước", option: ["40.5mm"] }
+    ],
+    listColors: ["Bạc"],
+    versions: [
+      {
+        storage: "40.5mm",
+        colors: [
+          { color: "Bạc", price: 13200000, stock: 40, status: true, sold: "1.3k", version: ["Pin (Quartz)", "40.5mm"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/47/16-9-1.png",
+      "../user/assets/image/sanpham/47/16-9-2.png",
+      "../user/assets/image/sanpham/47/16-9-3.png"
+    ],
+    infoDetail: {
+      "Loại máy": "Pin (Quartz)",
+      "Kích thước mặt": "40.5mm",
+      "Chất liệu vỏ": "Thép không gỉ mạ ion",
+      "Mặt kính": "Hardlex",
+      "Kháng nước": "5 ATM",
+      "Dây đeo": "Thép không gỉ",
+      "Pin": "Khoảng 3 năm",
+      "Xuất xứ": "Nhật Bản"
+    },
+    overview: '<p>Đang cập nhật</p>'
+  },
+
+  {
+    id: "48",
+    name: "Orient Bambino RA-AP0005B10B",
+    brand: "Orient",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp48.png",
+    price: 6500000,
+    salebefore: 7200000,
+    baseprice: 5500000,
+    listVersions: [
+      { name: "Loại máy", option: ["Automatic"] },
+      { name: "Kích thước", option: ["40mm"] }
+    ],
+    listColors: ["Đen"],
+    versions: [
+      {
+        storage: "40mm",
+        colors: [
+          { color: "Đen", price: 6600000, stock: 60, status: true, sold: "1.5k", version: ["Automatic", "40mm"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/48/16-9-1.png",
+      "../user/assets/image/sanpham/48/16-9-2.png",
+      "../user/assets/image/sanpham/48/16-9-3.png"
+    ],
+    infoDetail: {
+      "Loại máy": "Automatic F6222",
+      "Kích thước mặt": "42mm",
+      "Chất liệu vỏ": "Thép không gỉ",
+      "Mặt kính": "Kính khoáng Mineral",
+      "Kháng nước": "3 ATM",
+      "Dây đeo": "Da",
+      "Năng lượng dự trữ": "32 giờ",
+      "Xuất xứ": "Nhật Bản"
+    },
+    overview: `<h2>Orient Bambino- dòng đồng hồ Dress kinh điển.</h2><p>Thiết kế cổ điển, mặt kính cong và máy F6222 trữ cót 32 giờ tạo nên giá trị vượt tầm giá.</p>
+    <img src="/user/assets/image/sanpham/48/thongtin1.png" alt="">`
+  },
+
+  {
+    id: "49",
+    name: "Citizen 28 mm Nữ EM0801-85N",
+    brand: "Citizen",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp49.png",
+    price: 7200000,
+    salebefore: 7990000,
+    baseprice: 6200000,
+    listVersions: [
+      { name: "Loại máy", option: ["Eco-Drive"] },
+      { name: "Kích thước", option: ["28mm"] }
+    ],
+    listColors: ["Bạc"],
+    versions: [
+      {
+        storage: "28mm",
+        colors: [
+          { color: "Bạc", price: 7200000, stock: 70, status: true, sold: "1.4k", version: ["Eco-Drive", "28mm"] },
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/49/16-9-1.png",
+      "../user/assets/image/sanpham/49/16-9-2.png",
+      "../user/assets/image/sanpham/49/16-9-3.png"
+    ],
+    infoDetail: {
+      "Loại máy": "Eco-Drive",
+      "Kích thước mặt": "28mm",
+      "Chất liệu vỏ": "Thép không gỉ",
+      "Kháng nước": "3 ATM - Rửa tay, đi mưa",
+      "Dây đeo": "Thép không gỉ",
+      "Mặt kính": "Kính khoáng Mineral",
+      "Pin": "Khoảng 5 - 10 năm",
+      "Xuất xứ": "Nhật Bản"
+    },
+    overview: `<p>Đang cập nhật</p>`
+  },
+
+  {
+    id: "50",
+    name: "Festina 30.5 mm Nữ F20600/4",
+    brand: "Lacoste",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp50.png",
+    price: 2737000,
+    salebefore: 3650000,
+    baseprice: 2000000,
+    listVersions: [
+      { name: "Loại máy", option: ["Pin (Quartz)"] },
+      { name: "Kích thước", option: ["40mm"] }
+    ],
+    listColors: ["Bạc"],
+    versions: [
+      {
+        storage: "30.5mm",
+        colors: [
+          { color: "Bạc", price: 19900000, stock: 50, status: true, sold: "540", version: ["Pin (Quartz)", "30.5mm"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/50/16-9-1.png",
+      "../user/assets/image/sanpham/50/16-9-2.png",
+      "../user/assets/image/sanpham/50/16-9-3.png"
+    ],
+    infoDetail: {
+      "Loại máy": "Pin (Quartz)",
+      "Kích thước mặt": "30.5mm",
+      "Chất liệu vỏ": "Thép không gỉ",
+      "Mặt kính": "Kính khoáng Mineral",
+      "Kháng nước": "5-ATM",
+      "Dây đeo": "Thép không gỉ",
+      "Pin": "Khoảng 1 - 2 năm",
+      "Xuất xứ": "Thụy Sĩ"
+    },
+    overview: `<h2>Đồng hồ Festina F20600/4 gọn gàng, sang trọng và thanh lịch.</h2>
+    <p>Đồng hồ Festina F20600/4 có thiết kế gọn gàng nhưng vẫn giữ được vẻ sang trọng và thanh lịch. Mặt đồng hồ có nền trơn được trang trí bởi các cọc số đính đá, giúp tạo nên một sản phẩm phù hợp với các quý cô theo đuổi phong cách nhẹ nhàng, trang nhã.</p>
+    <p>Đồng hồ có kích thước mặt 30.5 mm phù hợp với các bạn nữ kích thước cổ tay nhỏ hoặc vừa. Hơn nữa, hãng còn sử dụng chất liệu kính khoáng cho phần mặt đồng hồ, vật liệu này có thể chịu lực và chống trầy ở mức vừa phải khi sử dụng hàng ngày.</p>
+    <p>Tiếp đến, khung viền và dây đeo của đồng hồ Festina này làm bằng thép không gỉ, một chất liệu thường được sử dụng ở các sản phẩm phụ kiện thời trang vì có tính bền đẹp, đem lại sự tiện lợi cho người đeo trong thời gian dài sử dụng.</p>`
+  },
+
+  {
+    id: "51",
+    name: "Orient Star RE-AT0202E00B",
+    brand: "Orient Star",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp51.png",
+    price: 18500000,
+    salebefore: 19900000,
+    baseprice: 16000000,
+    listVersions: [
+      { name: "Loại máy", option: ["Automatic"] },
+      { name: "Kích thước", option: ["41mm"] }
+    ],
+    listColors: ["Nâu"],
+    versions: [
+      {
+        storage: "41mm",
+        colors: [
+          { color: "Nâu", price: 18500000, stock: 20, status: true, sold: "420", version: ["Automatic", "41mm"] },
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/51/16-9-1.png",
+      "../user/assets/image/sanpham/51/16-9-2.png",
+      "../user/assets/image/sanpham/51/16-9-3.png"
+    ],
+    infoDetail: {
+      "Loại máy": "Automatic F6F44",
+      "Kích thước mặt": "41mm",
+      "Chất liệu vỏ": "Thép không gỉ",
+      "Mặt kính": "Sapphire cong",
+      "Kháng nước": "5-ATM",
+      "Dây đeo": "Da",
+      "Năng lượng dự trữ": "50 giờ",
+      "Xuất xứ": "Nhật Bản"
+    },
+    overview: `<h2>Đồng hồ Orient Star 40.4 mm Nam RE-AT0202E00B là một sản phẩm mang thương hiệu uy tín và chất lượng của Nhật Bản.</h2>
+    <p>Với thiết kế theo phong cách Classic cổ điển, đồng hồ này tạo được sự tinh tế và trở thành lựa chọn yêu thích của nhiều người tiêu dùng tại Việt Nam.</p>
+    <p>Mẫu đồng hồ này thuộc bộ sưu tập đặc biệt "Star" của Orient, nổi bật với phần mặt số được trang trí bằng cửa sổ lộ van tim, cho phép người dùng nhìn thấy một phần cơ chế hoạt động bên trong đồng hồ. Vị trí 12 giờ trên mặt số được sử dụng làm mức thang đo năng lượng dự trữ, tạo điểm nhấn độc đáo, phù hợp với phong cách hiện đại của dòng đồng hồ Orient Star.</p>
+    <img src="/user/assets/image/sanpham/51/thongtin1.png" alt="">`
+  },
+
+  {
+    id: "52",
+    name: "Hamilton Khaki Field Mechanical H69439931",
+    brand: "Hamilton",
+    category: "Đồng hồ",
+    thumbnail: "../user/assets/image/sanpham/sp52.png",
+    price: 13200000,
+    salebefore: 14500000,
+    baseprice: 11800000,
+    listVersions: [
+      { name: "Loại máy", option: ["Hand-winding"] },
+      { name: "Kích thước", option: ["38mm"] }
+    ],
+    listColors: ["Xanh Rêu", "Đen"],
+    versions: [
+      {
+        storage: "38mm",
+        colors: [
+          { color: "Xanh Rêu", price: 13200000, stock: 35, status: true, sold: "1.1k", version: ["Hand-winding", "38mm"] },
+          { color: "Đen", price: 13500000, stock: 30, status: true, sold: "920", version: ["Hand-winding", "38mm"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/52/16-9-1.png",
+      "../user/assets/image/sanpham/52/16-9-2.png",
+      "../user/assets/image/sanpham/52/16-9-3.png"
+    ],
+    infoDetail: {
+      "Loại máy": "Lên cót tay H-50",
+      "Kích thước mặt": "38mm",
+      "Chất liệu vỏ": "Thép không gỉ",
+      "Mặt kính": "Sapphire",
+      "Kháng nước": "50m",
+      "Dây đeo": "Vải Nato",
+      "Năng lượng dự trữ": "80 giờ",
+      "Xuất xứ": "Thụy Sĩ"
+    },
+    overview: `<h2>Dòng đồng hồ Field Watch nổi tiếng nhất.</h2><p>Hamilton Khaki mang hơi hướng quân đội Mỹ cổ điển, bền bỉ, giản dị nhưng cực kỳ cuốn hút.</p>
+  <img src="/user/assets/image/sanpham/52/thongtin1.png" alt="">`
+  },
+
+  {
+    id: "53",
+    name: "Samsung Galaxy Tab S10 FE 128GB",
+    brand: "Samsung",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp53.png",
+    price: 10769000,
+    salebefore: 11990000,
+    baseprice: 9990000,
+    listVersions: [
+      { name: "Bộ nhớ", option: ["128GB"] }
+    ],
+    listColors: ["Xanh", "Xám", "Bạc"],
+    versions: [
+      {
+        storage: "128GB",
+        colors: [
+          { color: "Xanh", price: 10769000, stock: 25, status: true, sold: "1.2k", version: ["128GB"] },
+          { color: "Xám", price: 10890000, stock: 20, status: true, sold: "980", version: ["128GB"] },
+          { color: "Bạc", price: 10950000, stock: 18, status: true, sold: "870", version: ["128GB"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/53/16-9-1.png",
+      "../user/assets/image/sanpham/53/16-9-2.png",
+      "../user/assets/image/sanpham/53/16-9-3.png"
+    ],
+    infoDetail: {
+      "Màn hình": "11\" LCD 90Hz",
+      "CPU": "Exynos 1380",
+      "RAM": "6GB",
+      "ROM": "128GB",
+      "Camera sau": "8MP",
+      "Camera trước": "12MP",
+      "Pin": "8000mAh",
+      "Sạc": "15W",
+      "Hệ điều hành": "Android 14"
+    },
+    overview: `<h2>Khám phá thế giới số theo cách hoàn toàn mới với Samsung Galaxy Tab S10 FE 5G chiếc tablet tầm trung sở hữu hiệu suất vượt bậc cùng khả năng kết nối siêu tốc.</h2>
+    <p>Máy tính bảng Samsung Galaxy Tab S gây ấn tượng với màn hình TFT LCD 10.9 inch, mang đến không gian hiển thị rộng rãi và rực rỡ. Dù bạn đang xem phim, chỉnh sửa văn bản, lướt web hay phác thảo ý tưởng sáng tạo, mọi nội dung đều trở nên sống động và rõ nét nhờ độ phân giải cao 1440 x 2304 pixels.</p>
+    <p>Màn hình có tần số quét 90 Hz giúp các thao tác vuốt và cuộn mượt mà hơn, hạn chế tình trạng xé hình hay giật khi chơi game hoặc xem video nhanh. Mọi chuyển động trên màn hình trở nên êm ái, tạo cảm giác dễ chịu cho mắt khi dùng lâu.</p>
+    <img src="/user/assets/image/sanpham/53/thongtin1.png" alt="">
+    <p>Sức mạnh của máy tính bảng Samsung này đến từ vi xử lý Exynos 1580 trên tiến trình 4 nm, vừa tối ưu hiệu suất vừa tiết kiệm năng lượng đáng kể. Với RAM 8 GB và bộ nhớ trong 128 GB, thiết bị dễ dàng xử lý đa nhiệm, từ làm việc trên ứng dụng văn phòng, thiết kế cơ bản đến chơi game hay học online.</p>
+    <p>Điểm nổi bật vượt trội chính là hỗ trợ kết nối 5G, cho phép, bạn có thể tải dữ liệu lớn, xem video trực tuyến 4K, thực hiện các cuộc gọi video sắc nét hay chia sẻ tệp dung lượng cao, tất cả đều diễn ra trong tích tắc, không bị gián đoạn bởi đường truyền.</p>
+    <img src="/user/assets/image/sanpham/53/thongtin2.png" alt="">
+    <p>Máy tính bảng trang bị camera sau 13 MP với khả năng lấy nét nhanh, ghi lại tài liệu, phong cảnh hay khoảnh khắc thường ngày với độ chi tiết cao. Ngoài ra, máy hỗ trợ quay video 4K, giúp bạn lưu giữ những đoạn phim sống động, chất lượng vượt trội.</p>
+    <p>Camera trước 12 MP góc rộng là người bạn đồng hành lý tưởng cho các cuộc họp video, học trực tuyến hay gọi điện thoại với gia đình, cho khung hình rõ ràng, bao quát và chuyên nghiệp hơn.</p>
+    <img src="/user/assets/image/sanpham/53/thongtin3.png" alt="">
+    `
+  },
+  {
+    id: "54",
+    name: "Apple iPad Gen 11 (A16) 128GB",
+    brand: "Apple",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp54.png",
+    price: 8990000,
+    salebefore: 9990000,
+    baseprice: 8890000,
+    listVersions: [
+      { name: "RAM", option: ["6GB"] },
+      { name: "Bộ nhớ", option: ["128GB"] },
+    ],
+    listColors: ["Bạc", "Xanh", "Hồng"],
+    versions: [
+      {
+        storage: "128GB",
+        colors: [
+          { color: "Bạc", price: 8990000, stock: 30, status: true, sold: "2.5k", version: ["6GB", "128GB"] },
+          { color: "Xanh", price: 9050000, stock: 28, status: true, sold: "2.1k", version: ["6GB", "128GB"] },
+          { color: "Hồng", price: 9100000, stock: 25, status: true, sold: "1.8k", version: ["6GB", "128GB"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/54/16-9-1.png",
+      "../user/assets/image/sanpham/54/16-9-2.png",
+      "../user/assets/image/sanpham/54/16-9-3.png"
+    ],
+    infoDetail: {
+      "Màn hình": "10.9\" Liquid Retina",
+      "CPU": "Apple A16 Bionic",
+      "RAM": "6GB",
+      "ROM": "128GB",
+      "Camera sau": "12MP",
+      "Camera trước": "12MP",
+      "Pin": "10 giờ",
+      "Sạc": "20W",
+      "Hệ điều hành": "iPadOS 18"
+    },
+    overview: `<h2>Với chip A16 mạnh mẽ, iPad A16 không chỉ mang lại hiệu năng vượt trội mà còn tích hợp nhiều công nghệ tiên tiến, giúp nâng cao trải nghiệm người dùng. Màn hình Liquid Retina 11 inch sắc nét, hỗ trợ Apple Pencil kết hợp với bộ nhớ khởi điểm 128GB, đảm bảo khả năng làm việc và giải trí mượt mà.</h2>
+    <p>Được thiết kế để mang đến trải nghiệm viết vẽ tự nhiên và chính xác nhất trên iPad. Với độ trễ gần như không đáng kể và khả năng nhận diện lực nhấn, Apple Pencil cho phép người dùng tạo ra những nét vẽ tinh tế, từ những đường phác thảo mảnh mai đến những mảng màu đậm nét.</p>
+    <p>Bên cạnh đó, Apple Pencil còn hỗ trợ các tính năng như nghiêng bút để tạo bóng và thay đổi độ dày nét vẽ, mang đến sự linh hoạt tối đa cho người dùng trong quá trình sáng tạo. Ngoài ra, mẫu máy tính bảng 11 inch này cũng hỗ trợ những ứng dụng chuyên nghiệp được tối ưu hóa cho Apple Pencil, biến iPad thành một studio di động tiện lợi của riêng bạn.</p>
+    <p>iPad 11 được trang bị chip Apple A16, một bộ vi xử lý tiên tiến được thiết kế để mang đến hiệu năng ổn định cho cả tác vụ cơ bản và chuyên sâu. Chip A16 Bionic bao gồm CPU 5 lõi, cho phép thiết bị cân bằng giữa hiệu suất và thời lượng pin.</p>
+    < img src="/user/assets/image/sanpham/54/thongtin1.png" alt="">`
+  },
+  {
+    id: "55",
+    name: "Samsung Galaxy Tab A9 64GB",
+    brand: "Samsung",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp55.png",
+    price: 5400000,
+    salebefore: 5990000,
+    baseprice: 5200000,
+    listVersions: [
+      { name: "RAM", option: ["4GB"] },
+      { name: "Bộ nhớ", option: ["64GB"] }
+    ],
+    listColors: ["Xanh", "Xám"],
+    versions: [
+      {
+        storage: "64GB",
+        colors: [
+          { color: "Xanh", price: 5400000, stock: 50, status: true, sold: "3.2k", version: ["4GB", "64GB"] },
+          { color: "Xám", price: 5490000, stock: 45, status: true, sold: "2.8k", version: ["4GB", "64GB"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/55/16-9-1.png",
+      "../user/assets/image/sanpham/55/16-9-2.png",
+      "../user/assets/image/sanpham/55/16-9-3.png",
+    ],
+    infoDetail: {
+      "Màn hình": "8.7\" LCD",
+      "CPU": "Helio G99",
+      "RAM": "4GB",
+      "ROM": "64GB",
+      "Camera sau": "8MP",
+      "Camera trước": "2MP",
+      "Pin": "5100mAh",
+      "Sạc": "15W",
+      "Hệ điều hành": "Android 14"
+    },
+    overview: `
+    <h2>Samsung Galaxy Tab A9 WiFi là mẫu máy tính bảng đáng chú ý tại thị trường Việt Nam, được ra mắt chính thức vào tháng 10/2023. Một vài điểm nổi bật trên chiếc máy tính bảng này có thể kể đến như: Thiết kế đẹp, màn hình lớn, trang bị chip MediaTek Helio G99 cùng viên pin 5100 mAh.</h2>
+    <p>Mặt lưng của Galaxy Tab A9 WiFi là một trong những đặc điểm đáng chú ý về phần thiết kế của máy, nó được làm từ kim loại và theo kiểu phẳng. Không giống như nhiều sản phẩm khác trên thị trường, mặt lưng của dòng Samsung Galaxy Tab A này còn có một lớp hoàn thiện kiểu nhám độc đáo. Điều này giúp tạo ra một cảm giác mềm mại, dễ cầm nắm, ngăn tránh hiện tượng bám dấu vân tay và bụi gây mất thẩm mỹ.</p>
+    <p>Mặt lưng của Galaxy Tab A9 WiFi không chỉ đẹp mà còn chứa trong mình sự khéo léo với việc được làm nguyên khối với bộ khung. Cách làm này giúp tránh hiện tượng mối nối để tạo nên sự kín đáo và giúp tạo nên một sản phẩm chắc chắn, cảm giác rất đáng tin cậy trong tay người dùng.</p>
+    <img src="/user/assets/image/sanpham/55/thongtin1.png" alt="">
+    <p>Mặt trước của tablet tiếp tục được làm theo kiểu xu hướng phẳng để đồng bộ với mặt lưng. Thiết kế này tạo ra một sự thống nhất và tạo cảm giác về một chiếc tablet tinh tế, thanh lịch, phù hợp với nhiều mục đích sử dụng khác nhau. Khả năng hiển thị hình ảnh trên màn hình lớn của Galaxy Tab A9 WiFi càng làm cho thiết kế trở nên hoàn hảo hơn.</p>
+    <p>Một trong những yếu tố quan trọng nhất khi sử dụng một tablet chắc chắn là màn hình, và Galaxy Tab A9 WiFi không chỉ đáp ứng mà còn vượt quá mong đợi của một người dùng. Với tấm nền TFT LCD, màn hình này mang lại những trải nghiệm tuyệt vời với độ phân giải cao và kích thước lớn lên đến 8.7 inch.</p>
+    <img src="/user/assets/image/sanpham/55/thongtin2.png" alt="">
+    <p>Camera trên chiếc Galaxy Tab A9 WiFi đã chứng minh sự đáng tin cậy trong công việc hằng ngày, đặc biệt đối với một người làm việc văn phòng hay những bạn học sinh - sinh viên. Chiếc tablet này trang bị một camera sau 8 MP, cho phép người dùng dễ dàng chụp tài liệu văn bản và tạo bản sao chất lượng cao. Độ phân giải cao giúp máy bắt giữ mọi chi tiết của tài liệu, đảm bảo rằng mọi trang giấy và chữ viết đều rõ ràng và sắc nét.</p>
+    <p>Với chip Helio G99, Galaxy Tab A9 WiFi giúp người dùng trải nghiệm mọi tác vụ thông thường một cách mượt mà và nhanh chóng. Nhắn tin, duyệt web, xem video hoặc làm việc văn phòng - mọi thứ đều diễn ra một cách suôn sẻ, tạo cho người dùng cảm giác như đang sử dụng một máy tính xách tay thực thụ.</p>
+    <img src="/user/assets/image/sanpham/55/thongtin3.png" alt="">
+    `
+  },
+  {
+    id: "56",
+    name: "Samsung Galaxy Tab A9+ 64GB",
+    brand: "Samsung",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp56.png",
+    price: 6490000,
+    salebefore: 6990000,
+    baseprice: 6190000,
+    listVersions: [
+      { name: "RAM", option: ["4GB"] },
+      { name: "Bộ nhớ", option: ["64GB"] }
+    ],
+    listColors: ["Xanh", "Xám"],
+    versions: [
+      {
+        storage: "64GB",
+        colors: [
+          { color: "Xanh", price: 6490000, stock: 45, status: true, sold: "2.9k", version: ["4GB", "64GB"] },
+          { color: "Xám", price: 6550000, stock: 40, status: true, sold: "2.4k", version: ["4GB", "64GB"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/56/16-9-1.png",
+      "../user/assets/image/sanpham/56/16-9-2.png",
+      "../user/assets/image/sanpham/56/16-9-3.png",
+      "../user/assets/image/sanpham/56/16-9-4.png",
+      "../user/assets/image/sanpham/56/16-9-5.png",
+      "../user/assets/image/sanpham/56/16-9-6.png"
+    ],
+    infoDetail: {
+      "Màn hình": "11\" LCD 90Hz",
+      "CPU": "Snapdragon 695",
+      "RAM": "4GB",
+      "ROM": "64GB",
+      "Camera sau": "8MP",
+      "Camera trước": "5MP",
+      "Pin": "7040mAh",
+      "Sạc": "15W",
+      "Hệ điều hành": "Android 14"
+    },
+    overview: `<h2>Với giá cả phải chăng, Samsung Galaxy Tab A9+ 5G là một sản phẩm máy tính bảng của Samsung dành cho người dùng muốn sở hữu một thiết bị giải trí cơ bản với màn hình rộng và khả năng kết nối mạng toàn diện để truy cập internet bất kỳ lúc nào và ở bất kỳ đâu.</h2>
+    <p>Thiết kế của Galaxy Tab A9+ 5G đem đến một sự tươi mới và tinh tế. Máy sở hữu một ngoại hình hiện đại và thanh lịch với mặt lưng phẳng và khung kim loại. Các góc bo tròn mềm mại làm cho máy có sự đối lập với những đường nét phẳng phiu nên trông khá thú vị.</p>
+    <p>Vỏ ngoài của Galaxy Tab A9+ 5G được làm từ kim loại, tạo nên một vẻ ngoài sang trọng và đẳng cấp. Chất liệu kim loại cung cấp sự cứng cáp và độ bền cho máy tính bảng, giúp tăng thêm độ bền bỉ để hạn chế hư hại do va đập. Đặc biệt, việc làm nhám bề mặt này giúp ngăn máy trượt tay và mang lại cảm giác thoải mái khi cầm máy.</p>
+    <img src="/user/assets/image/sanpham/56/thongtin1.png" alt="">
+    <p>Màn hình của Galaxy Tab A9+ 5G được trang bị công nghệ TFT LCD, một sự kết hợp độc đáo giữa chất lượng hình ảnh và khả năng tiết kiệm năng lượng. Màn hình TFT LCD không chỉ hiển thị màu sắc tự nhiên và sáng rõ mà còn tiết kiệm điện năng, giúp kéo dài thời gian sử dụng máy. Điều này làm cho Galaxy Tab A9+ 5G trở thành một lựa chọn thông minh khi người dùng muốn kết hợp chất lượng hình ảnh và hiệu suất pin tối ưu.</p>
+    <p>Một trong những điểm đáng chú ý nhất của Galaxy Tab A9+ 5G là sự hiện diện của chip Snapdragon 695, một thành phần quan trọng quyết định hiệu năng của thiết bị. Chip được thiết kế để đáp ứng tốt nhu cầu của người dùng và giúp máy tính bảng thực hiện các tác vụ cơ bản một cách nhanh chóng và hiệu quả.</p>
+    <img src="/user/assets/image/sanpham/56/thongtin2.png" alt="">
+    `
+  },
+  {
+    id: "57",
+    name: "Lenovo Idea Tab 5G 128GB",
+    brand: "Lenovo",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp57.png",
+    price: 5590000,
+    salebefore: 5990000,
+    baseprice: 5300000,
+    listVersions: [
+      { name: "RAM", option: ["8GB"] },
+      { name: "Bộ nhớ", option: ["128GB"] }
+    ],
+    listColors: ["Xám"],
+    versions: [
+      {
+        storage: "128GB",
+        colors: [
+          { color: "Xám", price: 5590000, stock: 38, status: true, sold: "1.5k", version: ["8GB", "128GB"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/57/16-9-1.png",
+      "../user/assets/image/sanpham/57/16-9-2.png",
+      "../user/assets/image/sanpham/57/16-9-3.png",
+      "../user/assets/image/sanpham/57/16-9-4.png"
+    ],
+    infoDetail: {
+      "Màn hình": "11\" IPS",
+      "CPU": "MediaTek Dimensity 6300 8 nhân",
+      "GPU": "Mali-G57 MC2",
+      "RAM": "8GB",
+      "ROM": "128GB",
+      "Camera sau": "8MP",
+      "Camera trước": "5MP",
+      "Pin": "7040mAh",
+      "Sạc": "20W",
+      "Hệ điều hành": "Android 15"
+    },
+    overview: `<h2>Lenovo Idea Tab 5G mang đến trải nghiệm học tập và giải trí trọn vẹn với màn hình 2.5K sắc nét, âm thanh Dolby Atmos sống động, chip MediaTek Dimensity 6300 mượt mà. Bên cạnh đó, máy còn hỗ trợ AI Note, Circle to Search cùng bàn phím và bút cảm ứng tùy chọn, đáp ứng linh hoạt mọi nhu cầu học tập, làm việc và sáng tạo của sinh viên.</h2>
+    <p>Máy trang bị màn hình 11 inch độ phân giải 2.5K (2560 x 1600), cho chữ và hình ảnh hiển thị sắc nét, dễ đọc tài liệu, xem biểu đồ hay nghiên cứu mà không lo mỏi mắt. Khi xem phim hay video, chất lượng hình ảnh sống động như rạp mini tại nhà.</p>
+    <p>Ngoài ra, màn hình còn hỗ trợ tần số quét 90 Hz, giúp cuộn lướt mượt mà, chuyển cảnh nhanh gọn và chơi game cũng mượt mà hơn. Độ sáng tối đa 500 nits đảm bảo hiển thị rõ ngay cả khi dùng ngoài trời, cho bạn thoải mái học tập, làm việc hay giải trí ở bất kỳ đâu.</p>
+    <img src="/user/assets/image/sanpham/57/thongtin1.png" alt="">
+    <p>Máy tính bảng có 4 loa ngoài kết hợp Dolby Atmos, cho âm thanh vang to và lan đều xung quanh. Xem phim nghe rõ từng tiếng động, nghe nhạc thì nhạc cụ tách bạch hơn. Khi học online hay gọi video, giọng nói cũng rõ ràng, dễ nghe và dễ tập trung.</p>
+    <p>Lenovo Idea Tab 5G dùng chip 8 nhân MediaTek Dimensity 6300, cân bằng tốt giữa sức mạnh và tiết kiệm năng lượng. Máy xử lý mượt các ứng dụng học tập, duyệt web nhiều tab, chỉnh sửa tài liệu, thậm chí chơi game giải trí sau giờ học. Nhờ vậy, bạn có thể yên tâm sử dụng trong nhiều tình huống khác nhau mà không lo giật lag.</p>
+    <img src="/user/assets/image/sanpham/57/thongtin2.png" alt="">
+    <p>Lenovo AI Note được tích hợp ngay trong ứng dụng Notepad, biến việc ghi chú không còn đơn thuần là viết lại, mà còn giúp sắp xếp ý tưởng gọn gàng, tóm tắt nội dung và quản lý dễ dàng hơn. Với sinh viên, đây là công cụ hữu ích để ôn thi, hệ thống hóa kiến thức từ bài giảng hay phác thảo nhanh ý tưởng cho bài luận.</p>
+    <img src="/user/assets/image/sanpham/57/thongtin3.png" alt="">
+    `
+  },
+  {
+    id: "58",
+    name: "Apple iPad Gen 11 WiFi 256GB",
+    brand: "Apple",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp58.png",
+    price: 11490000,
+    salebefore: 12490000,
+    baseprice: 11290000,
+    listVersions: [
+      { name: "RAM", option: ["6GB"] },
+      { name: "Bộ nhớ", option: ["256GB"] }
+    ],
+    listColors: ["Bạc", "Xanh"],
+    versions: [
+      {
+        storage: "256GB",
+        colors: [
+          { color: "Bạc", price: 11490000, stock: 22, status: true, sold: "1.9k", version: ["6GB", "256GB"] },
+          { color: "Xanh", price: 11550000, stock: 18, status: true, sold: "1.7k", version: ["6GB", "256GB"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/58/16-9-1.png",
+      "../user/assets/image/sanpham/58/16-9-2.png",
+      "../user/assets/image/sanpham/58/16-9-3.png",
+      "../user/assets/image/sanpham/58/16-9-4.png"
+    ],
+    infoDetail: {
+      "Màn hình": "10.9\" Liquid Retina",
+      "CPU": "Apple A16 Bionic",
+      "GPU": "Apple GPU 4 nhân",
+      "RAM": "6GB",
+      "ROM": "256GB",
+      "Camera sau": "12MP",
+      "Camera trước": "12MP",
+      "Pin": "10 giờ",
+      "Sạc": "20W",
+      "Hệ điều hành": "iPadOS 18"
+    },
+    overview: `
+    <h2>iPad A16 WiFi 256GB, ra mắt song hành cùng iPad Air M3, mang đến lựa chọn kinh tế hơn cho người dùng. Thiết bị này sở hữu chip A16, cung cấp hiệu năng đủ đáp ứng các tác vụ hàng ngày. Thiết bị cũng hỗ trợ Apple Pencil, mở rộng khả năng thao tác với máy của người dùng.</h2>
+    <p>iPad A16 WiFi mang đến một diện mạo thanh lịch với phần khung nhôm nguyên khối được hoàn thiện tỉ mỉ, tạo cảm giác chắc chắn nhưng vẫn nhẹ nhàng khi cầm nắm. Apple mang đến bốn tùy chọn màu sắc trẻ trung: bạc, xanh dương, hồng và vàng, giúp người dùng có thêm nhiều sự lựa chọn để thể hiện cá tính riêng.</p>
+    <img src="/user/assets/image/sanpham/58/thongtin1.png" alt="">
+    <p>Chất lượng hiển thị trên iPad A16 WiFi được tối ưu với màn hình Liquid Retina 11 inch, mang đến độ phân giải 1640 x 2360 pixels, hiển thị hình ảnh sắc nét với mật độ điểm ảnh 264 ppi. Công nghệ True Tone giúp điều chỉnh nhiệt độ màu dựa trên ánh sáng môi trường, giúp mắt dễ chịu hơn khi sử dụng lâu.</p>
+    <img src="/user/assets/image/sanpham/58/thongtin2.png" alt="">
+    <p>Lớp phủ chống bám vân tay trên màn hình hạn chế dấu vết mồ hôi, giữ cho thiết bị luôn sạch sẽ và sáng bóng. Đặc biệt, khả năng hỗ trợ Apple Pencil thế hệ đầu cùng phiên bản USB-C giúp việc ghi chú, vẽ phác thảo và thao tác sáng tạo trở nên dễ dàng, tạo cảm giác chân thực như viết trên giấy.</p>
+    <p>Máy tính bảng 11 inch được trang bị chip Apple A16, một bộ vi xử lý mạnh mẽ với CPU 5 lõi, cho phép thiết bị xử lý các tác vụ đa nhiệm một cách ổn định, đồng thời tối ưu hóa mức tiêu thụ năng lượng. Bộ xử lý đồ họa GPU 4 lõi hỗ trợ hiển thị hình ảnh sắc nét và chơi game ổn định hơn. Với Neural Engine 16 lõi, iPad có thể tận dụng tối đa sức mạnh AI để cải thiện khả năng nhận diện giọng nói, xử lý hình ảnh nhanh hơn và tối ưu hóa trải nghiệm làm việc trên iPadOS.</p>
+    <img src="/user/assets/image/sanpham/58/thongtin3.png" alt="">
+    `
+  },
+  {
+    id: "59",
+    name: "Samsung Galaxy Tab S9 WIFI 256GB",
+    brand: "Samsung",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp59.png",
+    price: 18990000,
+    salebefore: 21990000,
+    baseprice: 14000000,
+    listVersions: [
+      { name: "RAM", option: ["12GB"] },
+      { name: "Bộ nhớ", option: ["256GB"] }
+    ],
+    listColors: ["Kem"],
+    versions: [
+      {
+        storage: "256GB",
+        colors: [
+          { color: "Kem", price: 13990000, stock: 15, status: true, sold: "980", version: ["12GB", "256GB"] },
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/59/16-9-1.png",
+      "../user/assets/image/sanpham/59/16-9-2.png",
+      "../user/assets/image/sanpham/59/16-9-3.png",
+    ],
+    infoDetail: {
+      "Màn hình": "11\" TFT 120Hz",
+      "CPU": "Snapdragon 8 Gen 2 for Galaxy",
+      "RAM": "12GB",
+      "ROM": "256GB",
+      "Camera sau": "13MP",
+      "Camera trước": "12MP",
+      "Pin": "8400mAh",
+      "Sạc": "45W",
+      "Hệ điều hành": "Android 13"
+    },
+    overview: `<h2>Samsung Galaxy Tab S9 WiFi 256GB là mẫu máy tính bảng được mở bán tại thị trường Việt Nam vào tháng 07/2023. Lần ra mắt này hãng mang đến khá nhiều sự nâng cấp nổi bật như: Cấu hình mạnh, thiết kế mỏng hơn đời tiền nhiệm cùng với chuẩn IP68 cho cả máy và bút S Pen.</h2>
+    <p>Samsung Galaxy Tab S9 WiFi không chỉ là một chiếc máy tính bảng thông thường, mà còn là tuyệt tác kết hợp giữa công nghệ hàng đầu và thiết kế vượt trội. Với thiết kế vuông vức đẹp mắt, mặt lưng và màn hình phẳng mang đến cảm giác sang trọng và hiện đại cho người dùng.</p>
+    <p>Tấm nền Dynamic AMOLED 2X là một trong những điểm nổi bật đáng chú ý nhất của Galaxy Tab S9 WiFi. Công nghệ này mang đến màu sắc trung thực, độ tương phản cao và độ sáng vượt trội, giúp hình ảnh trở nên sống động và chân thực hơn bao giờ hết.</p>
+    <img src="/user/assets/image/sanpham/59/thongtin1.png" alt="">
+    <p>Chip Snapdragon 8 Gen 2 trên Galaxy Tab S9 WiFi là mẫu chip đặc biệt được Qualcomm tối ưu riêng cho dòng sản phẩm Galaxy, nó tối ưu hóa để mang đến hiệu suất vượt trội và tiết kiệm năng lượng hiệu quả.</p>
+    <img src="/user/assets/image/sanpham/59/thongtin2.png" alt="">
+    <p>Samsung Galaxy Tab S9 WiFi là một sự lựa chọn đáng cân nhắc khi sở hữu bên trong đầy đủ các thông số mạnh mẽ. Từ cấu hình cho đến thiết kế, Samsung luôn chọn những cái tên hàng đầu để trang bị nhằm giúp mang đến những trải nghiệm tuyệt vời cho người dùng.</p>`
+  },
+  {
+    id: "60",
+    name: "Xiaomi Redmi Pad Pro WIFI 128GB",
+    brand: "Xiaomi",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp60.png",
+    price: 7990000,
+    salebefore: 8990000,
+    baseprice: 7590000,
+    listVersions: [
+      { name: "RAM", option: ["6GB"] },
+      { name: "Bộ nhớ", option: ["128GB"] }
+    ],
+    listColors: ["Xanh", "Xám"],
+    versions: [
+      {
+        storage: "128GB",
+        colors: [
+          { color: "Xanh", price: 7990000, stock: 40, status: true, sold: "2k", version: ["6GB", "128GB"] },
+          { color: "Xám", price: 8090000, stock: 35, status: true, sold: "1.6k", version: ["6GB", "128GB"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/60/16-9-1.png",
+      "../user/assets/image/sanpham/60/16-9-2.png",
+      "../user/assets/image/sanpham/60/16-9-3.png",
+      "../user/assets/image/sanpham/60/16-9-4.png"
+    ],
+    infoDetail: {
+      "Màn hình": "12.1\" IPS 144Hz",
+      "CPU": "Snapdragon 7s Gen 2 8 nhân",
+      "GPU": "Adreno 710",
+      "RAM": "6GB",
+      "ROM": "128GB",
+      "Camera sau": "8MP",
+      "Camera trước": "8MP",
+      "Pin": "10000mAh",
+      "Sạc": "33W",
+      "Hệ điều hành": "Xiaomi HyperOS (Android 14)"
+    },
+    overview: `
+    <h2>Sau thành công của thế hệ Redmi Pad năm 2022, nhà Xiaomi đã cho ra mắt phiên bản nâng cấp với nhiều cải tiến về thiết kế lẫn hiệu năng mang tên Xiaomi Redmi Pad Pro, hứa hẹn mang đến cho người dùng trải nghiệm tối ưu từ phần cứng đến phần mềm bên trong.</h2>
+    <p>Redmi Pad Pro ghi điểm nhờ ngôn ngữ thiết kế mặt lưng phẳng với bốn góc bo cong mềm mại mang đến vẻ đẹp hiện đại và sang trọng. Được chế tác từ kim loại và trải qua quá trình gia công tỉ mỉ, tạo nên sự đồng nhất về mặt thẩm mỹ và độ hoàn thiện cao.</p>
+    <img src="/user/assets/image/sanpham/60/thongtin1.png" alt="">
+    <p>Màn hình có kích thước 12.1 inch của Redmi Pad cùng thiết kế bốn viền mỏng đều, giúp mở ra không gian giải trí rộng lớn, cho bạn thoải mái tận hưởng những bộ phim yêu thích hay chơi game giải trí. Không chỉ vậy, màn hình lớn còn biến thiết bị thành một công cụ làm việc hiệu quả, giúp bạn dễ dàng sáng tạo nội dung hay học tập trực tuyến.</p>
+    <img src="/user/assets/image/sanpham/60/thongtin2.png" alt="">
+    <p>Mang trong mình CPU Snapdragon 7s Gen 2 8 nhân được sản xuất trên quy trình 4 nm hiện đại, có tốc độ tối đa 2.3 GHz giúp tăng hiệu suất xử lý nhưng vẫn giảm mức tiêu thụ điện, con chip này sẽ dễ dàng xử lý các tác vụ từ lướt web, xem video, đến các tác vụ nặng hơn như chỉnh sửa ảnh 2D, chơi game đồ họa trung bình,... mà không gặp quá nhiều trở ngại.</p>
+    <img src="/user/assets/image/sanpham/60/thongtin3.png" alt="">
+    <p>Mang một thiết kế đẹp, thời thượng nhưng không kém phần bền bỉ, màn hình 2.5K sắc nét, tần số làm mới 120 Hz mượt mà, hiệu năng mạnh mẽ cùng một viên pin khủng, Redmi Pad Pro 6GB/128GB sẽ là một chiếc máy tính bảng đáng trải nghiệm trong phân khúc dưới 10 triệu dành cho người dùng.</p>
+  `
+  },
+  {
+    id: "61",
+    name: "Xiaomi Pad SE 8.7",
+    brand: "Xiaomi",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp61.png",
+    price: 4590000,
+    salebefore: 4990000,
+    baseprice: 4390000,
+    listVersions: [
+      { name: "RAM", option: ["4GB"] },
+      { name: "Bộ nhớ", option: ["128GB"] }
+    ],
+    listColors: ["Xám", "Xanh"],
+    versions: [
+      {
+        storage: "128GB",
+        colors: [
+          { color: "Xám", price: 4590000, stock: 55, status: true, sold: "3.1k", version: ["4GB", "128GB"] },
+          { color: "Xanh", price: 4650000, stock: 48, status: true, sold: "2.9k", version: ["4GB", "128GB"] }
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/61/16-9-1.png",
+      "../user/assets/image/sanpham/61/16-9-2.png",
+      "../user/assets/image/sanpham/61/16-9-3.png",
+      "../user/assets/image/sanpham/61/16-9-4.png"
+    ],
+    infoDetail: {
+      "Màn hình": "8.7\" IPS LCD",
+      "CPU": "MediaTek Helio G85 8 nhân",
+      "GPU": "Mali-G52 MC2",
+      "RAM": "4GB",
+      "ROM": "128GB",
+      "Camera sau": "8MP",
+      "Camera trước": "5MP",
+      "Pin": "6650mAh",
+      "Sạc": "18W",
+      "Hệ điều hành": "Android 14"
+    },
+    overview: `<h2>Xiaomi Redmi Pad SE 8.7 4G có thiết kế gọn nhẹ với nhiều màu sắc lựa chọn. Pin dung lượng lớn cho thời gian sử dụng lâu dài, vi xử lý ổn định giúp xử lý mượt mà các tác vụ hàng ngày, và màn hình 8.7 inch mang lại hình ảnh sắc nét, dễ nhìn.</h2>
+    <p>Redmi Pad SE 8.7 4G có thiết kế tinh tế, với camera và các nút bấm được bố trí hợp lý, tạo nên một tổng thể hài hòa. Sự sắp xếp này không chỉ đẹp mắt mà còn giúp nâng cao trải nghiệm người dùng. Mỗi chi tiết, từ đường nét đến vị trí các phím bấm, đều được tính toán cẩn thận để đảm bảo thao tác chính xác và tiện lợi.</p>
+    <img src="/user/assets/image/sanpham/61/thongtin1.png" alt="">
+    <p>Redmi Pad SE 8.7 4G với vi xử lý MediaTek Helio G85 8 nhân mang đến hiệu suất mượt mà, ổn định. Máy dễ dàng xử lý đa nhiệm, từ công việc hàng ngày đến các game phổ biến, giúp bạn làm việc và giải trí hiệu quả.</p>
+    <img src="/user/assets/image/sanpham/61/thongtin2.png" alt="">
+    <p>Màn hình IPS LCD 8.7 inch của máy cho chất lượng hiển thị tốt với màu sắc trung thực, không quá rực rỡ nhưng vẫn đủ để xem phim và lướt web thoải mái. Kích thước vừa vặn, không quá lớn để cầm nắm, nhưng đủ rộng để thao tác dễ dàng.</p>
+    <p>Redmi Pad SE 8.7 4G sở hữu hệ thống camera đơn giản. Với ống kính chính 8 MP ở mặt sau đáp ứng đủ cho những bức ảnh hàng ngày hoặc khi cần quét tài liệu. Camera trước 5 MP hỗ trợ cho các cuộc gọi video và selfie cơ bản, phù hợp với những người dùng có nhu cầu sử dụng vừa phải.</p>
+    <p>Xiaomi Redmi Pad SE 8.7 4G là chiếc máy tính bảng đáp ứng nhu cầu cơ bản với thiết kế bền bỉ, màn hình rõ nét, cấu hình ổn định và pin sử dụng cả ngày. Đây là lựa chọn phù hợp cho những ai cần một thiết bị vừa túi tiền, vừa hoạt động ổn định.</p>
+  `
+  },
+  {
+    id: "62",
+    name: "Huawei MatePad 11 2024 128GB",
+    brand: "Huawei",
+    category: "Tablet",
+    thumbnail: "../user/assets/image/sanpham/sp62.png",
+    price: 8990000,
+    salebefore: 9990000,
+    baseprice: 8690000,
+    listVersions: [
+      { name: "RAM", option: ["4GB"] },
+      { name: "Bộ nhớ", option: ["128GB"] }
+    ],
+    listColors: ["Xám"],
+    versions: [
+      {
+        storage: "128GB",
+        colors: [
+          { color: "Xám", price: 8990000, stock: 20, status: true, sold: "1.4k", version: ["4GB", "128GB"] },
+        ]
+      }
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/62/16-9-1.png",
+      "../user/assets/image/sanpham/62/16-9-2.png",
+      "../user/assets/image/sanpham/62/16-9-3.png",
+      "../user/assets/image/sanpham/62/16-9-4.png",
+      "../user/assets/image/sanpham/62/16-9-5.png"
+    ],
+    infoDetail: {
+      "Màn hình": "11\" TFT LCD 120Hz",
+      "CPU": "Snapdragon 865",
+      "RAM": "4GB",
+      "ROM": "128GB",
+      "Camera sau": "13MP",
+      "Camera trước": "8MP",
+      "Pin": "7250mAh",
+      "Sạc": "22.5W",
+      "Hệ điều hành": "HarmonyOS 4.0"
+    },
+    overview: `<h2>Không chỉ sở hữu thiết kế kim loại nguyên khối lịch thiệp và màn hình FullView với nhiều công nghệ bảo vệ mắt, chiếc máy tính bảng Huawei MatePad SE 11 inch còn được trang bị viên pin 7.700 mAh dung lượng lớn và hỗ trợ sạc nhanh 22.5W tốc độ cao. Tất cả đều hứa hẹn cung cấp cho người dùng trải nghiệm toàn diện trên mọi khía cạnh.</h2>
+    <p>Theo đuổi triết lý thiết kế tối giản, Huawei MatePad SE 11 inch khoe dáng thanh lịch với bộ khung vỏ mỏng 6.9 mm và đạt trọng lượng 475 gram. Sản phẩm đem lại cảm nhận cầm nắm nhẹ nhàng, thoải mái trên tay. Từng chi tiết nhỏ trên chiếc máy tính bảng đều thể hiện chất lượng hoàn thiện tỉ mỉ, chỉn chu. Màu Xám Tinh Vân thời thượng phù hợp với nhiều phong cách khác nhau, cực kỳ đa dụng và tinh tế.</p>
+    <img src="/user/assets/image/sanpham/62/thongtin1.png" alt="">
+    <p>Toàn bộ cấu trúc thân vỏ của máy tính bảng Huawei MatePad SE 11 inch đều được chế tác bằng chất liệu kim loại nguyên khối, đảm bảo độ bền bỉ và chắc chắn, đồng thời mang tới cảm nhận sang trọng khi nhìn ngắm. Sự cứng cáp của khung vỏ nhôm này đã được kiểm định qua 60+ bài kiểm tra độ bền trước khi xuất xưởng tới tay người dùng. Huawei cho biết lợi thế về chất liệu giúp sản phẩm tăng cường tới 45.2% độ cứng.</p>
+    <img src="/user/assets/image/sanpham/62/thongtin2.png" alt="">
+    <p>Về khả năng hiển thị hình ảnh, máy tính bảng Huawei MatePad SE 11 inch được trang bị màn hình Full HD+ với kích thước 11 inch, cung cấp trải nghiệm hình ảnh sắc nét, sống động và đặc biệt chân thực. Với cấu trúc viền bao quanh cực mỏng, màn hình này đạt tỉ lệ trên thân máy lên đến 85%, với độ sáng 400 nits và độ tương phản 1.400:1. Tất cả hứa hẹn trải nghiệm xem đắm chìm, mãn nhãn.</p>
+    <p>Sở hữu Huawei MatePad SE 11 inch, bạn sẽ có ngay một trợ thủ đắc lực để thỏa sức sáng tạo, đó là bút cảm ứng M-Pen Lite. Chiếc bút được thiết kế hết sức gọn gàng và lịch thiệp với lớp phủ kim loại mờ cùng kẹp bút cơ động. Ngay khi cần tốc ký một ý tưởng nào đó, bạn chỉ cần rút bút ra là có thể lập tức sử dụng mà không cần thực hiện thao tác kết nối bluetooth rườm rà. Ứng dụng ghi chú Huawei Notes sẽ giúp bạn định hình và sàng lọc ý tưởng nhanh chóng.</p>
+    `
+  }
+
 ];
+
 let listTaiKhoan = [
   {
     hoten: "hoang",
@@ -105,19 +3143,22 @@ export function timPhienBanSanPham(id) {
 }
 
 
-export function timSanPhamTheoTen(ten){
-  
+export function timSanPhamTheoTen(ten) {
+  let listSanPham = getListSanPham();
+  let ketQua = listSanPham.filter(sanpham =>
+    sanpham.name.toLowerCase().includes(ten.toLowerCase())
+  );
+  return ketQua;
 }
-
 export function laySanPhamBangLuaChon(id, listpb, mau) {
   let sanpham = timSanPham(id);
   for (let sp of sanpham.versions) {
     if (sp.color === mau && sp.version.length === listpb.length &&
       sp.version.every((v, i) => v === listpb[i])) {
       if (sp.stock <= 0) {
-          return;
-        }
-        sp.stock--;
+        return;
+      }
+      sp.stock--;
       return sp;
     }
   }
@@ -153,3 +3194,4 @@ export function timSanPham(id) {
   }
   return null;
 }
+

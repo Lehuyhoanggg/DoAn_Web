@@ -1,19 +1,34 @@
 import { timSanPham } from "./database.js";
+import { tachetgiaodien } from "./home.js";
 
 const div = document.createElement('DIV');
 div.className = "donhang";
 
 document.querySelector(".main").appendChild(div);
-console.log("dqdq");
 
 window.addEventListener('DOMContentLoaded', function () {
+    div.innerHTML =
+        `<div class="donhang_text">
+            <p class="donhang_text-title">Quản lí đơn hàng của bạn</p>
+            <p class="donhang_text-desc">Xem chi tiết, trạng thái của những đơn hàng đã đặt.</p>
+        </div>
+
+        <ul class="donhang_list">
+    
+        </ul>`;
     khoiphucdonhang();
+    if (document.querySelector(".donhang_list").children.length === 0) {
+        donhangtrong(document.querySelector(".donhang_list"));
+    }
     const overlay = document.querySelector('.overlay');
-    const home = document.querySelector(".home");
     document.querySelector(".main").appendChild(div);
     const openDonHang = document.querySelector(".open_donhang");
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
     openDonHang?.addEventListener('click', function () {
-        home.style.display = 'none';
+        tachetgiaodien();
         div.style.display = 'flex';
     });
     const ul = this.document.querySelector(".donhang_xemchitiet_ul");
@@ -41,22 +56,39 @@ window.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+
+
+export function donhangtrong(ctn) {
+    ctn.innerHTML = ``;
+    const tb1 = document.createElement("p");
+    tb1.textContent = "Bạn chưa có đơn hàng nào";
+    tb1.className = "kotimthaysp1";
+    const ctn_tb = document.createElement("div");
+    ctn_tb.className = "kotimthaysp";
+    ctn_tb.appendChild(tb1);
+
+    ctn_tb.innerHTML += `<img class="donhangtrong_icon" src="./user/assets/svg/matcuoi.svg"> 
+`;
+    ctn.appendChild(ctn_tb);
+}
+
+
+
+
+
 function khoiphucdonhang() {
 
     const taikhoan = JSON.parse(localStorage.getItem("taikhoandangnhap"));
     if (taikhoan === null) {
         return;
     }
-    div.innerHTML =
-        `<div class="donhang_text">
-            <p class="donhang_text-title">Quản lí đơn hàng của bạn</p>
-            <p class="donhang_text-desc">Xem chi tiết, trạng thái của những đơn hàng đã đặt.</p>
-        </div>
 
-        <ul class="donhang_list">
-    
-        </ul>`;
     const listdonhang = JSON.parse(localStorage.getItem("donhang"));
+    if (listdonhang === null) {
+        return;
+    }
+
     listdonhang.forEach(donhang => {
         if (donhang.sdt === taikhoan.sdt) {
             let donhang_item = document.createElement('LI');
@@ -121,6 +153,7 @@ function khoiphucdonhang() {
                     </div>
                 </div>
                 `;
+
             document.querySelector(".donhang_list").appendChild(donhang_item);
             let listsp = donhang.sanpham.sanpham;
             listsp.forEach(sanpham => {
@@ -145,4 +178,5 @@ function khoiphucdonhang() {
             });
         }
     });
+
 }

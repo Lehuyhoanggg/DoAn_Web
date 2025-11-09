@@ -267,3 +267,110 @@
     font-size: 16px;
     display: none;
 }
+
+
+.chitiet-tintuc {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    /* Ghi đè màu nền xám của body */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chitiet-tintuc__header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.chitiet-tintuc__title {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.chitiet-tintuc__meta {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.chitiet-tintuc__meta span {
+    margin-right: 15px;
+}
+
+.chitiet-tintuc__content {
+    font-size: 1.1em;
+    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+}
+
+.chitiet-tintuc__subheading {
+    font-size: 1.8em;
+    margin-top: 30px;
+    color: #444;
+}
+
+.chitiet-tintuc__content p {
+    margin-bottom: 15px;
+}
+
+
+.bai-viet-lien-quan {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.bai-viet-lien-quan h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.bai-viet-lien-quan__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bai-viet-lien-quan__list li {
+    margin-bottom: 20px;
+}
+
+.bai-viet-lien-quan__list li:last-child {
+    margin-bottom: 0;
+}
+
+
+.chitiet-tintuc-image {
+    max-width: 700px;
+}
+
+.chitiet-tintuc-div-image {
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+}
+
+.chitiet-tintuc-image-lien-quan {
+    max-width: 200px;
+}
+
+.chitiet-tintuc-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 1px black;
+    margin: 20px 0;
+}
+
+.chitiet-tintuc-table th,
+.chitiet-tintuc-table td {
+    border: solid 1px black;
+    padding: 8px;
+    text-align: left;
+}
+
+.chitiet-tintuc-table th {
+    background-color: #f2f2f2;
+}

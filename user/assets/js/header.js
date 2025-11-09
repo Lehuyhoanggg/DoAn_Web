@@ -13,7 +13,7 @@ export function vohieuGiuCuon() {
 export function vohieuCuon() {
     cuon = false;
     document.querySelector(".header_support").style.minHeight = '70px';
-    document.querySelector(".header").style.height='70px';
+    document.querySelector(".header").style.height = '70px';
 }
 
 const div = document.createElement('DIV');
@@ -25,7 +25,7 @@ document.body.prepend(div);
 
 export function tacThanhDanhMuc() {
     document.querySelector(".header_bottom").style.display = 'none';
-
+    div.minHeight='70px';
 }
 // cuộn xuổng để mở danh mục sản phẩm trên menu và ngược lại
 window.addEventListener("scroll", () => {

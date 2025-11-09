@@ -1,0 +1,209 @@
+/* -------------------------------
+   3️⃣ LAPTOP (1024px - 1199px)
+--------------------------------*/
+@media (max-width: 1199px) {
+    .topMenu_list_item {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .topMenu_list_item {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .topMenu_list_item {
+        font-size: 13px;
+    }
+
+    .topMenu_list {
+        gap: 12px;
+    }
+
+    .home_sanpham_list {
+        gap: 5px;
+    }
+
+    .home_sanpham_list_item {
+        height: 280px;
+        gap: 0;
+    }
+}
+
+/* -------------------------------
+   4️⃣ MÁY TÍNH BẢNG (768px - 1023px)
+--------------------------------*/
+@media (max-width: 1023px) {
+    .topMenu_list_item {
+        font-size: 14px;
+    }
+
+    .topMenu_list {
+        gap: 10px;
+    }
+
+    .home_sanpham_list {
+        gap: 5px;
+    }
+
+    .home_sanpham_list_item {
+        height: 300px;
+        gap: 0;
+    }
+
+
+}
+
+@media (max-width: 900px) {
+    .topMenu_list_item {
+        font-size: 12px;
+    }
+
+    .topMenu_list {
+        gap: 5px;
+    }
+
+    .home_sanpham_list {
+        gap: 0;
+    }
+
+    .home_sanpham_list_item {
+        height: 220px;
+        gap: 0;
+    }
+
+    .home_tintuc_list_item {
+        display: block;
+        width: 100%;
+    }
+
+    .textmau{
+        display: none;
+    }
+    .textphienban{
+        display: none;
+    }
+}
+
+
+
+/* -------------------------------
+   5️⃣ ĐIỆN THOẠI (480px - 767px)
+--------------------------------*/
+@media (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+
+    .topMenu_list_item {
+        font-size: 9px;
+    }
+
+    .topMenu_list {
+        gap: 3px;
+    }
+
+    .header_top_right {
+        font-size: 10px;
+    }
+
+    .header_top {
+        justify-content: space-between;
+    }
+
+    .header_top_left {
+        display: none;
+    }
+
+    .header_top_mid {
+        width: 200px;
+    }
+
+    .sanpham_muangay {
+        display: none;
+    }
+
+    .home_sanpham_list_item {
+        height: 200px;
+        gap: 1px;
+    }
+
+    .home_tintuc_list {
+        display: block;
+    }
+
+    .home_tintuc_list_item {
+        display: block;
+        width: 100%;
+    }
+
+    .chitietsanpham_luachonphienban-item {
+        font-size: 12px;
+        width: 10px;
+
+    }
+
+    .chitietsanpham_luachonphienban-list {
+        gap: 2px;
+
+    }
+
+    .chitietsanpham_luachonmau-item {
+        font-size: 12px;
+        width: 15px;
+
+    }
+
+    .chitietsanpham_luachonmau-list {
+        gap: 2px;
+    }
+
+    .chitietsanpham-right_mua {
+        gap: 0;
+    }
+    .donhang_trangthai{
+        width: 100px;
+    }
+    .donhang_xemchitiet{
+        width: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 9px;
+    }
+
+    .chitietsanpham_luachonphienban-item {
+        font-size: 10px;
+        width: 10px;
+
+    }
+
+    .chitietsanpham_luachonphienban-list {
+        gap: 2px;
+
+    }
+
+    .chitietsanpham_luachonmau-item {
+        font-size: 10px;
+        width: 10px;
+
+    }
+
+    .chitietsanpham_luachonmau-list {
+        gap: 0;
+    }
+
+    .chitietsanpham-right_mua {
+        gap: 0;
+    }
+    .donhang_trangthai{
+        width: 60px;
+    }
+    .donhang_xemchitiet{
+        width: 60px;
+    }
+}
