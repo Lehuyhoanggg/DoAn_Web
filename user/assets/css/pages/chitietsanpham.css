@@ -16,7 +16,7 @@
  .chitietsanpham_img {
      aspect-ratio: 16 / 9;
      width: 100%;
-     background-color: rgb(138, 146, 146);
+     background-color: white;
      position: relative;
      overflow: hidden;
  }
@@ -258,7 +258,7 @@
  .display_img img {
      height: 85%;
      aspect-ratio: 16 / 9;
-     background-color: red;
+     background-color: transparent;
  }
 
  .display_img button {

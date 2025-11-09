@@ -11,8 +11,14 @@
     />
   </head>
   <body>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="wrapper">
-      <div class="modal"></div>
+      <div class="modal">
+
+      </div>
       <!-- Sidebar -->
       <div class="sidebar">
         <div class="logo-wrapper">
@@ -33,49 +39,29 @@
         <div class="home-wrapper">
           <div class="main-header">Trang Tổng Quan</div>
           <div class="home-container">
-            <div class="month-wrapper">
-              <label for="month">Chọn tháng</label>
-              <select name="month" id="month">
-                <option value="all">Tất cả</option>
-                <option value="1">Tháng 1</option>
-                <option value="2">Tháng 2</option>
-                <option value="3">Tháng 3</option>
-                <option value="4">Tháng 4</option>
-                <option value="5">Tháng 5</option>
-                <option value="6">Tháng 6</option>
-                <option value="7">Tháng 7</option>
-                <option value="8">Tháng 8</option>
-                <option value="9">Tháng 9</option>
-                <option value="10">Tháng 10</option>
-                <option value="11">Tháng 11</option>
-                <option value="12">Tháng 12</option>
-              </select>
 
-              <span>2025</span>
-            </div>
 
             <div class="home-info-list">
               <div class="home-info-item">
                 <span class="title">Doanh Thu</span>
                 <i class="fa-solid fa-money-bill"></i>
-                <span class="number">1.000.000.000</span>
+                <span class="numberMoney">1.000.000.000</span>
               </div>
 
               <div class="home-info-item">
                 <span class="title">Khách hàng</span>
                 <i class="fa-solid fa-users"></i>
-                <span class="number">1.000.000</span>
+                <span class="numberUser">1.000.000</span>
               </div>
 
               <div class="home-info-item">
                 <span class="title">Đơn hàng</span>
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span class="number">100.000.000</span>
+                <span class="numberOrder">100.000.000</span>
               </div>
             </div>
           </div>
         </div>
-
 
         <!-- Product Page -->
         <div class="product-wrapper">
@@ -109,7 +95,8 @@
                       <th>Màu</th>
                       <th>ROM</th>
                       <th>RAM</th>
-                      <th>Giá</th>
+                      <th>Giá gốc</th>
+                      <th>Giá Bán</th>
                       <th>Trạng thái</th>
                       <th></th>
                       <th></th>
@@ -121,9 +108,6 @@
                </div>
             </div>
           </div>
-
-
-
 
             <!-- User Page -->
           <div class="user-wrapper">
@@ -160,46 +144,6 @@
                     </thead>
 
                     <tbody></tbody>
-                  </table>
-                </div>
-              </div>
-          </div>
-
-          <div class="store-wrapper">
-              <div class="main-header">Trang quản lý kho</div>
-                <div class="product-container">
-                  <div class="product-header">
-                    <select name="status" id="user-status">
-                      <option value="all">Tất cả</option>
-                      <option value="true">Xác nhận</option>
-                      <option value="false">Chưa xác nhận</option>
-                    </select>
-                    <div class="product-search">
-                      <input
-                        type="text"
-                        class="product-search-input"
-                        placeholder="Tìm kiếm sản phẩm"
-                      />
-                      <button class="product-search-btn"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
-                    </div>
-                    <button class="product-reload-btn"><i class="fa-solid fa-rotate-right"></i>Làm mới</button>
-                    <button class="product-create-btn"><i class="fa-solid fa-plus"></i>Thêm phiếu nhập kho</button>
-                  </div>
-                  <div class="product-content" id="store-content">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Thời gian nhập hàng</th>
-                        <th>Tổng giá trị</th>
-                        <th>Trạng thái</th>
-                        <th></th>
-                        <th></th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-
-                    </tbody>
                   </table>
                 </div>
               </div>
@@ -285,11 +229,138 @@
               </div>
           </div>
 
+            <div class="order-wrapper">
+              <div class="main-header">Trang quản lý đơn hàng</div>
+                <div class="product-container">
+                  <div class="product-header">
+                    <select name="status" id="user-status">
+                      <option value="all">Tất cả</option>
+                      <option value="mới đặt">Mới đặt</option>
+                      <option value="đã xử lí">Đã xử lí</option>
+                      <option value="đã giao">Đã giao</option>
+                      <option value="hủy">Hủy</option>
+                    </select>
+                    <label for="fromDate" style="line-height: 40px;">Từ ngày</label>
+                    <input type="date" name="fromDate">
+                    <label for="toDate" style="line-height: 40px;">Đến ngày</label>
+                    <input type="date" name="toDate">
+                    <button class="product-create-btn" style="width: 100px;">Lọc</button>                 
+                    <button class="product-reload-btn" style="width: 100px;">Khôi phục</button>                 
+                  </div>
+                  <div class="product-content" id="order-content">
+                  <table class="order-table">
+                    <thead>
+                      <tr>
+                        <th>Tên người nhận</th>
+                        <th>Thời gian đặt hàng</th>
+                        <th>Trạng thái</th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
+
+          <div class="profit-wrapper">
+              <div class="main-header">Trang quản lý Lợi nhuận</div>
+                <div class="product-container">
+                  <div class="product-header">
+                    <select name="status" id="profit-status">
+                      <option value="all">Tất cả</option>
+                      <option value="category">Loại sản phẩm</option>
+                      <option value="product">Sản phẩm</option>
+                    </select>
+                    <div class="product-search">
+                      <input
+                        type="text"
+                        class="product-search-input"
+                        placeholder="Tìm kiếm sản phẩm"
+                      />
+                      <button class="product-search-btn"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+                    </div>
+                    <button class="product-create-btn">Thêm loại</button>                 
+                    <button class="product-reload-btn">Thêm sản phẩm</button>                
+                  </div>
+                  <div class="product-content" id="profit-content">
+                  <table class="profit-table">
+                    <thead>
+                      <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Danh mục</th>
+                        <th>% lợi nhuận</th>
+                        <th>% giảm giá</th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+  
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
+
+          <div class="stock-wrapper">
+              <div class="main-header">Trang quản lý kho</div>
+                <div class="product-container">
+                  <div class="product-header">
+                    <select name="status" style="margin-right: 20px;">
+                      <option value="all">Tất cả</option>
+                      <option value="lowStock">Sắp hết hàng</option>
+                      <option value="category">Theo loại sản phẩm</option>
+                    </select>
+                    <div class="product-search" style="margin-right: 20px;">
+                      <input
+                        type="text"
+                        class="product-search-input"
+                        placeholder="Tìm kiếm sản phẩm"
+                      />
+                      <button class="product-search-btn"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                      <label>Từ ngày:</label>
+                      <input type="date" name="fromDate" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;"/>
+                      <label>Đến ngày:</label>
+                      <input type="date" name="toDate" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;"/>
+                      <button style="margin-right: 20px;" class="product-create-btn"><i class="fa-solid fa-filter"></i>Lọc</button>
+                    </div>
+                    <button class="product-reload-btn"><i class="fa-solid fa-rotate-right"></i>Làm mới</button>                
+                  </div>
+                  <div class="product-content">
+                  <table class="stock-table">
+                    <thead>
+                      <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Hãng</th>
+                        <th>Danh mục</th>
+                        <th>Phiên bản</th>
+                        <th>Số lượng nhập</th>
+                        <th>Số lượng xuất</th>
+                        <th>Số lượng tồn</th>
+                        <th>Cảnh báo</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+  
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
 
 
 
 
-          
         </div>
       </div>
     </div>

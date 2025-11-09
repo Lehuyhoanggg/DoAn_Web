@@ -63,26 +63,6 @@
 
 }
 
-.search_loc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00B050;
-    color: white;
-    width: 80px;
-    height: 80%;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.search_loc svg {
-    margin: 0;
-}
-
-.search_loc span {
-    height: 60%;
-}
-
 .search {
     display: flex;
     width: 100%;
@@ -100,6 +80,7 @@
     border: none;
     background-color: inherit;
     font-size: 16px;
+    border-radius: inherit;
 }
 
 .header_top_right {

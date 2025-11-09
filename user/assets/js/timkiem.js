@@ -16,16 +16,17 @@ div.innerHTML = `
                     <div class="filter_item">
                         <label for="phanloai">Danh mục</label>
                         <select id="phanloai">
-                            <option value="tatca">Tất cả</option>
-                            <option value="dienthoai">Điện thoại</option>
-                            <option value="laptop">Laptop</option>
-                            <option value="tainghe">Tai nghe</option>
-                            <option value="dongho">Đồng hồ</option>
-                            <option value="tablet">Tablet</option>
-                            <option value="smartwatch">SmartWatch</option>
-                            <option value="manhinh">Màn hình</option>
-                            <option value="banphim">Bàn phím</option>
-                            <option value="chuot">Chuột</option>
+                            <option value="Tất cả">Tất cả</option>
+                            <option value="Điện thoại">Điện thoại</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Tai nghe">Tai nghe</option>
+                            <option value="Đồng hồ">Đồng hồ</option>
+                            <option value="Tablet">Tablet</option>
+                            <option value="SmartWatch">SmartWatch</option>
+                            <option value="Màn hình">Màn hình</option>
+                            <option value="Bàn phím">Bàn phím</option>
+                            <option value="Chuột">Chuột</option>
+
                         </select>
                     </div>
 
@@ -50,6 +51,7 @@ let homelistsanpham;
 const formSearch = document.querySelector('.search');
 const search = document.querySelector(".tinkiem_model");
 let listSanPham;
+
 formSearch.addEventListener('submit', function (e) {
     e.preventDefault();
     page = 1;
@@ -57,9 +59,9 @@ formSearch.addEventListener('submit', function (e) {
     tachetgiaodien();
     search.style.display = 'block';
     document.querySelector(".timkiem_input").textContent = tukhoa;
-
+    formSearch.querySelector('input').value = ``;
     homelistsanpham = search.querySelector(".home_sanpham_list");
-
+    homelistsanpham.innerHTML = ``;
     listSanPham = timSanPhamTheoTen(tukhoa);
     tacThanhDanhMuc();
     vohieuCuon();
@@ -71,7 +73,7 @@ formSearch.addEventListener('submit', function (e) {
         });
         return;
     }
-    console.log(listSanPham.length);
+    listsanphamtam = listSanPham;
 
     duaSPvaolist(listSanPham, homelistsanpham);
     taoThanhPhanTrang(search.querySelector(".home_sanpham_phantrang"));
@@ -138,6 +140,8 @@ function them1sanpham(sanpham, home_sp_list) {
         </button>
             `;
     sanpham_item.setAttribute("data-id", sanpham.id);
+    sanpham_item.setAttribute("data-danhmuc", sanpham.category);
+    sanpham_item.setAttribute("data-gia", sanpham.price);
     sanpham_item.innerHTML += nutMuaNgayHTML;
     home_sp_list.appendChild(sanpham_item);
 }
@@ -181,3 +185,40 @@ function taoThanhPhanTrang(phantrang) {
     if (mangbutton[0]) mangbutton[0].classList.add("nhan");
     page = 1;
 }
+
+
+
+const phanloai = document.getElementById("phanloai");
+const giatu = document.getElementById("giatu");
+const giaden = document.getElementById("giaden");
+let listsanphamtam = [];
+// Hàm xử lý chung khi có thay đổi
+function locSanPham() {
+    const loai = phanloai.value;
+    const tu = parseFloat(giatu.value) || 0;
+    const den = parseFloat(giaden.value) || Infinity;
+
+    console.log("Đã thay đổi bộ lọc:");
+    console.log("Phân loại:", loai);
+    console.log("Giá từ:", tu);
+    console.log("Giá đến:", den);
+    let list = [];
+    listsanphamtam.forEach(sanpham => {
+        if ((sanpham.category === loai || loai === "Tất cả") && sanpham.price >= tu && sanpham.price <= den) {
+            list.push(sanpham);
+        }
+    });
+    duaSPvaolist(list, homelistsanpham);
+    taoThanhPhanTrang(search.querySelector(".home_sanpham_phantrang"));
+    if (homelistsanpham.children.length === 0) {
+        khongtimthaysp(homelistsanpham);
+        search.querySelector(".home_sanpham_phantrang").innerHTML = ``;
+        return;
+    }
+
+}
+
+// Gán sự kiện cho cả 3 input
+phanloai.addEventListener("change", locSanPham);
+giatu.addEventListener("input", locSanPham);
+giaden.addEventListener("input", locSanPham);

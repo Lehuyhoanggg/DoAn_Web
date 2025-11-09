@@ -1174,5 +1174,382 @@ td .toggle-wrapper{
     width: 50px;
 }
 /* category Page */
+.category-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
 
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet và nhỏ hơn (≤1024px) */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 250px;
+        position: fixed;
+        left: -250px;
+        top: 0;
+        bottom: 0;
+        z-index: 999;
+        background-color: white;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-header {
+        width: 95%;
+        font-size: 24px;
+        margin: 20px auto;
+    }
+
+    .createModal {
+        width: 90%;
+        height: 85%;
+    }
+
+    .product-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .product-search {
+        width: 100%;
+        order: 3;
+    }
+
+    .home-info-list {
+        flex-direction: column;
+        gap: 20px;
+        margin: 40px 20px;
+    }
+
+    .home-info-item {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .home-info-item i {
+        font-size: 60px;
+    }
+}
+
+/* Mobile (≤768px) */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 70%;
+        left: -70%;
+    }
+
+    .main-header {
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        margin-top: 60px;
+    }
+
+    .product-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .product-header select,
+    .product-reload-btn,
+    .product-create-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .product-search {
+        width: 100%;
+    }
+
+    .product-search-input {
+        width: calc(100% - 100px);
+    }
+
+    .product-content {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .product-content table {
+        min-width: 800px;
+    }
+
+    table thead th,
+    td {
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+
+    .createModal {
+        width: 95%;
+        height: 90%;
+        margin: 10px auto;
+    }
+
+    .createModal-header {
+        height: 40px;
+        padding: 0 15px;
+    }
+
+    .createModal-title {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .createModal-body {
+        width: 95%;
+        margin: 15px auto;
+        height: calc(100% - 140px);
+    }
+
+    .createModal-body label {
+        font-size: 14px;
+    }
+
+    .createModal-body input,
+    .createModal-body select {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .createModal-accept-btn {
+        font-size: 18px;
+        padding: 8px 30px;
+    }
+
+    .product-detail-modal-body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-detail-modal-body img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .home-info-item {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .home-info-item i {
+        font-size: 50px;
+    }
+
+    /* Order page specific */
+    .order-wrapper .product-header {
+        flex-wrap: wrap;
+    }
+
+    .order-wrapper .product-header label {
+        width: 100%;
+        margin-bottom: 5px;
+        line-height: 30px;
+    }
+
+    .order-wrapper .product-header input[type="date"] {
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+        padding: 8px;
+    }
+
+    /* Stock page specific */
+    .stock-wrapper .product-header {
+        flex-direction: column;
+    }
+
+    .stock-wrapper .product-header > div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .stock-wrapper .product-header input[type="date"] {
+        width: calc(50% - 5px);
+        padding: 8px;
+    }
+}
+
+/* Small Mobile (≤480px) */
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 85%;
+        left: -85%;
+    }
+
+    .main-header {
+        font-size: 16px;
+        height: 35px;
+        line-height: 35px;
+        margin: 50px auto 15px;
+    }
+
+    .createModal {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .createModal-header {
+        border-radius: 0;
+    }
+
+    .product-content table {
+        min-width: 600px;
+    }
+
+    table thead th,
+    td {
+        font-size: 11px;
+        padding: 6px 2px;
+    }
+
+    .product-search-btn {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .product-search-input {
+        width: calc(100% - 80px);
+        font-size: 14px;
+    }
+
+    .home-info-item {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .home-info-item i {
+        font-size: 40px;
+    }
+
+    .toggle-wrapper {
+        transform: scale(0.8);
+    }
+
+    .slider {
+        width: 40px;
+        height: 20px;
+    }
+
+    .slider::before {
+        width: 14px;
+        height: 14px;
+    }
+
+    .toggle-wrapper input:checked + .slider::before {
+        transform: translateX(20px);
+    }
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mobile-menu-toggle:hover {
+    background-color: var(--bold-primary-color);
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+/* Overlay khi sidebar mở trên mobile */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* Fix cho modal trên mobile */
+@media screen and (max-width: 768px) {
+    .modal {
+        position: fixed;
+        overflow-y: auto;
+    }
+
+    .createModal-body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Responsive cho order item table trong modal */
+@media screen and (max-width: 768px) {
+    .orderItemTable {
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .orderItemTable thead,
+    .orderItemTable tbody,
+    .orderItemTable tr {
+        display: block;
+    }
+
+    .orderItemTable thead {
+        display: none;
+    }
+
+    .orderItemTable tbody tr {
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .orderItemTable tbody td {
+        display: block;
+        text-align: left;
+        padding: 5px 0;
+        border: none;
+    }
+
+    .orderItemTable tbody td:before {
+        content: attr(data-label) ": ";
+        font-weight: bold;
+        display: inline-block;
+        width: 100px;
+    }
+}
 

@@ -182,7 +182,7 @@ export function khongtimthaysp(ctn) {
 
 
 export function tachetgiaodien() {
-    const elements = document.querySelectorAll('.home, .donhang, .tinkiem_model, .chitietsanpham');
+    const elements = document.querySelectorAll('.home, .donhang, .tinkiem_model, .chitietsanpham, .tintuc');
     elements.forEach(el => {
         el.style.display = 'none';
     });

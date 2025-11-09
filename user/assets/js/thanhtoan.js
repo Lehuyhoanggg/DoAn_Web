@@ -7,7 +7,7 @@ div.innerHTML = `
             <div class="checkout_close">x</div>
         </div>
 
-        <!-- CỘT TRÁI: THÔNG TIN KHÁCH HÀNG -->
+
         <div class="checkout_left">
 
             <span>THÔNG TIN NGƯỜI NHẬN</span>
@@ -156,7 +156,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /// nhấn thanh toán
+let dangxuli = false;
 function luuDonhangLenLocal(giohang) {
+    if (dangxuli) {
+        return;
+    }
+    dangxuli = true;
+    setTimeout(function () {
+        dangxuli = false;
+    }, 1000);
     const ten = document.querySelector('input[placeholder="Tên người nhận"]').value.trim();
     const sdt = document.querySelector('input[placeholder="Số điện thoại nhận hàng"]').value.trim();
     const diachi = document.querySelector('input[placeholder^="Số nhà"]').value.trim();
@@ -179,7 +187,7 @@ function luuDonhangLenLocal(giohang) {
         diaChi: diachi,
         ghiChu: ghichu,
         thoiGianGiao: ngay,
-        hinhThucThanhToan: hinhthuc === 'Online' ? 'Thanh toán online : 1900100910 (Nguyễn Hoài Bảo)' : 'Thanh toán khi nhận hàng',
+        hinhThucThanhToan: hinhthuc === 'online' ? 'Thanh toán online : 1900100910 (Nguyễn Hoài Bảo)' : 'Thanh toán khi nhận hàng',
         sanpham: giohang,
         thanhtien: giohang.thanhtien,
     };

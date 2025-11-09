@@ -43,6 +43,9 @@
     border-radius: 8px;
     overflow: hidden;
     gap: 10px;
+    position: relative;
+    justify-content: end;
+    padding-bottom: 10px;
 }
 
 
@@ -126,7 +129,9 @@
 .home_sanpham_list_item_img {
     width:  100%;
     border-radius: inherit;
-
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 
@@ -185,6 +190,7 @@
 
 .home_spnoibat {
     background-color: white;
+    overflow: hidden;
 }
 
 .home_spnoibat_top {

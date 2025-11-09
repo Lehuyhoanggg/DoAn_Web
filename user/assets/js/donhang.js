@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', function () {
         top: 0,
         behavior: "smooth",
     });
+
     openDonHang?.addEventListener('click', function () {
         tachetgiaodien();
         div.style.display = 'flex';

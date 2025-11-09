@@ -2401,7 +2401,7 @@ const Initial = [
       "Pin": "Khoảng 3 năm",
       "Xuất xứ": "Nhật Bản"
     },
-    overview: '<p>Đang cập nhật</p>'
+    overview: `<p>Đang cập nhật</p>`
   },
 
   {
@@ -3171,6 +3171,11 @@ export function setListSanPham(mangsp) {
 
 export function getListSanPham() {
   const data = JSON.parse(localStorage.getItem("listSanPham"));
+  return data || [];
+}
+
+export function getListTaiKhoan() {
+  const data = JSON.parse(localStorage.getItem("listTaiKhoan"));
   return data || [];
 }
 
