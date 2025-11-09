@@ -162,7 +162,6 @@ document.addEventListener("click", function (e) {
     e.preventDefault();
     //dong dang ki
     const signupModal = document.querySelector(".signup_modal");
-    const overlay = document.querySelector(".overlay");
     if (signupModal) signupModal.style.display = "none";
     //mo dang nhap
     const btnLogin = document.querySelector(".open_login");

@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //thay doi menu dang nhap
         let menuHTML = `
             <li><a href="#" class="open_account"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
-            <li><a href="#"><i class="fa-solid fa-box"></i> Đơn hàng đã mua</a></li>
+            <li><a href="#" class="open_donhang"><i class="fa-solid fa-box"></i> Đơn hàng đã mua</a></li>
         `;
         menuHTML += `<li><a href="#" id="logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a></li>`;
 

@@ -422,7 +422,7 @@ document.addEventListener('click', function (e) {
             themsanphamVaoGio(sp, 1, mau, listLuaChon);
         }
         if (e.target.className === "chitietsanpham_muangay") {
-            localStorage.setItem("muangay", JSON.stringify([{ id: sp.id, mau: mau, listphienban: listLuaChon, soLuong: 1 }]));
+            localStorage.setItem("muangay", JSON.stringify({ sanpham: [{ id: sp.id, mau: mau, listphienban: listLuaChon, soLuong: 1, thanhtien: sp.price }], thanhtien: sp.price }));
         }
     }
 

@@ -112,11 +112,14 @@ export function xulidathang(e) {
 import { kiemtraLuaChon } from "./chitietsanpham.js";
 import { hienThongBao } from "./DangNhap.js";
 document.addEventListener("DOMContentLoaded", function () {
-
+    let taikhoan = JSON.parse(localStorage.getItem("taikhoandangnhap"));
     const thanhtoanGh = document.querySelector(".giohang_bottom_bottom_thanhtoan");
     thanhtoanGh.addEventListener('click', function () {
         const giohang = JSON.parse(localStorage.getItem("giohang"));
-        xulidathang(giohang.sanpham); ////
+        console.log(giohang);
+        const giohangcuakh = giohang.find(item => item.sdt === taikhoan.sdt);
+        console.log(giohangcuakh);
+        xulidathang({ sanpham: giohangcuakh.sanpham, thanhtien: giohangcuakh.thanhtien }); ////
     });
 
 
@@ -167,6 +170,7 @@ function luuDonhangLenLocal(giohang) {
         thoiGianGiao: ngay,
         hinhThucThanhToan: hinhthuc === 'Online' ? 'Thanh toán online : 1900100910 (Nguyễn Hoài Bảo)' : 'Thanh toán khi nhận hàng',
         sanpham: giohang,
+        thanhtien: giohang.thanhtien,
     };
     let don = JSON.parse(localStorage.getItem("donhang")) || [];
     don.push(thongTinDonHang);

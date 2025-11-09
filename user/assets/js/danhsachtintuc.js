@@ -29,7 +29,7 @@ const newsData = [
                         cao. Sự kết hợp hoàn hảo giữa phần cứng và phần mềm, cùng công nghệ AI tiên tiến, biến Galaxy
                         S25 Ultra thành một studio di động mạnh mẽ.</p>
                     <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
-                            src="/user/assets/image/tintuc/samsung3.jpg" alt="?"></div>
+                            src="" alt="?"></div>
                     <h4>Thiết kế tinh tế, khung titan siêu bền</h4>
                     <p>Samsung Galaxy S25 Ultra kế thừa thiết kế tinh tế của Samsung Galaxy S24 Ultra nhưng được nâng
                         cấp đáng kể. Khung viền titanium không chỉ mang lại vẻ ngoài sang trọng, cao cấp mà còn bền bỉ
@@ -47,7 +47,7 @@ const newsData = [
                         gian chờ đợi. Ngoài ra, S25 Ultra còn hỗ trợ sạc không dây và sạc ngược không dây, mang đến sự
                         tiện lợi và linh hoạt cho người dùng</p>
                     <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
-                            src="/user/assets/image/tintuc/samsung3.jpg" alt="?"></div>
+                            src="" alt="?"></div>
                     <h4>Màn hình lớn, sắc nét, hiển thị sống động</h4>
                     <p>Samsung Galaxy S25 Ultra được trang bị màn hình Dynamic AMOLED 2X kích thước 6.8 inch, độ phân
                         giải QHD+
@@ -59,7 +59,7 @@ const newsData = [
                         thị,
                         mang lại trải nghiệm thị giác ấn tượng.</p>
                     <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
-                            src="/user/assets/image/tintuc/samsung4.jpg" alt="?"></div>
+                            src="" alt="?"></div>
                     <h4>Tính năng AI mới trên Samsung Galaxy S25 Ultra</h4>
                     <p>Samsung Galaxy S25 Ultra không chỉ là một flagship mạnh mẽ về phần cứng mà còn là một thiết bị
                         tiên phong trong cuộc đua AI trên smartphone:
@@ -74,7 +74,7 @@ const newsData = [
                         thoại bằng giọng nói để thực hiện các tác vụ phức tạp trên nhiều ứng dụng.
                     </p>
                     <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
-                            src="/user/assets/image/tintuc/samsung5.jpg" alt="?"></div>
+                            src="" alt="?"></div>
                     <p>
                         Khoanh vùng tìm kiếm: Nhanh chóng tìm kiếm thông tin bằng cách khoanh vùng nội dung trên màn
                         hình.

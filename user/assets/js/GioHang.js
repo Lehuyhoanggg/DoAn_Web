@@ -72,14 +72,17 @@ function luuGiohangLenLocal() {
     const giohang = {
         sdt: taikhoan.sdt,
         sanpham: [],
+        thanhtien: 0,
     }
     giohang_mid.forEach(item => {
         const donhang = {
             id: item.dataset.id,
             mau: item.dataset.mau,
             listphienban: stringThanhMang(item.dataset.listphienban),
-            soLuong: item.querySelector(".giohang_mid_donhang_chucnang_soluong_value").textContent
+            soLuong: item.querySelector(".giohang_mid_donhang_chucnang_soluong_value").textContent,
+            thanhtien: item.querySelector(".giohang_mid_donhang_top_gia").textContent.replace(/\D/g, ""),
         }
+        giohang.thanhtien = Number(giohang.thanhtien) + Number(donhang.thanhtien);
         giohang.sanpham.push(donhang);
     });
 
