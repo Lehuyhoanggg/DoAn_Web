@@ -53,6 +53,9 @@
         gap: 0;
     }
 
+    .home_spnoibat_bottom_img {
+        display: none;
+    }
 
 }
 
@@ -66,7 +69,7 @@
     }
 
     .home_sanpham_list {
-        gap: 0;
+        gap: 20px;
     }
 
     .home_sanpham_list_item {
@@ -79,10 +82,11 @@
         width: 100%;
     }
 
-    .textmau{
+    .textmau {
         display: none;
     }
-    .textphienban{
+
+    .textphienban {
         display: none;
     }
 }
@@ -98,11 +102,11 @@
     }
 
     .topMenu_list_item {
-        font-size: 9px;
+        font-size: 10px;
     }
 
     .topMenu_list {
-        gap: 3px;
+        gap: 4px;
     }
 
     .header_top_right {
@@ -113,10 +117,14 @@
         justify-content: space-between;
     }
 
-    .header_top_left {
+    .header_top_left>img:nth-of-type(2) {
         display: none;
+    }.header_top_left>img:nth-of-type(1) {
+        width: 100%;
     }
-
+.header_top_left{
+    width: 100px;
+}
     .header_top_mid {
         width: 200px;
     }
@@ -163,11 +171,34 @@
     .chitietsanpham-right_mua {
         gap: 0;
     }
-    .donhang_trangthai{
+
+    .donhang_trangthai {
         width: 100px;
     }
-    .donhang_xemchitiet{
+
+    .donhang_xemchitiet {
         width: 100px;
+    }
+
+    .header_support {
+        height: 70px;
+    }
+
+    .header {
+        height: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topMenu_list_item {
+        font-size: 9px;
+    }
+
+    .topMenu_list {
+        gap: 0px;
+    }
+    .header_top_right_taikhoan{
+        display: none;
     }
 }
 
@@ -176,10 +207,19 @@
         font-size: 9px;
     }
 
+
+    .header_bottom {
+        display: none;
+    }
+
     .chitietsanpham_luachonphienban-item {
         font-size: 10px;
         width: 10px;
 
+    }
+
+    .home_sanpham_list_item {
+        height: 150px;
     }
 
     .chitietsanpham_luachonphienban-list {
@@ -190,7 +230,6 @@
     .chitietsanpham_luachonmau-item {
         font-size: 10px;
         width: 10px;
-
     }
 
     .chitietsanpham_luachonmau-list {
@@ -200,10 +239,15 @@
     .chitietsanpham-right_mua {
         gap: 0;
     }
-    .donhang_trangthai{
+
+    .donhang_trangthai {
         width: 60px;
     }
-    .donhang_xemchitiet{
+
+    .donhang_xemchitiet {
         width: 60px;
+    }
+    .header{
+        justify-content: space-evenly;
     }
 }
