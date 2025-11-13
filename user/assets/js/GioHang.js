@@ -218,17 +218,12 @@ function stringThanhMang(str) {
 
 export function themsanphamVaoGio(sanpham, soLuong, color, version) {
     const listdonhang = document.querySelectorAll('.giohang_mid_donhang');
-    let tontai = false;
     listdonhang.forEach(donhangitem => {
         if (donhangitem.dataset.id === sanpham.id && donhangitem.dataset.mau === color && soSanhMang(stringThanhMang(donhangitem.dataset.listphienban), version)) {
             tangsl(donhangitem);
-            tontai = true;
             return;
         }
     });
-    if (tontai) {
-        return;
-    }
     const donhang = document.createElement('DIV');
     donhang.className = "giohang_mid_donhang";
     donhang.innerHTML = `
