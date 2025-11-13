@@ -7,23 +7,54 @@ import {
 
 import { tatCuon } from "./header.js";
 
-
+import {
+    initCategoryList,
+} from "../../../admin/db/categories.js";
+import { initOrderList } from "../../../admin/db/order.js";
+import { initProfitList } from "../../../admin/db/profit.js";
+import { initStoreList } from "../../../admin/db/store.js";
 
 
 window.onload = () => {
     initialTaiKhoan(); // thêm vào local nếu chưa có
     initialSanPham(); /// thêm vào local nếu chưa 
+    initStoreList();
+    initCategoryList();
+    initOrderList();
+    initProfitList();
     listSanPham = getListSanPham(); /// lấy list sản phẩm
     danhmuc = "Điện thoại";
     page_number = 1;
+    themdanhmucheader();
+
     hienThiSanPham();
     taoThanhPhanTrang();
+    localStorage.setItem("statusAdmin", JSON.stringify(false));
 };
 
 
 document.querySelector(".header_top_left").addEventListener('click', function () {
     window.location.reload()
 });
+
+
+function themdanhmucheader() {
+    const category = JSON.parse(localStorage.getItem("categories"));
+    const topmenu = document.querySelector(".topMenu_list");
+    topmenu.innerHTML = ``;
+    const div = document.createElement('LI');
+    div.className = "topMenu_list_item";
+    div.textContent = "Trang chủ";
+    topmenu.appendChild(div);
+    for (const dmuc of category) {
+        if (dmuc.status === true) {
+            const div = document.createElement('LI');
+            div.className = "topMenu_list_item";
+            div.textContent = dmuc.label;
+            topmenu.appendChild(div);
+        }
+    }
+}
 
 /// tạo 1 thẻ sản phẩm và vứt vào list sản phẩm ở home
 const home_sp_list = document.querySelector(".home_sanpham_list");
@@ -182,7 +213,7 @@ export function khongtimthaysp(ctn) {
 
 
 export function tachetgiaodien() {
-    const elements = document.querySelectorAll('.home, .donhang, .tinkiem_model, .chitietsanpham, .tintuc');
+    const elements = document.querySelectorAll('.home, .donhang, .tinkiem_model, .chitietsanpham, .tintuc, .news-list');
     elements.forEach(el => {
         el.style.display = 'none';
     });

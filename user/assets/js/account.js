@@ -79,16 +79,19 @@ class AccountManager {
                 <div class="form_group">
                     <label for="currentPass">Mật khẩu hiện tại</label>
                     <input type="password" id="currentPass" placeholder="Nhập mật khẩu hiện tại">
+                    <span class="thongBaoLoi" id="loi_matkhauhientai"></span>
                 </div>
                 
                 <div class="form_group">
                     <label for="newPass">Mật khẩu mới</label>
                     <input type="password" id="newPass" placeholder="Nhập mật khẩu mới">
+                    <span class="thongBaoLoi" id="loi_matkhaumoi"></span>
                 </div>
                 
                 <div class="form_group">
                     <label for="confirmPass">Xác nhận mật khẩu mới</label>
                     <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu mới">
+                    <span class="thongBaoLoi" id="loi_xacnhanmatkhau"></span>
                 </div>
 
                 <button type="submit" class="btn btn_password">

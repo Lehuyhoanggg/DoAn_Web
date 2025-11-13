@@ -117,7 +117,7 @@ export function xulidathang(e) {
 }
 import { kiemtraLuaChon, sanphamhethang } from "./chitietsanpham.js";
 import { hienThongBao } from "./DangNhap.js";
-import { tacThanhDanhMuc, tatCuon, vohieuCuon, vohieuGiuCuon } from "./header.js";
+
 import { tachetgiaodien } from "./home.js";
 document.addEventListener("DOMContentLoaded", function () {
     let taikhoan = JSON.parse(localStorage.getItem("taikhoandangnhap"));
@@ -190,6 +190,7 @@ function luuDonhangLenLocal(giohang) {
         hinhThucThanhToan: hinhthuc === 'online' ? 'Thanh toán online : 1900100910 (Nguyễn Hoài Bảo)' : 'Thanh toán khi nhận hàng',
         sanpham: giohang,
         thanhtien: giohang.thanhtien,
+        trangThai: "mới đặt",
     };
 
 

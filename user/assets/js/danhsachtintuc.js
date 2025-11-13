@@ -792,14 +792,88 @@ const newsData = [
             </article>
         </div>`
     },
+    {
+        id: "11", // <-- ID MỚI
+        img: "user/assets/image/tintuc/feature-img.png",
+        title: "OPPO Find X9 Series ra mắt tại VN: Camera Hasselblad 200MP, pin 7,500mAh, giá từ 22.99 triệu",
+        meta: "Hồ Xuân Lý • 31/10/2025",
+        desc: "OPPO chính thức ra mắt Find X9 và Find X9 Pro tại Việt Nam, cùng thời điểm sự kiện ra mắt toàn cầu tại Barcelona, Tây Ban Nha.",
+        link: `<div class="chitiet-tintuc">
+            <article class="chitiet-tintuc__article">
+                <header class="chitiet-tintuc__header">
+                    <h1 class="chitiet-tintuc__title">
+                        OPPO Find X9 Series ra mắt tại VN: Đánh giá chi tiết "siêu phẩm" với camera đỉnh cao!
+                    </h1>
+                    <div class="chitiet-tintuc__meta">
+                        <span class="chitiet-tintuc__date">Ngày đăng: 1/11/2025</span>
+                        <span class="chitiet-tintuc__author">Tác giả: Đoàn Ngọc Minh Tuấn</span>
+                        <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
+                                src="/user/assets/image/tintuc/oppo.png" alt=""></div>
+                    </div>
+                </header>
+                <section class="chitiet-tintuc__content">
+                    <h4>Bộ đôi OPPO Find X9 và Find X9 Pro đã được giới thiệu với người dùng quốc tế, qua đó mang đến
+                        những lựa chọn cực kỳ chất lượng trong phân khúc smartphone cao cấp.</h4>
+                    <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
+                            src="/user/assets/image/tintuc/oppo.png" alt=""></div>
+                    <p>Trong bối cảnh thị trường smartphone ngày càng cạnh tranh, việc sở hữu một chiếc camera chất
+                        lượng cao đã trở thành yếu tố quyết định đối với người tiêu dùng. Mới đây, "siêu phẩm" OPPO Find
+                        X9 Series đã ra mắt với lời hứa hẹn mang đến trải nghiệm chụp ảnh đỉnh cao cùng với dung lượng
+                        pin đồi dào. Vậy thực tế camera của OPPO Find X9 Series có thật
+                        sự 'khủng' như lời đồn? Hãy cùng chúng tôi khám phá qua bài đánh giá chi tiết dưới đây.</p>
+
+                    <h2>Thiết kế và thông số kỹ thuật</h2>
+                    <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
+                                src="/user/assets/image/tintuc/oppo3.jpg" alt="?"></div>
+                    <p>Về camera, Find X9 Pro sở hữu camera chính 50MP cùng ống kính tele tiềm vọng 3x 200MP và máy ảnh
+                        góc siêu rộng 50MP. Trong khi đó, Find X9 tiêu chuẩn sở hữu bộ ba camera 50MP với cảm biến
+                        chính, ống kính góc siêu rộng và tele tiềm vọng 3x.
+
+                        Cả hai điện thoại đều được trang bị công nghệ LUMO Image Engine mới nhất của OPPO, nhưng chỉ có
+                        Find X9 Pro đi kèm thêm tùy chọn Hasselblad Teleconverter, cho phép zoom quang học 10x.</p>
+                
+                        <h2>Dung lượng pin</h2>
+                    <p>Cả hai điện thoại đều được trang bị chip Dimensity 9500 của MediaTek và pin silicon-carbon dung
+                        lượng lớn 7,025 mAh (Find X9) và 7,500 mAh (Find X9 Pro). Tốc độ sạc tối đa 80W khi sạc có dây,
+                        và bạn cũng có thể sạc không dây 50W và sạc ngược không dây 10W trên cả hai thiết bị.</p>
+                    <h2>Chất lượng hình ảnh</h2>
+                    <p>Ở mặt trước, Find X9 sở hữu màn hình AMOLED 6.59 inch (FHD+ 120Hz) trong khi Find X9 Pro có màn
+                        hình AMOLED FHD+ 6.78 inch với cùng tần số quét 120Hz.</p>
+                    <div class="chitiet-tintuc-div-image"><img class="chitiet-tintuc-image"
+                                src="/user/assets/image/tintuc/oppo2.png" alt=""></div>
+                    <h2>Tính năng đặc biệt</h2>
+                    <p>Được biết, sự kiện ra mắt dòng Find X9 trên toàn cầu được OPPO bắt đầu với màn hình thiệu giao
+                        diện người dùng ColorOS 16 mới nhất của hãng. Dựa trên nền tảng của Parallel Animation trên
+                        ColorOS 15, phiên bản ColorOS mới nhất giới thiệu Seamless Animation, cho phép mọi tương tác đều
+                        diễn ra tức thời và được kết nối một cách hoàn hảo trên toàn bộ hệ điều hành.
+
+                        Chưa hết, ColorOS 16 còn mang đến thiết kế mới mẻ lấy cảm hứng từ sự tương tác giữa ánh sáng và
+                        bóng tối trong các bối cảnh tự nhiên, tạo ra một giao diện gọn gàng, trực quan hơn và mang lại
+                        cảm giác tươi mới. Giao diện người dùng này cũng tích hợp AI sâu hơn vào các ứng dụng cốt lõi
+                        như Ghi chú, Ghi âm và Lịch. Tính năng AI Portrait Glow mới tối ưu hóa tông màu da và cân bằng
+                        ánh sáng chỉ với một cú chạm.</p>
+
+                    <h2>Kết luận</h2>
+                    <p>Dòng Find X9 sẽ được cài sẵn giao diện người dùng ColorOS 16 dựa trên hệ điều hành Android 16 và
+                        hỗ trợ bộ ứng dụng O+ Connect của OPPO, hoạt động trên cả Mac và Windows. Biến thể tiêu chuẩn có
+                        các màu Xám Titan, Đen Không Gian và Đỏ Nhung. Máy sẽ có các phiên bản 12/256GB, 12/512GB,
+                        16/512GB và có giá khởi điểm là 999 EUR (khoảng 30.66 triệu đồng).
+
+                        Find X9 Pro có hai màu Trắng Lụa và Than Titan, cùng phiên bản bộ nhớ 16/512GB duy nhất. Nó có
+                        giá 1,299 EUR (khoảng 39.78 triệu đồng). Mức giá chính hãng tại thị trường Việt Nam của cả hai
+                        phiên bản dự kiến sẽ thấp hơn đáng kể.</p>
+                </section>
+            </article>
+</div>`
+    }
 ];
 
-import { vohieuCuon, vohieuGiuCuon } from "./header.js";
+// import { vohieuCuon, vohieuGiuCuon } from "./header.js";
 let div = document.createElement('DIV');
 div.className = "home_tintuc";
 div.innerHTML = ` <h2>Tin tức</h2>
                 <ul class="home_tintuc_list">
-                    <li data-id="1" class="home_tintuc_list_item">
+                    <li data-id="5" class="home_tintuc_list_item">
                         <img src="user/assets/image/tintuc/news1.png" alt="MacBook Pro M5">
                         <div class=tintuc_info>
                             <h3>Apple ra mắt MacBook mới</h3>
@@ -810,7 +884,7 @@ div.innerHTML = ` <h2>Tin tức</h2>
                         </div>
                     </li>
 
-                    <li data-id="2" class="home_tintuc_list_item">
+                    <li data-id="10" class="home_tintuc_list_item">
                         <img src="user/assets/image/tintuc/news2.png" alt="Samsung Galaxy S25 Ultra">
                         <div class="tintuc_info">
                             <h3>Samsung Galaxy S25 Ultra lộ diện</h3>
@@ -819,14 +893,14 @@ div.innerHTML = ` <h2>Tin tức</h2>
                         </div>
                     </li>
 
-                    <li data-id="3" class="home_tintuc_list_item">
+                    <li data-id="6" class="home_tintuc_list_item">
                         <img src="user/assets/image/tintuc/news3.png" alt="Xiaomi 15">
                         <h3>Xiaomi 15T ra mắt với camera Leica</h3>
                         <p>Siêu phẩm Xiaomi 15T ra mắt, trang bị cụm camera Leica và chip Snapdragon mới nhất.</p>
                         <a href="#" class="doc-them">Đọc thêm</a>
                     </li>
 
-                    <li data-id="4" class="home_tintuc_list_item">
+                    <li data-id="7" class="home_tintuc_list_item">
                         <img src="user/assets/image/tintuc/news4.png" alt="OPPO Pad 5 và OPPO Watch S">
                         <h3>OPPO Pad 5 và OPPO Watch S ra mắt</h3>
                         <p>Cả 2 sản phẩm đều thể hiện rõ hướng đi của OPPO trong việc kết hợp hiệu năng, thiết kế và
@@ -834,8 +908,11 @@ div.innerHTML = ` <h2>Tin tức</h2>
                             mang lại trải nghiệm toàn diện cho người dùng.</p>
                         <a href="#" class="doc-them">Đọc thêm</a>
                     </li>
-                </ul>`;
-
+                </ul>
+                                    <div class="xem-them">
+    <a href="#" class="btn-xem-them">Đọc thêm</a>
+</div>`;
+/*
 import { tacThanhDanhMuc } from "./header.js";
 import { tachetgiaodien } from "./home.js";
 
@@ -885,3 +962,203 @@ const ganSuKien = () => {
 
     });
 };
+*/
+
+import { vohieuCuon, vohieuGiuCuon, tacThanhDanhMuc } from "./header.js";
+import { tachetgiaodien } from "./home.js";
+
+// Bọc TẤT CẢ code vào DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+    // CHÈN VÀO .home (chỉ sau khi DOM sẵn sàng)
+    const homeElement = document.querySelector(".home");
+    if (homeElement) {
+        homeElement.appendChild(div);
+        console.log("Đã chèn tin tức vào .home!"); // Test
+    } else {
+        console.error("Không tìm thấy .home để chèn tin tức!");
+    }
+
+
+    // TẠO DIV RỖNG ĐỂ CHỨA CHI TIẾT TIN TỨC
+    const tintuc = document.createElement('DIV');
+    tintuc.className = "tintuc";
+    tintuc.innerHTML = ``;
+
+    // CHÈN VÀO .main (chỉ sau khi DOM sẵn sàng)
+    const mainElement = document.querySelector(".main");
+    if (mainElement) {
+        mainElement.appendChild(tintuc);
+    } else {
+        console.error("Không tìm thấy .main để chèn div chi tiết!");
+    }
+
+    // CÁC HÀM XỬ LÝ
+    function timTinTuc(id) {
+        return newsData.find(tin => tin.id === id) || null;
+    }
+
+    // Hàm này sẽ được gọi bởi cả tin ở trang chủ và tin ở trang danh sách
+    function moChiTietTinTuc(id) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        vohieuCuon();
+        vohieuGiuCuon();
+        tacThanhDanhMuc();
+
+        let news = timTinTuc(id);
+
+        if (news) {
+            tachetgiaodien(); // Đây là hàm import từ home.js
+            tintuc.innerHTML = news.link;
+            tintuc.style.display = 'block';
+        } else {
+            console.error("Không tìm thấy tin tức với ID:", id);
+        }
+    }
+
+    // Hàm gán sự kiện cho các tin tức (TRANG CHỦ)
+    const ganSuKienTrangChu = () => {
+        // Phải tìm sau khi đã chèn div ở trên
+        const tintuc_item = document.querySelectorAll(".home_tintuc_list_item");
+        tintuc_item.forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                moChiTietTinTuc(item.dataset.id);
+
+            });
+        });
+    };
+
+    // GÁN CÁC SỰ KIỆN
+
+    // GÁN SỰ KIỆN CHO 4 TIN TỨC VỪA TẠO
+    ganSuKienTrangChu();
+
+    // GÁN SỰ KIỆN CHO NÚT "ĐỌC THÊM" (TRANG CHỦ)
+    const btnXemThem = document.querySelector(".btn-xem-them");
+    const home = document.querySelector(".home"); // .home đã được tìm thấy ở trên
+    const newsList = document.querySelector(".news-list");
+
+    btnXemThem?.addEventListener("click", (e) => {
+        e.preventDefault();
+        home.style.display = "none";
+        newsList.style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // XÂY DỰNG TRANG DANH SÁCH TIN TỨC (NẾU CHƯA CÓ)
+    const newsListPage = document.querySelector(".news-list");
+    if (newsListPage.childElementCount > 0) return; // nếu đã render rồi thì bỏ qua
+
+    //==================banner==================
+    const banner = document.createElement("section");
+    banner.className = "news-banner";
+    banner.innerHTML = `<img src="user/assets/image/banner/news-banner.png" alt="Công nghệ" />
+                <div class="banner-text">
+                    <h1>Tin tức công nghệ mới nhất</h1>
+                    <p>Cập nhật liên tục xu hướng và sản phẩm công nghệ mới nhất trên thị trường</p>
+                </div>`;
+    newsListPage.appendChild(banner);
+
+    //==================feature==================
+    const feature = document.createElement("section");
+    feature.className = "news-feature";
+    feature.dataset.id = "11";
+    feature.innerHTML = `<img src="user/assets/image/tintuc/feature-img.png" alt="Feature image" />
+                <div class="feature-content">
+                    <h1>OPPO Find X9 Series ra mắt tại VN: Camera Hasselblad 200MP, pin 7,500mAh, giá từ 22.99
+                        triệu
+                    </h1>
+                    <p>Hồ Xuân Lý • 31/10/2025</p>
+                    <p>OPPO chính thức ra mắt Find X9 và Find X9 Pro tại Việt Nam...</p>
+                    <a href="#">Đọc thêm</a>
+                </div>`;
+    newsListPage.appendChild(feature);
+
+    feature.addEventListener('click', function (e) {
+        e.preventDefault();
+        moChiTietTinTuc(feature.dataset.id);
+    });
+
+    //==================main content==================
+    const main_content = document.createElement("section");
+    main_content.className = "news-main";
+    main_content.innerHTML = `<div class="news-content">
+                    <div id="newsList" class="news-list-container"></div>
+                    <div id="pagination" class="pagination"></div>
+                </div>
+                <aside class="news-sidebar">
+                    <h3>#CHỦ ĐỀ HOT</h3>
+                    <div class="tags">
+                        <span>#OPPO Find X9 Series</span>
+                        <span>#Apple</span>
+                        <span>#AI</span>
+                        <span>#Oppo</span>
+                        <span>#Honor</span>
+                        <span>#Samsung</span>
+                    </div>
+                </aside>`;
+    newsListPage.appendChild(main_content);
+
+    // Hiển thị danh sách tin tức và phân trang
+    const newsListContainer = document.getElementById("newsList");
+    const pagination = document.getElementById("pagination");
+
+    let currentPage = 1;
+    const itemsPerPage = 4;
+
+    function renderNewsList() {
+        newsListContainer.innerHTML = "";
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const currentNews = newsData.slice(start, end);
+
+        currentNews.forEach(n => {
+            const card = document.createElement("div");
+            card.classList.add("news-item");
+            card.dataset.id = n.id;
+            card.innerHTML = `
+            <img src="${n.img}" alt="${n.title}">
+            <div class="news-content">
+                <h3>${n.title}</h3>
+                <p class="meta">${n.meta}</p>
+                <p class="desc">${n.desc}</p>
+                <a href="#" class="btn-read">Đọc thêm</a>
+            </div>
+            `;
+            newsListContainer.appendChild(card);
+        });
+    }
+
+    function renderPagination() {
+        pagination.innerHTML = "";
+        const totalPages = Math.ceil(newsData.length / itemsPerPage);
+
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            if (i === currentPage) btn.classList.add("active");
+            btn.addEventListener("click", () => {
+                currentPage = i;
+                renderNewsList();
+                renderPagination();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+            pagination.appendChild(btn);
+        }
+    }
+
+    // Gắn 1 sự kiện cho cha (newsListContainer) để xử lý tất cả các cú click
+    newsListContainer.addEventListener('click', function (event) {
+        const newsItem = event.target.closest('.news-item');
+        if (newsItem) {
+            event.preventDefault();
+            moChiTietTinTuc(newsItem.dataset.id);
+            document.querySelector(".news-list").display = `none`;
+        }
+    });
+
+    renderNewsList();
+    renderPagination();
+
+});

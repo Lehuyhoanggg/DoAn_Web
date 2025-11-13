@@ -543,7 +543,9 @@ td .toggle-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    overflow-y: scroll;
+    min-height: 500px;
+    width: 70%;
+
 
 }
 .product-detail-modal-info input{

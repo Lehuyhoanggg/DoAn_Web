@@ -1,11 +1,5 @@
 export const InitData = [
   {
-    label: "Tất cả",
-    createdAt: "00:00:00 01/11/2025",
-    updatedAt: "00:00:00 01/11/2025",
-    status: true,
-  },
-  {
     label: "Điện thoại",
     createdAt: "00:00:00 01/11/2025",
     updatedAt: "00:00:00 01/11/2025",
@@ -55,12 +49,6 @@ export const InitData = [
   },
   {
     label: "Chuột",
-    createdAt: "00:00:00 01/11/2025",
-    updatedAt: "00:00:00 01/11/2025",
-    status: true,
-  },
-  {
-    label: "Khác",
     createdAt: "00:00:00 01/11/2025",
     updatedAt: "00:00:00 01/11/2025",
     status: true,

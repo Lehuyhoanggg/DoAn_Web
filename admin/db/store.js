@@ -1,18 +1,97 @@
 export const InitData = [
-  // {
-  //   date: "30/10/2025",
-  //   products: [
-  //     {
-  //       nameProduct: "iPhone 17 Pro Max",
-  //       ramProduct: "12GB",
-  //       storageProduct: "256GB",
-  //       stock: 10,
-  //       colorProduct: "Cam Vũ Trụ",
-  //       priceProduct: 30000000,
-  //       status: false,
-  //     },
-  //   ],
-  // },
+  {
+    date: "2025-10-30",
+    products: [
+      {
+        nameProduct: "IPhone 17 Pro Max",
+        ramProduct: "12GB",
+        storageProduct: "256GB",
+        stock: 10,
+        colorProduct: "Cam Vũ Trụ",
+        priceProduct: 30000000,
+        status: false,
+      },
+      {
+        nameProduct: "IPhone 17 Pro Max",
+        ramProduct: "12GB",
+        storageProduct: "512GB",
+        stock: 10,
+        colorProduct: "Xanh Đậm",
+        priceProduct: 30000000,
+        status: false,
+      },
+    ],
+  },
+  {
+    date: "2025-10-31",
+    products: [
+      {
+        nameProduct: "IPhone 17 Pro Max",
+        ramProduct: "12GB",
+        storageProduct: "256GB",
+        stock: 10,
+        colorProduct: "Cam Vũ Trụ",
+        priceProduct: 30000000,
+        status: false,
+      },
+    ],
+  },
+  {
+    date: "2025-11-01",
+    products: [
+      {
+        nameProduct: "IPhone 17 Pro Max",
+        ramProduct: "12GB",
+        storageProduct: "256GB",
+        stock: 10,
+        colorProduct: "Cam Vũ Trụ",
+        priceProduct: 30000000,
+        status: false,
+      },
+    ],
+  },
+  {
+    date: "2025-11-02",
+    products: [
+      {
+        nameProduct: "IPhone 17 Pro Max",
+        ramProduct: "12GB",
+        storageProduct: "256GB",
+        stock: 10,
+        colorProduct: "Cam Vũ Trụ",
+        priceProduct: 30000000,
+        status: false,
+      },
+    ],
+  },
+  {
+    date: "2025-11-03",
+    products: [
+      {
+        nameProduct: "IPhone 17 Pro Max",
+        ramProduct: "12GB",
+        storageProduct: "256GB",
+        stock: 10,
+        colorProduct: "Cam Vũ Trụ",
+        priceProduct: 30000000,
+        status: false,
+      },
+    ],
+  },
+  {
+    date: "2025-11-04",
+    products: [
+      {
+        nameProduct: "IPhone 17 Pro Max",
+        ramProduct: "12GB",
+        storageProduct: "256GB",
+        stock: 10,
+        colorProduct: "Cam Vũ Trụ",
+        priceProduct: 30000000,
+        status: false,
+      },
+    ],
+  },
 ];
 
 export function setStoreList(mangsp) {

@@ -101,7 +101,7 @@ function khoiphucdonhang() {
 
                 <div class="donhang_tongtien">
                     <div class="donhang_tongtien_top">
-                        <span class="donhang_trangthai"> <img src="./user/assets/svg/reload.svg" alt=""> Đang xử lí</span>
+                        <span class="donhang_trangthai"> <img src="./user/assets/svg/reload.svg" alt=""><span class="donhang_trangthai_span">Đang xử lí</span></span>
                         <button class="donhang_xemchitiet"><div class="donhang_xemchitiet_ul">
                             <h2>Thông tin đơn hàng  <div class="donhang_xemchitiet_xoa">x</div> </h2>
                                 <ul class="donhang_xemchitiet_list">
@@ -165,7 +165,7 @@ function khoiphucdonhang() {
                             <img src="${sp.thumbnail}" alt="">
                             <div>
                                 <span class="donhang_sanpham-name">${sp.name}</span>
-                                <span class="donhang_sanpham-thuonghieu">${sanpham.mau + sanpham.listphienban}</span>
+                                <span class="donhang_sanpham-thuonghieu">${sanpham.mau + "," + sanpham.listphienban}</span>
                                 <span class="donhang_sanpham-soluong">x${sanpham.soLuong}</span>
                             </div>
 
@@ -176,6 +176,7 @@ function khoiphucdonhang() {
                         </div>
 
                     </li>`;
+                document.querySelector(".donhang_trangthai_span").textContent = donhang.trangThai;
             });
         }
     });

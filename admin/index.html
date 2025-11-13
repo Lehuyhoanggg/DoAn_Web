@@ -158,13 +158,12 @@
                       <option value="true">Xác nhận</option>
                       <option value="false">Chưa xác nhận</option>
                     </select>
-                    <div class="product-search">
-                      <input
-                        type="text"
-                        class="product-search-input"
-                        placeholder="Tìm kiếm sản phẩm"
-                      />
-                      <button class="product-search-btn"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                      <label for="fromDate" style="line-height: 40px;">Từ ngày:</label>
+                      <input type="date" name="fromDate" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;"/>
+                      <label for="toDate" style="line-height: 40px;">Đến ngày:</label>
+                      <input type="date" name="toDate" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;"/>
+                      <button class="product-filter-btn" style="width: 100px;"><i class="fa-solid fa-filter"></i>Lọc</button>
                     </div>
                     <button class="product-reload-btn"><i class="fa-solid fa-rotate-right"></i>Làm mới</button>
                     <button class="product-create-btn"><i class="fa-solid fa-plus"></i>Thêm phiếu nhập kho</button>
@@ -198,14 +197,6 @@
                       <option value="true">Hoạt động</option>
                       <option value="false">Đã khóa</option>
                     </select>
-                    <div class="product-search">
-                      <input
-                        type="text"
-                        class="product-search-input"
-                        placeholder="Tìm kiếm sản phẩm"
-                      />
-                      <button class="product-search-btn"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
-                    </div>
                     <button class="product-reload-btn"><i class="fa-solid fa-rotate-right"></i>Làm mới</button>
                     <button class="product-create-btn"><i class="fa-solid fa-plus"></i>Thêm danh mục</button>
                   </div>

@@ -1,24 +1,23 @@
 const Initial = [
-
   {
     id: "1",
     name: "IPhone 17 Pro Max",
     brand: "Apple",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp1.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp1.png",
     price: 37990000,
     salebefore: 39990000,
-    baseprice: 25000000, // giá nhập vào 
+    baseprice: 25000000, // giá nhập vào
     listVersions: [
       { name: "ram", option: ["12GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB", "1TB", "2TB"] }
+      { name: "dung lượng", option: ["256GB", "512GB", "1TB", "2TB"] },
     ],
     listColors: ["Cam Vũ Trụ", "Xanh Đậm", "Bạc"],
     versions: [
       {
         id: "1-cam-12-256",
         color: "Cam Vũ Trụ",
-        price: 37990000,
+        priceBase: 37990000,
         stock: 200,
         status: true,
         sold: "5.5k",
@@ -28,7 +27,7 @@ const Initial = [
       {
         id: "1-xanh-12-256",
         color: "Xanh Đậm",
-        price: 37990000,
+        priceBase: 37990000,
         stock: 500,
         status: true,
         sold: "4.9k",
@@ -38,7 +37,7 @@ const Initial = [
       {
         id: "1-bac-12-256",
         color: "Bạc",
-        price: 37990000,
+        priceBase: 37990000,
         stock: 400,
         status: true,
         sold: "3.8k",
@@ -48,7 +47,7 @@ const Initial = [
       {
         id: "1-cam-12-512",
         color: "Cam Vũ Trụ",
-        price: 44490000,
+        priceBase: 44490000,
         stock: 200,
         status: true,
         sold: "10.3k",
@@ -58,7 +57,7 @@ const Initial = [
       {
         id: "1-xanh-12-512",
         color: "Xanh Đậm",
-        price: 44490000,
+        priceBase: 44490000,
         stock: 300,
         status: true,
         sold: "4.9k",
@@ -68,7 +67,7 @@ const Initial = [
       {
         id: "1-bac-12-512",
         color: "Bạc",
-        price: 44490000,
+        priceBase: 44490000,
         stock: 100,
         status: true,
         sold: "3.6k",
@@ -78,7 +77,7 @@ const Initial = [
       {
         id: "1-cam-12-1",
         color: "Cam Vũ Trụ",
-        price: 50990000,
+        priceBase: 50990000,
         stock: 100,
         status: true,
         sold: "11.3k",
@@ -87,7 +86,7 @@ const Initial = [
       {
         id: "1-xanh-12-1",
         color: "Xanh Đậm",
-        price: 50990000,
+        priceBase: 50990000,
         stock: 100,
         status: true,
         sold: "7k",
@@ -97,7 +96,7 @@ const Initial = [
       {
         id: "1-bac-12-1",
         color: "Bạc",
-        price: 50990000,
+        priceBase: 50990000,
         stock: 100,
         status: true,
         sold: "5.3k",
@@ -106,7 +105,7 @@ const Initial = [
       {
         id: "1-cam-12-2",
         color: "Cam Vũ Trụ",
-        price: 63990000,
+        priceBase: 63990000,
         stock: 0,
         status: false,
         sold: "3k",
@@ -116,7 +115,7 @@ const Initial = [
       {
         id: "1-xanh-12-2",
         color: "Xanh Đậm",
-        price: 63990000,
+        priceBase: 63990000,
         stock: 100,
         status: true,
         sold: "2k",
@@ -126,13 +125,14 @@ const Initial = [
       {
         id: "1-bac-12-2",
         color: "Bạc",
-        price: 63990000,
+        priceBase: 63990000,
         stock: 100,
         status: true,
         sold: "1.4k",
         version: ["12GB", "2TB"],
       },
     ],
+    status: true,
     imgDetail: [
       "../user/assets/image/sanpham/1/16-9-1.png",
       "../user/assets/image/sanpham/1/16-9-2.png",
@@ -147,12 +147,12 @@ const Initial = [
       "Hệ điều hành": "iOS 26",
       "Chip xử lý (CPU)": "Apple A19 Pro 6 nhân",
       "Chip đồ họa (GPU)": "Apple GPU 6 nhân",
-      "RAM": "12GB",
+      RAM: "12GB",
       "Bộ nhớ trong": "256GB/ 512GB/ 1TB",
       "Màn hình": "6.9 inch Super Retina XDR",
       "Camera trước": "18MP TrueDepth",
       "Camera sau": "Chính 48 MP & Phụ 48 MP, 48 MP",
-      "Pin": "5088mAh, sạc nhanh 40W",
+      Pin: "5088mAh, sạc nhanh 40W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth v6.0",
       "Bảo mật": "Face ID, Touch ID",
       "Trọng lượng": "231g",
@@ -177,7 +177,7 @@ const Initial = [
     <li>Công cụ viết lách (Writing Tools): Hỗ trợ bạn kiểm tra lại, viết lại văn bản với các văn phong khác nhau và tóm tắt nội dung đã chọn một cách nhanh chóng.</li>
     </ul>
 
-          `  ,
+          `,
   },
 
   {
@@ -185,20 +185,20 @@ const Initial = [
     name: "IPhone 17 Pro",
     brand: "Apple",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp2.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp2.png",
     price: 34990000,
     salebefore: 39990000,
-    baseprice: 20000000, // giá nhập vào 
+    basepriceBase: 20000000, // giá nhập vào
     listVersions: [
       { name: "ram", option: ["12GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] }
+      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] },
     ],
     listColors: ["Cam Vũ Trụ", "Xanh Đậm", "Bạc"],
     versions: [
       {
         id: "2-cam-12-256",
         color: "Cam Vũ Trụ",
-        price: 34990000,
+        priceBase: 34990000,
         stock: 110,
         status: true,
         sold: "7.3k",
@@ -208,7 +208,7 @@ const Initial = [
       {
         id: "2-xanh-12-256",
         color: "Xanh Đậm",
-        price: 34990000,
+        priceBase: 34990000,
         stock: 200,
         status: true,
         sold: "6.9k",
@@ -218,7 +218,7 @@ const Initial = [
       {
         id: "2-bac-12-256",
         color: "Bạc",
-        price: 34990000,
+        priceBase: 34990000,
         stock: 243,
         status: true,
         sold: "2.6k",
@@ -228,7 +228,7 @@ const Initial = [
       {
         id: "2-cam-12-512",
         color: "Cam Vũ Trụ",
-        price: 41490000,
+        priceBase: 41490000,
         stock: 0,
         status: false,
         sold: "8.3k",
@@ -238,7 +238,7 @@ const Initial = [
       {
         id: "2-xanh-12-512",
         color: "Xanh Đậm",
-        price: 41490000,
+        priceBase: 41490000,
         stock: 20,
         status: true,
         sold: "5.9k",
@@ -248,7 +248,7 @@ const Initial = [
       {
         id: "2-bac-12-512",
         color: "Bạc",
-        price: 41490000,
+        priceBase: 41490000,
         stock: 60,
         status: true,
         sold: "3.6k",
@@ -258,7 +258,7 @@ const Initial = [
       {
         id: "2-cam-12-1",
         color: "Cam Vũ Trụ",
-        price: 47990000,
+        priceBase: 47990000,
         stock: 100,
         status: true,
         sold: "3.3k",
@@ -268,7 +268,7 @@ const Initial = [
       {
         id: "2-xanh-12-1",
         color: "Xanh Đậm",
-        price: 47990000,
+        priceBase: 47990000,
         stock: 20,
         status: true,
         sold: "2.9k",
@@ -278,7 +278,7 @@ const Initial = [
       {
         id: "2-bac-12-1",
         color: "Bạc",
-        price: 47990000,
+        priceBase: 47990000,
         stock: 60,
         status: true,
         sold: "1.6k",
@@ -296,12 +296,12 @@ const Initial = [
       "Hệ điều hành": "iOS 26",
       "Chip xử lý (CPU)": "Apple A19 Pro 6 nhân",
       "Chip đồ họa (GPU)": "Apple GPU 6 nhân",
-      "RAM": "12GB",
+      RAM: "12GB",
       "Bộ nhớ trong": "256GB",
       "Màn hình": "6.3 inch Super Retina XDR",
       "Camera trước": "18MP TrueDepth",
       "Camera sau": "Chính 48 MP & Phụ 48 MP, 48 MP",
-      "Pin": "4252mAh, sạc nhanh 40W",
+      Pin: "4252mAh, sạc nhanh 40W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth v6.0",
       "Bảo mật": "Face ID, Touch ID",
       "Trọng lượng": "204g",
@@ -320,7 +320,7 @@ const Initial = [
     <img src="/user/assets/image/sanpham/2/thongtin4.png" alt="">
     <p>Hệ thống camera 48MP Pro Fusion, một nâng cấp đáng chú ý, mang đến nhiều tùy chọn hơn cho việc chụp ảnh và quay phim ngay trên chiếc điện thoại của bạn. Không chỉ camera chính, mà cả camera Ultra Wide và camera Telephoto Zoom cũng đều được nâng cấp lên 48MP. Đặc biệt, camera Telephoto còn được trang bị khả năng zoom quang học lên đến 4x và 8x, mở ra nhiều góc chụp đa dạng và chi tiết hơn. Nâng cấp này cho phép người dùng ghi lại hình ảnh có độ chi tiết cao trong nhiều điều kiện khác nhau.</p>
     <img src="/user/assets/image/sanpham/2/thongtin5.png" alt="">
-    `  ,
+    `,
   },
 
   {
@@ -328,20 +328,20 @@ const Initial = [
     name: "Samsung Galaxy S25 FE 5G",
     brand: "Apple",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp3.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp3.png",
     price: 14390000,
     salebefore: 16690000,
-    baseprice: 12000000, // giá nhập vào 
+    basepriceBase: 12000000, // giá nhập vào
     listVersions: [
       { name: "ram", option: ["8GB"] },
-      { name: "dung lượng", option: ["128GB", "256GB", "512GB"] }
+      { name: "dung lượng", option: ["128GB", "256GB", "512GB"] },
     ],
     listColors: ["Xanh Dương Nhạt", "Trắng", "Đen"],
     versions: [
       {
         id: "3-xanh-8-128",
         color: "Xanh Dương Nhạt",
-        price: 14390000,
+        priceBase: 14390000,
         stock: 100,
         status: true,
         sold: "1k",
@@ -350,7 +350,7 @@ const Initial = [
       {
         id: "3-trang-8-128",
         color: "Trắng",
-        price: 14390000,
+        priceBase: 14390000,
         stock: 220,
         status: true,
         sold: "1.4k",
@@ -359,18 +359,17 @@ const Initial = [
       {
         id: "3-den-8-128",
         color: "Đen",
-        price: 14390000,
+        priceBase: 14390000,
         stock: 130,
         status: true,
         sold: "2.6k",
         version: ["8GB", "128GB"],
       },
 
-
       {
         id: "3-xanh-8-256",
         color: "Xanh Dương Nhạt",
-        price: 16990000,
+        priceBase: 16990000,
         stock: 210,
         status: true,
         sold: "2.3k",
@@ -379,7 +378,7 @@ const Initial = [
       {
         id: "3-trang-8-256",
         color: "Trắng",
-        price: 16990000,
+        priceBase: 16990000,
         stock: 120,
         status: true,
         sold: "1.9k",
@@ -388,7 +387,7 @@ const Initial = [
       {
         id: "3-den-8-256",
         color: "Đen",
-        price: 16990000,
+        priceBase: 16990000,
         stock: 310,
         status: true,
         sold: "1.6k",
@@ -398,7 +397,7 @@ const Initial = [
       {
         id: "3-xanh-8-512",
         color: "Xanh Dương Nhạt",
-        price: 21990000,
+        priceBase: 21990000,
         stock: 110,
         status: true,
         sold: "1.3k",
@@ -407,7 +406,7 @@ const Initial = [
       {
         id: "3-trang-8-512",
         color: "Trắng",
-        price: 21990000,
+        priceBase: 21990000,
         stock: 220,
         status: true,
         sold: "1.9k",
@@ -416,7 +415,7 @@ const Initial = [
       {
         id: "3-den-8-512",
         color: "Đen",
-        price: 21990000,
+        priceBase: 21990000,
         stock: 305,
         status: true,
         sold: "1.6k",
@@ -436,12 +435,12 @@ const Initial = [
       "Hệ điều hành": "Android 16",
       "Chip xử lý (CPU)": "Exynos 2400 10 nhân",
       "Chip đồ họa (GPU)": "Đang cập nhật",
-      "RAM": "8GB",
+      RAM: "8GB",
       "Bộ nhớ trong": "128GB/ 256GB/ 512GB",
       "Màn hình": "6.7 inch Dynamic AMOLED 2X",
       "Camera trước": "12MP",
       "Camera sau": "Chính 50 MP & Phụ 12 MP, 8 MP",
-      "Pin": "4900mAh, sạc nhanh 45W",
+      Pin: "4900mAh, sạc nhanh 45W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.3",
       "Bảo mật": "Vân tay, Sinh trắc học",
       "Trọng lượng": "190g",
@@ -456,7 +455,7 @@ const Initial = [
     <p>Chiếc điện thoại Samsung này được trang bị vi xử lý Exynos 2400, con chip mạnh mẽ của Samsung, mang đến khả năng xử lý vượt trội cho mọi tác vụ. Không chỉ dựa vào sức mạnh tính toán, máy còn tối ưu trải nghiệm bằng công nghệ Ray-tracing, giúp tái hiện ánh sáng, bóng đổ và phản chiếu trong game sống động, nâng chất lượng đồ họa lên tầm cao mới, đặc biệt hấp dẫn với game thủ.</p>
     <img src="/user/assets/image/sanpham/3/thongtin3.png" alt="">
     <p>Galaxy AI đưa việc sáng tạo hình ảnh và video lên tầm mới. Với Photo Assist, các công cụ như Generative Edit, Suggest Erases và Auto Trim giúp xóa chi tiết thừa, cắt gọn video và giữ lại khoảnh khắc đẹp nhất, tất cả đều thực hiện ngay trên điện thoại, đơn giản và trực quan. Không chỉ dừng ở hình ảnh, Galaxy AI còn hỗ trợ mạnh mẽ cho công việc và kết nối. Browsing Assist tóm tắt, dịch web nhanh chóng; Writing Assist giúp soạn thảo gọn gàng; trong khi Audio Eraser loại bỏ tiếng ồn, mang lại âm thanh rõ ràng. Tất cả đều nhằm tiết kiệm thời gian và công sức.</p>
-    `  ,
+    `,
   },
 
   {
@@ -464,22 +463,70 @@ const Initial = [
     name: "OPPO Find X8 Pro",
     brand: "OPPO",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp4.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp4.png",
     price: 28990000,
     salebefore: 30990000,
     baseprice: 21000000,
     listVersions: [
       { name: "ram", option: ["12GB", "16GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB"] }
+      { name: "dung lượng", option: ["256GB", "512GB"] },
     ],
     listColors: ["Đen", "Trắng", "Xanh Lục"],
     versions: [
-      { id: "4-den-12-256", color: "Đen", price: 28990000, stock: 200, status: true, sold: "2.8k", version: ["12GB", "256GB"] },
-      { id: "4-trang-12-256", color: "Trắng", price: 28990000, stock: 150, status: true, sold: "1.9k", version: ["12GB", "256GB"] },
-      { id: "4-xanh-12-256", color: "Xanh Lục", price: 28990000, stock: 100, status: true, sold: "1.2k", version: ["12GB", "256GB"] },
-      { id: "4-den-12-512", color: "Đen", price: 31990000, stock: 100, status: true, sold: "1.5k", version: ["16GB", "512GB"] },
-      { id: "4-trang-12-512", color: "Trắng", price: 31990000, stock: 80, status: true, sold: "1k", version: ["16GB", "512GB"] },
-      { id: "4-xanh-12-512", color: "Xanh Lục", price: 31990000, stock: 70, status: true, sold: "900", version: ["16GB", "512GB"] }
+      {
+        id: "4-den-12-256",
+        color: "Đen",
+        priceBase: 28990000,
+        stock: 200,
+        status: true,
+        sold: "2.8k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "4-trang-12-256",
+        color: "Trắng",
+        priceBase: 28990000,
+        stock: 150,
+        status: true,
+        sold: "1.9k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "4-xanh-12-256",
+        color: "Xanh Lục",
+        priceBase: 28990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "4-den-12-512",
+        color: "Đen",
+        priceBase: 31990000,
+        stock: 100,
+        status: true,
+        sold: "1.5k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "4-trang-12-512",
+        color: "Trắng",
+        priceBase: 31990000,
+        stock: 80,
+        status: true,
+        sold: "1k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "4-xanh-12-512",
+        color: "Xanh Lục",
+        priceBase: 31990000,
+        stock: 70,
+        status: true,
+        sold: "900",
+        version: ["16GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/4/16-9-1.png",
@@ -492,16 +539,16 @@ const Initial = [
     infoDetail: {
       "Hệ điều hành": "Android 15, ColorOS 15",
       "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
-      "RAM": "12GB/16GB",
+      RAM: "12GB/16GB",
       "Bộ nhớ trong": "256GB/512GB",
       "Màn hình": "6.82 inch AMOLED QHD+ 120Hz",
       "Camera trước": "32MP",
       "Camera sau": "50MP + 64MP + 48MP",
-      "Pin": "5000mAh, sạc nhanh 100W",
+      Pin: "5000mAh, sạc nhanh 100W",
       "Bảo mật": "Vân tay dưới màn hình",
       "Kết nối": "5G, Wi-Fi 7, NFC, Bluetooth 5.3",
       "Trọng lượng": "218g",
-      "Màu sắc": "Đen, Trắng, Xanh Lục"
+      "Màu sắc": "Đen, Trắng, Xanh Lục",
     },
     overview: `
       <h2>OPPO Find X8 Pro – Cân bằng giữa hiệu năng và nhiếp ảnh.</h2>
@@ -509,57 +556,104 @@ const Initial = [
       <img src="/user/assets/image/sanpham/4/thongtin1.png" alt="">
       <p>Thiết kế cong mềm mại, hiệu năng mượt mà với chip Snapdragon 8 Gen 3.</p>
       <img src="/user/assets/image/sanpham/4/thongtin2.png" alt="">
-    `
+    `,
   },
   {
     id: "5",
     name: "Vivo X200 Pro",
     brand: "Vivo",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp5.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp5.png",
     price: 24990000,
     salebefore: 26990000,
     baseprice: 18000000,
     listVersions: [
       { name: "ram", option: ["12GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB"] }
+      { name: "dung lượng", option: ["256GB", "512GB"] },
     ],
     listColors: ["Đen", "Trắng", "Hồng"],
     versions: [
-      { id: "5-den-12-256", color: "Đen", price: 24990000, stock: 300, status: true, sold: "3.3k", version: ["12GB", "256GB"] },
-      { id: "5-trang-12-256", color: "Trắng", price: 24990000, stock: 200, status: true, sold: "2.2k", version: ["12GB", "256GB"] },
-      { id: "5-hong-12-256", color: "Hồng", price: 24990000, stock: 150, status: true, sold: "1.5k", version: ["12GB", "256GB"] },
-      { id: "5-den-12-512", color: "Đen", price: 27990000, stock: 100, status: true, sold: "1.8k", version: ["12GB", "512GB"] },
-      { id: "5-trang-12-512", color: "Trắng", price: 27990000, stock: 80, status: true, sold: "1.2k", version: ["12GB", "512GB"] },
-      { id: "5-hong-12-512", color: "Hồng", price: 27990000, stock: 50, status: true, sold: "900", version: ["12GB", "512GB"] }
+      {
+        id: "5-den-12-256",
+        color: "Đen",
+        priceBase: 24990000,
+        stock: 300,
+        status: true,
+        sold: "3.3k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "5-trang-12-256",
+        color: "Trắng",
+        priceBase: 24990000,
+        stock: 200,
+        status: true,
+        sold: "2.2k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "5-hong-12-256",
+        color: "Hồng",
+        priceBase: 24990000,
+        stock: 150,
+        status: true,
+        sold: "1.5k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "5-den-12-512",
+        color: "Đen",
+        priceBase: 27990000,
+        stock: 100,
+        status: true,
+        sold: "1.8k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "5-trang-12-512",
+        color: "Trắng",
+        priceBase: 27990000,
+        stock: 80,
+        status: true,
+        sold: "1.2k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "5-hong-12-512",
+        color: "Hồng",
+        priceBase: 27990000,
+        stock: 50,
+        status: true,
+        sold: "900",
+        version: ["12GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/5/16-9-1.png",
       "../user/assets/image/sanpham/5/16-9-2.png",
       "../user/assets/image/sanpham/5/16-9-3.png",
       "../user/assets/image/sanpham/5/16-9-4.png",
-
     ],
     infoDetail: {
       "Hệ điều hành": "Android 15, FuntouchOS 15",
       "Chip xử lý (CPU)": "Dimensity 9400",
-      "RAM": "12GB",
+      RAM: "12GB",
       "Bộ nhớ trong": "256GB/512GB",
       "Màn hình": "6.78 inch AMOLED LTPO 120Hz",
       "Camera trước": "32MP",
       "Camera sau": "50MP + 50MP + 64MP",
-      "Pin": "5100mAh, sạc nhanh 120W",
+      Pin: "5100mAh, sạc nhanh 120W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
       "Bảo mật": "Vân tay quang học dưới màn hình",
       "Trọng lượng": "210g",
-      "Màu sắc": "Đen, Trắng, Hồng"
+      "Màu sắc": "Đen, Trắng, Hồng",
     },
     overview: `
       <h2>Vivo X200 Pro – Flagship mới của Vivo với camera 64MP.</h2>
       <p>Hiệu năng mạnh mẽ nhờ chip Dimensity 9400 và hệ thống camera ZEISS ấn tượng.</p>
       <img src="/user/assets/image/sanpham/5/thongtin1.png" alt="">
       <p>Màn hình AMOLED LTPO 120Hz siêu mượt, pin 5100mAh với sạc nhanh 120W.</p>
-    `
+    `,
   },
 
   {
@@ -567,31 +661,127 @@ const Initial = [
     name: "Realme GT7 Pro",
     brand: "Realme",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp6.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp6.png",
     price: 18990000,
     salebefore: 19990000,
     baseprice: 15000000,
     listVersions: [
       { name: "ram", option: ["8GB", "12GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB"] }
+      { name: "dung lượng", option: ["256GB", "512GB"] },
     ],
     listColors: ["Đen", "Trắng", "Cam"],
     versions: [
-      { id: "6-den-8-256", color: "Đen", price: 18990000, stock: 250, status: true, sold: "2.4k", version: ["8GB", "256GB"] },
-      { id: "6-trang-8-256", color: "Trắng", price: 18990000, stock: 200, status: true, sold: "1.8k", version: ["8GB", "256GB"] },
-      { id: "6-cam-8-256", color: "Cam", price: 18990000, stock: 100, status: true, sold: "1.2k", version: ["8GB", "256GB"] },
+      {
+        id: "6-den-8-256",
+        color: "Đen",
+        priceBase: 18990000,
+        stock: 250,
+        status: true,
+        sold: "2.4k",
+        version: ["8GB", "256GB"],
+      },
+      {
+        id: "6-trang-8-256",
+        color: "Trắng",
+        priceBase: 18990000,
+        stock: 200,
+        status: true,
+        sold: "1.8k",
+        version: ["8GB", "256GB"],
+      },
+      {
+        id: "6-cam-8-256",
+        color: "Cam",
+        priceBase: 18990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["8GB", "256GB"],
+      },
 
-      { id: "6-den-8-512", color: "Đen", price: 18990000, stock: 250, status: true, sold: "2.4k", version: ["8GB", "512GB"] },
-      { id: "6-trang-8-512", color: "Trắng", price: 18990000, stock: 200, status: true, sold: "1.8k", version: ["8GB", "512GB"] },
-      { id: "6-cam-8-512", color: "Cam", price: 18990000, stock: 100, status: true, sold: "1.2k", version: ["8GB", "512GB"] },
+      {
+        id: "6-den-8-512",
+        color: "Đen",
+        priceBase: 18990000,
+        stock: 250,
+        status: true,
+        sold: "2.4k",
+        version: ["8GB", "512GB"],
+      },
+      {
+        id: "6-trang-8-512",
+        color: "Trắng",
+        priceBase: 18990000,
+        stock: 200,
+        status: true,
+        sold: "1.8k",
+        version: ["8GB", "512GB"],
+      },
+      {
+        id: "6-cam-8-512",
+        color: "Cam",
+        priceBase: 18990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["8GB", "512GB"],
+      },
 
-      { id: "6-den-12-512", color: "Đen", price: 20990000, stock: 150, status: true, sold: "1.5k", version: ["12GB", "512GB"] },
-      { id: "6-trang-12-512", colorcolor: "Trắng", price: 20990000, stock: 100, status: true, sold: "900", version: ["12GB", "512GB"] },
-      { id: "6-cam-12-512", colorcolor: "Cam", price: 20990000, stock: 80, status: true, sold: "700", version: ["12GB", "512GB"] },
+      {
+        id: "6-den-12-512",
+        color: "Đen",
+        priceBase: 20990000,
+        stock: 150,
+        status: true,
+        sold: "1.5k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "6-trang-12-512",
+        colorcolor: "Trắng",
+        priceBase: 20990000,
+        stock: 100,
+        status: true,
+        sold: "900",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "6-cam-12-512",
+        colorcolor: "Cam",
+        priceBase: 20990000,
+        stock: 80,
+        status: true,
+        sold: "700",
+        version: ["12GB", "512GB"],
+      },
 
-      { id: "6-den-12-256", color: "Đen", price: 20990000, stock: 150, status: true, sold: "1.5k", version: ["12GB", "256GB"] },
-      { id: "6-trang-12-256", colorcolor: "Trắng", price: 20990000, stock: 100, status: true, sold: "900", version: ["12GB", "256GB"] },
-      { id: "6-cam-12-256", colorcolor: "Cam", price: 20990000, stock: 80, status: true, sold: "700", version: ["12GB", "256GB"] }
+      {
+        id: "6-den-12-256",
+        color: "Đen",
+        priceBase: 20990000,
+        stock: 150,
+        status: true,
+        sold: "1.5k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "6-trang-12-256",
+        colorcolor: "Trắng",
+        priceBase: 20990000,
+        stock: 100,
+        status: true,
+        sold: "900",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "6-cam-12-256",
+        colorcolor: "Cam",
+        priceBase: 20990000,
+        stock: 80,
+        status: true,
+        sold: "700",
+        version: ["12GB", "256GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/6/16-9-1.png",
@@ -605,43 +795,75 @@ const Initial = [
     infoDetail: {
       "Hệ điều hành": "Android 15, Realme UI 6",
       "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
-      "RAM": "8GB/12GB",
+      RAM: "8GB/12GB",
       "Bộ nhớ trong": "256GB/512GB",
       "Màn hình": "6.7 inch AMOLED 120Hz",
       "Camera trước": "32MP",
       "Camera sau": "50MP + 8MP + 2MP",
-      "Pin": "5000mAh, sạc nhanh 100W",
+      Pin: "5000mAh, sạc nhanh 100W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.3",
       "Bảo mật": "Vân tay dưới màn hình",
-      "Màu sắc": "Đen, Trắng, Cam"
+      "Màu sắc": "Đen, Trắng, Cam",
     },
     overview: `
     <h2>Realme GT7 Pro – Sức mạnh flagship giá tầm trung.</h2>
     <p>Trang bị Snapdragon 8 Gen 3, pin 5000mAh, sạc nhanh 100W, thiết kế trẻ trung hiện đại.</p>
     <img src="/user/assets/image/sanpham/6/thongtin1.png" alt="">
     <p>Hiệu năng ổn định, camera sắc nét và màn hình AMOLED 120Hz mượt mà.</p>
-  `
+  `,
   },
   {
     id: "7",
     name: "Asus ROG Phone 8",
     brand: "Asus",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp7.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp7.png",
     price: 32990000,
     salebefore: 34990000,
     baseprice: 25000000,
     listVersions: [
       { name: "ram", option: ["16GB"] },
-      { name: "dung lượng", option: ["512GB", "1TB"] }
+      { name: "dung lượng", option: ["512GB", "1TB"] },
     ],
     listColors: ["Đen", "Xanh Navy"],
     versions: [
-      { id: "7-den-16-512", colorcolor: "Đen", price: 32990000, stock: 120, status: true, sold: "2.2k", version: ["16GB", "512GB"] },
-      { id: "7-xanh-16-512", colorcolor: "Xanh Navy", price: 32990000, stock: 80, status: true, sold: "1.6k", version: ["16GB", "512GB"] },
+      {
+        id: "7-den-16-512",
+        color: "Đen",
+        priceBase: 32990000,
+        stock: 120,
+        status: true,
+        sold: "2.2k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "7-xanh-16-512",
+        color: "Xanh Navy",
+        priceBase: 32990000,
+        stock: 80,
+        status: true,
+        sold: "1.6k",
+        version: ["16GB", "512GB"],
+      },
 
-      { id: "7-den-16-1", colorcolor: "Đen", price: 35990000, stock: 50, status: true, sold: "1k", version: ["16GB", "1TB"] },
-      { id: "7-xanh-16-1", colorcolor: "Xanh Navy", price: 35990000, stock: 40, status: true, sold: "700", version: ["16GB", "1TB"] }
+      {
+        id: "7-den-16-1",
+        color: "Đen",
+        priceBase: 35990000,
+        stock: 50,
+        status: true,
+        sold: "1k",
+        version: ["16GB", "1TB"],
+      },
+      {
+        id: "7-xanh-16-1",
+        color: "Xanh Navy",
+        priceBase: 35990000,
+        stock: 40,
+        status: true,
+        sold: "700",
+        version: ["16GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/7/16-9-1.png",
@@ -654,53 +876,149 @@ const Initial = [
     infoDetail: {
       "Hệ điều hành": "Android 14, ROG UI",
       "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
-      "RAM": "16GB",
+      RAM: "16GB",
       "Bộ nhớ trong": "512GB/1TB",
       "Màn hình": "6.78 inch AMOLED 165Hz",
       "Camera trước": "32MP",
       "Camera sau": "50MP + 13MP + 5MP",
-      "Pin": "6000mAh, sạc nhanh 65W",
+      Pin: "6000mAh, sạc nhanh 65W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
       "Bảo mật": "Vân tay quang học dưới màn hình",
-      "Màu sắc": "Đen, Xanh Navy"
+      "Màu sắc": "Đen, Xanh Navy",
     },
     overview: `
     <h2>Asus ROG Phone 8 – Gaming phone hiệu năng cực đỉnh.</h2>
     <p>Được thiết kế dành riêng cho game thủ với Snapdragon 8 Gen 3, màn hình 165Hz và pin khủng 6000mAh.</p>
     <img src="/user/assets/image/sanpham/7/thongtin1.png" alt="">
     <p>Hệ thống tản nhiệt tối ưu, trải nghiệm chơi game cực mượt, RGB tùy chỉnh độc quyền ROG.</p>
-  `
+  `,
   },
   {
     id: "8",
     name: "OnePlus 13 Pro",
     brand: "OnePlus",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp8.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp8.png",
     price: 25990000,
     salebefore: 27990000,
     baseprice: 19000000,
     listVersions: [
       { name: "ram", option: ["12GB", "16GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB"] }
+      { name: "dung lượng", option: ["256GB", "512GB"] },
     ],
     listColors: ["Đen", "Trắng", "Xanh Lá"],
     versions: [
-      { id: "8-den-12-256", color: "Đen", price: 25990000, stock: 180, status: true, sold: "2k", version: ["12GB", "256GB"] },
-      { id: "8-trang-12-256", color: "Trắng", price: 25990000, stock: 150, status: true, sold: "1.6k", version: ["12GB", "256GB"] },
-      { id: "8-xanh-12-256", color: "Xanh Lá", price: 25990000, stock: 150, status: true, sold: "1.6k", version: ["12GB", "256GB"] },
+      {
+        id: "8-den-12-256",
+        color: "Đen",
+        priceBase: 25990000,
+        stock: 180,
+        status: true,
+        sold: "2k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "8-trang-12-256",
+        color: "Trắng",
+        priceBase: 25990000,
+        stock: 150,
+        status: true,
+        sold: "1.6k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "8-xanh-12-256",
+        color: "Xanh Lá",
+        priceBase: 25990000,
+        stock: 150,
+        status: true,
+        sold: "1.6k",
+        version: ["12GB", "256GB"],
+      },
 
-      { id: "8-den-12-512", color: "Đen", price: 25990000, stock: 180, status: true, sold: "2k", version: ["12GB", "512GB"] },
-      { id: "8-trang-12-512", color: "Trắng", price: 25990000, stock: 150, status: true, sold: "1.6k", version: ["12GB", "512GB"] },
-      { id: "8-trang-12-512", color: "Xanh Lá", price: 25990000, stock: 150, status: true, sold: "1.6k", version: ["12GB", "512GB"] },
+      {
+        id: "8-den-12-512",
+        color: "Đen",
+        priceBase: 25990000,
+        stock: 180,
+        status: true,
+        sold: "2k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "8-trang-12-512",
+        color: "Trắng",
+        priceBase: 25990000,
+        stock: 150,
+        status: true,
+        sold: "1.6k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "8-trang-12-512",
+        color: "Xanh Lá",
+        priceBase: 25990000,
+        stock: 150,
+        status: true,
+        sold: "1.6k",
+        version: ["12GB", "512GB"],
+      },
 
-      { id: "8-den-16-512", color: "Đen", price: 28990000, stock: 100, status: true, sold: "1k", version: ["16GB", "512GB"] },
-      { id: "8-trang-16-512", color: "Trắng", price: 28990000, stock: 80, status: true, sold: "900", version: ["16GB", "512GB"] },
-      { id: "8-xanh-16-512", color: "Xanh Lá", price: 28990000, stock: 80, status: true, sold: "900", version: ["16GB", "512GB"] },
+      {
+        id: "8-den-16-512",
+        color: "Đen",
+        priceBase: 28990000,
+        stock: 100,
+        status: true,
+        sold: "1k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "8-trang-16-512",
+        color: "Trắng",
+        priceBase: 28990000,
+        stock: 80,
+        status: true,
+        sold: "900",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "8-xanh-16-512",
+        color: "Xanh Lá",
+        priceBase: 28990000,
+        stock: 80,
+        status: true,
+        sold: "900",
+        version: ["16GB", "512GB"],
+      },
 
-      { id: "8-den-16-256", color: "Đen", price: 28990000, stock: 100, status: true, sold: "1k", version: ["16GB", "256GB"] },
-      { id: "8-trang-16-256", color: "Trắng", price: 28990000, stock: 80, status: true, sold: "900", version: ["16GB", "256GB"] },
-      { id: "8-trang-16-256", color: "Xanh Lá", price: 28990000, stock: 80, status: true, sold: "900", version: ["16GB", "256GB"] }
+      {
+        id: "8-den-16-256",
+        color: "Đen",
+        priceBase: 28990000,
+        stock: 100,
+        status: true,
+        sold: "1k",
+        version: ["16GB", "256GB"],
+      },
+      {
+        id: "8-trang-16-256",
+        color: "Trắng",
+        priceBase: 28990000,
+        stock: 80,
+        status: true,
+        sold: "900",
+        version: ["16GB", "256GB"],
+      },
+      {
+        id: "8-trang-16-256",
+        color: "Xanh Lá",
+        priceBase: 28990000,
+        stock: 80,
+        status: true,
+        sold: "900",
+        version: ["16GB", "256GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/8/16-9-1.png",
@@ -708,27 +1026,27 @@ const Initial = [
       "../user/assets/image/sanpham/8/16-9-3.png",
       "../user/assets/image/sanpham/8/16-9-4.png",
       "../user/assets/image/sanpham/8/16-9-5.png",
-      "../user/assets/image/sanpham/8/16-9-6.png"
+      "../user/assets/image/sanpham/8/16-9-6.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Android 15, OxygenOS 15",
       "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
-      "RAM": "12GB/16GB",
+      RAM: "12GB/16GB",
       "Bộ nhớ trong": "256GB/512GB",
       "Màn hình": "6.8 inch AMOLED LTPO 2.0 120Hz",
       "Camera trước": "32MP",
       "Camera sau": "50MP + 48MP + 64MP",
-      "Pin": "5000mAh, sạc nhanh 100W",
+      Pin: "5000mAh, sạc nhanh 100W",
       "Kết nối": "5G, Wi-Fi 7, NFC, Bluetooth 5.4",
       "Bảo mật": "Vân tay dưới màn hình",
-      "Màu sắc": "Đen, Trắng, Xanh Lá"
+      "Màu sắc": "Đen, Trắng, Xanh Lá",
     },
     overview: `
     <h2>OnePlus 13 Pro – Sự cân bằng hoàn hảo giữa tốc độ và phong cách.</h2>
     <p>Chip Snapdragon 8 Gen 3 mạnh mẽ, camera Hasselblad chất lượng cao và sạc siêu nhanh 100W.</p>
     <img src="/user/assets/image/sanpham/8/thongtin1.png" alt="">
     <p>Thiết kế tinh tế, khung viền bo tròn mềm mại và màn hình LTPO AMOLED 120Hz.</p>
-  `
+  `,
   },
 
   {
@@ -736,92 +1054,210 @@ const Initial = [
     name: "Google Pixel 9 Pro",
     brand: "Google",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp9.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp9.png",
     price: 29990000,
     salebefore: 31990000,
     baseprice: 23000000,
     listVersions: [
       { name: "ram", option: ["12GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB"] }
+      { name: "dung lượng", option: ["256GB", "512GB"] },
     ],
     listColors: ["Xám", "Đen", "Xanh Bạc Hà"],
     versions: [
-      { id: "9-xam-12-256", color: "Xám", price: 29990000, stock: 200, status: true, sold: "2.5k", version: ["12GB", "256GB"] },
-      { id: "9-den-12-256", color: "Đen", price: 29990000, stock: 150, status: true, sold: "1.9k", version: ["12GB", "256GB"] },
-      { id: "9-xanh-12-256", color: "Xanh Bạc Hà", price: 29990000, stock: 150, status: true, sold: "1.9k", version: ["12GB", "256GB"] },
+      {
+        id: "9-xam-12-256",
+        color: "Xám",
+        priceBase: 29990000,
+        stock: 200,
+        status: true,
+        sold: "2.5k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "9-den-12-256",
+        color: "Đen",
+        priceBase: 29990000,
+        stock: 150,
+        status: true,
+        sold: "1.9k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "9-xanh-12-256",
+        color: "Xanh Bạc Hà",
+        priceBase: 29990000,
+        stock: 150,
+        status: true,
+        sold: "1.9k",
+        version: ["12GB", "256GB"],
+      },
 
-      { id: "9-xanh-12-512", color: "Xanh Bạc Hà", price: 32990000, stock: 120, status: true, sold: "1.2k", version: ["12GB", "512GB"] },
-      { id: "9-xam-12-512", color: "Xám", price: 32990000, stock: 100, status: true, sold: "800", version: ["12GB", "512GB"] },
-      { id: "9-den-12-512", color: "Đen", price: 32990000, stock: 100, status: true, sold: "800", version: ["12GB", "512GB"] }
+      {
+        id: "9-xanh-12-512",
+        color: "Xanh Bạc Hà",
+        priceBase: 32990000,
+        stock: 120,
+        status: true,
+        sold: "1.2k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "9-xam-12-512",
+        color: "Xám",
+        priceBase: 32990000,
+        stock: 100,
+        status: true,
+        sold: "800",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "9-den-12-512",
+        color: "Đen",
+        priceBase: 32990000,
+        stock: 100,
+        status: true,
+        sold: "800",
+        version: ["12GB", "512GB"],
+      },
     ],
-    imgDetail: [
-      "../user/assets/image/sanpham/9/16-9-1.png",
-    ],
+    imgDetail: ["../user/assets/image/sanpham/9/16-9-1.png"],
     infoDetail: {
       "Hệ điều hành": "Android 15",
       "Chip xử lý (CPU)": "Google Tensor G4",
-      "RAM": "12GB",
+      RAM: "12GB",
       "Bộ nhớ trong": "256GB/512GB",
       "Màn hình": "6.7 inch OLED LTPO 120Hz",
       "Camera trước": "24MP",
       "Camera sau": "50MP + 48MP + 48MP",
-      "Pin": "5100mAh, sạc nhanh 45W",
+      Pin: "5100mAh, sạc nhanh 45W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.3",
       "Bảo mật": "Face Unlock + Vân tay",
-      "Màu sắc": "Xám, Đen, Xanh Bạc Hà"
+      "Màu sắc": "Xám, Đen, Xanh Bạc Hà",
     },
     overview: `
     <h2>Google Pixel 9 Pro – Trải nghiệm thuần Google, AI cực mạnh.</h2>
     <p>Trang bị Tensor G4, camera HDR siêu thực và khả năng xử lý AI thông minh vượt trội.</p>
     <img src="/user/assets/image/sanpham/9/thongtin1.png" alt="">
     <p>Thiết kế thanh lịch, nhẹ tay, cùng giao diện Android tinh gọn, tối ưu trải nghiệm người dùng.</p>
-  `
+  `,
   },
   {
     id: "10",
     name: "Samsung Galaxy Z Fold 6",
     brand: "Samsung",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp10.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp10.png",
     price: 44990000,
     salebefore: 46990000,
     baseprice: 35000000,
     listVersions: [
       { name: "ram", option: ["12GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] }
+      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] },
     ],
     listColors: ["Xám Titan", "Kem", "Xanh"],
     versions: [
-      { id: "10-xam-12-256", color: "Xám Titan", price: 44990000, stock: 150, status: true, sold: "3.1k", version: ["12GB", "256GB"] },
-      { id: "10-kem-12-256", color: "Kem", price: 44990000, stock: 100, status: true, sold: "2.4k", version: ["12GB", "256GB"] },
-      { id: "10-xanh-12-256", color: "Xanh", price: 44990000, stock: 100, status: true, sold: "2.4k", version: ["12GB", "256GB"] },
+      {
+        id: "10-xam-12-256",
+        color: "Xám Titan",
+        priceBase: 44990000,
+        stock: 150,
+        status: true,
+        sold: "3.1k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "10-kem-12-256",
+        color: "Kem",
+        priceBase: 44990000,
+        stock: 100,
+        status: true,
+        sold: "2.4k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "10-xanh-12-256",
+        color: "Xanh",
+        priceBase: 44990000,
+        stock: 100,
+        status: true,
+        sold: "2.4k",
+        version: ["12GB", "256GB"],
+      },
 
-      { id: "10-xanh-12-512", color: "Xanh", price: 48990000, stock: 80, status: true, sold: "1.2k", version: ["12GB", "512GB"] },
-      { id: "10-kem-12-512", color: "Kem", price: 48990000, stock: 60, status: true, sold: "900", version: ["12GB", "512GB"] },
-      { id: "10-xam-12-512", color: "Xám Titan", price: 48990000, stock: 60, status: true, sold: "900", version: ["12GB", "512GB"] },
+      {
+        id: "10-xanh-12-512",
+        color: "Xanh",
+        priceBase: 48990000,
+        stock: 80,
+        status: true,
+        sold: "1.2k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "10-kem-12-512",
+        color: "Kem",
+        priceBase: 48990000,
+        stock: 60,
+        status: true,
+        sold: "900",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "10-xam-12-512",
+        color: "Xám Titan",
+        priceBase: 48990000,
+        stock: 60,
+        status: true,
+        sold: "900",
+        version: ["12GB", "512GB"],
+      },
 
-      { id: "10-xam-12-1", color: "Xám Titan", price: 53990000, stock: 60, status: true, sold: "900", version: ["12GB", "1TB"] },
-      { id: "10-kem-12-1", color: "Kem", price: 53990000, stock: 30, status: true, sold: "900", version: ["12GB", "1TB"] },
-      { id: "10-xanh-12-1", color: "Xanh", price: 53990000, stock: 80, status: true, sold: "1200", version: ["12GB", "1TB"] }
+      {
+        id: "10-xam-12-1",
+        color: "Xám Titan",
+        priceBase: 53990000,
+        stock: 60,
+        status: true,
+        sold: "900",
+        version: ["12GB", "1TB"],
+      },
+      {
+        id: "10-kem-12-1",
+        color: "Kem",
+        priceBase: 53990000,
+        stock: 30,
+        status: true,
+        sold: "900",
+        version: ["12GB", "1TB"],
+      },
+      {
+        id: "10-xanh-12-1",
+        color: "Xanh",
+        priceBase: 53990000,
+        stock: 80,
+        status: true,
+        sold: "1200",
+        version: ["12GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/10/16-9-1.png",
       "../user/assets/image/sanpham/10/16-9-2.png",
       "../user/assets/image/sanpham/10/16-9-3.png",
-      "../user/assets/image/sanpham/10/16-9-4.png"
+      "../user/assets/image/sanpham/10/16-9-4.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Android 15, One UI 7",
       "Chip xử lý (CPU)": "Snapdragon 8 Gen 3 for Galaxy",
-      "RAM": "12GB",
+      RAM: "12GB",
       "Bộ nhớ trong": "256GB/512GB/1TB",
       "Màn hình": "7.6 inch Dynamic AMOLED 2X, 120Hz",
       "Camera trước": "16MP dưới màn hình",
       "Camera sau": "50MP + 12MP + 10MP",
-      "Pin": "4600mAh, sạc nhanh 45W",
+      Pin: "4600mAh, sạc nhanh 45W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
       "Bảo mật": "Vân tay cạnh viền, nhận diện khuôn mặt",
-      "Màu sắc": "Xám Titan, Kem, Xanh"
+      "Màu sắc": "Xám Titan, Kem, Xanh",
     },
     overview: `
     <h2>Galaxy Z Fold6 – Smartphone gập đỉnh cao của Samsung.</h2>
@@ -831,40 +1267,134 @@ const Initial = [
     <p>Galaxy Z Fold6 được trang bị vi xử lý Snapdragon 8 Gen 3 for Galaxy, phát triển trên tiến trình 4 nm, mang đến hiệu suất vượt trội và tiết kiệm năng lượng tối ưu. So với thế hệ trước (Galaxy Z Fold5), hiệu suất của máy đã được cải thiện hơn 18%, giúp máy xử lý tốt cho các tác vụ hằng ngày một cách mượt mà, nhanh chóng.</p>
     <p>Giao diện tối ưu cho đa nhiệm, S Pen hỗ trợ làm việc chuyên nghiệp, gập mở mượt mà.</p>
     <img src="/user/assets/image/sanpham/10/thongtin2.png" alt="">
-  `
+  `,
   },
   {
     id: "11",
     name: "Xiaomi 15 Ultra",
     brand: "Xiaomi",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp11.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp11.png",
     price: 27990000,
     salebefore: 28990000,
     baseprice: 21000000,
     listVersions: [
       { name: "ram", option: ["12GB", "16GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB"] }
+      { name: "dung lượng", option: ["256GB", "512GB"] },
     ],
     listColors: ["Đen", "Trắng", "Xanh"],
     versions: [
+      {
+        id: "11-den-12-256",
+        color: "Đen",
+        priceBase: 27990000,
+        stock: 180,
+        status: true,
+        sold: "1.8k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "11-trang-12-256",
+        color: "Trắng",
+        priceBase: 27990000,
+        stock: 180,
+        status: true,
+        sold: "1.8k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "11-xanh-12-256",
+        color: "Xanh",
+        priceBase: 27990000,
+        stock: 180,
+        status: true,
+        sold: "1.8k",
+        version: ["12GB", "256GB"],
+      },
 
-      { id: "11-den-12-256", color: "Đen", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["12GB", "256GB"] },
-      { id: "11-trang-12-256", color: "Trắng", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["12GB", "256GB"] },
-      { id: "11-xanh-12-256", color: "Xanh", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["12GB", "256GB"] },
+      {
+        id: "11-den-16-256",
+        color: "Đen",
+        priceBase: 27990000,
+        stock: 180,
+        status: true,
+        sold: "1.8k",
+        version: ["16GB", "256GB"],
+      },
+      {
+        id: "11-trang-16-256",
+        color: "Trắng",
+        priceBase: 27990000,
+        stock: 180,
+        status: true,
+        sold: "1.8k",
+        version: ["16GB", "256GB"],
+      },
+      {
+        id: "11-xanh-16-256",
+        color: "Xanh",
+        priceBase: 27990000,
+        stock: 180,
+        status: true,
+        sold: "1.8k",
+        version: ["16GB", "256GB"],
+      },
 
-      { id: "11-den-16-256", color: "Đen", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["16GB", "256GB"] },
-      { id: "11-trang-16-256", color: "Trắng", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["16GB", "256GB"] },
-      { id: "11-xanh-16-256", color: "Xanh", price: 27990000, stock: 180, status: true, sold: "1.8k", version: ["16GB", "256GB"] },
+      {
+        id: "11-den-16-512",
+        color: "Đen",
+        priceBase: 30990000,
+        stock: 120,
+        status: true,
+        sold: "1.1k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "11-trang-16-512",
+        color: "Trắng",
+        priceBase: 30990000,
+        stock: 120,
+        status: true,
+        sold: "1.1k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "11-xanh-16-512",
+        color: "Xanh",
+        priceBase: 30990000,
+        stock: 100,
+        status: true,
+        sold: "900",
+        version: ["16GB", "512GB"],
+      },
 
-      { id: "11-den-16-512", color: "Đen", price: 30990000, stock: 120, status: true, sold: "1.1k", version: ["16GB", "512GB"] },
-      { id: "11-trang-16-512", color: "Trắng", price: 30990000, stock: 120, status: true, sold: "1.1k", version: ["16GB", "512GB"] },
-      { id: "11-xanh-16-512", color: "Xanh", price: 30990000, stock: 100, status: true, sold: "900", version: ["16GB", "512GB"] },
-
-      { id: "11-den-12-512", color: "Đen", price: 30990000, stock: 120, status: true, sold: "1.1k", version: ["12GB", "512GB"] },
-      { id: "11-trang-12-512", color: "Trắng", price: 30990000, stock: 120, status: true, sold: "1.1k", version: ["12GB", "512GB"] },
-      { id: "11-xanh-12-512", color: "Xanh", price: 30990000, stock: 100, status: true, sold: "900", version: ["12GB", "512GB"] }
-
+      {
+        id: "11-den-12-512",
+        color: "Đen",
+        priceBase: 30990000,
+        stock: 120,
+        status: true,
+        sold: "1.1k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "11-trang-12-512",
+        color: "Trắng",
+        priceBase: 30990000,
+        stock: 120,
+        status: true,
+        sold: "1.1k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "11-xanh-12-512",
+        color: "Xanh",
+        priceBase: 30990000,
+        stock: 100,
+        status: true,
+        sold: "900",
+        version: ["12GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/11/16-9-1.png",
@@ -872,20 +1402,20 @@ const Initial = [
       "../user/assets/image/sanpham/11/16-9-3.png",
       "../user/assets/image/sanpham/11/16-9-4.png",
       "../user/assets/image/sanpham/11/16-9-5.png",
-      "../user/assets/image/sanpham/11/16-9-6.png"
+      "../user/assets/image/sanpham/11/16-9-6.png",
     ],
     infoDetail: {
       "Hệ điều hành": "HyperOS, Android 15",
       "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
-      "RAM": "12GB/16GB",
+      RAM: "12GB/16GB",
       "Bộ nhớ trong": "256GB/512GB",
       "Màn hình": "6.73 inch AMOLED WQHD+ 120Hz",
       "Camera trước": "32MP",
       "Camera sau": "50MP + 50MP + 50MP + 50MP",
-      "Pin": "5000mAh, sạc nhanh 90W",
+      Pin: "5000mAh, sạc nhanh 90W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
       "Bảo mật": "Vân tay quang học dưới màn hình",
-      "Màu sắc": "Đen, Trắng, Xanh"
+      "Màu sắc": "Đen, Trắng, Xanh",
     },
     overview: `
     <h2>Xiaomi 15 Ultra – Camera Leica chuyên nghiệp, hiệu năng mạnh mẽ.</h2>
@@ -897,7 +1427,7 @@ const Initial = [
     <img src="/user/assets/image/sanpham/11/thongtin3.png" alt="">
     <p>Ống kính tele 70 mm và siêu tele 100 mm không chỉ hỗ trợ chụp chân dung tự nhiên mà còn giúp ghi lại những khoảnh khắc từ xa với độ sắc nét cao. Đặc biệt, camera siêu tele với khẩu độ f/2,6 và cảm biến 200 MP sẽ mang đến khả năng phóng đại hình ảnh vượt trội cho người dùng, trong khi vẫn giữ nguyên độ chi tiết và màu sắc chân thực.</p>
     <p>Bên cạnh chụp ảnh, điện thoại Xiaomi AI còn hỗ trợ quay video chuyên nghiệp với khả năng quay 4K 60 fps ở toàn bộ dải tiêu cự. Đối với những nhà làm phim hoặc người dùng đam mê sáng tạo nội dung, chế độ quay video Log và hỗ trợ chuẩn màu ACES giúp đảm bảo chất lượng hình ảnh đạt mức tối ưu.</p>
-  `
+  `,
   },
 
   {
@@ -905,20 +1435,34 @@ const Initial = [
     name: "Nothing Phone 3",
     brand: "Nothing",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp12.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp12.png",
     price: 19990000,
     salebefore: 20990000,
     baseprice: 16000000,
     listVersions: [
       { name: "ram", option: ["12GB"] },
-      { name: "dung lượng", option: ["256GB"] }
+      { name: "dung lượng", option: ["256GB"] },
     ],
     listColors: ["Đen", "Trắng"],
     versions: [
-
-      { id: "12-den-12-256", color: "Đen", price: 19990000, stock: 100, status: true, sold: "1.1k", version: ["12GB", "256GB"] },
-      { id: "12-trang-12-256", color: "Trắng", price: 19990000, stock: 80, status: true, sold: "900", version: ["12GB", "256GB"] }
-
+      {
+        id: "12-den-12-256",
+        color: "Đen",
+        priceBase: 19990000,
+        stock: 100,
+        status: true,
+        sold: "1.1k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "12-trang-12-256",
+        color: "Trắng",
+        priceBase: 19990000,
+        stock: 80,
+        status: true,
+        sold: "900",
+        version: ["12GB", "256GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/12/16-9-1.png",
@@ -930,15 +1474,15 @@ const Initial = [
     infoDetail: {
       "Hệ điều hành": "Nothing OS 3.0",
       "Chip xử lý (CPU)": "Snapdragon 8s Gen 4",
-      "RAM": "12GB",
+      RAM: "12GB",
       "Bộ nhớ trong": "256GB",
       "Màn hình": "6.7 inch OLED 120Hz",
       "Camera trước": "32MP",
       "Camera sau": "50MP + 50MP",
-      "Pin": "4700mAh, sạc nhanh 45W",
+      Pin: "4700mAh, sạc nhanh 45W",
       "Kết nối": "5G, Wi-Fi 7",
       "Bảo mật": "Vân tay quang học dưới màn hình",
-      "Màu sắc": "Đen, Trắng"
+      "Màu sắc": "Đen, Trắng",
     },
     overview: `
     <h2>Nothing Phone (3) – Tối giản nhưng nổi bật.</h2>
@@ -948,27 +1492,50 @@ const Initial = [
     <p>Nothing Phone 3 được trang bị không gian hiển thị cao cấp với màn hình AMOLED 6,67 inch, độ phân giải 1.260 x 2.800 pixel, cùng tần số quét cao 120Hz, đảm bảo khả năng mang lại hình ảnh mượt mà và sắc nét.</p>
     <p>Ấn tượng nhất là máy có độ sáng tối đa lên đến 4.500 nits – đây là mức đỉnh cực cao trong điều kiện ngoài trời nắng, hỗ trợ hiển thị HDR, thông số chuẩn cao cấp vượt mặt các mẫu smartphone hàng đầu như Galaxy S24 Ultra (2.600 nit) và iPhone 15 Pro Max (~2.000 nit).</p>
     <img src="/user/assets/image/sanpham/12/thongtin2.png" alt="">
-  `
+  `,
   },
   {
     id: "13",
     name: "Sony Xperia 1 VI",
     brand: "Sony",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp13.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp13.png",
     price: 33990000,
     salebefore: 35990000,
     baseprice: 27000000,
     listVersions: [
       { name: "ram", option: ["12GB"] },
-      { name: "dung lượng", option: ["512GB"] }
+      { name: "dung lượng", option: ["512GB"] },
     ],
     listColors: ["Đen", "Xanh Rêu", "Bạc"],
     versions: [
-
-      { id: "13-den-12-512", color: "Đen", price: 33990000, stock: 90, status: true, sold: "800", version: ["12GB", "512GB"] },
-      { id: "13-xanh-12-512", color: "Xanh Rêu", price: 33990000, stock: 90, status: true, sold: "800", version: ["12GB", "512GB"] },
-      { id: "13-bac-12-512", color: "Bạc", price: 33990000, stock: 70, status: true, sold: "600", version: ["12GB", "512GB"] }
+      {
+        id: "13-den-12-512",
+        color: "Đen",
+        priceBase: 33990000,
+        stock: 90,
+        status: true,
+        sold: "800",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "13-xanh-12-512",
+        color: "Xanh Rêu",
+        priceBase: 33990000,
+        stock: 90,
+        status: true,
+        sold: "800",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "13-bac-12-512",
+        color: "Bạc",
+        priceBase: 33990000,
+        stock: 70,
+        status: true,
+        sold: "600",
+        version: ["12GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/13/16-9-1.png",
@@ -976,26 +1543,26 @@ const Initial = [
       "../user/assets/image/sanpham/13/16-9-3.png",
       "../user/assets/image/sanpham/13/16-9-4.png",
       "../user/assets/image/sanpham/13/16-9-5.png",
-      "../user/assets/image/sanpham/13/16-9-6.png"
+      "../user/assets/image/sanpham/13/16-9-6.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Android 15",
       "Chip xử lý (CPU)": "Snapdragon 8 Gen 3",
-      "RAM": "12GB",
+      RAM: "12GB",
       "Bộ nhớ trong": "512GB",
       "Màn hình": "6.5 inch 4K HDR OLED 120Hz",
       "Camera trước": "12MP",
       "Camera sau": "48MP + 12MP + 12MP",
-      "Pin": "5000mAh, sạc nhanh 30W",
+      Pin: "5000mAh, sạc nhanh 30W",
       "Kết nối": "5G, Wi-Fi 6E, NFC",
       "Bảo mật": "Cảm biến vân tay cạnh viền",
-      "Màu sắc": "Đen, Xanh Rêu, Bạc"
+      "Màu sắc": "Đen, Xanh Rêu, Bạc",
     },
     overview: `
     <h2>Sony Xperia 1 VI – Đỉnh cao quay phim và nhiếp ảnh chuyên nghiệp.</h2>
     <p>Trang bị màn hình 4K HDR độc quyền, camera cảm biến Exmor RS, trải nghiệm điện ảnh thực thụ.</p>
     <img src="/user/assets/image/sanpham/13/thongtin1.png" alt="">
-  `
+  `,
   },
 
   {
@@ -1003,29 +1570,99 @@ const Initial = [
     name: "Samsung Galaxy S25 Ultra",
     brand: "Samsung",
     category: "Điện thoại",
-    thumbnail: "../user/assets/image/sanpham/sp14.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp14.png",
     price: 33990000,
     salebefore: 36990000,
     baseprice: 22000000,
     listVersions: [
       { name: "ram", option: ["12GB"] },
-      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] }
+      { name: "dung lượng", option: ["256GB", "512GB", "1TB"] },
     ],
     listColors: ["Đen Titan", "Trắng Sương", "Xanh Băng"],
     versions: [
+      {
+        id: "14-den-12-256",
+        color: "Đen Titan",
+        priceBase: 33990000,
+        stock: 300,
+        status: true,
+        sold: "7.1k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "14-trang-12-256",
+        color: "Trắng Sương",
+        priceBase: 33990000,
+        stock: 250,
+        status: true,
+        sold: "6.4k",
+        version: ["12GB", "256GB"],
+      },
+      {
+        id: "14-xanh-12-256",
+        color: "Xanh Băng",
+        priceBase: 33990000,
+        stock: 300,
+        status: true,
+        sold: "4.3k",
+        version: ["12GB", "256GB"],
+      },
 
-      { id: "14-den-12-256", color: "Đen Titan", price: 33990000, stock: 300, status: true, sold: "7.1k", version: ["12GB", "256GB"] },
-      { id: "14-trang-12-256", color: "Trắng Sương", price: 33990000, stock: 250, status: true, sold: "6.4k", version: ["12GB", "256GB"] },
-      { id: "14-xanh-12-256", color: "Xanh Băng", price: 33990000, stock: 300, status: true, sold: "4.3k", version: ["12GB", "256GB"] },
+      {
+        id: "14-den-12-512",
+        color: "Đen Titan",
+        priceBase: 38990000,
+        stock: 200,
+        status: true,
+        sold: "8.2k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "14-trang-12-512",
+        color: "Trắng Sương",
+        priceBase: 38990000,
+        stock: 150,
+        status: true,
+        sold: "3.5k",
+        version: ["12GB", "512GB"],
+      },
+      {
+        id: "14-xanh-12-512",
+        color: "Xanh Băng",
+        priceBase: 38990000,
+        stock: 100,
+        status: true,
+        sold: "2.8k",
+        version: ["12GB", "512GB"],
+      },
 
-      { id: "14-den-12-512", color: "Đen Titan", price: 38990000, stock: 200, status: true, sold: "8.2k", version: ["12GB", "512GB"] },
-      { id: "14-trang-12-512", color: "Trắng Sương", price: 38990000, stock: 150, status: true, sold: "3.5k", version: ["12GB", "512GB"] },
-      { id: "14-xanh-12-512", color: "Xanh Băng", price: 38990000, stock: 100, status: true, sold: "2.8k", version: ["12GB", "512GB"] },
-
-      { id: "14-den-12-1", color: "Đen Titan", price: 41990000, stock: 50, status: true, sold: "5.2k", version: ["12GB", "1TB"] },
-      { id: "14-trang-12-1", color: "Trắng Sương", price: 41990000, stock: 50, status: true, sold: "3.2k", version: ["12GB", "1TB"] },
-      { id: "14-xanh-12-1", color: "Xanh Băng", price: 41990000, stock: 50, status: true, sold: "2.4k", version: ["12GB", "1TB"] }
-
+      {
+        id: "14-den-12-1",
+        color: "Đen Titan",
+        priceBase: 41990000,
+        stock: 50,
+        status: true,
+        sold: "5.2k",
+        version: ["12GB", "1TB"],
+      },
+      {
+        id: "14-trang-12-1",
+        color: "Trắng Sương",
+        priceBase: 41990000,
+        stock: 50,
+        status: true,
+        sold: "3.2k",
+        version: ["12GB", "1TB"],
+      },
+      {
+        id: "14-xanh-12-1",
+        color: "Xanh Băng",
+        priceBase: 41990000,
+        stock: 50,
+        status: true,
+        sold: "2.4k",
+        version: ["12GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/14/16-9-1.png",
@@ -1039,16 +1676,16 @@ const Initial = [
       "Hệ điều hành": "Android 15, One UI 7",
       "Chip xử lý (CPU)": "Snapdragon 8 Gen 4 for Galaxy",
       "Chip đồ họa (GPU)": "Adreno 830",
-      "RAM": "12GB",
+      RAM: "12GB",
       "Bộ nhớ trong": "256GB/512GB/1TB",
       "Màn hình": "6.8 inch QHD+ Dynamic AMOLED 2X, 120Hz",
       "Camera trước": "12MP",
       "Camera sau": "200MP + 50MP + 12MP + 10MP",
-      "Pin": "5000mAh, sạc nhanh 45W",
+      Pin: "5000mAh, sạc nhanh 45W",
       "Kết nối": "5G, Wi-Fi 7, Bluetooth 5.4",
       "Bảo mật": "Vân tay siêu âm, Nhận diện khuôn mặt",
       "Trọng lượng": "233g",
-      "Màu sắc": "Đen Titan, Trắng Sương, Xanh Băng"
+      "Màu sắc": "Đen Titan, Trắng Sương, Xanh Băng",
     },
     overview: `
       <h2>Galaxy S25 Ultra – Định nghĩa lại sức mạnh flagship Android.</h2>
@@ -1059,37 +1696,99 @@ const Initial = [
       <p>Tần số quét màn hình 120 Hz được duy trì, mang lại trải nghiệm mượt mà khi cuộn trang hoặc chơi game. Hơn nữa, công nghệ Vision Booster được cải tiến sẽ tối ưu hóa độ sáng và màu sắc cùng màu đen sâu dựa trên điều kiện ánh sáng xung quanh, giúp nội dung trên màn hình trở nên sống động hơn.</p>
       <p>Snapdragon 8 Elite For Galaxy chính thức được xác nhận là vi xử lý của siêu phẩm này. Đây là chip tùy chỉnh đặc biệt từ Qualcomm, độc quyền cho Samsung, mang lại hiệu suất vượt trội hơn 20% so với thế hệ trước. Đồng thời, khả năng tối ưu năng lượng được cải thiện đáng kể, giúp kéo dài thời lượng pin và nâng cao trải nghiệm sử dụng.</p>
       <img src="/user/assets/image/sanpham/14/thongtin2.png" alt="">
-    `
+    `,
   },
 
   {
     id: "16",
     name: "MacBook Pro M3 14 inch",
     brand: "Apple",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp16.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp16.png",
     price: 47990000,
     salebefore: 49990000,
     baseprice: 39000000,
     listVersions: [
       { name: "ram", option: ["16GB", "32GB"] },
-      { name: "dung lượng", option: ["512GB", "1TB"] }
+      { name: "dung lượng", option: ["512GB", "1TB"] },
     ],
     listColors: ["Xám Vũ Trụ", "Bạc"],
     versions: [
+      {
+        id: "16-xam-16-512",
+        color: "Xám Vũ Trụ",
+        priceBase: 47990000,
+        stock: 200,
+        status: true,
+        sold: "4.2k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "16-bac-16-512",
+        color: "Bạc",
+        priceBase: 47990000,
+        stock: 300,
+        status: true,
+        sold: "3.8k",
+        version: ["16GB", "512GB"],
+      },
 
-      { id: "16-xam-16-512", color: "Xám Vũ Trụ", price: 47990000, stock: 200, status: true, sold: "4.2k", version: ["16GB", "512GB"] },
-      { id: "16-bac-16-512", color: "Bạc", price: 47990000, stock: 300, status: true, sold: "3.8k", version: ["16GB", "512GB"] },
+      {
+        id: "16-den-32-512",
+        color: "Xám Vũ Trụ",
+        priceBase: 47990000,
+        stock: 200,
+        status: true,
+        sold: "4.2k",
+        version: ["32GB", "512GB"],
+      },
+      {
+        id: "16-xam-32-512",
+        color: "Bạc",
+        priceBase: 47990000,
+        stock: 300,
+        status: true,
+        sold: "3.8k",
+        version: ["32GB", "512GB"],
+      },
 
-      { id: "16-den-32-512", color: "Xám Vũ Trụ", price: 47990000, stock: 200, status: true, sold: "4.2k", version: ["32GB", "512GB"] },
-      { id: "16-xam-32-512", color: "Bạc", price: 47990000, stock: 300, status: true, sold: "3.8k", version: ["32GB", "512GB"] },
+      {
+        id: "16-xam-32-1",
+        color: "Xám Vũ Trụ",
+        priceBase: 51990000,
+        stock: 100,
+        status: true,
+        sold: "2.3k",
+        version: ["32GB", "1TB"],
+      },
+      {
+        id: "16-bac-32-1",
+        colorcolor: "Bạc",
+        priceBase: 51990000,
+        stock: 100,
+        status: true,
+        sold: "1.9k",
+        version: ["32GB", "1TB"],
+      },
 
-      { id: "16-xam-32-1", color: "Xám Vũ Trụ", price: 51990000, stock: 100, status: true, sold: "2.3k", version: ["32GB", "1TB"] },
-      { id: "16-bac-32-1", colorcolor: "Bạc", price: 51990000, stock: 100, status: true, sold: "1.9k", version: ["32GB", "1TB"] },
-
-      { id: "16-xam-16-1", color: "Xám Vũ Trụ", price: 51990000, stock: 100, status: true, sold: "2.3k", version: ["16GB", "1TB"] },
-      { id: "16-bac-16-1", color: "Bạc", price: 51990000, stock: 100, status: true, sold: "1.9k", version: ["16GB", "1TB"] }
-
+      {
+        id: "16-xam-16-1",
+        color: "Xám Vũ Trụ",
+        priceBase: 51990000,
+        stock: 100,
+        status: true,
+        sold: "2.3k",
+        version: ["16GB", "1TB"],
+      },
+      {
+        id: "16-bac-16-1",
+        color: "Bạc",
+        priceBase: 51990000,
+        stock: 100,
+        status: true,
+        sold: "1.9k",
+        version: ["16GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/16/16-9-1.png",
@@ -1098,20 +1797,20 @@ const Initial = [
       "../user/assets/image/sanpham/16/16-9-4.png",
       "../user/assets/image/sanpham/16/16-9-5.png",
       "../user/assets/image/sanpham/16/16-9-6.png",
-      "../user/assets/image/sanpham/16/16-9-7.png"
+      "../user/assets/image/sanpham/16/16-9-7.png",
     ],
     infoDetail: {
       "Hệ điều hành": "macOS Sequoia",
-      "CPU": "Apple M3 Pro",
-      "GPU": "16 nhân",
-      "RAM": "16GB / 32GB",
+      CPU: "Apple M3 Pro",
+      GPU: "16 nhân",
+      RAM: "16GB / 32GB",
       "Ổ cứng": "512GB / 1TB SSD",
       "Màn hình": "14.2 inch Liquid Retina XDR",
       "Trọng lượng": "1.55kg",
-      "Pin": "18 giờ phát video",
+      Pin: "18 giờ phát video",
       "Cổng kết nối": "HDMI, Thunderbolt 4, MagSafe 3",
       "Bảo mật": "Touch ID",
-      "Màu sắc": "Bạc, Xám Vũ Trụ"
+      "Màu sắc": "Bạc, Xám Vũ Trụ",
     },
     overview: `
   <h2>MacBook Pro M3 – Sức mạnh vượt trội trong thiết kế sang trọng</h2>
@@ -1122,35 +1821,99 @@ const Initial = [
   <p>Sản phẩm trang bị màn hình 14.2 inch cùng độ phân giải Liquid Retina XDR display (3024 x 1964) với khả năng hiển thị độ sáng liên tục 1000 nits cho XDR và độ sáng tối đa lên đến 1600 nits cho nội dung HDR, nó mang đến một trải nghiệm xem ảnh và video tuyệt vời. Tỷ lệ tương phản cao giữa ánh sáng và bóng tối làm cho mọi hình ảnh trong tầm mắt trở nên sắc nét và sống động hơn bao giờ hết.</p>
   <p>Màn hình Liquid Retina XDR cũng xuất sắc trong việc tái hiển thị màu bởi công nghệ Wide color và 1 tỷ màu sắc. Nó đem lại cho bạn gam màu sống động, chính xác và tươi sáng giúp nội dung trở nên chân thực và cuốn hút.</p>  
   <img src="/user/assets/image/sanpham/16/thongtin2.png" alt="">
-  `
+  `,
   },
   {
     id: "17",
     name: "ASUS ROG Zephyrus G14 (2025)",
     brand: "ASUS",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp17.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp17.png",
     price: 39990000,
     salebefore: 42990000,
     baseprice: 33000000,
     listVersions: [
       { name: "ram", option: ["16GB", "32GB"] },
-      { name: "dung lượng", option: ["512GB", "1TB"] }
+      { name: "dung lượng", option: ["512GB", "1TB"] },
     ],
     listColors: ["Trắng", "Xám"],
     versions: [
+      {
+        id: "17-trang-16-512",
+        color: "Trắng",
+        priceBase: 39990000,
+        stock: 200,
+        status: true,
+        sold: "2.5k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "17-xam-16-512",
+        color: "Xám",
+        priceBase: 39990000,
+        stock: 200,
+        status: true,
+        sold: "3.1k",
+        version: ["16GB", "512GB"],
+      },
 
-      { id: "17-trang-16-512", color: "Trắng", price: 39990000, stock: 200, status: true, sold: "2.5k", version: ["16GB", "512GB"] },
-      { id: "17-xam-16-512", color: "Xám", price: 39990000, stock: 200, status: true, sold: "3.1k", version: ["16GB", "512GB"] },
+      {
+        id: "17-trang-32-512",
+        color: "Trắng",
+        priceBase: 39990000,
+        stock: 200,
+        status: true,
+        sold: "2.5k",
+        version: ["32GB", "512GB"],
+      },
+      {
+        id: "17-xam-32-512",
+        color: "Xám",
+        priceBase: 39990000,
+        stock: 200,
+        status: true,
+        sold: "3.1k",
+        version: ["32GB", "512GB"],
+      },
 
-      { id: "17-trang-32-512", color: "Trắng", price: 39990000, stock: 200, status: true, sold: "2.5k", version: ["32GB", "512GB"] },
-      { id: "17-xam-32-512", color: "Xám", price: 39990000, stock: 200, status: true, sold: "3.1k", version: ["32GB", "512GB"] },
+      {
+        id: "17-trang-32-1",
+        color: "Trắng",
+        priceBase: 44990000,
+        stock: 150,
+        status: true,
+        sold: "1.8k",
+        version: ["32GB", "1TB"],
+      },
+      {
+        id: "17-xam-32-1",
+        color: "Xám",
+        priceBase: 44990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["32GB", "1TB"],
+      },
 
-      { id: "17-trang-32-1", color: "Trắng", price: 44990000, stock: 150, status: true, sold: "1.8k", version: ["32GB", "1TB"] },
-      { id: "17-xam-32-1", color: "Xám", price: 44990000, stock: 100, status: true, sold: "1.2k", version: ["32GB", "1TB"] },
-
-      { id: "17-trang-16-1", color: "Trắng", price: 44990000, stock: 150, status: true, sold: "1.8k", version: ["16GB", "1TB"] },
-      { id: "17-xam-16-1", color: "Xám", color: "Xám", price: 44990000, stock: 100, status: true, sold: "1.2k", version: ["16GB", "1TB"] }
+      {
+        id: "17-trang-16-1",
+        color: "Trắng",
+        priceBase: 44990000,
+        stock: 150,
+        status: true,
+        sold: "1.8k",
+        version: ["16GB", "1TB"],
+      },
+      {
+        id: "17-xam-16-1",
+        color: "Xám",
+        color: "Xám",
+        priceBase: 44990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["16GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/17/16-9-1.png",
@@ -1158,79 +1921,141 @@ const Initial = [
       "../user/assets/image/sanpham/17/16-9-3.png",
       "../user/assets/image/sanpham/17/16-9-4.png",
       "../user/assets/image/sanpham/17/16-9-5.png",
-      "../user/assets/image/sanpham/17/16-9-6.png"
+      "../user/assets/image/sanpham/17/16-9-6.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11 Home",
-      "CPU": "AMD Ryzen 9 8945HS",
-      "GPU": "NVIDIA RTX 4070 8GB",
-      "RAM": "16GB / 32GB",
+      CPU: "AMD Ryzen 9 8945HS",
+      GPU: "NVIDIA RTX 4070 8GB",
+      RAM: "16GB / 32GB",
       "Ổ cứng": "512GB / 1TB SSD",
       "Màn hình": "14 inch QHD+ 165Hz",
       "Trọng lượng": "1.6kg",
-      "Pin": "76Wh",
+      Pin: "76Wh",
       "Cổng kết nối": "USB-C, HDMI, Jack 3.5mm",
       "Bảo mật": "Mở khóa khuôn mặt",
-      "Màu sắc": "Trắng, Xám"
+      "Màu sắc": "Trắng, Xám",
     },
     overview: `
   <h2>ASUS ROG Zephyrus G14 – Hiệu năng mạnh mẽ cho game thủ và nhà sáng tạo</h2>
-  <p>Chiếc Lap top gaming gọn nhẹ nhất với hiệu năng cao, GPU RTX 4070 và màn hình QHD+ 165Hz. Hoàn hảo cho cả chơi game và làm việc.</p>
+  <p>Chiếc Laptop gaming gọn nhẹ nhất với hiệu năng cao, GPU RTX 4070 và màn hình QHD+ 165Hz. Hoàn hảo cho cả chơi game và làm việc.</p>
   <p>Kích thước 31.1 x 22.0 x 1.59 ~ 1.63 cm và trọng lượng 1.50 kg (3.31 lbs) làm cho thiết bị này trở thành một lựa chọn phù hợp cho người dùng thường xuyên di chuyển. Với thiết kế nhỏ gọn, bạn có thể dễ dàng mang theo trong túi xách hoặc balo mà không cảm thấy nặng nề.</p>
   <p>Độ dày từ 1.59 cm đến 1.63 cm mang lại sự thanh mảnh, phù hợp cho các không gian làm việc hiện đại hoặc những chuyến công tác dài ngày. Bên cạnh đó, laptop Asus Gaming ROG Zephyrus G14 GA403UU-QS135W có màu xám sang trọng là điểm nhấn, tạo cảm giác tinh tế và chuyên nghiệp cho thiết bị. </p>
   <p>Trang bị màn hình 14-inch kết hợp độ phân giải 3K (2880 x 1800) , từ đó đem đến hông gian hiển thị rõ nét. Công nghệ OLED tiên tiến giúp tái tạo màu sắc sống động, chân thực và đạt độ sáng tối đa lên đến 500 nits, đảm bảo hiển thị tốt trong mọi điều kiện ánh sáng.</p>
   <p>Tốc độ làm mới 120Hz và thời gian phản hồi 0.2ms (G2G) giúp hình ảnh chuyển động nhanh nhạy, giảm thiểu hiện tượng nhòe, phù hợp cho các tác vụ đòi hỏi tốc độ cao. Laptop Asus Gaming ROG Zephyrus G14 GA403UU-QS135W trang bị góc nhìn rộng 85/85 đảm bảo hình ảnh không bị biến dạng dù nhìn từ nhiều hướng.</p>
   <img src="/user/assets/image/sanpham/17/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "18",
     name: "Dell XPS 13 Plus (2025)",
     brand: "Dell",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp18.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp18.png",
     price: 42990000,
     salebefore: 45990000,
     baseprice: 36000000,
     listVersions: [
       { name: "ram", option: ["16GB", "32GB"] },
-      { name: "dung lượng", option: ["512GB", "1TB"] }
+      { name: "dung lượng", option: ["512GB", "1TB"] },
     ],
     listColors: ["Bạc", "Đen Carbon"],
     versions: [
+      {
+        id: "18-bac-16-512",
+        color: "Bạc",
+        priceBase: 42990000,
+        stock: 250,
+        status: true,
+        sold: "2.1k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "18-den-16-512",
+        color: "Đen Carbon",
+        priceBase: 42990000,
+        stock: 200,
+        status: true,
+        sold: "1.9k",
+        version: ["16GB", "512GB"],
+      },
 
-      { id: "18-bac-16-512", color: "Bạc", price: 42990000, stock: 250, status: true, sold: "2.1k", version: ["16GB", "512GB"] },
-      { id: "18-den-16-512", color: "Đen Carbon", price: 42990000, stock: 200, status: true, sold: "1.9k", version: ["16GB", "512GB"] },
+      {
+        id: "18-bac-32-512",
+        color: "Bạc",
+        priceBase: 42990000,
+        stock: 250,
+        status: true,
+        sold: "2.1k",
+        version: ["32GB", "512GB"],
+      },
+      {
+        id: "18-den-32-512",
+        color: "Đen Carbon",
+        priceBase: 42990000,
+        stock: 200,
+        status: true,
+        sold: "1.9k",
+        version: ["32GB", "512GB"],
+      },
 
-      { id: "18-bac-32-512", color: "Bạc", price: 42990000, stock: 250, status: true, sold: "2.1k", version: ["32GB", "512GB"] },
-      { id: "18-den-32-512", color: "Đen Carbon", price: 42990000, stock: 200, status: true, sold: "1.9k", version: ["32GB", "512GB"] },
+      {
+        id: "18-bac-16-1",
+        color: "Bạc",
+        priceBase: 47990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["16GB", "1TB"],
+      },
+      {
+        id: "18-den-16-1",
+        color: "Đen Carbon",
+        priceBase: 47990000,
+        stock: 100,
+        status: true,
+        sold: "1.5k",
+        version: ["16GB", "1TB"],
+      },
 
-      { id: "18-bac-16-1", color: "Bạc", price: 47990000, stock: 100, status: true, sold: "1.2k", version: ["16GB", "1TB"] },
-      { id: "18-den-16-1", color: "Đen Carbon", price: 47990000, stock: 100, status: true, sold: "1.5k", version: ["16GB", "1TB"] },
-
-      { id: "18-bac-32-1", color: "Bạc", price: 47990000, stock: 100, status: true, sold: "1.2k", version: ["32GB", "1TB"] },
-      { id: "18-den-32-1", color: "Đen Carbon", price: 47990000, stock: 100, status: true, sold: "1.5k", version: ["32GB", "1TB"] }
-
+      {
+        id: "18-bac-32-1",
+        color: "Bạc",
+        priceBase: 47990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["32GB", "1TB"],
+      },
+      {
+        id: "18-den-32-1",
+        color: "Đen Carbon",
+        priceBase: 47990000,
+        stock: 100,
+        status: true,
+        sold: "1.5k",
+        version: ["32GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/18/16-9-1.png",
       "../user/assets/image/sanpham/18/16-9-2.png",
       "../user/assets/image/sanpham/18/16-9-3.png",
       "../user/assets/image/sanpham/18/16-9-4.png",
-      "../user/assets/image/sanpham/18/16-9-5.png"
+      "../user/assets/image/sanpham/18/16-9-5.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11 Pro",
-      "CPU": "Intel Core Ultra 7 155H",
-      "GPU": "Intel Arc tích hợp",
-      "RAM": "16GB / 32GB LPDDR5",
+      CPU: "Intel Core Ultra 7 155H",
+      GPU: "Intel Arc tích hợp",
+      RAM: "16GB / 32GB LPDDR5",
       "Ổ cứng": "512GB / 1TB SSD",
       "Màn hình": "13.4 inch OLED 3.2K",
       "Trọng lượng": "1.23kg",
-      "Pin": "55Wh",
+      Pin: "55Wh",
       "Cổng kết nối": "2x Thunderbolt 4, USB-C",
       "Bảo mật": "Cảm biến vân tay",
-      "Màu sắc": "Bạc, Đen Carbon"
+      "Màu sắc": "Bạc, Đen Carbon",
     },
     overview: `
   <h2>Dell XPS 13 Plus – Sang trọng, mạnh mẽ, và tối giản</h2>
@@ -1242,36 +2067,99 @@ const Initial = [
   <img src="/user/assets/image/sanpham/18/thongtin2.png" alt="">
   <p>Màn hình laptop Dell sở hữu kích thước 13.4 inch sử dụng tấm nền WVA cho góc nhìn rộng rãi hơn, thoải mái quan sát đa dạng nội dung khi làm việc hay giải trí. Thêm vào đó, tính năng cảm ứng đa điểm còn giúp người dùng dễ dàng sử dụng hơn với các thao tác kéo thả, di vuốt trực tiếp lên màn hình.</p>
   <p>Độ phân giải 3.5K (3456 x 2160) - OLED mang đến sắc độ màu rực rỡ, độ sâu màu cao tái hiện những khung hình chi tiết và rõ nét nhất cho người dùng, không chỉ nâng cao các trải nghiệm giải trí thêm đã mắt mà còn giúp ích rất tốt cho việc làm thiết kế, đồ hoạ.</p>
-  `
+  `,
   },
 
   {
     id: "19",
     name: "HP Spectre x360 14 (2025)",
     brand: "HP",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp19.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp19.png",
     price: 38990000,
     salebefore: 40990000,
     baseprice: 31000000,
     listVersions: [
       { name: "ram", option: ["16GB", "32GB"] },
-      { name: "dung lượng", option: ["512GB", "1TB"] }
+      { name: "dung lượng", option: ["512GB", "1TB"] },
     ],
     listColors: ["Xanh Midnight", "Bạc"],
     versions: [
+      {
+        id: "19-xanh-16-512",
+        color: "Xanh Midnight",
+        priceBase: 38990000,
+        stock: 200,
+        status: true,
+        sold: "2.8k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "19-bac-16-512",
+        color: "Bạc",
+        priceBase: 38990000,
+        stock: 150,
+        status: true,
+        sold: "1.5k",
+        version: ["16GB", "512GB"],
+      },
 
-      { id: "19-xanh-16-512", color: "Xanh Midnight", price: 38990000, stock: 200, status: true, sold: "2.8k", version: ["16GB", "512GB"] },
-      { id: "19-bac-16-512", color: "Bạc", price: 38990000, stock: 150, status: true, sold: "1.5k", version: ["16GB", "512GB"] },
+      {
+        id: "19-xanh-32-512",
+        color: "Xanh Midnight",
+        priceBase: 38990000,
+        stock: 200,
+        status: true,
+        sold: "2.8k",
+        version: ["32GB", "512GB"],
+      },
+      {
+        id: "19-bac-32-512",
+        color: "Bạc",
+        priceBase: 38990000,
+        stock: 150,
+        status: true,
+        sold: "1.5k",
+        version: ["32GB", "512GB"],
+      },
 
-      { id: "19-xanh-32-512", color: "Xanh Midnight", price: 38990000, stock: 200, status: true, sold: "2.8k", version: ["32GB", "512GB"] },
-      { id: "19-bac-32-512", color: "Bạc", price: 38990000, stock: 150, status: true, sold: "1.5k", version: ["32GB", "512GB"] },
+      {
+        id: "19-xanh-16-1",
+        color: "Xanh Midnight",
+        priceBase: 42990000,
+        stock: 100,
+        status: true,
+        sold: "1.1k",
+        version: ["16GB", "1TB"],
+      },
+      {
+        id: "19-bac-16-1",
+        color: "Bạc",
+        priceBase: 42990000,
+        stock: 100,
+        status: true,
+        sold: "900",
+        version: ["16GB", "1TB"],
+      },
 
-      { id: "19-xanh-16-1", color: "Xanh Midnight", price: 42990000, stock: 100, status: true, sold: "1.1k", version: ["16GB", "1TB"] },
-      { id: "19-bac-16-1", color: "Bạc", price: 42990000, stock: 100, status: true, sold: "900", version: ["16GB", "1TB"] },
-
-      { id: "19-xanh-32-1", color: "Xanh Midnight", price: 42990000, stock: 100, status: true, sold: "1.1k", version: ["32GB", "1TB"] },
-      { id: "19-bac-32-1", color: "Bạc", price: 42990000, stock: 100, status: true, sold: "900", version: ["32GB", "1TB"] }
+      {
+        id: "19-xanh-32-1",
+        color: "Xanh Midnight",
+        priceBase: 42990000,
+        stock: 100,
+        status: true,
+        sold: "1.1k",
+        version: ["32GB", "1TB"],
+      },
+      {
+        id: "19-bac-32-1",
+        color: "Bạc",
+        priceBase: 42990000,
+        stock: 100,
+        status: true,
+        sold: "900",
+        version: ["32GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/19/16-9-1.png",
@@ -1281,19 +2169,19 @@ const Initial = [
       "../user/assets/image/sanpham/19/16-9-5.png",
       "../user/assets/image/sanpham/19/16-9-6.png",
       "../user/assets/image/sanpham/19/16-9-7.png",
-      "../user/assets/image/sanpham/19/16-9-8.png"
+      "../user/assets/image/sanpham/19/16-9-8.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11 Home",
-      "CPU": "Intel Core Ultra 7 155H",
-      "GPU": "Intel Arc tích hợp",
-      "RAM": "16GB / 32GB",
+      CPU: "Intel Core Ultra 7 155H",
+      GPU: "Intel Arc tích hợp",
+      RAM: "16GB / 32GB",
       "Ổ cứng": "512GB / 1TB SSD",
       "Màn hình": "14 inch OLED 2.8K cảm ứng",
       "Trọng lượng": "1.36kg",
-      "Pin": "66Wh",
+      Pin: "66Wh",
       "Bảo mật": "Cảm biến vân tay, camera IR",
-      "Màu sắc": "Xanh Midnight, Bạc"
+      "Màu sắc": "Xanh Midnight, Bạc",
     },
     overview: `
   <h2>HP Spectre x360 – Linh hoạt và thời thượng</h2>
@@ -1302,35 +2190,98 @@ const Initial = [
   <p>Chiếc laptop cao cấp - sang trọng này mang đến hiệu năng ấn tượng với sự kết hợp mạnh mẽ giữa CPU Intel Core Ultra 7 155H và card đồ họa Intel Arc Graphics. Dù là các tác vụ văn phòng nặng nhọc, chỉnh sửa ảnh, render video ngắn, xem phim chất lượng cao hay chơi game giải trí,... máy đều có thể xử lý mượt mà, trơn tru, giúp bạn hoàn thành mọi công việc một cách hiệu quả và tiết kiệm thời gian.</p>
   <p>Sở hữu màn hình 14 inch viền siêu mỏng với những thông số khủng như tấm nền OLED cao cấp, độ phân giải lên đến 2.8K (2880 x 1800) đi cùng chuẩn màu 100% DCI-P3, laptop cung cấp chất lượng hiển thị chuẩn điện ảnh với màu sắc rực rỡ, độ tương phản cao, màu đen sâu cùng khả năng tái tạo sắc nét đến từng khung hình, mở ra cho bạn không gian giải trí sống động ngay trước mắt mà không cần phải đi đến rạp chiếu phim.</p>
   <img src="/user/assets/image/sanpham/19/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "20",
     name: "Lenovo Yoga Pro 9i (2025)",
     brand: "Lenovo",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp20.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp20.png",
     price: 36990000,
     salebefore: 38990000,
     baseprice: 30000000,
     listVersions: [
       { name: "ram", option: ["16GB", "32GB"] },
-      { name: "dung lượng", option: ["512GB", "1TB"] }
+      { name: "dung lượng", option: ["512GB", "1TB"] },
     ],
     listColors: ["Xanh biển", "Xám bạc"],
     versions: [
+      {
+        id: "20-xanh-16-512",
+        color: "Xanh biển",
+        priceBase: 36990000,
+        stock: 150,
+        status: true,
+        sold: "2.1k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "20-xam-16-512",
+        color: "Xám bạc",
+        priceBase: 36990000,
+        stock: 200,
+        status: true,
+        sold: "1.8k",
+        version: ["16GB", "512GB"],
+      },
 
-      { id: "20-xanh-16-512", color: "Xanh biển", price: 36990000, stock: 150, status: true, sold: "2.1k", version: ["16GB", "512GB"] },
-      { id: "20-xam-16-512", color: "Xám bạc", price: 36990000, stock: 200, status: true, sold: "1.8k", version: ["16GB", "512GB"] },
+      {
+        id: "20-xanh-32-512",
+        color: "Xanh biển",
+        priceBase: 36990000,
+        stock: 150,
+        status: true,
+        sold: "2.1k",
+        version: ["32GB", "512GB"],
+      },
+      {
+        id: "20-xam-32-512",
+        color: "Xám bạc",
+        priceBase: 36990000,
+        stock: 200,
+        status: true,
+        sold: "1.8k",
+        version: ["32GB", "512GB"],
+      },
 
-      { id: "20-xanh-32-512", color: "Xanh biển", price: 36990000, stock: 150, status: true, sold: "2.1k", version: ["32GB", "512GB"] },
-      { id: "20-xam-32-512", color: "Xám bạc", price: 36990000, stock: 200, status: true, sold: "1.8k", version: ["32GB", "512GB"] },
+      {
+        id: "20-xanh-16-1",
+        color: "Xanh biển",
+        priceBase: 40990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["16GB", "1TB"],
+      },
+      {
+        id: "20-xam-16-1",
+        color: "Xám bạc",
+        priceBase: 40990000,
+        stock: 100,
+        status: true,
+        sold: "950",
+        version: ["16GB", "1TB"],
+      },
 
-      { id: "20-xanh-16-1", color: "Xanh biển", price: 40990000, stock: 100, status: true, sold: "1.2k", version: ["16GB", "1TB"] },
-      { id: "20-xam-16-1", color: "Xám bạc", price: 40990000, stock: 100, status: true, sold: "950", version: ["16GB", "1TB"] },
-
-      { id: "20-xanh-32-1", color: "Xanh biển", price: 40990000, stock: 100, status: true, sold: "1.2k", version: ["32GB", "1TB"] },
-      { id: "20-xam-32-1", color: "Xám bạc", price: 40990000, stock: 100, status: true, sold: "950", version: ["32GB", "1TB"] }
+      {
+        id: "20-xanh-32-1",
+        color: "Xanh biển",
+        priceBase: 40990000,
+        stock: 100,
+        status: true,
+        sold: "1.2k",
+        version: ["32GB", "1TB"],
+      },
+      {
+        id: "20-xam-32-1",
+        color: "Xám bạc",
+        priceBase: 40990000,
+        stock: 100,
+        status: true,
+        sold: "950",
+        version: ["32GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/20/16-9-1.png",
@@ -1338,19 +2289,19 @@ const Initial = [
       "../user/assets/image/sanpham/20/16-9-3.png",
       "../user/assets/image/sanpham/20/16-9-4.png",
       "../user/assets/image/sanpham/20/16-9-5.png",
-      "../user/assets/image/sanpham/20/16-9-6.png"
+      "../user/assets/image/sanpham/20/16-9-6.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11 Home",
-      "CPU": "Intel Core Ultra 9 185H",
-      "GPU": "NVIDIA RTX 4060 8GB",
-      "RAM": "16GB / 32GB",
+      CPU: "Intel Core Ultra 9 185H",
+      GPU: "NVIDIA RTX 4060 8GB",
+      RAM: "16GB / 32GB",
       "Ổ cứng": "512GB / 1TB SSD",
       "Màn hình": "16 inch 3.2K 165Hz Mini LED",
       "Trọng lượng": "1.7kg",
-      "Pin": "75Wh",
+      Pin: "75Wh",
       "Cổng kết nối": "USB-C, HDMI, Thunderbolt 4",
-      "Màu sắc": "Xanh biển, Xám bạc"
+      "Màu sắc": "Xanh biển, Xám bạc",
     },
     overview: `
   <h2>Lenovo Yoga Pro 9i – Đỉnh cao sáng tạo và hiệu suất</h2>
@@ -1359,49 +2310,63 @@ const Initial = [
   <p>Chiếc laptop Lenovo này được trang bị màn hình Mini LED 3.2K với độ phân giải cao, mang lại hình ảnh cực kỳ sắc nét và chi tiết. Kích thước 16 inch với tỷ lệ 16:10 giúp mở rộng không gian hiển thị, giúp bạn làm việc, giải trí thoải mái hơn, đặc biệt là khi xem nội dung đa phương tiện hoặc làm việc với nhiều cửa sổ cùng lúc.</p>
   <img src="/user/assets/image/sanpham/20/thongtin1.png" alt="">
   <p>Màn hình này còn có tần số quét 165Hz, giúp hình ảnh chuyển động mượt mà, đặc biệt hữu ích cho những ai thường xuyên chơi game hay xem video chất lượng cao. Bên cạnh đó, độ phủ màu 100% sRGB đảm bảo màu sắc hiển thị chân thực, sống động, lý tưởng cho công việc sáng tạo như thiết kế đồ họa hoặc chỉnh sửa hình ảnh. Với độ sáng 400 nits, màn hình vẫn đảm bảo hiển thị tốt trong điều kiện ánh sáng mạnh, giúp bạn làm việc ngoài trời hoặc trong không gian có nhiều ánh sáng mà không lo bị chói.</p>
-  `
+  `,
   },
   {
     id: "21",
     name: "MSI Stealth 16 Studio (2025)",
     brand: "MSI",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp21.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp21.png",
     price: 49990000,
     salebefore: 52990000,
     baseprice: 41000000,
     listVersions: [
       { name: "ram", option: ["32GB"] },
-      { name: "dung lượng", option: ["1TB"] }
+      { name: "dung lượng", option: ["1TB"] },
     ],
     listColors: ["Trắng Bạc", "Đen"],
     versions: [
-
-      { id: "21-trang-32-1", color: "Trắng Bạc", price: 49990000, stock: 120, status: true, sold: "2.4k", version: ["32GB", "1TB"] },
-      { id: "21-den-32-1", color: "Đen", price: 49990000, stock: 100, status: true, sold: "1.9k", version: ["32GB", "1TB"] }
-
+      {
+        id: "21-trang-32-1",
+        color: "Trắng Bạc",
+        priceBase: 49990000,
+        stock: 120,
+        status: true,
+        sold: "2.4k",
+        version: ["32GB", "1TB"],
+      },
+      {
+        id: "21-den-32-1",
+        color: "Đen",
+        priceBase: 49990000,
+        stock: 100,
+        status: true,
+        sold: "1.9k",
+        version: ["32GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/21/16-9-1.png",
       "../user/assets/image/sanpham/21/16-9-2.png",
       "../user/assets/image/sanpham/21/16-9-3.png",
-      "../user/assets/image/sanpham/21/16-9-4.png"
+      "../user/assets/image/sanpham/21/16-9-4.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11 Pro",
-      "CPU": "Intel Core Ultra 9 185H",
-      "GPU": "NVIDIA RTX 4070 8GB",
-      "RAM": "32GB LPDDR5",
+      CPU: "Intel Core Ultra 9 185H",
+      GPU: "NVIDIA RTX 4070 8GB",
+      RAM: "32GB LPDDR5",
       "Ổ cứng": "1TB SSD",
       "Màn hình": "16 inch QHD+ OLED 240Hz",
       "Trọng lượng": "1.99kg",
-      "Pin": "90Wh",
+      Pin: "90Wh",
       "Cổng kết nối": "HDMI, USB-C, Thunderbolt 4",
       "Bảo mật": "Cảm biến vân tay",
-      "Màu sắc": "Đen, Trắng Bạc"
+      "Màu sắc": "Đen, Trắng Bạc",
     },
     overview: `
-  <h2>MSI Stealth 16 Studio – Lap top mỏng nhẹ dành cho sáng tạo chuyên nghiệp</h2>
+  <h2>MSI Stealth 16 Studio – Laptop mỏng nhẹ dành cho sáng tạo chuyên nghiệp</h2>
   <p>MSI Stealth 16 Studio A13V mang trong mình ngôn ngữ thiết kế tối giản nhưng không thiếu đi vẻ mạnh mẽ cần thiết của những chiếc laptop gaming. Với vẻ ngoài có phần vuông vức, góc cạnh được làm tỉ mỉ cũng là yếu tố giúp MSI chiếm được nhiều cảm tình từ người dùng. Bên cạnh đó là sự kết hợp tài tình của logo MSI ở chính giữa mặt lưng càng làm tôn lên sự ấn tượng cho chiếc laptop gaming này.</p>
   <p>Trọng lượng của máy là 1.99kg và kích thước lần lượt 355mm x 259mm x 19.9mm. Phải thừa nhận rằng, đây là một con số khá lý tưởng so với mặt bằng chung của những chiếc laptop gaming hiện nay. Do đó, việc di chuyển hay mang vác cũng trở nên dễ dàng và tiện lợi hơn phần nào.</p>
   <img src="/user/assets/image/sanpham/21/thongtin1.png" alt="">
@@ -1413,26 +2378,41 @@ const Initial = [
   </ul>
   <p>Về hiệu năng tổng thể, MSI Stealth 16 Studio A13V vẫn cho thấy được sự nổi trội hơn nhiều so với “những bạn bè đồng trang lứa” bởi máy được trang bị hàng loạt các thành phần linh kiện hàng đầu hiện nay. Máy được trang bị sức mạnh đáng nể tới từ con chip Intel Gen 13th.</p>
   <img src="/user/assets/image/sanpham/21/thongtin2.png" alt="">
-  `
+  `,
   },
   {
     id: "22",
     name: "Acer Swift Go 14 (2025)",
     brand: "Acer",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp22.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp22.png",
     price: 28990000,
     salebefore: 30990000,
     baseprice: 23000000,
     listVersions: [
       { name: "ram", option: ["16GB"] },
-      { name: "dung lượng", option: ["512GB"] }
+      { name: "dung lượng", option: ["512GB"] },
     ],
     listColors: ["Bạc", "Hồng ánh kim"],
     versions: [
-
-      { id: "22-bac-16-512", color: "Bạc", price: 28990000, stock: 300, status: true, sold: "3.1k", version: ["16GB", "512GB"] },
-      { id: "22-hong-16-512", color: "Hồng ánh kim", price: 28990000, stock: 150, status: true, sold: "2.4k", version: ["16GB", "512GB"] }
+      {
+        id: "22-bac-16-512",
+        color: "Bạc",
+        priceBase: 28990000,
+        stock: 300,
+        status: true,
+        sold: "3.1k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "22-hong-16-512",
+        color: "Hồng ánh kim",
+        priceBase: 28990000,
+        stock: 150,
+        status: true,
+        sold: "2.4k",
+        version: ["16GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/22/16-9-1.png",
@@ -1440,22 +2420,22 @@ const Initial = [
       "../user/assets/image/sanpham/22/16-9-3.png",
       "../user/assets/image/sanpham/22/16-9-4.png",
       "../user/assets/image/sanpham/22/16-9-5.png",
-      "../user/assets/image/sanpham/22/16-9-6.png"
+      "../user/assets/image/sanpham/22/16-9-6.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11 Home",
-      "CPU": "Intel Core Ultra 5 125H",
-      "GPU": "Intel Arc tích hợp",
-      "RAM": "16GB LPDDR5",
+      CPU: "Intel Core Ultra 5 125H",
+      GPU: "Intel Arc tích hợp",
+      RAM: "16GB LPDDR5",
       "Ổ cứng": "512GB SSD",
       "Màn hình": "14 inch OLED 2.8K 90Hz",
       "Trọng lượng": "1.25kg",
-      "Pin": "65Wh",
+      Pin: "65Wh",
       "Cổng kết nối": "USB-C, HDMI, USB-A",
-      "Màu sắc": "Bạc, Hồng ánh kim"
+      "Màu sắc": "Bạc, Hồng ánh kim",
     },
     overview: `
-  <h2>Acer Swift Go 14 – Lap top di động cho sinh viên và dân văn phòng</h2>
+  <h2>Acer Swift Go 14 – Laptop di động cho sinh viên và dân văn phòng</h2>
   <p>Laptop Acer Swift Go 14 AI SFG14 được trang bị bộ vi xử lý Intel Core Ultra 5 Meteor Lake - 125H với 14 nhân và 18 luồng, tốc độ tối đa lên đến 4.5 GHz nhờ Turbo Boost, mang lại hiệu năng mạnh mẽ để xử lý các tác vụ văn phòng, học tập và giải trí một cách mượt mà. NPU Intel AI Boost giúp tăng cường khả năng xử lý các tác vụ liên quan đến trí tuệ nhân tạo, tối ưu hóa hiệu suất làm việc. Card đồ họa tích hợp Intel Arc Graphics cho phép bạn chỉnh sửa ảnh, video cơ bản và chơi các tựa game nhẹ nhàng.</p>
   <p>Máy có RAM 16 GB LPDDR5X tốc độ 6400 MHz giúp bạn thoải mái mở nhiều ứng dụng cùng lúc mà không lo giật lag. Ổ cứng 512 GB SSD NVMe PCIe cho tốc độ đọc/ghi nhanh chóng, giúp khởi động máy và mở ứng dụng chỉ trong tích tắc. Bạn cũng có thể nâng cấp ổ cứng lên tối đa 2 TB nếu có nhu cầu lưu trữ lớn hơn.</p>
   <img src="/user/assets/image/sanpham/22/thongtin1.png" alt="">
@@ -1464,45 +2444,51 @@ const Initial = [
   <p>Công nghệ Acer Purified Voice và Acer TrueHarmony mang đến trải nghiệm âm thanh rõ ràng, sống động. DTS:X ULTRA giúp tăng cường âm bass, tạo hiệu ứng âm thanh vòm, giúp bạn tận hưởng trọn vẹn những bộ phim và bản nhạc yêu thích. Webcam QHD cho chất lượng hình ảnh sắc nét khi gọi video.</p>
   <p>Laptop Acer Swift Go 14 AI SFG14 73 53X7 có độ dày 14.9 mm và khối lượng chỉ 1.32 kg, rất mỏng nhẹ và dễ dàng mang theo bên mình. Vỏ máy được làm từ kim loại nhôm chắc chắn, sang trọng và bền bỉ. Bản lề mở 180 độ giúp bạn dễ dàng chia sẻ màn hình với người đối diện. Bàn phím có đèn nền đơn sắc màu trắng giúp bạn làm việc trong điều kiện thiếu sáng. Touchpad rộng rãi, độ nhạy cao giúp bạn thao tác thoải mái. Máy còn được trang bị cảm biến vân tay giúp bảo mật dữ liệu cá nhân.</p>
   <img src="/user/assets/image/sanpham/22/thongtin3.png" alt="">
-  `
+  `,
   },
   {
     id: "23",
     name: "Gigabyte AORUS 17X (2025)",
     brand: "Gigabyte",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp23.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp23.png",
     price: 65990000,
     salebefore: 69990000,
     baseprice: 52000000,
     listVersions: [
       { name: "ram", option: ["32GB"] },
-      { name: "dung lượng", option: ["2TB"] }
+      { name: "dung lượng", option: ["2TB"] },
     ],
     listColors: ["Đen"],
     versions: [
-
-      { id: "23-den-32-2", color: "Đen", price: 65990000, stock: 180, status: true, sold: "1.2k", version: ["32GB", "2TB"] }
-
+      {
+        id: "23-den-32-2",
+        color: "Đen",
+        priceBase: 65990000,
+        stock: 180,
+        status: true,
+        sold: "1.2k",
+        version: ["32GB", "2TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/23/16-9-1.png",
       "../user/assets/image/sanpham/23/16-9-2.png",
       "../user/assets/image/sanpham/23/16-9-3.png",
       "../user/assets/image/sanpham/23/16-9-4.png",
-      "../user/assets/image/sanpham/23/16-9-5.png"
+      "../user/assets/image/sanpham/23/16-9-5.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11 Pro",
-      "CPU": "Intel Core i9 14900HX",
-      "GPU": "NVIDIA RTX 4090 16GB",
-      "RAM": "32GB DDR5",
+      CPU: "Intel Core i9 14900HX",
+      GPU: "NVIDIA RTX 4090 16GB",
+      RAM: "32GB DDR5",
       "Ổ cứng": "2TB SSD",
       "Màn hình": "17.3 inch QHD 240Hz",
       "Trọng lượng": "2.8kg",
-      "Pin": "99Wh",
+      Pin: "99Wh",
       "Cổng kết nối": "USB-C, HDMI, LAN",
-      "Màu sắc": "Đen"
+      "Màu sắc": "Đen",
     },
     overview: `
   <h2>Gigabyte AORUS 17X – Quái thú gaming thực thụ</h2>
@@ -1514,71 +2500,93 @@ const Initial = [
   <p>AORUS 17X được trang bị bộ xử lý Intel® Core™ i9 16 lõi thế hệ thứ 12, bao gồm 8 lõi hiệu suất và 8 lõi hiệu suất, giúp tăng hiệu suất lên 14% so với thế hệ trước. Nó có thể đạt tốc độ xung nhịp tối đa 5.0GHz, cho phép chạy mượt mà với các trò chơi đòi hỏi khắt khe và tải tác vụ nặng.</p>
   <p>AORUS 17X giới thiệu công nghệ chuyển đổi MUX, cho phép người chơi chọn chế độ chỉ GPU rời để cải thiện hiệu suất bổ sung. Thông qua giao diện đơn giản của Trung tâm điều khiển GIGABYTE, GPU có thể được xuất trực tiếp ra màn hình chỉ bằng một cú nhấp chuột, điều này có thể dễ dàng cải thiện hiệu suất trò chơi. Trong trò chơi yêu cầu hiệu năng nặng, tốc độ khung hình có thể tăng lên tới 84% Trung bình.</p>
   <p>Máy tính xách tay chơi game AORUS được hưởng lợi từ công nghệ làm mát tốt nhất độc quyền trên thị trường. Công nghệ làm mát WINDFORCE Infinity có 2 quạt với 84 cánh quạt, 6 ống dẫn nhiệt và nhiều cánh tản nhiệt có thể loại bỏ nhiệt do CPU và GPU tạo ra một cách hiệu quả, giữ cho máy tính xách tay luôn mát mẻ và duy trì hiệu suất cao trong suốt khối lượng công việc.</p>
-  `
+  `,
   },
 
   {
     id: "24",
     name: "Samsung Galaxy Book3 Pro 360",
     brand: "Samsung",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp24.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp24.png",
     price: 28990000,
     salebefore: 31990000,
     baseprice: 19000000,
     listVersions: [
       { name: "CPU", option: ["Intel Core i7"] },
       { name: "RAM", option: ["16GB"] },
-      { name: "Storage", option: ["512GB"] }
+      { name: "Storage", option: ["512GB"] },
     ],
     listColors: ["Graphite", "Burgundy"],
     versions: [
-      { id: "24-graphite-16-512", color: "Graphite", price: 28990000, stock: 90, status: true, sold: "1k", version: ["16GB", "512GB"] },
-      { id: "24-burgundy-16-512", color: "Burgundy", price: 28990000, stock: 100, status: true, sold: "2k", version: ["16GB", "512GB"] }
+      {
+        id: "24-graphite-16-512",
+        color: "Graphite",
+        priceBase: 28990000,
+        stock: 90,
+        status: true,
+        sold: "1k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "24-burgundy-16-512",
+        color: "Burgundy",
+        priceBase: 28990000,
+        stock: 100,
+        status: true,
+        sold: "2k",
+        version: ["16GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/24/16-9-1.png",
       "../user/assets/image/sanpham/24/16-9-2.png",
-      "../user/assets/image/sanpham/24/16-9-3.png"
+      "../user/assets/image/sanpham/24/16-9-3.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11",
-      "CPU": "Intel Core i7",
-      "GPU": "Intel Iris Xe",
-      "RAM": "16GB",
+      CPU: "Intel Core i7",
+      GPU: "Intel Iris Xe",
+      RAM: "16GB",
       "Bộ nhớ trong": "512GB SSD",
       "Màn hình": "13.3 inch AMOLED, cảm ứng",
-      "Pin": "Up to 14 hours",
+      Pin: "Up to 14 hours",
       "Kết nối": "USB-C, S Pen support",
-      "Trọng lượng": "1.1 kg"
+      "Trọng lượng": "1.1 kg",
     },
     overview: `<h2>Galaxy Book3 Pro 360 — mỏng nhẹ, xoay 360°, hỗ trợ S Pen.</h2>
     <p>Giống với người tiền nhiệm của mình, Galaxy Book 3 Pro 360 là một laptop hai trong một linh hoạt. Điều đó có nghĩa là bạn có thể dễ dàng chuyển đổi thiết bị từ trạng thái laptop sang máy tính bảng một cách dễ dàng, nhanh chóng. Chế độ máy tính bảng sẽ đặc biệt hữu ích khi bạn sử dụng với bút S Pen được tặng kèm, còn chế độ lều sẽ rất thích hợp cho việc xem nội dung đa phương tiện.</p>
     <p>Dù là một laptop lớn nhưng Galaxy Book 3 Pro 360 lại tương đối nhẹ, cụ thể, máy có kích thước 35.31 x 25.15 x 1.27 cm và nặng 1.68 kg. Một trong những lý do để tác giả yêu thích dòng Galaxy Book trước đây của Samsung là vì các sản phẩm này rất mỏng và nhẹ. Và rất đáng mừng khi ưu điểm này vẫn được giữ lại trên Galaxy Book 3 Pro 360.</p>
     <img src="/user/assets/image/sanpham/24/thongtin1.png" alt="">
     <p>Màn hình AMOLED 16 inch với độ phân giải 2K+ (2.880 x 1.800 pixels) và tỷ lệ khung hình 16:10 của Galaxy Book 3 Pro 360 thực sự rất phù hợp cho cả công việc và giải trí.</p>
-    `
+    `,
   },
 
   {
     id: "25",
     name: "LG Gram 17 (2025)",
     brand: "LG",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp25.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp25.png",
     price: 39990000,
     salebefore: 43990000,
     baseprice: 26000000,
     listVersions: [
       { name: "CPU", option: ["Intel Core i7"] },
       { name: "RAM", option: ["16GB"] },
-      { name: "Storage", option: ["1TB"] }
+      { name: "Storage", option: ["1TB"] },
     ],
     listColors: ["Trắng"],
     versions: [
-
-      { id: "25-trang-16-1", color: "Trắng", price: 39990000, stock: 45, status: true, sold: "250", version: ["16GB", "1TB"] }
-
+      {
+        id: "25-trang-16-1",
+        color: "Trắng",
+        priceBase: 39990000,
+        stock: 45,
+        status: true,
+        sold: "250",
+        version: ["16GB", "1TB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/25/16-9-1.png",
@@ -1588,43 +2596,73 @@ const Initial = [
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11",
-      "CPU": "Intel Core i7",
-      "GPU": "Intel Iris Xe",
-      "RAM": "16GB",
+      CPU: "Intel Core i7",
+      GPU: "Intel Iris Xe",
+      RAM: "16GB",
       "Bộ nhớ trong": "1TB SSD",
       "Màn hình": "17 inch WQXGA",
-      "Pin": "Up to 17 hours",
+      Pin: "Up to 17 hours",
       "Kết nối": "USB-C, HDMI, microSD",
-      "Trọng lượng": "1.35 kg"
+      "Trọng lượng": "1.35 kg",
     },
-    overview: `<h2>LG Gram 17 — Lap top 17 inch siêu nhẹ dành cho di động cao cấp.</h2>
+    overview: `<h2>LG Gram 17 — Laptop 17 inch siêu nhẹ dành cho di động cao cấp.</h2>
     <p>Gram 17 mang đến màn hình lớn nhưng vẫn giữ trọng lượng cực nhẹ, phù hợp người cần màn hình rộng mà vẫn phải di chuyển. Thời lượng pin vượt trội và cấu hình đủ mạnh cho công việc văn phòng nâng cao, đa nhiệm và chỉnh sửa nhẹ.</p>
     <img src="/user/assets/image/sanpham/25/thongtin1.png" alt="">
-    `
+    `,
   },
 
   {
     id: "26",
     name: "Huawei MateBook X Pro",
     brand: "Huawei",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp26.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp26.png",
     price: 28990000,
     salebefore: 31990000,
     baseprice: 18000000,
     listVersions: [
       { name: "CPU", option: ["Intel Core i5", "Intel Core i7"] },
       { name: "RAM", option: ["8GB", "16GB"] },
-      { name: "Storage", option: ["512GB"] }
+      { name: "Storage", option: ["512GB"] },
     ],
     listColors: ["Mystic Silver", "Space Gray"],
     versions: [
-
-      { id: "26-mysticsilver-8-512", color: "Mystic Silver", price: 28990000, stock: 110, status: true, sold: "980", version: ["8GB", "512GB"] },
-      { id: "26-spacegray-8-512", color: "Space Gray", price: 28990000, stock: 60, status: true, sold: "1.5k", version: ["8GB", "512GB"] },
-      { id: "26-mysticsilver-16-512", color: "Mystic Silver", price: 28990000, stock: 110, status: true, sold: "980", version: ["16GB", "512GB"] },
-      { id: "26-spacegray-16-512", color: "Space Gray", price: 28990000, stock: 60, status: true, sold: "1.5k", version: ["16GB", "512GB"] },
-
+      {
+        id: "26-mysticsilver-8-512",
+        color: "Mystic Silver",
+        priceBase: 28990000,
+        stock: 110,
+        status: true,
+        sold: "980",
+        version: ["8GB", "512GB"],
+      },
+      {
+        id: "26-spacegray-8-512",
+        color: "Space Gray",
+        priceBase: 28990000,
+        stock: 60,
+        status: true,
+        sold: "1.5k",
+        version: ["8GB", "512GB"],
+      },
+      {
+        id: "26-mysticsilver-16-512",
+        color: "Mystic Silver",
+        priceBase: 28990000,
+        stock: 110,
+        status: true,
+        sold: "980",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "26-spacegray-16-512",
+        color: "Space Gray",
+        priceBase: 28990000,
+        stock: 60,
+        status: true,
+        sold: "1.5k",
+        version: ["16GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/26/16-9-1.png",
@@ -1634,88 +2672,132 @@ const Initial = [
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11",
-      "CPU": "Intel Core i5/i7",
-      "GPU": "Intel Iris Xe",
-      "RAM": "8GB / 16GB",
+      CPU: "Intel Core i5/i7",
+      GPU: "Intel Iris Xe",
+      RAM: "8GB / 16GB",
       "Bộ nhớ trong": "512GB SSD",
       "Màn hình": "13.9 inch, 3K LTPS",
-      "Pin": "Up to 10 hours",
+      Pin: "Up to 10 hours",
       "Kết nối": "USB-C, Thunderbolt 4",
-      "Trọng lượng": "1.26 kg"
+      "Trọng lượng": "1.26 kg",
     },
     overview: `<h2>MateBook X Pro — thiết kế tinh tế, màn hình sắc nét.</h2>
     <p>MateBook X Pro là lựa chọn cho người ưu tiên thẩm mỹ thiết kế và chất lượng hiển thị cao. Khung kim loại nguyên khối, touchpad lớn, bàn phím good travel và camera ẩn. Thích hợp cho người làm sáng tạo nội dung và công việc văn phòng cao cấp.</p>
     <img src="/user/assets/image/sanpham/26/thongtin1.png" alt="">
-    `
+    `,
   },
 
   {
     id: "27",
-    name: "Microsoft Surface Lap top 5",
+    name: "Microsoft Surface Laptop 5",
     brand: "Microsoft",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp27.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp27.png",
     price: 25990000,
     salebefore: 28990000,
     baseprice: 16000000,
     listVersions: [
       { name: "CPU", option: ["Intel Core i5", "Intel Core i7"] },
       { name: "RAM", option: ["8GB", "16GB"] },
-      { name: "Storage", option: ["512GB"] }
+      { name: "Storage", option: ["512GB"] },
     ],
     listColors: ["Platinum", "Matte Black"],
     versions: [
+      {
+        id: "27-platium-8-512",
+        color: "Platinum",
+        priceBase: 25990000,
+        stock: 130,
+        status: true,
+        sold: "1.5k",
+        version: ["8GB", "512GB"],
+      },
+      {
+        id: "27-matteblack-8-512",
+        color: "Matte Black",
+        priceBase: 25990000,
+        stock: 110,
+        status: true,
+        sold: "980",
+        version: ["8GB", "512GB"],
+      },
 
-      { id: "27-platium-8-512", color: "Platinum", price: 25990000, stock: 130, status: true, sold: "1.5k", version: ["8GB", "512GB"] },
-      { id: "27-matteblack-8-512", color: "Matte Black", price: 25990000, stock: 110, status: true, sold: "980", version: ["8GB", "512GB"] },
-
-      { id: "27-platium-16-512", color: "Platinum", price: 25990000, stock: 130, status: true, sold: "1.5k", version: ["16GB", "512GB"] },
-      { id: "27-matteblack-16-512", color: "Matte Black", price: 25990000, stock: 110, status: true, sold: "980", version: ["16GB", "512GB"] }
-
+      {
+        id: "27-platium-16-512",
+        color: "Platinum",
+        priceBase: 25990000,
+        stock: 130,
+        status: true,
+        sold: "1.5k",
+        version: ["16GB", "512GB"],
+      },
+      {
+        id: "27-matteblack-16-512",
+        color: "Matte Black",
+        priceBase: 25990000,
+        stock: 110,
+        status: true,
+        sold: "980",
+        version: ["16GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/27/16-9-1.png",
       "../user/assets/image/sanpham/27/16-9-2.png",
-      "../user/assets/image/sanpham/27/16-9-3.png"
+      "../user/assets/image/sanpham/27/16-9-3.png",
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11",
-      "CPU": "Intel Core i5/i7",
-      "GPU": "Intel Iris Xe",
-      "RAM": "8GB / 16GB",
+      CPU: "Intel Core i5/i7",
+      GPU: "Intel Iris Xe",
+      RAM: "8GB / 16GB",
       "Bộ nhớ trong": "256GB / 512GB",
       "Màn hình": "13.5 inch PixelSense",
-      "Pin": "Up to 13 hours",
+      Pin: "Up to 13 hours",
       "Kết nối": "USB-C, USB-A, Surface Connect",
-      "Trọng lượng": "1.25 kg"
+      "Trọng lượng": "1.25 kg",
     },
     overview: `<h2>Surface Laptop 5 — sang trọng, tối giản và mượt mà cho công việc.</h2>
-    <p>Surface Lap top 5 đề cao trải nghiệm người dùng với màn hình chất lượng, bàn phím êm và trackpad chính xác. Máy phù hợp học sinh, sinh viên và nhân viên văn phòng muốn một máy tính mỏng, đẹp, hoạt động ổn định với Windows.</p>
+    <p>Surface Laptop 5 đề cao trải nghiệm người dùng với màn hình chất lượng, bàn phím êm và trackpad chính xác. Máy phù hợp học sinh, sinh viên và nhân viên văn phòng muốn một máy tính mỏng, đẹp, hoạt động ổn định với Windows.</p>
     <img src="/user/assets/image/sanpham/27/thongtin1.png" alt="">
-    `
+    `,
   },
 
   {
     id: "28",
     name: "Xiaomi RedmiBook Pro 16",
     brand: "Xiaomi",
-    category: "Lap top",
-    thumbnail: "../user/assets/image/sanpham/sp28.png",
+    category: "Laptop",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp28.png",
     price: 18990000,
     salebefore: 20990000,
     baseprice: 12000000,
     listVersions: [
       { name: "CPU", option: ["Intel Core i5", "Intel Core i7"] },
       { name: "RAM", option: ["8GB", "16GB"] },
-      { name: "Storage", option: ["512GB"] }
+      { name: "Storage", option: ["512GB"] },
     ],
     listColors: ["Xám Vũ Trụ"],
     versions: [
+      {
+        id: "28-xam-8-512",
+        color: "Xám Vũ Trụ",
+        priceBase: 18990000,
+        stock: 210,
+        status: true,
+        sold: "1.9k",
+        version: ["8GB", "512GB"],
+      },
 
-      { id: "28-xam-8-512", color: "Xám Vũ Trụ", price: 18990000, stock: 210, status: true, sold: "1.9k", version: ["8GB", "512GB"] },
-
-      { id: "28-xam-16-512", color: "Xám Vũ Trụ", price: 18990000, stock: 210, status: true, sold: "1.9k", version: ["16GB", "512GB"] }
-
+      {
+        id: "28-xam-16-512",
+        color: "Xám Vũ Trụ",
+        priceBase: 18990000,
+        stock: 210,
+        status: true,
+        sold: "1.9k",
+        version: ["16GB", "512GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/28/16-9-1.png",
@@ -1724,14 +2806,14 @@ const Initial = [
     ],
     infoDetail: {
       "Hệ điều hành": "Windows 11",
-      "CPU": "Intel Core i5/i7",
-      "GPU": "Intel Iris Xe",
-      "RAM": "8GB / 16GB",
+      CPU: "Intel Core i5/i7",
+      GPU: "Intel Iris Xe",
+      RAM: "8GB / 16GB",
       "Bộ nhớ trong": "512GB SSD",
       "Màn hình": "16 inch, 2.5K",
-      "Pin": "Up to 9 hours",
+      Pin: "Up to 9 hours",
       "Kết nối": "USB-C, HDMI",
-      "Trọng lượng": "1.8 kg"
+      "Trọng lượng": "1.8 kg",
     },
     overview: `<h2>RedmiBook Pro 16 — hiệu năng tốt trong tầm giá, màn hình lớn.</h2>
     <p>Nhìn từ bên ngoài, Redmi Book 16 2025 có thể tạo cho bạn một cảm giác rất quen thuộc. Bởi vì, chiếc laptop này sử dụng phong cách thiết kế mỏng gọn, thường thấy trên những chiếc Ultrabook đã có mặt trên thị trường. Thiết bị được hoàn thiện chắc chắn từ nhôm nguyên khối và sử dụng tông màu xám, bạc làm chủ đạo. Vậy nên, sản phẩm có thể tạo được cảm giác sang trọng khi nhìn vào.</p>
@@ -1740,7 +2822,7 @@ const Initial = [
     <p>Redmi Book 16 2025 được trang bị màn hình lớn 16 inch, hoạt động trên tấm nền IPS LCD, độ phân giải 2.5K và tần số quét 120 Hz. Đây là những thông số rất tốt đối với một chiếc laptop, nhờ vậy mà thiết bị có thể mang lại được trải nghiệm hiển thị rất sắc nét, màu sắc chân thật và mượt mà. Thêm nữa, màn hình của thiết bị này lại còn có tỉ lệ 16:10, nên không gian hiển thị cũng rộng rãi hơn để bạn làm việc, giải trí thoải mái.</p>
     <p>Ở bên trong, Redmi Book 16 2025 được trang bị hệ thống bàn phím 75% quen thuộc, giúp người dùng có thể nhanh chóng làm quen ngay từ lần đầu trải nghiệm máy. Redmi Book 16 2024 được trang bị bàn di chuột có kích thước lớn, do đó người dùng có thể thực hiện các thao tác vuốt, chạm, điều hướng mà không gặp vấn đề gì cản trở. Phần bàn di chuột này được đánh giá là có độ nhạy cao (Bấm phát ăn ngay) và mang lại cảm giác di chuột mượt mà.</p>
     <img src="/user/assets/image/sanpham/28/thongtin2.png" alt="">
-    `
+    `,
   },
 
   {
@@ -1748,7 +2830,7 @@ const Initial = [
     name: "AirPods Pro (Gen 2) MagSafe",
     brand: "Apple",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp31.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp31.png",
     price: 5990000,
     salebefore: 6990000,
     baseprice: 6990000,
@@ -1756,11 +2838,13 @@ const Initial = [
     listColors: ["Trắng"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Trắng", price: 5990000, stock: 80, status: true, sold: "450", version: [] }
-        ]
-      }
+        color: "Trắng",
+        priceBase: 5990000,
+        stock: 80,
+        status: true,
+        sold: "450",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/31/16-9-1.png",
@@ -1768,24 +2852,25 @@ const Initial = [
       "../user/assets/image/sanpham/31/16-9-3.png",
     ],
     infoDetail: {
-      "Thiết kế": "Công nghệ chống ồn chủ động (ANC) thông minh, loại bỏ tiếng ồn môi trường.",
-      "Chip": "Chip Apple H2 tối ưu hiệu năng và chất lượng âm thanh.",
-      "Pin": "Thời lượng pin lên đến 6 giờ, hộp sạc thêm 24 giờ.",
-      "Cổng sạc": "Sạc nhanh qua cổng USB-C hoặc sạc không dây MagSafe."
+      "Thiết kế":
+        "Công nghệ chống ồn chủ động (ANC) thông minh, loại bỏ tiếng ồn môi trường.",
+      Chip: "Chip Apple H2 tối ưu hiệu năng và chất lượng âm thanh.",
+      Pin: "Thời lượng pin lên đến 6 giờ, hộp sạc thêm 24 giờ.",
+      "Cổng sạc": "Sạc nhanh qua cổng USB-C hoặc sạc không dây MagSafe.",
     },
     overview: `
     <h2>AirPods Pro sở hữu thiết kế mang đậm chất thương hiệu Apple, màu sắc sang trọng, đi cùng nhiều công nghệ cho các iFan: chip Apple H2, chống bụi, chống ồn chủ động,... hứa hẹn mang đến trải nghiệm âm thanh sống động, chinh phục người dùng.</h2>
     <p>Apple AirPods Pro Gen 2 mang đến trải nghiệm nghe nhạc cao cấp với công nghệ chống ồn chủ động thông minh. Âm thanh trong trẻo, chi tiết, cùng thiết kế nhỏ gọn, thoải mái khi đeo cả ngày.</p>
     <p>Chip Apple H2 tối ưu hóa âm thanh và thời lượng pin. Hộp sạc MagSafe hỗ trợ sạc không dây và có cổng USB-C tiện lợi.</p>
     <img src="/user/assets/image/sanpham/31/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "32",
     name: "Sony WH-1000XM5 Wireless",
     brand: "Sony",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp32.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp32.png",
     price: 8990000,
     salebefore: 10490000,
     baseprice: 10490000,
@@ -1793,12 +2878,21 @@ const Initial = [
     listColors: ["Đen", "Bạc"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Đen", price: 8990000, stock: 60, status: true, sold: "310", version: [] },
-          { color: "Bạc", price: 8990000, stock: 50, status: true, sold: "270", version: [] }
-        ]
-      }
+        color: "Đen",
+        priceBase: 8990000,
+        stock: 60,
+        status: true,
+        sold: "310",
+        version: [],
+      },
+      {
+        color: "Bạc",
+        priceBase: 8990000,
+        stock: 50,
+        status: true,
+        sold: "270",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/32/16-9-1.png",
@@ -1807,23 +2901,23 @@ const Initial = [
     ],
     infoDetail: {
       "Công nghệ": "Công nghệ chống ồn chủ động hàng đầu từ Sony.",
-      "Pin": "Thời lượng pin đến 40 giờ, sạc nhanh 3 phút nghe 3 giờ.",
+      Pin: "Thời lượng pin đến 40 giờ, sạc nhanh 3 phút nghe 3 giờ.",
       "Trải nghiệm": "Âm thanh độ phân giải cao (Hi-Res Audio).",
-      "Hỗ trợ": "Tích hợp trợ lý giọng nói Google Assistant và Alexa."
+      "Hỗ trợ": "Tích hợp trợ lý giọng nói Google Assistant và Alexa.",
     },
     overview: `
     <h2>Tai nghe Sony WH-1000XM5 - Chống ồn dịu tai, sử dụng thoải mái</h2>
     <p>Sony WH-1000XM5 là tai nghe không dây chống ồn cao cấp, mang đến chất âm đỉnh cao cùng khả năng lọc tạp âm vượt trội.</p>
     <p>Thiết kế sang trọng, nhẹ, thoải mái và pin cực trâu 30 giờ giúp bạn tận hưởng âm nhạc suốt cả ngày dài.</p>
     <img src="/user/assets/image/sanpham/32/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "33",
     name: "JBL Tune 520BT Wireless",
     brand: "JBL",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp33.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp33.png",
     price: 1590000,
     salebefore: 1790000,
     baseprice: 1790000,
@@ -1831,13 +2925,29 @@ const Initial = [
     listColors: ["Đen", "Xanh", "Hồng"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Đen", price: 1590000, stock: 90, status: true, sold: "400", version: [] },
-          { color: "Xanh", price: 1590000, stock: 70, status: true, sold: "320", version: [] },
-          { color: "Hồng", price: 1590000, stock: 60, status: true, sold: "280", version: [] }
-        ]
-      }
+        color: "Đen",
+        priceBase: 1590000,
+        stock: 90,
+        status: true,
+        sold: "400",
+        version: [],
+      },
+      {
+        color: "Xanh",
+        priceBase: 1590000,
+        stock: 70,
+        status: true,
+        sold: "320",
+        version: [],
+      },
+      {
+        color: "Hồng",
+        priceBase: 1590000,
+        stock: 60,
+        status: true,
+        sold: "280",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/33/16-9-1.png",
@@ -1846,23 +2956,23 @@ const Initial = [
     ],
     infoDetail: {
       "Công nghệ": "Công nghệ âm thanh Pure Bass độc quyền từ JBL.",
-      "Pin": "Pin lên đến 57 giờ, sạc nhanh 5 phút nghe 3 giờ.",
+      Pin: "Pin lên đến 57 giờ, sạc nhanh 5 phút nghe 3 giờ.",
       "Kết nối": "Kết nối Bluetooth 5.3 ổn định, độ trễ thấp.",
-      "Thiết kế": "Thiết kế nhẹ, có thể gập gọn dễ mang theo."
+      "Thiết kế": "Thiết kế nhẹ, có thể gập gọn dễ mang theo.",
     },
     overview: `
     <h2>JBL Tune 520BT là dạng tai nghe chụp tai (tai nghe on ear) với diện mạo thời thượng, nhiều gam màu đẹp mắt, âm thanh phong phú và sống động, kết nối nhanh chóng, dung lượng pin khủng, hứa hẹn mang đến cho bạn những trải nghiệm tối ưu.</h2>
     <p>JBL Tune 520BT mang lại trải nghiệm âm trầm mạnh mẽ và thiết kế năng động phù hợp mọi lứa tuổi.</p>
     <p>Pin cực lâu và khả năng sạc nhanh giúp bạn luôn sẵn sàng thưởng thức âm nhạc mọi lúc mọi nơi.</p>
     <img src="/user/assets/image/sanpham/33/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "34",
     name: "Samsung Galaxy Buds2 Pro",
     brand: "Samsung",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp34.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp34.png",
     price: 4990000,
     salebefore: 5490000,
     baseprice: 5490000,
@@ -1870,13 +2980,29 @@ const Initial = [
     listColors: ["Tím", "Trắng", "Xanh Đen"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Tím", price: 4990000, stock: 80, status: true, sold: "310", version: [] },
-          { color: "Trắng", price: 4990000, stock: 70, status: true, sold: "270", version: [] },
-          { color: "Xanh Đen", price: 4990000, stock: 60, status: true, sold: "240", version: [] }
-        ]
-      }
+        color: "Tím",
+        priceBase: 4990000,
+        stock: 80,
+        status: true,
+        sold: "310",
+        version: [],
+      },
+      {
+        color: "Trắng",
+        priceBase: 4990000,
+        stock: 70,
+        status: true,
+        sold: "270",
+        version: [],
+      },
+      {
+        color: "Xanh Đen",
+        priceBase: 4990000,
+        stock: 60,
+        status: true,
+        sold: "240",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/34/16-9-1.png",
@@ -1886,62 +3012,77 @@ const Initial = [
     infoDetail: {
       "Trải nghiệm": "Âm thanh Hi-Fi 24 bit, trải nghiệm không gian 360°.",
       "Công nghệ": "Chống ồn chủ động ANC thế hệ mới, Kháng nước chuẩn IPX7",
-      "Pin": "Pin 5 giờ + hộp sạc 18 giờ.",
-      "Thiết kế": "Thiết kế nhỏ gọn, ôm tai thoải mái."
+      Pin: "Pin 5 giờ + hộp sạc 18 giờ.",
+      "Thiết kế": "Thiết kế nhỏ gọn, ôm tai thoải mái.",
     },
     overview: `
     <h2>Tai nghe Bluetooth True Wireless Samsung Galaxy Buds 2 Pro R510N. Bên cạnh thiết kế cải tiến, Galaxy Buds 2 Pro còn sở hữu nhiều tính năng đáng giá. Đây chắc hẳn chính là món phụ kiện tuyệt vời dành cho các SamFans.</h2>
     <p>Samsung Galaxy Buds2 Pro mang đến âm thanh sống động và khả năng chống ồn vượt trội. Tai nghe kết nối mượt mà với điện thoại Galaxy, hỗ trợ âm thanh không gian 360 độ.</p>
     <p>Thiết kế tinh tế, nhỏ gọn và kháng nước tốt, phù hợp sử dụng hằng ngày.</p>
     <img src="/user/assets/image/sanpham/34/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "35",
     name: "Soundcore Liberty 4 NC",
     brand: "Anker",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp35.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp35.png",
     price: 2990000,
     salebefore: 3490000,
-    baseprice: 3490.000,
+    baseprice: 3490.0,
     listVersions: [],
     listColors: ["Trắng", "Xanh Dương", "Đen"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Trắng", price: 2990000, stock: 70, status: true, sold: "250", version: [] },
-          { color: "Xanh Dương", price: 2990000, stock: 60, status: true, sold: "220", version: [] },
-          { color: "Đen", price: 2990000, stock: 80, status: true, sold: "300", version: [] }
-        ]
-      }
+        color: "Trắng",
+        priceBase: 2990000,
+        stock: 70,
+        status: true,
+        sold: "250",
+        version: [],
+      },
+      {
+        color: "Xanh Dương",
+        priceBase: 2990000,
+        stock: 60,
+        status: true,
+        sold: "220",
+        version: [],
+      },
+      {
+        color: "Đen",
+        priceBase: 2990000,
+        stock: 80,
+        status: true,
+        sold: "300",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/35/16-9-1.png",
       "../user/assets/image/sanpham/35/16-9-2.png",
       "../user/assets/image/sanpham/35/16-9-3.png",
-
     ],
     infoDetail: {
       "Công nghệ": "Chống ồn chủ động tới 98%, lọc tiếng gió hiệu quả.",
       "Âm thanh": "Âm thanh Hi-Res Wireless, hỗ trợ LDAC.",
-      "Pin": "Pin 10 giờ + hộp sạc thêm 40 giờ.",
-      "Kết nối": "Ứng dụng Soundcore App tùy chỉnh EQ và ANC."
+      Pin: "Pin 10 giờ + hộp sạc thêm 40 giờ.",
+      "Kết nối": "Ứng dụng Soundcore App tùy chỉnh EQ và ANC.",
     },
     overview: `
     <h2>Tai nghe bluetooth Anker Soundcore Liberty 4 - Âm thanh hoàn hảo 360 độ</h2>
     <p>Soundcore Liberty 4 NC là lựa chọn tai nghe không dây tầm trung cực kỳ đáng giá, mang đến khả năng chống ồn vượt trội và chất âm tinh tế.</p>
     <p>Pin lâu, sạc nhanh và nhiều tùy chỉnh thông minh qua app Soundcore.</p>
     <img src="/user/assets/image/sanpham/35/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "36",
     name: "Baseus Bowie E3 True Wireless",
     brand: "Baseus",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp36.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp36.png",
     price: 890000,
     salebefore: 1190000,
     baseprice: 1190000,
@@ -1949,12 +3090,21 @@ const Initial = [
     listColors: ["Trắng", "Đen"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Trắng", price: 890000, stock: 90, status: true, sold: "400", version: [] },
-          { color: "Đen", price: 890000, stock: 70, status: true, sold: "330", version: [] }
-        ]
-      }
+        color: "Trắng",
+        priceBase: 890000,
+        stock: 90,
+        status: true,
+        sold: "400",
+        version: [],
+      },
+      {
+        color: "Đen",
+        priceBase: 890000,
+        stock: 70,
+        status: true,
+        sold: "330",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/36/16-9-1.png",
@@ -1963,15 +3113,15 @@ const Initial = [
     infoDetail: {
       "Kết nối": "Bluetooth 5.0, độ trễ thấp khi chơi game.",
       "Công nghệ": "Chống ồn ENC, mic kép đàm thoại rõ ràng.",
-      "Pin": "Pin 5 giờ, kèm hộp sạc 20 giờ.",
-      "Thiết kế": "Thiết kế gọn nhẹ, cảm ứng điều khiển tiện lợi."
+      Pin: "Pin 5 giờ, kèm hộp sạc 20 giờ.",
+      "Thiết kế": "Thiết kế gọn nhẹ, cảm ứng điều khiển tiện lợi.",
     },
     overview: `
     <h2>Tai nghe không dây Baseus Bowie E3 - Âm thanh thư giãn dành trọn cho bạn</h2>
     <p><b>Baseus Bowie E3</b> là tai nghe không dây giá rẻ nhưng mang đến chất lượng âm thanh tốt, độ trễ thấp và thời lượng pin ổn định.</p>
     <p>Thiết kế trẻ trung, nhỏ gọn, phù hợp cho người dùng năng động.</p>
     <img src="/user/assets/image/sanpham/36/thongtin1.png" alt="">
-  `
+  `,
   },
 
   {
@@ -1979,7 +3129,7 @@ const Initial = [
     name: "Huawei FreeBuds 5i",
     brand: "Huawei",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp37.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp37.png",
     price: 2190000,
     salebefore: 2490000,
     baseprice: 2490000,
@@ -1987,13 +3137,29 @@ const Initial = [
     listColors: ["Xanh Dương", "Đen", "Trắng"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Xanh Dương", price: 2190000, stock: 60, status: true, sold: "210", version: [] },
-          { color: "Đen", price: 2190000, stock: 70, status: true, sold: "230", version: [] },
-          { color: "Trắng", price: 2190000, stock: 65, status: true, sold: "250", version: [] }
-        ]
-      }
+        color: "Xanh Dương",
+        priceBase: 2190000,
+        stock: 60,
+        status: true,
+        sold: "210",
+        version: [],
+      },
+      {
+        color: "Đen",
+        priceBase: 2190000,
+        stock: 70,
+        status: true,
+        sold: "230",
+        version: [],
+      },
+      {
+        color: "Trắng",
+        priceBase: 2190000,
+        stock: 65,
+        status: true,
+        sold: "250",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/37/16-9-1.png",
@@ -2004,23 +3170,23 @@ const Initial = [
     ],
     infoDetail: {
       "Công nghệ": "Chống ồn chủ động 42 dB, âm thanh Hi-Res, Kháng nước IP54",
-      "Pin": "Pin 7.5 giờ, hộp sạc thêm 28 giờ.",
+      Pin: "Pin 7.5 giờ, hộp sạc thêm 28 giờ.",
       "Kết nối": "Kết nối đa thiết bị.",
-      "Thiết kế": "Thiết kế gọn nhẹ, tiện mang theo."
+      "Thiết kế": "Thiết kế gọn nhẹ, tiện mang theo.",
     },
     overview: `
     <h2>Huawei Freebuds 5i: Thiết kế thời thượng, chất âm tốt, pin dùng lâu</h2>
     <p><b>Huawei FreeBuds 5i</b> mang đến âm thanh chất lượng cao và khả năng chống ồn vượt trội trong tầm giá. Hỗ trợ Hi-Res Audio và kết nối đa điểm tiện lợi.</p>
     <p>Thích hợp cho người dùng hay di chuyển, muốn trải nghiệm nghe nhạc và gọi điện ổn định.</p>
     <img src="/user/assets/image/sanpham/37/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "38",
     name: "Beats Studio Buds Plus",
     brand: "Apple",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp38.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp38.png",
     price: 4990000,
     salebefore: 5990000,
     baseprice: 5990000,
@@ -2028,13 +3194,29 @@ const Initial = [
     listColors: ["Trong Suốt", "Đen", "Vàng Cát"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Trong Suốt", price: 4990000, stock: 50, status: true, sold: "260", version: [] },
-          { color: "Đen", price: 4990000, stock: 60, status: true, sold: "280", version: [] },
-          { color: "Vàng Cát", price: 4990000, stock: 55, status: true, sold: "200", version: [] }
-        ]
-      }
+        color: "Trong Suốt",
+        priceBase: 4990000,
+        stock: 50,
+        status: true,
+        sold: "260",
+        version: [],
+      },
+      {
+        color: "Đen",
+        priceBase: 4990000,
+        stock: 60,
+        status: true,
+        sold: "280",
+        version: [],
+      },
+      {
+        color: "Vàng Cát",
+        priceBase: 4990000,
+        stock: 55,
+        status: true,
+        sold: "200",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/38/16-9-1.png",
@@ -2044,22 +3226,22 @@ const Initial = [
     infoDetail: {
       "Kết nối": "Chip Apple, tương thích Android & iOS.",
       "Công nghệ": "Chống ồn chủ động (ANC) và chế độ xuyên âm.",
-      "Pin": "Pin 9 giờ + hộp sạc 27 giờ.",
-      "Thiết kế": "Thiết kế nhỏ gọn, thời trang."
+      Pin: "Pin 9 giờ + hộp sạc 27 giờ.",
+      "Thiết kế": "Thiết kế nhỏ gọn, thời trang.",
     },
     overview: `
     <h2>Tai nghe Beats Studio Buds + - Thiết kế bắt mắt với thời lượng pin vượt trội</h2>
     <p><b>Beats Studio Buds Plus</b> mang đến âm thanh mạnh mẽ, hiện đại cùng thiết kế trong suốt độc đáo.</p>
     <p>Chống ồn chủ động thông minh và pin siêu trâu giúp bạn tận hưởng âm nhạc trọn vẹn cả ngày.</p>
     <img src="/user/assets/image/sanpham/38/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "39",
     name: "Marshall Major IV Bluetooth",
     brand: "Marshall",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp39.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp39.png",
     price: 3990000,
     salebefore: 4490000,
     baseprice: 4490000,
@@ -2067,12 +3249,21 @@ const Initial = [
     listColors: ["Đen", "Nâu"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Đen", price: 3990000, stock: 40, status: true, sold: "200", version: [] },
-          { color: "Nâu", price: 3990000, stock: 35, status: true, sold: "180", version: [] }
-        ]
-      }
+        color: "Đen",
+        priceBase: 3990000,
+        stock: 40,
+        status: true,
+        sold: "200",
+        version: [],
+      },
+      {
+        color: "Nâu",
+        priceBase: 3990000,
+        stock: 35,
+        status: true,
+        sold: "180",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/39/16-9-1.png",
@@ -2081,9 +3272,9 @@ const Initial = [
     ],
     infoDetail: {
       "Trải nghiệm": "Âm thanh đặc trưng Marshall mạnh mẽ.",
-      "Pin": "Thời lượng pin cực khủng 80 giờ.",
-      "Sạc": "Hỗ trợ sạc không dây và sạc nhanh USB-C.",
-      "Thiết kế": "Thiết kế cổ điển, chất liệu cao cấp."
+      Pin: "Thời lượng pin cực khủng 80 giờ.",
+      Sạc: "Hỗ trợ sạc không dây và sạc nhanh USB-C.",
+      "Thiết kế": "Thiết kế cổ điển, chất liệu cao cấp.",
     },
     overview: `
     <h2>Không chỉ là sự kết hợp hoàn hảo giữa thiết kế và công nghệ, tai nghe Bluetooth chụp tai Marshall Major IV còn là một tuyệt tác âm thanh dành cho những tín đồ âm nhạc. Mang trong mình phong cách cổ điển đặc trưng của Marshall, cùng chất lượng âm thanh đỉnh cao, Major IV hứa hẹn sẽ mang đến cho bạn những trải nghiệm âm nhạc tuyệt vời nhất.</h2>
@@ -2091,14 +3282,14 @@ const Initial = [
     <p>Marshall Major IV là người bạn đồng hành lý tưởng cho những ai yêu thích âm nhạc mọi lúc mọi nơi. Với khoảng 80 giờ chơi nhạc không dây liên tục, bạn có thể đắm chìm trong thế giới âm thanh yêu thích của mình mà không lo bị gián đoạn. Khả năng sạc nhanh chỉ 15 phút cho 15 giờ nghe cũng giúp bạn luôn sẵn sàng cho mọi cuộc phiêu lưu bất tận.</p>
     <p>Tai nghe chụp tai nhà Marshall mang đến cho bạn trải nghiệm âm thanh tuyệt đỉnh với Driver 40 mm và công nghệ Marshall Signature Sound trứ danh, giúp tái tạo âm thanh một cách chính xác và chi tiết. Mỗi nốt nhạc, dù là những giai điệu du dương nhẹ nhàng hay những bản rock cuồng nhiệt sôi động, đều được thể hiện một cách chân thực và sống động như chính bạn đang hòa mình vào sân khấu âm nhạc.</p>
     <img src="/user/assets/image/sanpham/39/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "40",
     name: "Edifier W820NB Plus",
     brand: "Edifier",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp40.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp40.png",
     price: 2290000,
     salebefore: 2690000,
     baseprice: 2690000,
@@ -2106,13 +3297,29 @@ const Initial = [
     listColors: ["Xanh Dương", "Trắng", "Đen"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Xanh Dương", price: 2290000, stock: 65, status: true, sold: "190", version: [] },
-          { color: "Trắng", price: 2290000, stock: 60, status: true, sold: "170", version: [] },
-          { color: "Đen", price: 2290000, stock: 50, status: true, sold: "150", version: [] }
-        ]
-      }
+        color: "Xanh Dương",
+        priceBase: 2290000,
+        stock: 65,
+        status: true,
+        sold: "190",
+        version: [],
+      },
+      {
+        color: "Trắng",
+        priceBase: 2290000,
+        stock: 60,
+        status: true,
+        sold: "170",
+        version: [],
+      },
+      {
+        color: "Đen",
+        priceBase: 2290000,
+        stock: 50,
+        status: true,
+        sold: "150",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/40/16-9-1.png",
@@ -2121,9 +3328,9 @@ const Initial = [
     ],
     infoDetail: {
       "Công nghệ": "Chống ồn chủ động ANC, âm thanh Hi-Res.",
-      "Pin": "Pin 49 giờ, sạc nhanh 10 phút nghe 7 giờ.",
+      Pin: "Pin 49 giờ, sạc nhanh 10 phút nghe 7 giờ.",
       "Kết nối": "Kết nối Bluetooth 5.2 ổn định.",
-      "Thiết kế": "Thiết kế nhẹ, thoải mái khi đeo lâu."
+      "Thiết kế": "Thiết kế nhẹ, thoải mái khi đeo lâu.",
     },
     overview: `
     <h2>Tai nghe Bluetooth Edifier W820NB Plus - Thiết kế trẻ trung, tinh tế</h2>
@@ -2131,14 +3338,14 @@ const Initial = [
     <p><b>Edifier W820NB Plus</b> là tai nghe chụp tai chất lượng cao, có khả năng chống ồn và pin cực lâu. Âm thanh trung thực, chi tiết và êm ái khi nghe lâu.</p>
     <p>Phù hợp với người cần tai nghe học tập, làm việc và giải trí.</p>
     <img src="/user/assets/image/sanpham/40/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "41",
     name: "Xiaomi Redmi Buds 5 Pro",
     brand: "Xiaomi",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp41.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp41.png",
     price: 1690000,
     salebefore: 1990000,
     baseprice: 1990000,
@@ -2146,12 +3353,21 @@ const Initial = [
     listColors: ["Đen", "Trắng"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Đen", price: 1690000, stock: 90, status: true, sold: "400", version: [] },
-          { color: "Trắng", price: 1690000, stock: 70, status: true, sold: "320", version: [] },
-        ]
-      }
+        color: "Đen",
+        priceBase: 1690000,
+        stock: 90,
+        status: true,
+        sold: "400",
+        version: [],
+      },
+      {
+        color: "Trắng",
+        priceBase: 1690000,
+        stock: 70,
+        status: true,
+        sold: "320",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/41/16-9-1.png",
@@ -2161,21 +3377,21 @@ const Initial = [
     infoDetail: {
       "Công nghệ": "Chống ồn chủ động đến 52 dB, mic kép AI lọc tạp âm.",
       "Trải nghiệm": "Âm thanh Hi-Res Wireless, codec LHDC 5.0.",
-      "Pin": "Pin 10 giờ + hộp sạc thêm 38 giờ.",
-      "Kết nối": "Kết nối Bluetooth 5.3, chống nước IP54."
+      Pin: "Pin 10 giờ + hộp sạc thêm 38 giờ.",
+      "Kết nối": "Kết nối Bluetooth 5.3, chống nước IP54.",
     },
     overview: `
     <h2>Xiaomi vừa trình làng mẫu tai nghe True Wireless mới nhất của mình mang tên Xiaomi Redmi Buds 5 Pro. Mang nhiều công nghệ đáng chú ý như giảm tiếng ồn lên đến 52 dB và chặn 99.5% tiếng ồn xung quanh, tích hợp thuật toán AI, sạc siêu nhanh, đi cùng thời lượng pin ấn tượng,... hứa hẹn đáp ứng tối ưu mọi nhu cầu sử dụng của người dùng.</h2>
     <p><b>Redmi Buds 5 Pro</b> là tai nghe tầm trung với khả năng chống ồn ấn tượng, chất âm Hi-Res và pin cực lâu. Phù hợp với người yêu công nghệ và âm nhạc chất lượng cao.</p>
     <img src="/user/assets/image/sanpham/41/thongtin1.png" alt="">
-  `
+  `,
   },
   {
     id: "42",
     name: "SoundPEATS Air3 Deluxe HS",
     brand: "SoundPEATS",
     category: "Tai nghe",
-    thumbnail: "../user/assets/image/sanpham/sp42.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp42.png",
     price: 1390000,
     salebefore: 1590000,
     baseprice: 1590000,
@@ -2183,12 +3399,21 @@ const Initial = [
     listColors: ["Đen", "Trắng"],
     versions: [
       {
-        storage: "",
-        colors: [
-          { color: "Đen", price: 1390000, stock: 80, status: true, sold: "290", version: [] },
-          { color: "Trắng", price: 1390000, stock: 90, status: true, sold: "310", version: [] }
-        ]
-      }
+        color: "Đen",
+        priceBase: 1390000,
+        stock: 80,
+        status: true,
+        sold: "290",
+        version: [],
+      },
+      {
+        color: "Trắng",
+        priceBase: 1390000,
+        stock: 90,
+        status: true,
+        sold: "310",
+        version: [],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/42/16-9-1.png",
@@ -2197,14 +3422,14 @@ const Initial = [
     infoDetail: {
       "Trải nghiệm": "Âm thanh Hi-Res, codec LDAC, driver 14.2mm.",
       "Thiết kế": "Thiết kế mở, đeo thoải mái lâu dài.",
-      "Pin": "Pin 5 giờ + hộp sạc 20 giờ.",
-      "Kết nối": "Kết nối Bluetooth 5.2 ổn định."
+      Pin: "Pin 5 giờ + hộp sạc 20 giờ.",
+      "Kết nối": "Kết nối Bluetooth 5.2 ổn định.",
     },
     overview: `
     <h2>Tai Nghe SoundPEATS Air 3 Deluxe HS – Âm thanh sống động, chân thật</h2>
     <p><b>SoundPEATS Air3 Deluxe HS</b> mang đến chất lượng âm thanh Hi-Res trong một thiết kế nhỏ gọn, nhẹ nhàng. Kết nối ổn định và đeo thoải mái, phù hợp sử dụng hằng ngày.</p>
     <img src="/user/assets/image/sanpham/42/thongtin1.png" alt="">
-  `
+  `,
   },
 
   {
@@ -2212,22 +3437,24 @@ const Initial = [
     name: "Rolex Submariner Date 126610LN",
     brand: "Rolex",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp43.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp43.png",
     price: 315000000,
     salebefore: 329000000,
     baseprice: 280000000,
     listVersions: [
       { name: "Loại máy", option: ["Automatic"] },
-      { name: "Kích thước", option: ["41mm"] }
+      { name: "Kích thước", option: ["41mm"] },
     ],
     listColors: ["Bạch Kim"],
     versions: [
       {
-        storage: "41mm",
-        colors: [
-          { color: "Bạch Kim", price: 315000000, stock: 5, status: true, sold: "250", version: ["Automatic", "41mm"] },
-        ]
-      }
+        color: "Bạch Kim",
+        priceBase: 315000000,
+        stock: 5,
+        status: true,
+        sold: "250",
+        version: ["Automatic", "41mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/43/16-9-1.png",
@@ -2241,33 +3468,42 @@ const Initial = [
       "Kháng nước": "300m",
       "Dây đeo": "Thép Oyster",
       "Năng lượng dự trữ": "70 giờ",
-      "Xuất xứ": "Thụy Sĩ"
+      "Xuất xứ": "Thụy Sĩ",
     },
     overview: `<h2>Rolex Submariner Date 126610LN là chiếc đồng hồ huyền thoại của giới sưu tầm.</h2>
-      <p>Với thiết kế biểu tượng, khả năng kháng nước đến 300m và bộ máy tự động Calibre 3235 chính xác, Submariner luôn nằm trong danh sách mong muốn của mọi tín đồ đồng hồ cơ.</p>`
+      <p>Với thiết kế biểu tượng, khả năng kháng nước đến 300m và bộ máy tự động Calibre 3235 chính xác, Submariner luôn nằm trong danh sách mong muốn của mọi tín đồ đồng hồ cơ.</p>`,
   },
   {
     id: "44",
     name: "Omega Seamaster Diver 300M Co-Axial",
     brand: "Omega",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp44.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp44.png",
     price: 165000000,
     salebefore: 179000000,
     baseprice: 140000000,
     listVersions: [
       { name: "Loại máy", option: ["Automatic"] },
-      { name: "Kích thước", option: ["42mm"] }
+      { name: "Kích thước", option: ["42mm"] },
     ],
     listColors: ["Xanh Dương", "Đen"],
     versions: [
       {
-        storage: "42mm",
-        colors: [
-          { color: "Xanh Dương", price: 165000000, stock: 10, status: true, sold: "420", version: ["Automatic", "42mm"] },
-          { color: "Đen", price: 167000000, stock: 8, status: true, sold: "310", version: ["Automatic", "42mm"] }
-        ]
-      }
+        color: "Xanh Dương",
+        priceBase: 165000000,
+        stock: 10,
+        status: true,
+        sold: "420",
+        version: ["Automatic", "42mm"],
+      },
+      {
+        color: "Đen",
+        priceBase: 167000000,
+        stock: 8,
+        status: true,
+        sold: "310",
+        version: ["Automatic", "42mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/44/16-9-1.png",
@@ -2281,36 +3517,38 @@ const Initial = [
       "Kháng nước": "300m",
       "Dây đeo": "Thép không gỉ",
       "Năng lượng dự trữ": "55 giờ",
-      "Xuất xứ": "Thụy Sĩ"
+      "Xuất xứ": "Thụy Sĩ",
     },
-    overview: `<h2>Seamaster Diver 300M là biểu tượng của Omega.</h2><p>Với thiết kế sóng đặc trưng và hiệu suất vượt trội, đây là lựa chọn hàng đầu cho những ai yêu thích sự sang trọng pha lẫn thể thao.</p>`
+    overview: `<h2>Seamaster Diver 300M là biểu tượng của Omega.</h2><p>Với thiết kế sóng đặc trưng và hiệu suất vượt trội, đây là lựa chọn hàng đầu cho những ai yêu thích sự sang trọng pha lẫn thể thao.</p>`,
   },
   {
     id: "45",
     name: " MVW 41 mm Nam MS081-01",
     brand: "MVW",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp45.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp45.png",
     price: 22000000,
     salebefore: 24900000,
     baseprice: 18000000,
     listVersions: [
       { name: "Loại máy", option: ["Pin (Quartz)"] },
-      { name: "Kích thước", option: ["41mm"] }
+      { name: "Kích thước", option: ["41mm"] },
     ],
     listColors: ["Bạc"],
     versions: [
       {
-        storage: "41mm",
-        colors: [
-          { color: "Bạc", price: 22000000, stock: 40, status: true, sold: "1.2k", version: ["Pin (Quartz)", "41mm"] },
-        ]
-      }
+        color: "Bạc",
+        priceBase: 22000000,
+        stock: 40,
+        status: true,
+        sold: "1.2k",
+        version: ["Pin (Quartz)", "41mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/45/16-9-1.png",
       "../user/assets/image/sanpham/45/16-9-2.png",
-      "../user/assets/image/sanpham/45/16-9-3.png"
+      "../user/assets/image/sanpham/45/16-9-3.png",
     ],
     infoDetail: {
       "Loại máy": "Pin (Quartz)",
@@ -2319,38 +3557,40 @@ const Initial = [
       "Mặt kính": "Kính khoáng Mineral",
       "Kháng nước": "5 ATM - Đi mưa, tắm",
       "Dây đeo": "Thép không gỉ 304",
-      "Pin": "Khoảng 2 năm",
-      "Xuất xứ": "Trung Quốc"
+      Pin: "Khoảng 2 năm",
+      "Xuất xứ": "Trung Quốc",
     },
     overview: `<h2>Thương hiệu MVW đến từ Việt Nam</h2>
-    <p>Chiếc đồng hồ nam này đến từ thương hiệu MVW nổi tiếng của Việt Nam. Đồng hồ sở hữu đường kính mặt 41 mm, độ rộng dây 20 mm. Đồng hồ MVW được trang bị khung viền và dây đeo được làm bằng thép không gỉ 304 có độ cứng cao, khả năng chịu lực tốt giúp bảo vệ tốt các chi tiết bên trong.Nước đã không còn là vấn đề lo ngại khi bạn có thể đeo đồng hồ ngay cả khi rửa tay, đi mưa hay đi tắm nhờ vào thông số chống nước 5 ATM tối ưu. Lưu ý: không đeo khi đi bơi, lặn. Đồng hồ hỗ trợ lịch ngày giúp người dùng chủ động theo dõi thời gian một cách thuận tiện.</p>`
+    <p>Chiếc đồng hồ nam này đến từ thương hiệu MVW nổi tiếng của Việt Nam. Đồng hồ sở hữu đường kính mặt 41 mm, độ rộng dây 20 mm. Đồng hồ MVW được trang bị khung viền và dây đeo được làm bằng thép không gỉ 304 có độ cứng cao, khả năng chịu lực tốt giúp bảo vệ tốt các chi tiết bên trong.Nước đã không còn là vấn đề lo ngại khi bạn có thể đeo đồng hồ ngay cả khi rửa tay, đi mưa hay đi tắm nhờ vào thông số chống nước 5 ATM tối ưu. Lưu ý: không đeo khi đi bơi, lặn. Đồng hồ hỗ trợ lịch ngày giúp người dùng chủ động theo dõi thời gian một cách thuận tiện.</p>`,
   },
   {
     id: "46",
     name: "Citizen NH8350-59A Automatic",
     brand: "Citizen",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp46.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp46.png",
     price: 7500000,
     salebefore: 8900000,
     baseprice: 6000000,
     listVersions: [
       { name: "Loại máy", option: ["Automatic"] },
-      { name: "Kích thước", option: ["40mm"] }
+      { name: "Kích thước", option: ["40mm"] },
     ],
     listColors: ["Bạc"],
     versions: [
       {
-        storage: "40mm",
-        colors: [
-          { color: "Bạc", price: 7500000, stock: 170, status: true, sold: "1.3k", version: ["Automatic", "40mm"] },
-        ]
-      }
+        color: "Bạc",
+        priceBase: 7500000,
+        stock: 170,
+        status: true,
+        sold: "1.3k",
+        version: ["Automatic", "40mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/46/16-9-1.png",
       "../user/assets/image/sanpham/46/16-9-2.png",
-      "../user/assets/image/sanpham/46/16-9-3.png"
+      "../user/assets/image/sanpham/46/16-9-3.png",
     ],
     infoDetail: {
       "Loại máy": "Automatic 8210",
@@ -2360,37 +3600,39 @@ const Initial = [
       "Kháng nước": "50m",
       "Dây đeo": "Thép",
       "Năng lượng dự trữ": "40 giờ",
-      "Xuất xứ": "Nhật Bản"
+      "Xuất xứ": "Nhật Bản",
     },
     overview: `<h2>Citizen NH8350 là chiếc đồng hồ cơ nổi bật với thiết kế cổ điển.</h2><p>Giá thành hợp lý, bộ máy bền bỉ và mặt kính sapphire chống trầy, đây là lựa chọn tốt cho người mới bắt đầu chơi đồng hồ cơ.</p>
-    <img src="/user/assets/image/sanpham/46/thongtin1.png" alt="">`
+    <img src="/user/assets/image/sanpham/46/thongtin1.png" alt="">`,
   },
   {
     id: "47",
     name: "Casio 40 mm Nam MTP-1303DD-7AVDF",
     brand: "Seiko",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp47.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp47.png",
     price: 1350000,
     salebefore: 1500000,
     baseprice: 800000,
     listVersions: [
       { name: "Loại máy", option: ["Pin (Quartz)"] },
-      { name: "Kích thước", option: ["40.5mm"] }
+      { name: "Kích thước", option: ["40.5mm"] },
     ],
     listColors: ["Bạc"],
     versions: [
       {
-        storage: "40.5mm",
-        colors: [
-          { color: "Bạc", price: 13200000, stock: 40, status: true, sold: "1.3k", version: ["Pin (Quartz)", "40.5mm"] }
-        ]
-      }
+        color: "Bạc",
+        priceBase: 13200000,
+        stock: 40,
+        status: true,
+        sold: "1.3k",
+        version: ["Pin (Quartz)", "40.5mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/47/16-9-1.png",
       "../user/assets/image/sanpham/47/16-9-2.png",
-      "../user/assets/image/sanpham/47/16-9-3.png"
+      "../user/assets/image/sanpham/47/16-9-3.png",
     ],
     infoDetail: {
       "Loại máy": "Pin (Quartz)",
@@ -2399,10 +3641,10 @@ const Initial = [
       "Mặt kính": "Hardlex",
       "Kháng nước": "5 ATM",
       "Dây đeo": "Thép không gỉ",
-      "Pin": "Khoảng 3 năm",
-      "Xuất xứ": "Nhật Bản"
+      Pin: "Khoảng 3 năm",
+      "Xuất xứ": "Nhật Bản",
     },
-    overview: `<p>Đang cập nhật</p>`
+    overview: `<p>Đang cập nhật</p>`,
   },
 
   {
@@ -2410,27 +3652,29 @@ const Initial = [
     name: "Orient Bambino RA-AP0005B10B",
     brand: "Orient",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp48.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp48.png",
     price: 6500000,
     salebefore: 7200000,
     baseprice: 5500000,
     listVersions: [
       { name: "Loại máy", option: ["Automatic"] },
-      { name: "Kích thước", option: ["40mm"] }
+      { name: "Kích thước", option: ["40mm"] },
     ],
     listColors: ["Đen"],
     versions: [
       {
-        storage: "40mm",
-        colors: [
-          { color: "Đen", price: 6600000, stock: 60, status: true, sold: "1.5k", version: ["Automatic", "40mm"] }
-        ]
-      }
+        color: "Đen",
+        priceBase: 6600000,
+        stock: 60,
+        status: true,
+        sold: "1.5k",
+        version: ["Automatic", "40mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/48/16-9-1.png",
       "../user/assets/image/sanpham/48/16-9-2.png",
-      "../user/assets/image/sanpham/48/16-9-3.png"
+      "../user/assets/image/sanpham/48/16-9-3.png",
     ],
     infoDetail: {
       "Loại máy": "Automatic F6222",
@@ -2440,10 +3684,10 @@ const Initial = [
       "Kháng nước": "3 ATM",
       "Dây đeo": "Da",
       "Năng lượng dự trữ": "32 giờ",
-      "Xuất xứ": "Nhật Bản"
+      "Xuất xứ": "Nhật Bản",
     },
     overview: `<h2>Orient Bambino- dòng đồng hồ Dress kinh điển.</h2><p>Thiết kế cổ điển, mặt kính cong và máy F6222 trữ cót 32 giờ tạo nên giá trị vượt tầm giá.</p>
-    <img src="/user/assets/image/sanpham/48/thongtin1.png" alt="">`
+    <img src="/user/assets/image/sanpham/48/thongtin1.png" alt="">`,
   },
 
   {
@@ -2451,27 +3695,29 @@ const Initial = [
     name: "Citizen 28 mm Nữ EM0801-85N",
     brand: "Citizen",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp49.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp49.png",
     price: 7200000,
     salebefore: 7990000,
     baseprice: 6200000,
     listVersions: [
       { name: "Loại máy", option: ["Eco-Drive"] },
-      { name: "Kích thước", option: ["28mm"] }
+      { name: "Kích thước", option: ["28mm"] },
     ],
     listColors: ["Bạc"],
     versions: [
       {
-        storage: "28mm",
-        colors: [
-          { color: "Bạc", price: 7200000, stock: 70, status: true, sold: "1.4k", version: ["Eco-Drive", "28mm"] },
-        ]
-      }
+        color: "Bạc",
+        priceBase: 7200000,
+        stock: 70,
+        status: true,
+        sold: "1.4k",
+        version: ["Eco-Drive", "28mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/49/16-9-1.png",
       "../user/assets/image/sanpham/49/16-9-2.png",
-      "../user/assets/image/sanpham/49/16-9-3.png"
+      "../user/assets/image/sanpham/49/16-9-3.png",
     ],
     infoDetail: {
       "Loại máy": "Eco-Drive",
@@ -2480,10 +3726,10 @@ const Initial = [
       "Kháng nước": "3 ATM - Rửa tay, đi mưa",
       "Dây đeo": "Thép không gỉ",
       "Mặt kính": "Kính khoáng Mineral",
-      "Pin": "Khoảng 5 - 10 năm",
-      "Xuất xứ": "Nhật Bản"
+      Pin: "Khoảng 5 - 10 năm",
+      "Xuất xứ": "Nhật Bản",
     },
-    overview: `<p>Đang cập nhật</p>`
+    overview: `<p>Đang cập nhật</p>`,
   },
 
   {
@@ -2491,27 +3737,29 @@ const Initial = [
     name: "Festina 30.5 mm Nữ F20600/4",
     brand: "Lacoste",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp50.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp50.png",
     price: 2737000,
     salebefore: 3650000,
     baseprice: 2000000,
     listVersions: [
       { name: "Loại máy", option: ["Pin (Quartz)"] },
-      { name: "Kích thước", option: ["40mm"] }
+      { name: "Kích thước", option: ["40mm"] },
     ],
     listColors: ["Bạc"],
     versions: [
       {
-        storage: "30.5mm",
-        colors: [
-          { color: "Bạc", price: 19900000, stock: 50, status: true, sold: "540", version: ["Pin (Quartz)", "30.5mm"] }
-        ]
-      }
+        color: "Bạc",
+        priceBase: 19900000,
+        stock: 50,
+        status: true,
+        sold: "540",
+        version: ["Pin (Quartz)", "30.5mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/50/16-9-1.png",
       "../user/assets/image/sanpham/50/16-9-2.png",
-      "../user/assets/image/sanpham/50/16-9-3.png"
+      "../user/assets/image/sanpham/50/16-9-3.png",
     ],
     infoDetail: {
       "Loại máy": "Pin (Quartz)",
@@ -2520,13 +3768,13 @@ const Initial = [
       "Mặt kính": "Kính khoáng Mineral",
       "Kháng nước": "5-ATM",
       "Dây đeo": "Thép không gỉ",
-      "Pin": "Khoảng 1 - 2 năm",
-      "Xuất xứ": "Thụy Sĩ"
+      Pin: "Khoảng 1 - 2 năm",
+      "Xuất xứ": "Thụy Sĩ",
     },
     overview: `<h2>Đồng hồ Festina F20600/4 gọn gàng, sang trọng và thanh lịch.</h2>
     <p>Đồng hồ Festina F20600/4 có thiết kế gọn gàng nhưng vẫn giữ được vẻ sang trọng và thanh lịch. Mặt đồng hồ có nền trơn được trang trí bởi các cọc số đính đá, giúp tạo nên một sản phẩm phù hợp với các quý cô theo đuổi phong cách nhẹ nhàng, trang nhã.</p>
     <p>Đồng hồ có kích thước mặt 30.5 mm phù hợp với các bạn nữ kích thước cổ tay nhỏ hoặc vừa. Hơn nữa, hãng còn sử dụng chất liệu kính khoáng cho phần mặt đồng hồ, vật liệu này có thể chịu lực và chống trầy ở mức vừa phải khi sử dụng hàng ngày.</p>
-    <p>Tiếp đến, khung viền và dây đeo của đồng hồ Festina này làm bằng thép không gỉ, một chất liệu thường được sử dụng ở các sản phẩm phụ kiện thời trang vì có tính bền đẹp, đem lại sự tiện lợi cho người đeo trong thời gian dài sử dụng.</p>`
+    <p>Tiếp đến, khung viền và dây đeo của đồng hồ Festina này làm bằng thép không gỉ, một chất liệu thường được sử dụng ở các sản phẩm phụ kiện thời trang vì có tính bền đẹp, đem lại sự tiện lợi cho người đeo trong thời gian dài sử dụng.</p>`,
   },
 
   {
@@ -2534,27 +3782,29 @@ const Initial = [
     name: "Orient Star RE-AT0202E00B",
     brand: "Orient Star",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp51.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp51.png",
     price: 18500000,
     salebefore: 19900000,
     baseprice: 16000000,
     listVersions: [
       { name: "Loại máy", option: ["Automatic"] },
-      { name: "Kích thước", option: ["41mm"] }
+      { name: "Kích thước", option: ["41mm"] },
     ],
     listColors: ["Nâu"],
     versions: [
       {
-        storage: "41mm",
-        colors: [
-          { color: "Nâu", price: 18500000, stock: 20, status: true, sold: "420", version: ["Automatic", "41mm"] },
-        ]
-      }
+        color: "Nâu",
+        priceBase: 18500000,
+        stock: 20,
+        status: true,
+        sold: "420",
+        version: ["Automatic", "41mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/51/16-9-1.png",
       "../user/assets/image/sanpham/51/16-9-2.png",
-      "../user/assets/image/sanpham/51/16-9-3.png"
+      "../user/assets/image/sanpham/51/16-9-3.png",
     ],
     infoDetail: {
       "Loại máy": "Automatic F6F44",
@@ -2564,12 +3814,12 @@ const Initial = [
       "Kháng nước": "5-ATM",
       "Dây đeo": "Da",
       "Năng lượng dự trữ": "50 giờ",
-      "Xuất xứ": "Nhật Bản"
+      "Xuất xứ": "Nhật Bản",
     },
     overview: `<h2>Đồng hồ Orient Star 40.4 mm Nam RE-AT0202E00B là một sản phẩm mang thương hiệu uy tín và chất lượng của Nhật Bản.</h2>
     <p>Với thiết kế theo phong cách Classic cổ điển, đồng hồ này tạo được sự tinh tế và trở thành lựa chọn yêu thích của nhiều người tiêu dùng tại Việt Nam.</p>
     <p>Mẫu đồng hồ này thuộc bộ sưu tập đặc biệt "Star" của Orient, nổi bật với phần mặt số được trang trí bằng cửa sổ lộ van tim, cho phép người dùng nhìn thấy một phần cơ chế hoạt động bên trong đồng hồ. Vị trí 12 giờ trên mặt số được sử dụng làm mức thang đo năng lượng dự trữ, tạo điểm nhấn độc đáo, phù hợp với phong cách hiện đại của dòng đồng hồ Orient Star.</p>
-    <img src="/user/assets/image/sanpham/51/thongtin1.png" alt="">`
+    <img src="/user/assets/image/sanpham/51/thongtin1.png" alt="">`,
   },
 
   {
@@ -2577,28 +3827,37 @@ const Initial = [
     name: "Hamilton Khaki Field Mechanical H69439931",
     brand: "Hamilton",
     category: "Đồng hồ",
-    thumbnail: "../user/assets/image/sanpham/sp52.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp52.png",
     price: 13200000,
     salebefore: 14500000,
     baseprice: 11800000,
     listVersions: [
       { name: "Loại máy", option: ["Hand-winding"] },
-      { name: "Kích thước", option: ["38mm"] }
+      { name: "Kích thước", option: ["38mm"] },
     ],
     listColors: ["Xanh Rêu", "Đen"],
     versions: [
       {
-        storage: "38mm",
-        colors: [
-          { color: "Xanh Rêu", price: 13200000, stock: 35, status: true, sold: "1.1k", version: ["Hand-winding", "38mm"] },
-          { color: "Đen", price: 13500000, stock: 30, status: true, sold: "920", version: ["Hand-winding", "38mm"] }
-        ]
-      }
+        color: "Xanh Rêu",
+        priceBase: 13200000,
+        stock: 35,
+        status: true,
+        sold: "1.1k",
+        version: ["Hand-winding", "38mm"],
+      },
+      {
+        color: "Đen",
+        priceBase: 13500000,
+        stock: 30,
+        status: true,
+        sold: "920",
+        version: ["Hand-winding", "38mm"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/52/16-9-1.png",
       "../user/assets/image/sanpham/52/16-9-2.png",
-      "../user/assets/image/sanpham/52/16-9-3.png"
+      "../user/assets/image/sanpham/52/16-9-3.png",
     ],
     infoDetail: {
       "Loại máy": "Lên cót tay H-50",
@@ -2608,10 +3867,10 @@ const Initial = [
       "Kháng nước": "50m",
       "Dây đeo": "Vải Nato",
       "Năng lượng dự trữ": "80 giờ",
-      "Xuất xứ": "Thụy Sĩ"
+      "Xuất xứ": "Thụy Sĩ",
     },
     overview: `<h2>Dòng đồng hồ Field Watch nổi tiếng nhất.</h2><p>Hamilton Khaki mang hơi hướng quân đội Mỹ cổ điển, bền bỉ, giản dị nhưng cực kỳ cuốn hút.</p>
-  <img src="/user/assets/image/sanpham/52/thongtin1.png" alt="">`
+  <img src="/user/assets/image/sanpham/52/thongtin1.png" alt="">`,
   },
 
   {
@@ -2619,39 +3878,53 @@ const Initial = [
     name: "Samsung Galaxy Tab S10 FE 128GB",
     brand: "Samsung",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp53.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp53.png",
     price: 10769000,
     salebefore: 11990000,
     baseprice: 9990000,
-    listVersions: [
-      { name: "Bộ nhớ", option: ["128GB"] }
-    ],
+    listVersions: [{ name: "Bộ nhớ", option: ["128GB"] }],
     listColors: ["Xanh", "Xám", "Bạc"],
     versions: [
       {
-        storage: "128GB",
-        colors: [
-          { color: "Xanh", price: 10769000, stock: 25, status: true, sold: "1.2k", version: ["128GB"] },
-          { color: "Xám", price: 10890000, stock: 20, status: true, sold: "980", version: ["128GB"] },
-          { color: "Bạc", price: 10950000, stock: 18, status: true, sold: "870", version: ["128GB"] }
-        ]
-      }
+        color: "Xanh",
+        priceBase: 10769000,
+        stock: 25,
+        status: true,
+        sold: "1.2k",
+        version: ["128GB"],
+      },
+      {
+        color: "Xám",
+        priceBase: 10890000,
+        stock: 20,
+        status: true,
+        sold: "980",
+        version: ["128GB"],
+      },
+      {
+        color: "Bạc",
+        priceBase: 10950000,
+        stock: 18,
+        status: true,
+        sold: "870",
+        version: ["128GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/53/16-9-1.png",
       "../user/assets/image/sanpham/53/16-9-2.png",
-      "../user/assets/image/sanpham/53/16-9-3.png"
+      "../user/assets/image/sanpham/53/16-9-3.png",
     ],
     infoDetail: {
-      "Màn hình": "11\" LCD 90Hz",
-      "CPU": "Exynos 1380",
-      "RAM": "6GB",
-      "ROM": "128GB",
+      "Màn hình": '11" LCD 90Hz',
+      CPU: "Exynos 1380",
+      RAM: "6GB",
+      ROM: "128GB",
       "Camera sau": "8MP",
       "Camera trước": "12MP",
-      "Pin": "8000mAh",
-      "Sạc": "15W",
-      "Hệ điều hành": "Android 14"
+      Pin: "8000mAh",
+      Sạc: "15W",
+      "Hệ điều hành": "Android 14",
     },
     overview: `<h2>Khám phá thế giới số theo cách hoàn toàn mới với Samsung Galaxy Tab S10 FE 5G chiếc tablet tầm trung sở hữu hiệu suất vượt bậc cùng khả năng kết nối siêu tốc.</h2>
     <p>Máy tính bảng Samsung Galaxy Tab S gây ấn tượng với màn hình TFT LCD 10.9 inch, mang đến không gian hiển thị rộng rãi và rực rỡ. Dù bạn đang xem phim, chỉnh sửa văn bản, lướt web hay phác thảo ý tưởng sáng tạo, mọi nội dung đều trở nên sống động và rõ nét nhờ độ phân giải cao 1440 x 2304 pixels.</p>
@@ -2663,14 +3936,14 @@ const Initial = [
     <p>Máy tính bảng trang bị camera sau 13 MP với khả năng lấy nét nhanh, ghi lại tài liệu, phong cảnh hay khoảnh khắc thường ngày với độ chi tiết cao. Ngoài ra, máy hỗ trợ quay video 4K, giúp bạn lưu giữ những đoạn phim sống động, chất lượng vượt trội.</p>
     <p>Camera trước 12 MP góc rộng là người bạn đồng hành lý tưởng cho các cuộc họp video, học trực tuyến hay gọi điện thoại với gia đình, cho khung hình rõ ràng, bao quát và chuyên nghiệp hơn.</p>
     <img src="/user/assets/image/sanpham/53/thongtin3.png" alt="">
-    `
+    `,
   },
   {
     id: "54",
     name: "Apple iPad Gen 11 (A16) 128GB",
     brand: "Apple",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp54.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp54.png",
     price: 8990000,
     salebefore: 9990000,
     baseprice: 8890000,
@@ -2681,58 +3954,83 @@ const Initial = [
     listColors: ["Bạc", "Xanh", "Hồng"],
     versions: [
       {
-        storage: "128GB",
-        colors: [
-          { color: "Bạc", price: 8990000, stock: 30, status: true, sold: "2.5k", version: ["6GB", "128GB"] },
-          { color: "Xanh", price: 9050000, stock: 28, status: true, sold: "2.1k", version: ["6GB", "128GB"] },
-          { color: "Hồng", price: 9100000, stock: 25, status: true, sold: "1.8k", version: ["6GB", "128GB"] }
-        ]
-      }
+        color: "Bạc",
+        priceBase: 8990000,
+        stock: 30,
+        status: true,
+        sold: "2.5k",
+        version: ["6GB", "128GB"],
+      },
+      {
+        color: "Xanh",
+        priceBase: 9050000,
+        stock: 28,
+        status: true,
+        sold: "2.1k",
+        version: ["6GB", "128GB"],
+      },
+      {
+        color: "Hồng",
+        priceBase: 9100000,
+        stock: 25,
+        status: true,
+        sold: "1.8k",
+        version: ["6GB", "128GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/54/16-9-1.png",
       "../user/assets/image/sanpham/54/16-9-2.png",
-      "../user/assets/image/sanpham/54/16-9-3.png"
+      "../user/assets/image/sanpham/54/16-9-3.png",
     ],
     infoDetail: {
-      "Màn hình": "10.9\" Liquid Retina",
-      "CPU": "Apple A16 Bionic",
-      "RAM": "6GB",
-      "ROM": "128GB",
+      "Màn hình": '10.9" Liquid Retina',
+      CPU: "Apple A16 Bionic",
+      RAM: "6GB",
+      ROM: "128GB",
       "Camera sau": "12MP",
       "Camera trước": "12MP",
-      "Pin": "10 giờ",
-      "Sạc": "20W",
-      "Hệ điều hành": "iPadOS 18"
+      Pin: "10 giờ",
+      Sạc: "20W",
+      "Hệ điều hành": "iPadOS 18",
     },
     overview: `<h2>Với chip A16 mạnh mẽ, iPad A16 không chỉ mang lại hiệu năng vượt trội mà còn tích hợp nhiều công nghệ tiên tiến, giúp nâng cao trải nghiệm người dùng. Màn hình Liquid Retina 11 inch sắc nét, hỗ trợ Apple Pencil kết hợp với bộ nhớ khởi điểm 128GB, đảm bảo khả năng làm việc và giải trí mượt mà.</h2>
     <p>Được thiết kế để mang đến trải nghiệm viết vẽ tự nhiên và chính xác nhất trên iPad. Với độ trễ gần như không đáng kể và khả năng nhận diện lực nhấn, Apple Pencil cho phép người dùng tạo ra những nét vẽ tinh tế, từ những đường phác thảo mảnh mai đến những mảng màu đậm nét.</p>
     <p>Bên cạnh đó, Apple Pencil còn hỗ trợ các tính năng như nghiêng bút để tạo bóng và thay đổi độ dày nét vẽ, mang đến sự linh hoạt tối đa cho người dùng trong quá trình sáng tạo. Ngoài ra, mẫu máy tính bảng 11 inch này cũng hỗ trợ những ứng dụng chuyên nghiệp được tối ưu hóa cho Apple Pencil, biến iPad thành một studio di động tiện lợi của riêng bạn.</p>
     <p>iPad 11 được trang bị chip Apple A16, một bộ vi xử lý tiên tiến được thiết kế để mang đến hiệu năng ổn định cho cả tác vụ cơ bản và chuyên sâu. Chip A16 Bionic bao gồm CPU 5 lõi, cho phép thiết bị cân bằng giữa hiệu suất và thời lượng pin.</p>
-    < img src="/user/assets/image/sanpham/54/thongtin1.png" alt="">`
+    < img src="/user/assets/image/sanpham/54/thongtin1.png" alt="">`,
   },
   {
     id: "55",
     name: "Samsung Galaxy Tab A9 64GB",
     brand: "Samsung",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp55.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp55.png",
     price: 5400000,
     salebefore: 5990000,
     baseprice: 5200000,
     listVersions: [
       { name: "RAM", option: ["4GB"] },
-      { name: "Bộ nhớ", option: ["64GB"] }
+      { name: "Bộ nhớ", option: ["64GB"] },
     ],
     listColors: ["Xanh", "Xám"],
     versions: [
       {
-        storage: "64GB",
-        colors: [
-          { color: "Xanh", price: 5400000, stock: 50, status: true, sold: "3.2k", version: ["4GB", "64GB"] },
-          { color: "Xám", price: 5490000, stock: 45, status: true, sold: "2.8k", version: ["4GB", "64GB"] }
-        ]
-      }
+        color: "Xanh",
+        priceBase: 5400000,
+        stock: 50,
+        status: true,
+        sold: "3.2k",
+        version: ["4GB", "64GB"],
+      },
+      {
+        color: "Xám",
+        priceBase: 5490000,
+        stock: 45,
+        status: true,
+        sold: "2.8k",
+        version: ["4GB", "64GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/55/16-9-1.png",
@@ -2740,15 +4038,15 @@ const Initial = [
       "../user/assets/image/sanpham/55/16-9-3.png",
     ],
     infoDetail: {
-      "Màn hình": "8.7\" LCD",
-      "CPU": "Helio G99",
-      "RAM": "4GB",
-      "ROM": "64GB",
+      "Màn hình": '8.7" LCD',
+      CPU: "Helio G99",
+      RAM: "4GB",
+      ROM: "64GB",
       "Camera sau": "8MP",
       "Camera trước": "2MP",
-      "Pin": "5100mAh",
-      "Sạc": "15W",
-      "Hệ điều hành": "Android 14"
+      Pin: "5100mAh",
+      Sạc: "15W",
+      "Hệ điều hành": "Android 14",
     },
     overview: `
     <h2>Samsung Galaxy Tab A9 WiFi là mẫu máy tính bảng đáng chú ý tại thị trường Việt Nam, được ra mắt chính thức vào tháng 10/2023. Một vài điểm nổi bật trên chiếc máy tính bảng này có thể kể đến như: Thiết kế đẹp, màn hình lớn, trang bị chip MediaTek Helio G99 cùng viên pin 5100 mAh.</h2>
@@ -2761,30 +4059,39 @@ const Initial = [
     <p>Camera trên chiếc Galaxy Tab A9 WiFi đã chứng minh sự đáng tin cậy trong công việc hằng ngày, đặc biệt đối với một người làm việc văn phòng hay những bạn học sinh - sinh viên. Chiếc tablet này trang bị một camera sau 8 MP, cho phép người dùng dễ dàng chụp tài liệu văn bản và tạo bản sao chất lượng cao. Độ phân giải cao giúp máy bắt giữ mọi chi tiết của tài liệu, đảm bảo rằng mọi trang giấy và chữ viết đều rõ ràng và sắc nét.</p>
     <p>Với chip Helio G99, Galaxy Tab A9 WiFi giúp người dùng trải nghiệm mọi tác vụ thông thường một cách mượt mà và nhanh chóng. Nhắn tin, duyệt web, xem video hoặc làm việc văn phòng - mọi thứ đều diễn ra một cách suôn sẻ, tạo cho người dùng cảm giác như đang sử dụng một máy tính xách tay thực thụ.</p>
     <img src="/user/assets/image/sanpham/55/thongtin3.png" alt="">
-    `
+    `,
   },
   {
     id: "56",
     name: "Samsung Galaxy Tab A9+ 64GB",
     brand: "Samsung",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp56.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp56.png",
     price: 6490000,
     salebefore: 6990000,
     baseprice: 6190000,
     listVersions: [
       { name: "RAM", option: ["4GB"] },
-      { name: "Bộ nhớ", option: ["64GB"] }
+      { name: "Bộ nhớ", option: ["64GB"] },
     ],
     listColors: ["Xanh", "Xám"],
     versions: [
       {
-        storage: "64GB",
-        colors: [
-          { color: "Xanh", price: 6490000, stock: 45, status: true, sold: "2.9k", version: ["4GB", "64GB"] },
-          { color: "Xám", price: 6550000, stock: 40, status: true, sold: "2.4k", version: ["4GB", "64GB"] }
-        ]
-      }
+        color: "Xanh",
+        priceBase: 6490000,
+        stock: 45,
+        status: true,
+        sold: "2.9k",
+        version: ["4GB", "64GB"],
+      },
+      {
+        color: "Xám",
+        priceBase: 6550000,
+        stock: 40,
+        status: true,
+        sold: "2.4k",
+        version: ["4GB", "64GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/56/16-9-1.png",
@@ -2792,18 +4099,18 @@ const Initial = [
       "../user/assets/image/sanpham/56/16-9-3.png",
       "../user/assets/image/sanpham/56/16-9-4.png",
       "../user/assets/image/sanpham/56/16-9-5.png",
-      "../user/assets/image/sanpham/56/16-9-6.png"
+      "../user/assets/image/sanpham/56/16-9-6.png",
     ],
     infoDetail: {
-      "Màn hình": "11\" LCD 90Hz",
-      "CPU": "Snapdragon 695",
-      "RAM": "4GB",
-      "ROM": "64GB",
+      "Màn hình": '11" LCD 90Hz',
+      CPU: "Snapdragon 695",
+      RAM: "4GB",
+      ROM: "64GB",
       "Camera sau": "8MP",
       "Camera trước": "5MP",
-      "Pin": "7040mAh",
-      "Sạc": "15W",
-      "Hệ điều hành": "Android 14"
+      Pin: "7040mAh",
+      Sạc: "15W",
+      "Hệ điều hành": "Android 14",
     },
     overview: `<h2>Với giá cả phải chăng, Samsung Galaxy Tab A9+ 5G là một sản phẩm máy tính bảng của Samsung dành cho người dùng muốn sở hữu một thiết bị giải trí cơ bản với màn hình rộng và khả năng kết nối mạng toàn diện để truy cập internet bất kỳ lúc nào và ở bất kỳ đâu.</h2>
     <p>Thiết kế của Galaxy Tab A9+ 5G đem đến một sự tươi mới và tinh tế. Máy sở hữu một ngoại hình hiện đại và thanh lịch với mặt lưng phẳng và khung kim loại. Các góc bo tròn mềm mại làm cho máy có sự đối lập với những đường nét phẳng phiu nên trông khá thú vị.</p>
@@ -2812,47 +4119,49 @@ const Initial = [
     <p>Màn hình của Galaxy Tab A9+ 5G được trang bị công nghệ TFT LCD, một sự kết hợp độc đáo giữa chất lượng hình ảnh và khả năng tiết kiệm năng lượng. Màn hình TFT LCD không chỉ hiển thị màu sắc tự nhiên và sáng rõ mà còn tiết kiệm điện năng, giúp kéo dài thời gian sử dụng máy. Điều này làm cho Galaxy Tab A9+ 5G trở thành một lựa chọn thông minh khi người dùng muốn kết hợp chất lượng hình ảnh và hiệu suất pin tối ưu.</p>
     <p>Một trong những điểm đáng chú ý nhất của Galaxy Tab A9+ 5G là sự hiện diện của chip Snapdragon 695, một thành phần quan trọng quyết định hiệu năng của thiết bị. Chip được thiết kế để đáp ứng tốt nhu cầu của người dùng và giúp máy tính bảng thực hiện các tác vụ cơ bản một cách nhanh chóng và hiệu quả.</p>
     <img src="/user/assets/image/sanpham/56/thongtin2.png" alt="">
-    `
+    `,
   },
   {
     id: "57",
     name: "Lenovo Idea Tab 5G 128GB",
     brand: "Lenovo",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp57.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp57.png",
     price: 5590000,
     salebefore: 5990000,
     baseprice: 5300000,
     listVersions: [
       { name: "RAM", option: ["8GB"] },
-      { name: "Bộ nhớ", option: ["128GB"] }
+      { name: "Bộ nhớ", option: ["128GB"] },
     ],
     listColors: ["Xám"],
     versions: [
       {
-        storage: "128GB",
-        colors: [
-          { color: "Xám", price: 5590000, stock: 38, status: true, sold: "1.5k", version: ["8GB", "128GB"] }
-        ]
-      }
+        color: "Xám",
+        priceBase: 5590000,
+        stock: 38,
+        status: true,
+        sold: "1.5k",
+        version: ["8GB", "128GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/57/16-9-1.png",
       "../user/assets/image/sanpham/57/16-9-2.png",
       "../user/assets/image/sanpham/57/16-9-3.png",
-      "../user/assets/image/sanpham/57/16-9-4.png"
+      "../user/assets/image/sanpham/57/16-9-4.png",
     ],
     infoDetail: {
-      "Màn hình": "11\" IPS",
-      "CPU": "MediaTek Dimensity 6300 8 nhân",
-      "GPU": "Mali-G57 MC2",
-      "RAM": "8GB",
-      "ROM": "128GB",
+      "Màn hình": '11" IPS',
+      CPU: "MediaTek Dimensity 6300 8 nhân",
+      GPU: "Mali-G57 MC2",
+      RAM: "8GB",
+      ROM: "128GB",
       "Camera sau": "8MP",
       "Camera trước": "5MP",
-      "Pin": "7040mAh",
-      "Sạc": "20W",
-      "Hệ điều hành": "Android 15"
+      Pin: "7040mAh",
+      Sạc: "20W",
+      "Hệ điều hành": "Android 15",
     },
     overview: `<h2>Lenovo Idea Tab 5G mang đến trải nghiệm học tập và giải trí trọn vẹn với màn hình 2.5K sắc nét, âm thanh Dolby Atmos sống động, chip MediaTek Dimensity 6300 mượt mà. Bên cạnh đó, máy còn hỗ trợ AI Note, Circle to Search cùng bàn phím và bút cảm ứng tùy chọn, đáp ứng linh hoạt mọi nhu cầu học tập, làm việc và sáng tạo của sinh viên.</h2>
     <p>Máy trang bị màn hình 11 inch độ phân giải 2.5K (2560 x 1600), cho chữ và hình ảnh hiển thị sắc nét, dễ đọc tài liệu, xem biểu đồ hay nghiên cứu mà không lo mỏi mắt. Khi xem phim hay video, chất lượng hình ảnh sống động như rạp mini tại nhà.</p>
@@ -2863,48 +4172,57 @@ const Initial = [
     <img src="/user/assets/image/sanpham/57/thongtin2.png" alt="">
     <p>Lenovo AI Note được tích hợp ngay trong ứng dụng Notepad, biến việc ghi chú không còn đơn thuần là viết lại, mà còn giúp sắp xếp ý tưởng gọn gàng, tóm tắt nội dung và quản lý dễ dàng hơn. Với sinh viên, đây là công cụ hữu ích để ôn thi, hệ thống hóa kiến thức từ bài giảng hay phác thảo nhanh ý tưởng cho bài luận.</p>
     <img src="/user/assets/image/sanpham/57/thongtin3.png" alt="">
-    `
+    `,
   },
   {
     id: "58",
     name: "Apple iPad Gen 11 WiFi 256GB",
     brand: "Apple",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp58.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp58.png",
     price: 11490000,
     salebefore: 12490000,
     baseprice: 11290000,
     listVersions: [
       { name: "RAM", option: ["6GB"] },
-      { name: "Bộ nhớ", option: ["256GB"] }
+      { name: "Bộ nhớ", option: ["256GB"] },
     ],
     listColors: ["Bạc", "Xanh"],
     versions: [
       {
-        storage: "256GB",
-        colors: [
-          { color: "Bạc", price: 11490000, stock: 22, status: true, sold: "1.9k", version: ["6GB", "256GB"] },
-          { color: "Xanh", price: 11550000, stock: 18, status: true, sold: "1.7k", version: ["6GB", "256GB"] }
-        ]
-      }
+        color: "Bạc",
+        priceBase: 11490000,
+        stock: 22,
+        status: true,
+        sold: "1.9k",
+        version: ["6GB", "256GB"],
+      },
+      {
+        color: "Xanh",
+        priceBase: 11550000,
+        stock: 18,
+        status: true,
+        sold: "1.7k",
+        version: ["6GB", "256GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/58/16-9-1.png",
       "../user/assets/image/sanpham/58/16-9-2.png",
       "../user/assets/image/sanpham/58/16-9-3.png",
-      "../user/assets/image/sanpham/58/16-9-4.png"
+      "../user/assets/image/sanpham/58/16-9-4.png",
     ],
     infoDetail: {
-      "Màn hình": "10.9\" Liquid Retina",
-      "CPU": "Apple A16 Bionic",
-      "GPU": "Apple GPU 4 nhân",
-      "RAM": "6GB",
-      "ROM": "256GB",
+      "Màn hình": '10.9" Liquid Retina',
+      CPU: "Apple A16 Bionic",
+      GPU: "Apple GPU 4 nhân",
+      RAM: "6GB",
+      ROM: "256GB",
       "Camera sau": "12MP",
       "Camera trước": "12MP",
-      "Pin": "10 giờ",
-      "Sạc": "20W",
-      "Hệ điều hành": "iPadOS 18"
+      Pin: "10 giờ",
+      Sạc: "20W",
+      "Hệ điều hành": "iPadOS 18",
     },
     overview: `
     <h2>iPad A16 WiFi 256GB, ra mắt song hành cùng iPad Air M3, mang đến lựa chọn kinh tế hơn cho người dùng. Thiết bị này sở hữu chip A16, cung cấp hiệu năng đủ đáp ứng các tác vụ hàng ngày. Thiết bị cũng hỗ trợ Apple Pencil, mở rộng khả năng thao tác với máy của người dùng.</h2>
@@ -2915,29 +4233,31 @@ const Initial = [
     <p>Lớp phủ chống bám vân tay trên màn hình hạn chế dấu vết mồ hôi, giữ cho thiết bị luôn sạch sẽ và sáng bóng. Đặc biệt, khả năng hỗ trợ Apple Pencil thế hệ đầu cùng phiên bản USB-C giúp việc ghi chú, vẽ phác thảo và thao tác sáng tạo trở nên dễ dàng, tạo cảm giác chân thực như viết trên giấy.</p>
     <p>Máy tính bảng 11 inch được trang bị chip Apple A16, một bộ vi xử lý mạnh mẽ với CPU 5 lõi, cho phép thiết bị xử lý các tác vụ đa nhiệm một cách ổn định, đồng thời tối ưu hóa mức tiêu thụ năng lượng. Bộ xử lý đồ họa GPU 4 lõi hỗ trợ hiển thị hình ảnh sắc nét và chơi game ổn định hơn. Với Neural Engine 16 lõi, iPad có thể tận dụng tối đa sức mạnh AI để cải thiện khả năng nhận diện giọng nói, xử lý hình ảnh nhanh hơn và tối ưu hóa trải nghiệm làm việc trên iPadOS.</p>
     <img src="/user/assets/image/sanpham/58/thongtin3.png" alt="">
-    `
+    `,
   },
   {
     id: "59",
     name: "Samsung Galaxy Tab S9 WIFI 256GB",
     brand: "Samsung",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp59.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp59.png",
     price: 18990000,
     salebefore: 21990000,
     baseprice: 14000000,
     listVersions: [
       { name: "RAM", option: ["12GB"] },
-      { name: "Bộ nhớ", option: ["256GB"] }
+      { name: "Bộ nhớ", option: ["256GB"] },
     ],
     listColors: ["Kem"],
     versions: [
       {
-        storage: "256GB",
-        colors: [
-          { color: "Kem", price: 13990000, stock: 15, status: true, sold: "980", version: ["12GB", "256GB"] },
-        ]
-      }
+        color: "Kem",
+        priceBase: 13990000,
+        stock: 15,
+        status: true,
+        sold: "980",
+        version: ["12GB", "256GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/59/16-9-1.png",
@@ -2945,15 +4265,15 @@ const Initial = [
       "../user/assets/image/sanpham/59/16-9-3.png",
     ],
     infoDetail: {
-      "Màn hình": "11\" TFT 120Hz",
-      "CPU": "Snapdragon 8 Gen 2 for Galaxy",
-      "RAM": "12GB",
-      "ROM": "256GB",
+      "Màn hình": '11" TFT 120Hz',
+      CPU: "Snapdragon 8 Gen 2 for Galaxy",
+      RAM: "12GB",
+      ROM: "256GB",
       "Camera sau": "13MP",
       "Camera trước": "12MP",
-      "Pin": "8400mAh",
-      "Sạc": "45W",
-      "Hệ điều hành": "Android 13"
+      Pin: "8400mAh",
+      Sạc: "45W",
+      "Hệ điều hành": "Android 13",
     },
     overview: `<h2>Samsung Galaxy Tab S9 WiFi 256GB là mẫu máy tính bảng được mở bán tại thị trường Việt Nam vào tháng 07/2023. Lần ra mắt này hãng mang đến khá nhiều sự nâng cấp nổi bật như: Cấu hình mạnh, thiết kế mỏng hơn đời tiền nhiệm cùng với chuẩn IP68 cho cả máy và bút S Pen.</h2>
     <p>Samsung Galaxy Tab S9 WiFi không chỉ là một chiếc máy tính bảng thông thường, mà còn là tuyệt tác kết hợp giữa công nghệ hàng đầu và thiết kế vượt trội. Với thiết kế vuông vức đẹp mắt, mặt lưng và màn hình phẳng mang đến cảm giác sang trọng và hiện đại cho người dùng.</p>
@@ -2961,48 +4281,57 @@ const Initial = [
     <img src="/user/assets/image/sanpham/59/thongtin1.png" alt="">
     <p>Chip Snapdragon 8 Gen 2 trên Galaxy Tab S9 WiFi là mẫu chip đặc biệt được Qualcomm tối ưu riêng cho dòng sản phẩm Galaxy, nó tối ưu hóa để mang đến hiệu suất vượt trội và tiết kiệm năng lượng hiệu quả.</p>
     <img src="/user/assets/image/sanpham/59/thongtin2.png" alt="">
-    <p>Samsung Galaxy Tab S9 WiFi là một sự lựa chọn đáng cân nhắc khi sở hữu bên trong đầy đủ các thông số mạnh mẽ. Từ cấu hình cho đến thiết kế, Samsung luôn chọn những cái tên hàng đầu để trang bị nhằm giúp mang đến những trải nghiệm tuyệt vời cho người dùng.</p>`
+    <p>Samsung Galaxy Tab S9 WiFi là một sự lựa chọn đáng cân nhắc khi sở hữu bên trong đầy đủ các thông số mạnh mẽ. Từ cấu hình cho đến thiết kế, Samsung luôn chọn những cái tên hàng đầu để trang bị nhằm giúp mang đến những trải nghiệm tuyệt vời cho người dùng.</p>`,
   },
   {
     id: "60",
     name: "Xiaomi Redmi Pad Pro WIFI 128GB",
     brand: "Xiaomi",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp60.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp60.png",
     price: 7990000,
     salebefore: 8990000,
     baseprice: 7590000,
     listVersions: [
       { name: "RAM", option: ["6GB"] },
-      { name: "Bộ nhớ", option: ["128GB"] }
+      { name: "Bộ nhớ", option: ["128GB"] },
     ],
     listColors: ["Xanh", "Xám"],
     versions: [
       {
-        storage: "128GB",
-        colors: [
-          { color: "Xanh", price: 7990000, stock: 40, status: true, sold: "2k", version: ["6GB", "128GB"] },
-          { color: "Xám", price: 8090000, stock: 35, status: true, sold: "1.6k", version: ["6GB", "128GB"] }
-        ]
-      }
+        color: "Xanh",
+        priceBase: 7990000,
+        stock: 40,
+        status: true,
+        sold: "2k",
+        version: ["6GB", "128GB"],
+      },
+      {
+        color: "Xám",
+        priceBase: 8090000,
+        stock: 35,
+        status: true,
+        sold: "1.6k",
+        version: ["6GB", "128GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/60/16-9-1.png",
       "../user/assets/image/sanpham/60/16-9-2.png",
       "../user/assets/image/sanpham/60/16-9-3.png",
-      "../user/assets/image/sanpham/60/16-9-4.png"
+      "../user/assets/image/sanpham/60/16-9-4.png",
     ],
     infoDetail: {
-      "Màn hình": "12.1\" IPS 144Hz",
-      "CPU": "Snapdragon 7s Gen 2 8 nhân",
-      "GPU": "Adreno 710",
-      "RAM": "6GB",
-      "ROM": "128GB",
+      "Màn hình": '12.1" IPS 144Hz',
+      CPU: "Snapdragon 7s Gen 2 8 nhân",
+      GPU: "Adreno 710",
+      RAM: "6GB",
+      ROM: "128GB",
       "Camera sau": "8MP",
       "Camera trước": "8MP",
-      "Pin": "10000mAh",
-      "Sạc": "33W",
-      "Hệ điều hành": "Xiaomi HyperOS (Android 14)"
+      Pin: "10000mAh",
+      Sạc: "33W",
+      "Hệ điều hành": "Xiaomi HyperOS (Android 14)",
     },
     overview: `
     <h2>Sau thành công của thế hệ Redmi Pad năm 2022, nhà Xiaomi đã cho ra mắt phiên bản nâng cấp với nhiều cải tiến về thiết kế lẫn hiệu năng mang tên Xiaomi Redmi Pad Pro, hứa hẹn mang đến cho người dùng trải nghiệm tối ưu từ phần cứng đến phần mềm bên trong.</h2>
@@ -3013,48 +4342,57 @@ const Initial = [
     <p>Mang trong mình CPU Snapdragon 7s Gen 2 8 nhân được sản xuất trên quy trình 4 nm hiện đại, có tốc độ tối đa 2.3 GHz giúp tăng hiệu suất xử lý nhưng vẫn giảm mức tiêu thụ điện, con chip này sẽ dễ dàng xử lý các tác vụ từ lướt web, xem video, đến các tác vụ nặng hơn như chỉnh sửa ảnh 2D, chơi game đồ họa trung bình,... mà không gặp quá nhiều trở ngại.</p>
     <img src="/user/assets/image/sanpham/60/thongtin3.png" alt="">
     <p>Mang một thiết kế đẹp, thời thượng nhưng không kém phần bền bỉ, màn hình 2.5K sắc nét, tần số làm mới 120 Hz mượt mà, hiệu năng mạnh mẽ cùng một viên pin khủng, Redmi Pad Pro 6GB/128GB sẽ là một chiếc máy tính bảng đáng trải nghiệm trong phân khúc dưới 10 triệu dành cho người dùng.</p>
-  `
+  `,
   },
   {
     id: "61",
     name: "Xiaomi Pad SE 8.7",
     brand: "Xiaomi",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp61.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp61.png",
     price: 4590000,
     salebefore: 4990000,
     baseprice: 4390000,
     listVersions: [
       { name: "RAM", option: ["4GB"] },
-      { name: "Bộ nhớ", option: ["128GB"] }
+      { name: "Bộ nhớ", option: ["128GB"] },
     ],
     listColors: ["Xám", "Xanh"],
     versions: [
       {
-        storage: "128GB",
-        colors: [
-          { color: "Xám", price: 4590000, stock: 55, status: true, sold: "3.1k", version: ["4GB", "128GB"] },
-          { color: "Xanh", price: 4650000, stock: 48, status: true, sold: "2.9k", version: ["4GB", "128GB"] }
-        ]
-      }
+        color: "Xám",
+        priceBase: 4590000,
+        stock: 55,
+        status: true,
+        sold: "3.1k",
+        version: ["4GB", "128GB"],
+      },
+      {
+        color: "Xanh",
+        priceBase: 4650000,
+        stock: 48,
+        status: true,
+        sold: "2.9k",
+        version: ["4GB", "128GB"],
+      },
     ],
     imgDetail: [
       "../user/assets/image/sanpham/61/16-9-1.png",
       "../user/assets/image/sanpham/61/16-9-2.png",
       "../user/assets/image/sanpham/61/16-9-3.png",
-      "../user/assets/image/sanpham/61/16-9-4.png"
+      "../user/assets/image/sanpham/61/16-9-4.png",
     ],
     infoDetail: {
-      "Màn hình": "8.7\" IPS LCD",
-      "CPU": "MediaTek Helio G85 8 nhân",
-      "GPU": "Mali-G52 MC2",
-      "RAM": "4GB",
-      "ROM": "128GB",
+      "Màn hình": '8.7" IPS LCD',
+      CPU: "MediaTek Helio G85 8 nhân",
+      GPU: "Mali-G52 MC2",
+      RAM: "4GB",
+      ROM: "128GB",
       "Camera sau": "8MP",
       "Camera trước": "5MP",
-      "Pin": "6650mAh",
-      "Sạc": "18W",
-      "Hệ điều hành": "Android 14"
+      Pin: "6650mAh",
+      Sạc: "18W",
+      "Hệ điều hành": "Android 14",
     },
     overview: `<h2>Xiaomi Redmi Pad SE 8.7 4G có thiết kế gọn nhẹ với nhiều màu sắc lựa chọn. Pin dung lượng lớn cho thời gian sử dụng lâu dài, vi xử lý ổn định giúp xử lý mượt mà các tác vụ hàng ngày, và màn hình 8.7 inch mang lại hình ảnh sắc nét, dễ nhìn.</h2>
     <p>Redmi Pad SE 8.7 4G có thiết kế tinh tế, với camera và các nút bấm được bố trí hợp lý, tạo nên một tổng thể hài hòa. Sự sắp xếp này không chỉ đẹp mắt mà còn giúp nâng cao trải nghiệm người dùng. Mỗi chi tiết, từ đường nét đến vị trí các phím bấm, đều được tính toán cẩn thận để đảm bảo thao tác chính xác và tiện lợi.</p>
@@ -3064,39 +4402,2695 @@ const Initial = [
     <p>Màn hình IPS LCD 8.7 inch của máy cho chất lượng hiển thị tốt với màu sắc trung thực, không quá rực rỡ nhưng vẫn đủ để xem phim và lướt web thoải mái. Kích thước vừa vặn, không quá lớn để cầm nắm, nhưng đủ rộng để thao tác dễ dàng.</p>
     <p>Redmi Pad SE 8.7 4G sở hữu hệ thống camera đơn giản. Với ống kính chính 8 MP ở mặt sau đáp ứng đủ cho những bức ảnh hàng ngày hoặc khi cần quét tài liệu. Camera trước 5 MP hỗ trợ cho các cuộc gọi video và selfie cơ bản, phù hợp với những người dùng có nhu cầu sử dụng vừa phải.</p>
     <p>Xiaomi Redmi Pad SE 8.7 4G là chiếc máy tính bảng đáp ứng nhu cầu cơ bản với thiết kế bền bỉ, màn hình rõ nét, cấu hình ổn định và pin sử dụng cả ngày. Đây là lựa chọn phù hợp cho những ai cần một thiết bị vừa túi tiền, vừa hoạt động ổn định.</p>
-  `
+  `,
   },
   {
     id: "62",
     name: "Huawei MatePad 11 2024 128GB",
     brand: "Huawei",
     category: "Tablet",
-    thumbnail: "../user/assets/image/sanpham/sp62.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/sp62.png",
     price: 8990000,
     salebefore: 9990000,
     baseprice: 8690000,
     listVersions: [
       { name: "RAM", option: ["4GB"] },
-      { name: "Bộ nhớ", option: ["128GB"] }
+      { name: "Bộ nhớ", option: ["128GB"] },
     ],
     listColors: ["Xám"],
     versions: [
       {
-        storage: "128GB",
-        colors: [
-          { color: "Xám", price: 8990000, stock: 20, status: true, sold: "1.4k", version: ["4GB", "128GB"] },
-        ]
-      }
-    ]
+        color: "Xám",
+        priceBase: 8990000,
+        stock: 20,
+        status: true,
+        sold: "1.4k",
+        version: ["4GB", "128GB"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/sanpham/62/16-9-1.png",
+      "../user/assets/image/sanpham/62/16-9-2.png",
+      "../user/assets/image/sanpham/62/16-9-3.png",
+      "../user/assets/image/sanpham/62/16-9-4.png",
+      "../user/assets/image/sanpham/62/16-9-5.png",
+    ],
+    infoDetail: {
+      "Màn hình": '11" TFT LCD 120Hz',
+      CPU: "Snapdragon 865",
+      RAM: "4GB",
+      ROM: "128GB",
+      "Camera sau": "13MP",
+      "Camera trước": "8MP",
+      Pin: "7250mAh",
+      Sạc: "22.5W",
+      "Hệ điều hành": "HarmonyOS 4.0",
+    },
+    overview: `<h2>Không chỉ sở hữu thiết kế kim loại nguyên khối lịch thiệp và màn hình FullView với nhiều công nghệ bảo vệ mắt, chiếc máy tính bảng Huawei MatePad SE 11 inch còn được trang bị viên pin 7.700 mAh dung lượng lớn và hỗ trợ sạc nhanh 22.5W tốc độ cao. Tất cả đều hứa hẹn cung cấp cho người dùng trải nghiệm toàn diện trên mọi khía cạnh.</h2>
+    <p>Theo đuổi triết lý thiết kế tối giản, Huawei MatePad SE 11 inch khoe dáng thanh lịch với bộ khung vỏ mỏng 6.9 mm và đạt trọng lượng 475 gram. Sản phẩm đem lại cảm nhận cầm nắm nhẹ nhàng, thoải mái trên tay. Từng chi tiết nhỏ trên chiếc máy tính bảng đều thể hiện chất lượng hoàn thiện tỉ mỉ, chỉn chu. Màu Xám Tinh Vân thời thượng phù hợp với nhiều phong cách khác nhau, cực kỳ đa dụng và tinh tế.</p>
+    <img src="/user/assets/image/sanpham/62/thongtin1.png" alt="">
+    <p>Toàn bộ cấu trúc thân vỏ của máy tính bảng Huawei MatePad SE 11 inch đều được chế tác bằng chất liệu kim loại nguyên khối, đảm bảo độ bền bỉ và chắc chắn, đồng thời mang tới cảm nhận sang trọng khi nhìn ngắm. Sự cứng cáp của khung vỏ nhôm này đã được kiểm định qua 60+ bài kiểm tra độ bền trước khi xuất xưởng tới tay người dùng. Huawei cho biết lợi thế về chất liệu giúp sản phẩm tăng cường tới 45.2% độ cứng.</p>
+    <img src="/user/assets/image/sanpham/62/thongtin2.png" alt="">
+    <p>Về khả năng hiển thị hình ảnh, máy tính bảng Huawei MatePad SE 11 inch được trang bị màn hình Full HD+ với kích thước 11 inch, cung cấp trải nghiệm hình ảnh sắc nét, sống động và đặc biệt chân thực. Với cấu trúc viền bao quanh cực mỏng, màn hình này đạt tỉ lệ trên thân máy lên đến 85%, với độ sáng 400 nits và độ tương phản 1.400:1. Tất cả hứa hẹn trải nghiệm xem đắm chìm, mãn nhãn.</p>
+    <p>Sở hữu Huawei MatePad SE 11 inch, bạn sẽ có ngay một trợ thủ đắc lực để thỏa sức sáng tạo, đó là bút cảm ứng M-Pen Lite. Chiếc bút được thiết kế hết sức gọn gàng và lịch thiệp với lớp phủ kim loại mờ cùng kẹp bút cơ động. Ngay khi cần tốc ký một ý tưởng nào đó, bạn chỉ cần rút bút ra là có thể lập tức sử dụng mà không cần thực hiện thao tác kết nối bluetooth rườm rà. Ứng dụng ghi chú Huawei Notes sẽ giúp bạn định hình và sàng lọc ý tưởng nhanh chóng.</p>
+    `,
+  },
+
+  {
+    id: "81",
+    name: "Màn hình Dahua LM25-E231 25 inch",
+    brand: "Dahua",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp1.png",
+    price: 1990000,
+    salebefore: 2990000,
+    baseprice: 1500000,
+    listVersions: [{ name: "Phiên bản", option: ["25 inch"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "81-den-25",
+        color: "Đen",
+        priceBase: 1990000,
+        stock: 50,
+        status: true,
+        sold: "500",
+        version: ["25 inch"],
+      },
+      {
+        id: "81-trang-25",
+        color: "Trắng",
+        priceBase: 1990000,
+        stock: 50,
+        status: true,
+        sold: "500",
+        version: ["25 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp1/1.png",
+      "../user/assets/image/Screen/sp1/2.png",
+      "../user/assets/image/Screen/sp1/3.png",
+      "../user/assets/image/Screen/sp1/4.png",
+      "../user/assets/image/Screen/sp1/5.png",
+      "../user/assets/image/Screen/sp1/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "25 inches",
+      "Tần số quét": "180 Hz",
+      "Thời gian phản hồi": "5ms",
+      "Góc nhìn": "178°/178°",
+      "Cổng kết nối":
+        "1x DP 1.4, 1x HDMI 2.0, 1x USB (only upgrade), 1x Audio out",
+      "Khối lượng": "4.7 kg",
+      "Phụ kiện": "Cáp nguồn, Cáp HDMI, Sách hướng dẫn",
+      "Tính năng": "Khử nhấp nháy, Chống lóa, GameMode",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Màn hình Dahua LM25-E231 25 inch mang đến trải nghiệm hình ảnh sắc nét với tấm nền IPS và độ phân giải Full HD. Tần số quét 180Hz cùng thời gian phản hồi 5ms đảm bảo chuyển động mượt mà, phù hợp cho gaming. Thiết kế phẳng hiện đại với chân đế vững chắc, tích hợp nhiều cổng kết nối đa dạng.",
+  },
+
+  {
+    id: "82",
+    name: "Màn hình Gaming LG UltraGear 24GS65F 24 inch",
+    brand: "LG",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp2.png",
+    price: 2990000,
+    salebefore: 3490000,
+    baseprice: 2500000,
+    listVersions: [{ name: "Phiên bản", option: ["24 inch"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "82-den-24",
+        color: "Đen",
+        price: 2990000,
+        stock: 45,
+        status: true,
+        sold: "800",
+        version: ["24 inch"],
+      },
+      {
+        id: "82-trang-24",
+        color: "Trắng",
+        price: 2990000,
+        stock: 45,
+        status: true,
+        sold: "800",
+        version: ["24 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp2/1.png",
+      "../user/assets/image/Screen/sp2/2.png",
+      "../user/assets/image/Screen/sp2/3.png",
+      "../user/assets/image/Screen/sp2/4.png",
+      "../user/assets/image/Screen/sp2/5.png",
+      "../user/assets/image/Screen/sp2/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "24 inch",
+      "Tần số quét": "180Hz",
+      "Thời gian phản hồi": "1ms (GtG)",
+      "Góc nhìn": "178°/178°",
+      HDR: "HDR10",
+      "Cổng kết nối": "2x HDMI, 1x DisplayPort, 1x Jack 3.5mm",
+      "Tính năng":
+        "AMD FreeSync Premium, Dynamic Action Sync, Black Stabilizer, Crosshair",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Màn hình gaming LG UltraGear 24GS65F được trang bị tấm nền IPS chất lượng cao cùng tần số quét 180Hz và thời gian phản hồi 1ms, mang đến trải nghiệm chơi game mượt mà, không bị xé hình. Công nghệ AMD FreeSync Premium và các tính năng gaming chuyên dụng giúp tối ưu hóa hiệu suất chơi game.",
+  },
+
+  {
+    id: "83",
+    name: "Màn hình Gaming LG UltraGear 24GS50F-B 24 inch",
+    brand: "LG",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp3.png",
+    price: 2490000,
+    salebefore: 2990000,
+    baseprice: 2000000,
+    listVersions: [{ name: "Phiên bản", option: ["24 inch"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "83-den-24",
+        color: "Đen",
+        price: 2490000,
+        stock: 40,
+        status: true,
+        sold: "1.2k",
+        version: ["24 inch"],
+      },
+      {
+        id: "83-trang-24",
+        color: "Trắng",
+        price: 2490000,
+        stock: 40,
+        status: true,
+        sold: "1.2k",
+        version: ["24 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp3/1.png",
+      "../user/assets/image/Screen/sp3/2.png",
+      "../user/assets/image/Screen/sp3/3.png",
+      "../user/assets/image/Screen/sp3/4.png",
+      "../user/assets/image/Screen/sp3/5.png",
+      "../user/assets/image/Screen/sp3/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "VA",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "24 inch",
+      "Tần số quét": "180Hz",
+      "Thời gian phản hồi": "1ms (MBR)",
+      "Độ sáng": "250 nits",
+      "Cổng kết nối": "2x HDMI 2.0, 1x DisplayPort 1.4",
+      "Tính năng":
+        "AMD FreeSync Premium, Black Stabilizer, Dynamic Action Sync, Flicker Safe",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Màn hình LG UltraGear 24GS50F-B với tấm nền VA 24 inch, tần số quét 180Hz cho trải nghiệm gaming mượt mà. Tích hợp công nghệ AMD FreeSync Premium chống xé hình, cùng các tính năng gaming tiện ích như Black Stabilizer và Dynamic Action Sync.",
+  },
+
+  {
+    id: "84",
+    name: "Màn hình E-DRA EGM22F100H 22 inch",
+    brand: "E-DRA",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp4.png",
+    price: 1290000,
+    salebefore: 1490000,
+    baseprice: 1000000,
+    listVersions: [{ name: "Phiên bản", option: ["22 inch"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "84-den-22",
+        color: "Đen",
+        price: 1290000,
+        stock: 55,
+        status: true,
+        sold: "2.5k",
+        version: ["22 inch"],
+      },
+      {
+        id: "84-trang-22",
+        color: "Trắng",
+        price: 1290000,
+        stock: 55,
+        status: true,
+        sold: "2.5k",
+        version: ["22 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp4/1.png",
+      "../user/assets/image/Screen/sp4/2.png",
+      "../user/assets/image/Screen/sp4/3.png",
+      "../user/assets/image/Screen/sp4/4.png",
+      "../user/assets/image/Screen/sp4/5.png",
+      "../user/assets/image/Screen/sp4/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "22 inch",
+      "Tần số quét": "100Hz",
+      "Thời gian phản hồi": "5ms",
+      "Độ sáng": "250 nits",
+      "Cổng kết nối": "1x HDMI, 1x VGA",
+      "Tính năng": "Low Blue Light, Flicker Free, FreeSync",
+      "Góc nhìn": "178°/178°",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Màn hình E-DRA EGM22F100H 22 inch sử dụng tấm nền IPS cho góc nhìn rộng và màu sắc chân thực. Tần số quét 100Hz cùng công nghệ FreeSync giúp trải nghiệm gaming mượt mà hơn. Thiết kế viền mỏng hiện đại, tích hợp các tính năng bảo vệ mắt.",
+  },
+
+  {
+    id: "85",
+    name: "Màn hình Gaming Philips 27M2N8500 27 inch",
+    brand: "Philips",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp5.png",
+    price: 16990000,
+    salebefore: 17990000,
+    baseprice: 15000000,
+    listVersions: [{ name: "Phiên bản", option: ["27 inch"] }],
+    listColors: ["Đen", "Vàng"],
+    versions: [
+      {
+        id: "85-den-27",
+        color: "Đen",
+        priceBase: 16990000,
+        stock: 20,
+        status: true,
+        sold: "100",
+        version: ["27 inch"],
+      },
+      {
+        id: "85-vang-27",
+        color: "Vàng",
+        priceBase: 16990000,
+        stock: 20,
+        status: true,
+        sold: "100",
+        version: ["27 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp5/1.png",
+      "../user/assets/image/Screen/sp5/2.png",
+      "../user/assets/image/Screen/sp5/3.png",
+      "../user/assets/image/Screen/sp5/4.png",
+      "../user/assets/image/Screen/sp5/5.png",
+      "../user/assets/image/Screen/sp5/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "QD OLED",
+      "Độ phân giải": "2560 x 1440 pixels",
+      "Kích thước": "27 inch",
+      "Tần số quét": "360Hz",
+      "Thời gian phản hồi": "0.03ms GtG",
+      HDR: "DisplayHDR True Black 400",
+      "Độ tương phản": "1,500,000:1",
+      "Độ sáng": "450 nits",
+      "Cổng kết nối": "2x HDMI 2.1, 1x DisplayPort 1.4, 4x USB 3.2",
+      "Tính năng": "AMD FreeSync Premium Pro, NVIDIA G-SYNC Compatible",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình Philips 27M2N8500 sử dụng tấm nền QD OLED cao cấp với độ tương phản cực cao và màu sắc sống động. Tần số quét 360Hz cùng thời gian phản hồi siêu nhanh 0.03ms mang lại trải nghiệm gaming cực mượt. Tích hợp đầy đủ công nghệ đồng bộ khung hình và các tính năng gaming chuyên nghiệp.",
+  },
+
+  {
+    id: "86",
+    name: "Màn hình ASUS VU249CFE 24 inch",
+    brand: "ASUS",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp6.png",
+    price: 2590000,
+    salebefore: 3990000,
+    baseprice: 2000000,
+    listVersions: [{ name: "Phiên bản", option: ["24 inch"] }],
+    listColors: ["Hồng", "Đen"],
+    versions: [
+      {
+        id: "86-hong-24",
+        color: "Hồng",
+        priceBase: 2590000,
+        stock: 30,
+        status: true,
+        sold: "450",
+        version: ["24 inch"],
+      },
+      {
+        id: "86-den-24",
+        color: "Đen",
+        priceBase: 2590000,
+        stock: 35,
+        status: true,
+        sold: "500",
+        version: ["24 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp6/1.png",
+      "../user/assets/image/Screen/sp6/2.png",
+      "../user/assets/image/Screen/sp6/3.png",
+      "../user/assets/image/Screen/sp6/4.png",
+      "../user/assets/image/Screen/sp6/5.png",
+      "../user/assets/image/Screen/sp6/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "24 inch",
+      "Tần số quét": "100Hz",
+      "Thời gian phản hồi": "1ms MPRT",
+      "Độ sáng": "250 nits",
+      "Góc nhìn": "178°/178°",
+      "Cổng kết nối": "1x HDMI 1.4, 1x VGA, 1x Audio In",
+      "Tính năng": "ASUS Eye Care, Flicker Free, Low Blue Light",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình ASUS VU249CFE với thiết kế thanh lịch và phối màu độc đáo. Tấm nền IPS cho màu sắc chân thực, tần số quét 100Hz mang lại chuyển động mượt mà. Tích hợp công nghệ bảo vệ mắt ASUS Eye Care và nhiều tính năng tiện ích.",
+  },
+
+  {
+    id: "87",
+    name: "Màn hình Dell U2424H 24 inch",
+    brand: "Dell",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp7.png",
+    price: 5990000,
+    salebefore: 6490000,
+    baseprice: 5000000,
+    listVersions: [{ name: "Phiên bản", option: ["24 inch"] }],
+    listColors: ["Xám", "Nâu"],
+    versions: [
+      {
+        id: "87-xam-24",
+        color: "Xám",
+        price: 5990000,
+        stock: 25,
+        status: true,
+        sold: "200",
+        version: ["24 inch"],
+      },
+      {
+        id: "87-nau-24",
+        color: "Nâu",
+        price: 5990000,
+        stock: 25,
+        status: true,
+        sold: "200",
+        version: ["24 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp7/1.png",
+      "../user/assets/image/Screen/sp7/2.png",
+      "../user/assets/image/Screen/sp7/3.png",
+      "../user/assets/image/Screen/sp7/4.png",
+      "../user/assets/image/Screen/sp7/5.png",
+      "../user/assets/image/Screen/sp7/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "24 inch",
+      "Tần số quét": "120Hz",
+      "Thời gian phản hồi": "5ms",
+      "Độ sáng": "300 nits",
+      "Độ phủ màu": "100% sRGB, 100% BT.709",
+      "Cổng kết nối": "1x DisplayPort, 1x HDMI, 4x USB Type-A, 1x USB Type-C",
+      "Tính năng": "ComfortView Plus, Picture-in-Picture, Picture-by-Picture",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình Dell U2424H thuộc dòng UltraSharp cao cấp với độ chính xác màu sắc cao, phù hợp cho công việc đồ họa chuyên nghiệp. Trang bị đa dạng cổng kết nối hiện đại và tính năng tiện ích như ComfortView Plus bảo vệ mắt.",
+  },
+
+  {
+    id: "88",
+    name: "Màn hình Gaming Samsung Odyssey G5 LS27CG552 27 inch",
+    brand: "Samsung",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp8.png",
+    price: 5590000,
+    salebefore: 5990000,
+    baseprice: 4800000,
+    listVersions: [{ name: "Phiên bản", option: ["27 inch"] }],
+    listColors: ["Đen", "Đỏ"],
+    versions: [
+      {
+        id: "88-den-27",
+        color: "Đen",
+        price: 5590000,
+        stock: 30,
+        status: true,
+        sold: "350",
+        version: ["27 inch"],
+      },
+      {
+        id: "88-do-27",
+        color: "Đỏ",
+        price: 5590000,
+        stock: 30,
+        status: true,
+        sold: "350",
+        version: ["27 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp8/1.png",
+      "../user/assets/image/Screen/sp8/2.png",
+      "../user/assets/image/Screen/sp8/3.png",
+      "../user/assets/image/Screen/sp8/4.png",
+      "../user/assets/image/Screen/sp8/5.png",
+      "../user/assets/image/Screen/sp8/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "VA",
+      "Độ phân giải": "2560 x 1440 pixels",
+      "Kích thước": "27 inch",
+      "Tần số quét": "165Hz",
+      "Thời gian phản hồi": "1ms (MPRT)",
+      HDR: "HDR10",
+      "Độ cong": "1000R",
+      "Cổng kết nối": "1x DisplayPort 1.2, 2x HDMI 2.0",
+      "Tính năng": "AMD FreeSync Premium, Game Mode, Eye Saver Mode",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Màn hình Samsung Odyssey G5 với thiết kế màn hình cong 1000R cho trải nghiệm gaming đắm chìm. Tần số quét 165Hz, độ phân giải 2K và công nghệ AMD FreeSync Premium mang lại gameplay mượt mà, sắc nét. Tích hợp nhiều tính năng gaming và bảo vệ mắt.",
+  },
+
+  {
+    id: "89",
+    name: "Màn hình di động MSI Pro MP165 E6 16 inch",
+    brand: "MSI",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp9.png",
+    price: 2690000,
+    salebefore: 3090000,
+    baseprice: 2200000,
+    listVersions: [{ name: "Phiên bản", option: ["16 inch"] }],
+    listColors: ["Đen", "Tím"],
+    versions: [
+      {
+        id: "89-den-16",
+        color: "Đen",
+        price: 2690000,
+        stock: 40,
+        status: true,
+        sold: "180",
+        version: ["16 inch"],
+      },
+      {
+        id: "89-tim-16",
+        color: "Tím",
+        price: 2690000,
+        stock: 40,
+        status: true,
+        sold: "180",
+        version: ["16 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp9/1.png",
+      "../user/assets/image/Screen/sp9/2.png",
+      "../user/assets/image/Screen/sp9/3.png",
+      "../user/assets/image/Screen/sp9/4.png",
+      "../user/assets/image/Screen/sp9/5.png",
+      "../user/assets/image/Screen/sp9/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "16 inch",
+      "Tần số quét": "60Hz",
+      "Thời gian phản hồi": "5ms",
+      "Độ sáng": "250 nits",
+      "Kích thước": "356.5 x 13.85 x 210.35 mm",
+      "Trọng lượng": "0.78 kg",
+      "Cổng kết nối": "2x USB Type-C, Mini-HDMI",
+      "Tính năng": "MSI Display Kit, Less Blue Light PRO",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Màn hình di động MSI Pro MP165 E6 với thiết kế siêu mỏng nhẹ, dễ dàng mang theo. Tấm nền IPS cho góc nhìn rộng và màu sắc chân thực. Đa dạng cổng kết nối và tích hợp công nghệ bảo vệ mắt, phù hợp cho làm việc di động.",
+  },
+
+  {
+    id: "90",
+    name: "Màn hình Xiaomi A27i 27 inch",
+    brand: "Xiaomi",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp10.png",
+    price: 3420000,
+    salebefore: 3990000,
+    baseprice: 2900000,
+    listVersions: [{ name: "Phiên bản", option: ["27 inch"] }],
+    listColors: ["Xám", "Đen"],
+    versions: [
+      {
+        id: "90-xam-27",
+        color: "Xám",
+        price: 3420000,
+        stock: 35,
+        status: true,
+        sold: "250",
+        version: ["27 inch"],
+      },
+      {
+        id: "90-den-27",
+        color: "Đen",
+        price: 3420000,
+        stock: 35,
+        status: true,
+        sold: "250",
+        version: ["27 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp10/1.png",
+      "../user/assets/image/Screen/sp10/2.png",
+      "../user/assets/image/Screen/sp10/3.png",
+      "../user/assets/image/Screen/sp10/4.png",
+      "../user/assets/image/Screen/sp10/5.png",
+      "../user/assets/image/Screen/sp10/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "27 inch",
+      "Tần số quét": "100Hz",
+      "Thời gian phản hồi": "6ms",
+      "Độ sáng": "300 nits",
+      "Độ phủ màu": "100% sRGB",
+      "Cổng kết nối": "1x HDMI 1.4, 1x DisplayPort 1.2, 1x Audio Out",
+      "Tính năng": "Low Blue Light, Flicker Free",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình Xiaomi A27i với tấm nền IPS 27 inch, độ phủ màu 100% sRGB cho chất lượng hiển thị tốt. Tần số quét 100Hz mang lại chuyển động mượt mà, tích hợp công nghệ bảo vệ mắt. Thiết kế tối giản với chân đế vững chắc.",
+  },
+
+  {
+    id: "91",
+    name: "Màn hình LG UltraWide 29WP60G-B 29 inch",
+    brand: "LG",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp11.png",
+    price: 5590000,
+    salebefore: 6290000,
+    baseprice: 4900000,
+    listVersions: [{ name: "Phiên bản", option: ["29 inch"] }],
+    listColors: ["Đen", "Hồng"],
+    versions: [
+      {
+        id: "91-den-29",
+        color: "Đen",
+        price: 5590000,
+        stock: 25,
+        status: true,
+        sold: "150",
+        version: ["29 inch"],
+      },
+      {
+        id: "91-hong-29",
+        color: "Hồng",
+        price: 5590000,
+        stock: 25,
+        status: true,
+        sold: "150",
+        version: ["29 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp11/1.png",
+      "../user/assets/image/Screen/sp11/2.png",
+      "../user/assets/image/Screen/sp11/3.png",
+      "../user/assets/image/Screen/sp11/4.png",
+      "../user/assets/image/Screen/sp11/5.png",
+      "../user/assets/image/Screen/sp11/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "2560 x 1080 pixels",
+      "Kích thước": "29 inch",
+      "Tỉ lệ": "21:9 UltraWide",
+      "Tần số quét": "100Hz",
+      "Thời gian phản hồi": "5ms",
+      "Độ sáng": "250 nits",
+      "Độ phủ màu": "99% sRGB",
+      HDR: "HDR10",
+      "Cổng kết nối": "1x DisplayPort 1.4, 2x HDMI 2.0, 1x USB-C",
+      "Tính năng": "AMD FreeSync, Dynamic Action Sync, Black Stabilizer",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Màn hình LG UltraWide 29WP60G-B với tỉ lệ 21:9 siêu rộng cho không gian làm việc thoải mái. Tấm nền IPS với độ phủ màu 99% sRGB cùng công nghệ HDR10 mang lại chất lượng hiển thị xuất sắc. Tích hợp cổng USB-C đa năng và nhiều tính năng tiện ích.",
+  },
+
+  {
+    id: "92",
+    name: "Màn hình Gaming Acer Nitro VG271U3 27 inch",
+    brand: "Acer",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp12.png",
+    price: 7990000,
+    salebefore: 8990000,
+    baseprice: 7000000,
+    listVersions: [{ name: "Phiên bản", option: ["27 inch"] }],
+    listColors: ["Đen", "Xám"],
+    versions: [
+      {
+        id: "92-den-27",
+        color: "Đen",
+        price: 7990000,
+        stock: 30,
+        status: true,
+        sold: "220",
+        version: ["27 inch"],
+      },
+      {
+        id: "92-xam-27",
+        color: "Xám",
+        price: 7990000,
+        stock: 30,
+        status: true,
+        sold: "220",
+        version: ["27 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp12/1.png",
+      "../user/assets/image/Screen/sp12/2.png",
+      "../user/assets/image/Screen/sp12/3.png",
+      "../user/assets/image/Screen/sp12/4.png",
+      "../user/assets/image/Screen/sp12/5.png",
+      "../user/assets/image/Screen/sp12/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "2560 x 1440 pixels",
+      "Kích thước": "27 inch",
+      "Tần số quét": "170Hz",
+      "Thời gian phản hồi": "1ms (VRB)",
+      HDR: "VESA DisplayHDR 400",
+      "Độ sáng": "400 nits",
+      "Độ phủ màu": "95% DCI-P3",
+      "Cổng kết nối": "2x HDMI 2.0, 1x DisplayPort 1.4",
+      "Tính năng": "AMD FreeSync Premium, BlueLightShield, Flicker-free",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình gaming Acer Nitro VG271U3 với độ phân giải 2K và tần số quét 170Hz mang lại trải nghiệm chơi game sắc nét, mượt mà. Công nghệ HDR400 và độ phủ màu rộng cho hình ảnh sống động. Tích hợp nhiều tính năng gaming và bảo vệ mắt.",
+  },
+
+  {
+    id: "93",
+    name: "Màn hình Asus TUF Gaming VG27AQZ 27 inch",
+    brand: "ASUS",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp13.png",
+    price: 8490000,
+    salebefore: 8990000,
+    baseprice: 7500000,
+    listVersions: [{ name: "Phiên bản", option: ["27 inch"] }],
+    listColors: ["Đen", "Nâu"],
+    versions: [
+      {
+        id: "93-den-27",
+        color: "Đen",
+        price: 8490000,
+        stock: 20,
+        status: true,
+        sold: "280",
+        version: ["27 inch"],
+      },
+      {
+        id: "93-nau-27",
+        color: "Nâu",
+        price: 8490000,
+        stock: 20,
+        status: true,
+        sold: "280",
+        version: ["27 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp13/1.png",
+      "../user/assets/image/Screen/sp13/2.png",
+      "../user/assets/image/Screen/sp13/3.png",
+      "../user/assets/image/Screen/sp13/4.png",
+      "../user/assets/image/Screen/sp13/5.png",
+      "../user/assets/image/Screen/sp13/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "Fast IPS",
+      "Độ phân giải": "2560 x 1440 pixels",
+      "Kích thước": "27 inch",
+      "Tần số quét": "165Hz",
+      "Thời gian phản hồi": "1ms (GTG)",
+      HDR: "HDR10",
+      "Độ sáng": "350 nits",
+      "Cổng kết nối": "2x HDMI 2.0, 1x DisplayPort 1.2",
+      "Tính năng": "ASUS ELMB SYNC, G-SYNC Compatible, GamePlus",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình ASUS TUF Gaming VG27AQZ với tấm nền Fast IPS cho tốc độ phản hồi nhanh và màu sắc chính xác. Tần số quét 165Hz và công nghệ ELMB SYNC mang lại gameplay mượt mà, không bị xé hình. Thiết kế gaming đặc trưng của dòng TUF với độ bền cao.",
+  },
+
+  {
+    id: "94",
+    name: "Màn hình HKC MB24V9 24 inch",
+    brand: "HKC",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp14.png",
+    price: 2090000,
+    salebefore: 2490000,
+    baseprice: 1800000,
+    listVersions: [{ name: "Phiên bản", option: ["24 inch"] }],
+    listColors: ["Đen", "Đỏ"],
+    versions: [
+      {
+        id: "94-den-24",
+        color: "Đen",
+        price: 2090000,
+        stock: 45,
+        status: true,
+        sold: "320",
+        version: ["24 inch"],
+      },
+      {
+        id: "94-do-24",
+        color: "Đỏ",
+        price: 2090000,
+        stock: 45,
+        status: true,
+        sold: "320",
+        version: ["24 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp14/1.png",
+      "../user/assets/image/Screen/sp14/2.png",
+      "../user/assets/image/Screen/sp14/3.png",
+      "../user/assets/image/Screen/sp14/4.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "VA",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "24 inch",
+      "Tần số quét": "75Hz",
+      "Thời gian phản hồi": "5ms",
+      "Độ sáng": "250 nits",
+      "Góc nhìn": "178°/178°",
+      "Cổng kết nối": "1x HDMI, 1x VGA",
+      "Tính năng": "Low Blue Light, Flicker Free",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Màn hình HKC MB24V9 với thiết kế viền mỏng hiện đại, tấm nền VA cho độ tương phản cao. Tần số quét 75Hz mang lại trải nghiệm xem mượt mà hơn màn hình thông thường. Tích hợp các công nghệ bảo vệ mắt, phù hợp cho văn phòng và giải trí.",
+  },
+
+  {
+    id: "95",
+    name: "Màn hình ViewSonic VA2432-H 24 inch",
+    brand: "ViewSonic",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp15.png",
+    price: 3290000,
+    salebefore: 3690000,
+    baseprice: 2800000,
+    listVersions: [{ name: "Phiên bản", option: ["24 inch"] }],
+    listColors: ["Đen", "Tím"],
+    versions: [
+      {
+        id: "95-den-24",
+        color: "Đen",
+        price: 3290000,
+        stock: 35,
+        status: true,
+        sold: "180",
+        version: ["24 inch"],
+      },
+      {
+        id: "95-tim-24",
+        color: "Tím",
+        price: 3290000,
+        stock: 35,
+        status: true,
+        sold: "180",
+        version: ["24 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp15/1.png",
+      "../user/assets/image/Screen/sp15/2.png",
+      "../user/assets/image/Screen/sp15/3.png",
+      "../user/assets/image/Screen/sp15/4.png",
+      "../user/assets/image/Screen/sp15/5.png",
+      "../user/assets/image/Screen/sp15/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "1920 x 1080 pixels",
+      "Kích thước": "24 inch",
+      "Tần số quét": "100Hz",
+      "Thời gian phản hồi": "4ms",
+      "Độ sáng": "300 nits",
+      "Góc nhìn": "178°/178°",
+      "Cổng kết nối": "1x HDMI 1.4, 1x DisplayPort 1.2, 1x VGA",
+      "Tính năng": "ViewMode, Blue Light Filter, Flicker-Free",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình ViewSonic VA2432-H với tấm nền IPS cho màu sắc chân thực và góc nhìn rộng. Tần số quét 100Hz cùng thời gian phản hồi 4ms đảm bảo trải nghiệm mượt mà. Tích hợp nhiều chế độ xem và tính năng bảo vệ mắt.",
+  },
+
+  {
+    id: "96",
+    name: "Màn hình cong Samsung LC49G95 49 inch",
+    brand: "Samsung",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp16.png",
+    price: 29990000,
+    salebefore: 32990000,
+    baseprice: 25000000,
+    listVersions: [{ name: "Phiên bản", option: ["49 inch"] }],
+    listColors: ["Trắng", "Đen"],
+    versions: [
+      {
+        id: "96-trang-49",
+        color: "Trắng",
+        price: 29990000,
+        stock: 10,
+        status: true,
+        sold: "50",
+        version: ["49 inch"],
+      },
+      {
+        id: "96-den-49",
+        color: "Đen",
+        price: 29990000,
+        stock: 10,
+        status: true,
+        sold: "50",
+        version: ["49 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp16/1.png",
+      "../user/assets/image/Screen/sp16/2.png",
+      "../user/assets/image/Screen/sp16/3.png",
+      "../user/assets/image/Screen/sp16/4.png",
+      "../user/assets/image/Screen/sp16/5.png",
+      "../user/assets/image/Screen/sp16/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "VA",
+      "Độ phân giải": "5120 x 1440 pixels",
+      "Kích thước": "49 inch",
+      "Tỉ lệ": "32:9 Super Ultra-Wide",
+      "Độ cong": "1000R",
+      "Tần số quét": "240Hz",
+      "Thời gian phản hồi": "1ms (GTG)",
+      HDR: "HDR1000",
+      "Độ sáng": "1000 nits",
+      "Độ phủ màu": "95% DCI-P3",
+      "Cổng kết nối": "2x DisplayPort 1.4, 1x HDMI 2.0, 2x USB 3.0",
+      "Tính năng": "G-SYNC Compatible, FreeSync Premium Pro",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình Samsung LC49G95 với kích thước khổng lồ 49 inch, tỉ lệ 32:9 và độ cong 1000R mang lại trải nghiệm đắm chìm tối đa. Tần số quét 240Hz cùng HDR1000 cho chất lượng gaming tuyệt vời. Thiết kế Odyssey độc đáo với hiệu ứng LED Infinity Core.",
+  },
+
+  {
+    id: "97",
+    name: "Màn hình Dell P2723QE 27 inch",
+    brand: "Dell",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp17.png",
+    price: 12990000,
+    salebefore: 13990000,
+    baseprice: 11000000,
+    listVersions: [{ name: "Phiên bản", option: ["27 inch"] }],
+    listColors: ["Bạc", "Đen"],
+    versions: [
+      {
+        id: "97-den-27",
+        color: "Đen",
+        price: 12990000,
+        stock: 15,
+        status: true,
+        sold: "80",
+        version: ["27 inch"],
+      },
+      {
+        id: "97-bac-27",
+        color: "Bạc",
+        price: 12990000,
+        stock: 15,
+        status: true,
+        sold: "80",
+        version: ["27 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp17/1.png",
+      "../user/assets/image/Screen/sp17/2.png",
+      "../user/assets/image/Screen/sp17/3.png",
+      "../user/assets/image/Screen/sp17/4.png",
+      "../user/assets/image/Screen/sp17/5.png",
+      "../user/assets/image/Screen/sp17/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "3840 x 2160 pixels",
+      "Kích thước": "27 inch",
+      "Tần số quét": "60Hz",
+      "Thời gian phản hồi": "5ms",
+      "Độ sáng": "350 nits",
+      "Độ phủ màu": "99% sRGB, 99% REC 709",
+      "Cổng kết nối":
+        "1x HDMI 2.0, 1x DisplayPort 1.4, 1x USB-C (90W PD), 4x USB 3.2",
+      "Tính năng":
+        "ComfortView Plus, Picture-in-Picture, Picture-by-Picture, KVM",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình Dell P2723QE chuyên nghiệp với độ phân giải 4K và độ chính xác màu cao. Cổng USB-C hỗ trợ sạc laptop 90W và truyền dữ liệu. Tích hợp tính năng KVM và nhiều chế độ hiển thị linh hoạt, phù hợp cho công việc đòi hỏi chi tiết cao.",
+  },
+
+  {
+    id: "98",
+    name: "Màn hình BenQ MOBIUZ EX3210U 32 inch",
+    brand: "BenQ",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp18.png",
+    price: 25990000,
+    salebefore: 27990000,
+    baseprice: 23000000,
+    listVersions: [{ name: "Phiên bản", option: ["32 inch"] }],
+    listColors: ["Trắng", "Đen"],
+    versions: [
+      {
+        id: "98-trang-32",
+        color: "Trắng",
+        price: 25990000,
+        stock: 8,
+        status: true,
+        sold: "30",
+        version: ["32 inch"],
+      },
+      {
+        id: "98-den-32",
+        color: "Đen",
+        price: 25990000,
+        stock: 8,
+        status: true,
+        sold: "30",
+        version: ["32 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp18/1.png",
+      "../user/assets/image/Screen/sp18/2.png",
+      "../user/assets/image/Screen/sp18/3.png",
+      "../user/assets/image/Screen/sp18/4.png",
+      "../user/assets/image/Screen/sp18/5.png",
+      "../user/assets/image/Screen/sp18/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "3840 x 2160 pixels",
+      "Kích thước": "32 inch",
+      "Tần số quét": "144Hz",
+      "Thời gian phản hồi": "1ms (MPRT)",
+      HDR: "HDR600",
+      "Độ sáng": "600 nits",
+      "Độ phủ màu": "98% DCI-P3",
+      "Cổng kết nối": "2x HDMI 2.1, 1x DisplayPort 1.4, 4x USB 3.0, 1x USB-C",
+      "Tính năng": "AMD FreeSync Premium Pro, HDRi, Light Tuner",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình BenQ MOBIUZ EX3210U là màn hình gaming cao cấp với độ phân giải 4K và tần số quét 144Hz. Công nghệ HDRi thông minh tự động điều chỉnh HDR theo điều kiện ánh sáng. Tích hợp loa 2.1 kênh và nhiều tính năng gaming chuyên nghiệp.",
+  },
+
+  {
+    id: "99",
+    name: "Màn hình AOC CQ27G3S 27 inch",
+    brand: "AOC",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp19.png",
+    price: 5990000,
+    salebefore: 6490000,
+    baseprice: 5200000,
+    listVersions: [{ name: "Phiên bản", option: ["27 inch"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "99-den-27",
+        color: "Đen",
+        price: 5990000,
+        stock: 25,
+        status: true,
+        sold: "150",
+        version: ["27 inch"],
+      },
+      {
+        id: "99-trang-27",
+        color: "Trắng",
+        price: 5990000,
+        stock: 25,
+        status: true,
+        sold: "150",
+        version: ["27 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp19/1.png",
+      "../user/assets/image/Screen/sp19/2.png",
+      "../user/assets/image/Screen/sp19/3.png",
+      "../user/assets/image/Screen/sp19/4.png",
+      "../user/assets/image/Screen/sp19/5.png",
+      "../user/assets/image/Screen/sp19/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "VA",
+      "Độ phân giải": "2560 x 1440 pixels",
+      "Kích thước": "27 inch",
+      "Tần số quét": "165Hz",
+      "Thời gian phản hồi": "1ms MPRT",
+      "Độ cong": "1500R",
+      HDR: "HDR10",
+      "Độ sáng": "300 nits",
+      "Cổng kết nối": "2x HDMI 2.0, 1x DisplayPort 1.2",
+      "Tính năng": "AMD FreeSync Premium, AOC Game Color, Shadow Control",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình gaming AOC CQ27G3S với thiết kế màn hình cong 1500R và độ phân giải 2K cho trải nghiệm chơi game đắm chìm. Tần số quét 165Hz và công nghệ AMD FreeSync Premium đảm bảo gameplay mượt mà. Tích hợp nhiều tính năng tối ưu cho gaming.",
+  },
+
+  {
+    id: "100",
+    name: "Màn hình MSI PRO MP273QP 27 inch",
+    brand: "MSI",
+    category: "Màn hình",
+    status: true, thumbnail: "../user/assets/image/Screen/sp20.png",
+    price: 6990000,
+    salebefore: 7490000,
+    baseprice: 6000000,
+    listVersions: [{ name: "Phiên bản", option: ["27 inch"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "100-den-27",
+        color: "Đen",
+        price: 6990000,
+        stock: 20,
+        status: true,
+        sold: "120",
+        version: ["27 inch"],
+      },
+      {
+        id: "100-trang-27",
+        color: "Trắng",
+        price: 6990000,
+        stock: 20,
+        status: true,
+        sold: "120",
+        version: ["27 inch"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Screen/sp20/1.png",
+      "../user/assets/image/Screen/sp20/2.png",
+      "../user/assets/image/Screen/sp20/3.png",
+      "../user/assets/image/Screen/sp20/4.png",
+      "../user/assets/image/Screen/sp20/5.png",
+      "../user/assets/image/Screen/sp20/6.png",
+    ],
+    infoDetail: {
+      "Công nghệ màn hình": "IPS",
+      "Độ phân giải": "2560 x 1440 pixels",
+      "Kích thước": "27 inch",
+      "Tần số quét": "75Hz",
+      "Thời gian phản hồi": "5ms",
+      "Độ sáng": "300 nits",
+      "Độ phủ màu": "99% sRGB, 81% AdobeRGB",
+      "Cổng kết nối": "1x HDMI 1.4, 1x DisplayPort 1.2, 1x USB Type-C",
+      "Tính năng": "Less Blue Light PRO, Anti-Flicker, Reading Mode",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "Màn hình MSI PRO MP273QP với độ phân giải 2K và độ chính xác màu cao, phù hợp cho công việc thiết kế và đồ họa. Tích hợp cổng USB-C đa năng và các công nghệ bảo vệ mắt. Thiết kế chuyên nghiệp với chân đế điều chỉnh linh hoạt.",
+  },
+
+  {
+    id: "101",
+    name: "Bàn phím cơ Aula S2022 Blue Switch",
+    brand: "Aula",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp1.png",
+    price: 520000,
+    salebefore: 599000,
+    baseprice: 320000,
+    listVersions: [{ name: "Phiên bản", option: ["Fullsize"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "101-den-fullsize",
+        color: "Đen",
+        price: 520000,
+        stock: 120,
+        status: true,
+        sold: "430",
+        version: ["Fullsize"],
+      },
+      {
+        id: "101-trang-fullsize",
+        color: "Trắng",
+        price: 520000,
+        stock: 120,
+        status: true,
+        sold: "430",
+        version: ["Fullsize"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp1/1.png",
+      "../user/assets/image/KeyBoard/sp1/2.png",
+      "../user/assets/image/KeyBoard/sp1/3.png",
+      "../user/assets/image/KeyBoard/sp1/4.png",
+      "../user/assets/image/KeyBoard/sp1/5.png",
+      "../user/assets/image/KeyBoard/sp1/6.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Blue",
+      "Kết nối": "USB Type-C",
+      LED: "RGB",
+      Layout: "Fullsize",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Bàn phím cơ Aula S2022 trang bị Blue switch cho cảm giác gõ rõ ràng, LED RGB và kết nối USB Type-C, phù hợp chơi game và gõ phím hàng ngày.",
+  },
+
+  {
+    id: "102",
+    name: "Bàn phím cơ không dây Aula S100 Pro",
+    brand: "Aula",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp2.png",
+    price: 890000,
+    salebefore: 999000,
+    baseprice: 600000,
+    listVersions: [{ name: "Phiên bản", option: ["Wireless"] }],
+    listColors: ["Xanh dương", "Đen"],
+    versions: [
+      {
+        id: "102-xanhduong-wireless",
+        color: "Xanh dương",
+        price: 890000,
+        stock: 80,
+        status: true,
+        sold: "210",
+        version: ["Wireless"],
+      },
+      {
+        id: "102-den-wireless",
+        color: "Đen",
+        price: 890000,
+        stock: 80,
+        status: true,
+        sold: "210",
+        version: ["Wireless"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp2/1.png",
+      "../user/assets/image/KeyBoard/sp2/2.png",
+      "../user/assets/image/KeyBoard/sp2/3.png",
+      "../user/assets/image/KeyBoard/sp2/4.png",
+      "../user/assets/image/KeyBoard/sp2/5.png",
+      "../user/assets/image/KeyBoard/sp2/6.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Blue/Optical (phiên bản)",
+      "Kết nối": "Bluetooth / 2.4GHz",
+      Pin: "2000 mAh",
+      LED: "RGB",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Bàn phím không dây Aula S100 Pro hỗ trợ Bluetooth và 2.4GHz, thiết kế gọn, nhiều màu, phù hợp làm việc lẫn giải trí.",
+  },
+
+  {
+    id: "103",
+    name: "Bàn phím gaming MSI Forge GK100 RGB",
+    brand: "MSI",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp3.png",
+    price: 1299000,
+    salebefore: 1499000,
+    baseprice: 900000,
+    listVersions: [{ name: "Phiên bản", option: ["Fullsize"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "103-den-fullsize",
+        color: "Đen",
+        price: 1299000,
+        stock: 60,
+        status: true,
+        sold: "95",
+        version: ["Fullsize"],
+      },
+      {
+        id: "103-trang-fullsize",
+        color: "Trắng",
+        price: 1299000,
+        stock: 60,
+        status: true,
+        sold: "95",
+        version: ["Fullsize"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp3/1.png",
+      "../user/assets/image/KeyBoard/sp3/2.png",
+      "../user/assets/image/KeyBoard/sp3/3.png",
+      "../user/assets/image/KeyBoard/sp3/4.png",
+      "../user/assets/image/KeyBoard/sp3/5.png",
+      "../user/assets/image/KeyBoard/sp3/6.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Mechanical (Red/Optical)",
+      "Kết nối": "USB Type-C",
+      LED: "Per-key RGB",
+      "Tính năng": "Anti-Ghosting, NKRO",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "MSI Forge GK100 là bàn phím gaming với LED RGB toàn phím, switch tuyến tính hoặc quang học tùy model, phù hợp game thủ muốn build setup đồng bộ.",
+  },
+
+  {
+    id: "104",
+    name: "Bàn phím gaming không dây Logitech G915 X Lightspeed TKL",
+    brand: "Logitech",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp4.png",
+    price: 4299000,
+    salebefore: 4999000,
+    baseprice: 3500000,
+    listVersions: [{ name: "Phiên bản", option: ["TKL Low Profile"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "104-den-tkllowprofile",
+        color: "Đen",
+        price: 4299000,
+        stock: 20,
+        status: true,
+        sold: "60",
+        version: ["TKL Low Profile"],
+      },
+      {
+        id: "104-trang-tkllowprofile",
+        color: "Trắng",
+        price: 4299000,
+        stock: 20,
+        status: true,
+        sold: "60",
+        version: ["TKL Low Profile"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp4/1.png",
+      "../user/assets/image/KeyBoard/sp4/2.png",
+      "../user/assets/image/KeyBoard/sp4/3.png",
+      "../user/assets/image/KeyBoard/sp4/4.png",
+      "../user/assets/image/KeyBoard/sp4/5.png",
+      "../user/assets/image/KeyBoard/sp4/6.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Low-profile mechanical",
+      "Kết nối": "Lightspeed Wireless / Bluetooth",
+      LED: "RGB",
+      "Tính năng": "Low profile, TKL, Media keys",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Logitech G915 X Lightspeed TKL là bàn phím không dây cao cấp với thiết kế low-profile, thời gian phản hồi nhanh dành cho game thủ chuyên nghiệp.",
+  },
+
+  {
+    id: "105",
+    name: "Bàn phím cơ E-Dra EK398W Trắng",
+    brand: "E-Dra",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp5.png",
+    price: 750000,
+    salebefore: 899000,
+    baseprice: 500000,
+    listVersions: [{ name: "Phiên bản", option: ["87 Key"] }],
+    listColors: ["Trắng", "Đen"],
+    versions: [
+      {
+        id: "105-trang-87key",
+        color: "Trắng",
+        price: 750000,
+        stock: 90,
+        status: true,
+        sold: "340",
+        version: ["87 Key"],
+      },
+      {
+        id: "105-den-87key",
+        color: "Đen",
+        price: 750000,
+        stock: 90,
+        status: true,
+        sold: "340",
+        version: ["87 Key"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp5/1.png",
+      "../user/assets/image/KeyBoard/sp5/2.png",
+      "../user/assets/image/KeyBoard/sp5/3.png",
+      "../user/assets/image/KeyBoard/sp5/4.png",
+      "../user/assets/image/KeyBoard/sp5/5.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Outemu Blue/Red",
+      "Kết nối": "USB",
+      LED: "RGB",
+      Layout: "TKL/87-key",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "E-Dra EK398W là bàn phím cơ màu trắng thanh lịch, switch tactile phù hợp gõ phím và chơi game, độ bền cao và giá hợp lý.",
+  },
+
+  {
+    id: "106",
+    name: "Bàn phím gaming Logitech G515 Lightspeed TKL",
+    brand: "Logitech",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp6.png",
+    price: 3499000,
+    salebefore: 3999000,
+    baseprice: 2900000,
+    listVersions: [{ name: "Phiên bản", option: ["TKL"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "106-den-tkl",
+        color: "Đen",
+        price: 3499000,
+        stock: 30,
+        status: true,
+        sold: "110",
+        version: ["TKL"],
+      },
+      {
+        id: "106-trang-tkl",
+        color: "Trắng",
+        price: 3499000,
+        stock: 30,
+        status: true,
+        sold: "110",
+        version: ["TKL"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp6/1.png",
+      "../user/assets/image/KeyBoard/sp6/2.png",
+      "../user/assets/image/KeyBoard/sp6/3.png",
+      "../user/assets/image/KeyBoard/sp6/4.png",
+      "../user/assets/image/KeyBoard/sp6/5.png",
+      "../user/assets/image/KeyBoard/sp6/6.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Tactile/Linear tùy model",
+      "Kết nối": "Lightspeed Wireless / USB",
+      LED: "RGB",
+      "Tính năng": "Low-profile, Media wheel",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Logitech G515 là bàn phím gaming cao cấp với kết nối Lightspeed, build chắc chắn và cảm giác gõ thoải mái cho các phiên chơi game dài.",
+  },
+
+  {
+    id: "107",
+    name: "Bàn phím cơ không dây Aula F108 Pro",
+    brand: "Aula",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp7.png",
+    price: 1190000,
+    salebefore: 1390000,
+    baseprice: 800000,
+    listVersions: [{ name: "Phiên bản", option: ["Wireless"] }],
+    listColors: ["Đen Gradient", "Trắng"],
+    versions: [
+      {
+        id: "107-den-wireless",
+        color: "Đen Gradient",
+        price: 1190000,
+        stock: 50,
+        status: true,
+        sold: "75",
+        version: ["Wireless"],
+      },
+      {
+        id: "107-trang-wireless",
+        color: "Trắng",
+        price: 1190000,
+        stock: 50,
+        status: true,
+        sold: "75",
+        version: ["Wireless"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp7/1.png",
+      "../user/assets/image/KeyBoard/sp7/2.png",
+      "../user/assets/image/KeyBoard/sp7/3.png",
+      "../user/assets/image/KeyBoard/sp7/4.png",
+      "../user/assets/image/KeyBoard/sp7/5.png",
+      "../user/assets/image/KeyBoard/sp7/6.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Blue/Red tùy chọn",
+      "Kết nối": "Bluetooth / 2.4GHz",
+      LED: "RGB",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Aula F108 Pro là bàn phím cơ không dây với thiết kế gradient bắt mắt, nhiều tùy chọn switch và pin dùng lâu.",
+  },
+
+  {
+    id: "108",
+    name: "Bàn phím cơ không dây Leobog HI75C Pro",
+    brand: "Leobog",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp8.png",
+    price: 1590000,
+    salebefore: 1790000,
+    baseprice: 1000000,
+    listVersions: [{ name: "Phiên bản", option: ["75%"] }],
+    listColors: ["Be/Trắng/Nâu", "Đen/Xanh/Xám"],
+    versions: [
+      {
+        id: "108-be/trang/nau-75",
+        color: "Be/Trắng/Nâu",
+        price: 1590000,
+        stock: 40,
+        status: true,
+        sold: "33",
+        version: ["75%"],
+      },
+      {
+        id: "108-den/xanh/xam-75",
+        color: "Đen/Xanh/Xám",
+        price: 1590000,
+        stock: 40,
+        status: true,
+        sold: "33",
+        version: ["75%"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp8/1.png",
+      "../user/assets/image/KeyBoard/sp8/2.png",
+      "../user/assets/image/KeyBoard/sp8/3.png",
+      "../user/assets/image/KeyBoard/sp8/4.png",
+      "../user/assets/image/KeyBoard/sp8/5.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Mechanical (Hot-swap tùy model)",
+      "Kết nối": "Bluetooth / USB-C",
+      LED: "RGB",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Leobog HI75C Pro là bàn phím 75% không dây với thiết kế màu trung tính, phù hợp người dùng thích tiết kiệm không gian nhưng vẫn đủ phím chức năng.",
+  },
+
+  {
+    id: "109",
+    name: "Bàn phím gaming ASUS ROG Azoth",
+    brand: "ASUS",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp9.png",
+    price: 4999000,
+    salebefore: 5499000,
+    baseprice: 4200000,
+    listVersions: [{ name: "Phiên bản", option: ["Wireless / Wired"] }],
+    listColors: ["Đen"],
+    versions: [
+      {
+        id: "109-den-wireless",
+        color: "Đen",
+        price: 4999000,
+        stock: 22,
+        status: true,
+        sold: "40",
+        version: ["Wireless"],
+      },
+      {
+        id: "109-den-Wired",
+        color: "Đen",
+        price: 4999000,
+        stock: 22,
+        status: true,
+        sold: "40",
+        version: ["Wired"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp9/1.png",
+      "../user/assets/image/KeyBoard/sp9/2.png",
+      "../user/assets/image/KeyBoard/sp9/3.png",
+      "../user/assets/image/KeyBoard/sp9/4.png",
+      "../user/assets/image/KeyBoard/sp9/5.png",
+      "../user/assets/image/KeyBoard/sp9/6.png",
+    ],
+    infoDetail: {
+      "Loại switch": "ROG GX Switch / Optical",
+      "Kết nối": "Wireless / USB",
+      LED: "Aura Sync RGB",
+      "Tính năng": "Hot-swap, NKRO, Onboard memory",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "ASUS ROG Azoth là bàn phím gaming cao cấp, hỗ trợ Aura Sync, hot-swap và kết nối đa dạng dành cho người chơi chuyên nghiệp.",
+  },
+
+  {
+    id: "110",
+    name: "Combo bàn phím + chuột gaming Aula T102",
+    brand: "Aula",
+    category: "Bàn phím",
+    status: true, thumbnail: "../user/assets/image/KeyBoard/sp10.png",
+    price: 299000,
+    salebefore: 399000,
+    baseprice: 180000,
+    listVersions: [{ name: "Phiên bản", option: ["Combo"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "110-den-combo",
+        color: "Đen",
+        price: 299000,
+        stock: 200,
+        status: true,
+        sold: "520",
+        version: ["Combo"],
+      },
+      {
+        id: "110-trang-combo",
+        color: "Trắng",
+        price: 299000,
+        stock: 200,
+        status: true,
+        sold: "520",
+        version: ["Combo"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/KeyBoard/sp10/1.png",
+      "../user/assets/image/KeyBoard/sp10/2.png",
+      "../user/assets/image/KeyBoard/sp10/3.png",
+      "../user/assets/image/KeyBoard/sp10/4.png",
+      "../user/assets/image/KeyBoard/sp10/5.png",
+      "../user/assets/image/KeyBoard/sp10/6.png",
+    ],
+    infoDetail: {
+      "Loại switch": "Membrane (combo)",
+      "Kết nối": "USB",
+      LED: "RGB",
+      "Tính năng": "Combo bàn phím + chuột gaming cơ bản",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Combo Aula T102 gồm bàn phím và chuột gaming với LED RGB, là lựa chọn tiết kiệm cho người mới chơi game.",
+  },
+
+  {
+    id: "111",
+    name: "Chuột không dây Logitech MX Master 2S",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp1.png",
+    price: 1990000,
+    salebefore: 2490000,
+    baseprice: 1500000,
+    listVersions: [{ name: "Phiên bản", option: ["Không dây"] }],
+    listColors: ["Đen", "Xám"],
+    versions: [
+      {
+        id: "111-den-khongday",
+        color: "Đen",
+        price: 1990000,
+        stock: 50,
+        status: true,
+        sold: "320",
+        version: ["Không dây"],
+      },
+      {
+        id: "111-xam-khongday",
+        color: "Xám",
+        price: 1990000,
+        stock: 45,
+        status: true,
+        sold: "280",
+        version: ["Không dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp1/1.png",
+      "../user/assets/image/Mouse/sp1/2.png",
+      "../user/assets/image/Mouse/sp1/3.png",
+      "../user/assets/image/Mouse/sp1/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Darkfield Laser",
+      DPI: "200-4000",
+      "Kết nối": "Bluetooth và USB Unifying",
+      Pin: "Sạc 500mAh, dùng 70 ngày",
+      "Nút bấm": "7 nút có thể tùy chỉnh",
+      "Tương thích": "Windows, macOS",
+      "Tính năng": "Flow cross-computer control, Gesture button",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Chuột không dây cao cấp Logitech MX Master 2S với cảm biến Darkfield chính xác trên mọi bề mặt, pin sạc dùng 70 ngày và khả năng điều khiển đa thiết bị Flow. Thiết kế công thái học cho cảm giác cầm thoải mái.",
+  },
+
+  {
+    id: "112",
+    name: "Chuột gaming không dây Logitech G304 Lightspeed",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp2.png",
+    price: 790000,
+    salebefore: 990000,
+    baseprice: 600000,
+    listVersions: [{ name: "Phiên bản", option: ["Không dây"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "112-den-khongday",
+        color: "Đen",
+        price: 790000,
+        stock: 100,
+        status: true,
+        sold: "2.5k",
+        version: ["Không dây"],
+      },
+      {
+        id: "112-trang-khongday",
+        color: "Trắng",
+        price: 790000,
+        stock: 80,
+        status: true,
+        sold: "1.8k",
+        version: ["Không dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp2/1.png",
+      "../user/assets/image/Mouse/sp2/2.png",
+      "../user/assets/image/Mouse/sp2/3.png",
+      "../user/assets/image/Mouse/sp2/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "HERO",
+      DPI: "200-12000",
+      "Kết nối": "Lightspeed Wireless",
+      Pin: "1 viên AA, dùng 250 giờ",
+      "Nút bấm": "6 nút có thể lập trình",
+      "Tần số phản hồi": "1ms",
+      "Trọng lượng": "99g",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Chuột gaming G304 với công nghệ không dây Lightspeed độ trễ 1ms, cảm biến HERO 12000 DPI và thời lượng pin ấn tượng 250 giờ. Thiết kế đơn giản nhưng hiệu năng cao cho game thủ.",
+  },
+
+  {
+    id: "113",
+    name: "Chuột không dây Logitech Signature M650",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp3.png",
+    price: 590000,
+    salebefore: 690000,
+    baseprice: 450000,
+    listVersions: [{ name: "Phiên bản", option: ["Size M"] }],
+    listColors: ["Đen", "Hồng", "Trắng"],
+    versions: [
+      {
+        id: "113-den-sizem",
+        color: "Đen",
+        price: 590000,
+        stock: 70,
+        status: true,
+        sold: "850",
+        version: ["Size M"],
+      },
+      {
+        id: "113-hong-sizem",
+        color: "Hồng",
+        price: 590000,
+        stock: 50,
+        status: true,
+        sold: "420",
+        version: ["Size M"],
+      },
+      {
+        id: "113-trang-sizem",
+        color: "Trắng",
+        price: 590000,
+        stock: 55,
+        status: true,
+        sold: "380",
+        version: ["Size M"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp3/1.png",
+      "../user/assets/image/Mouse/sp3/2.png",
+      "../user/assets/image/Mouse/sp3/3.png",
+      "../user/assets/image/Mouse/sp3/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "400-4000",
+      "Kết nối": "Bluetooth hoặc USB",
+      Pin: "1 viên AA, dùng 24 tháng",
+      "Nút bấm": "5 nút (có SmartWheel)",
+      "Tương thích": "Windows, macOS, ChromeOS",
+      "Độ ồn": "Silent Touch, giảm 90% tiếng click",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Chuột Signature M650 với thiết kế thoải mái cỡ trung bình, cuộn SmartWheel và công nghệ Silent Touch giảm 90% tiếng click. Pin AA dùng đến 24 tháng, kết nối linh hoạt qua Bluetooth hoặc USB.",
+  },
+
+  {
+    id: "114",
+    name: "Chuột gaming có dây Logitech G102 Lightsync",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp4.png",
+    price: 399000,
+    salebefore: 499000,
+    baseprice: 300000,
+    listVersions: [{ name: "Phiên bản", option: ["Có dây"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "114-den-coday",
+        color: "Đen",
+        price: 399000,
+        stock: 200,
+        status: true,
+        sold: "15k",
+        version: ["Có dây"],
+      },
+      {
+        id: "114-trang-coday",
+        color: "Trắng",
+        price: 399000,
+        stock: 150,
+        status: true,
+        sold: "12k",
+        version: ["Có dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp4/1.png",
+      "../user/assets/image/Mouse/sp4/2.png",
+      "../user/assets/image/Mouse/sp4/3.png",
+      "../user/assets/image/Mouse/sp4/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Mercury",
+      DPI: "200-8000",
+      "Kết nối": "USB",
+      LED: "RGB LIGHTSYNC",
+      "Nút bấm": "6 nút có thể lập trình",
+      "Tần số phản hồi": "1000Hz",
+      "Trọng lượng": "85g",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Chuột gaming G102 Lightsync là lựa chọn phổ biến với cảm biến Mercury 8000 DPI, 6 nút có thể lập trình và đèn RGB 16.8 triệu màu. Thiết kế nhẹ 85g cùng giá thành hợp lý cho game thủ.",
+  },
+
+  {
+    id: "115",
+    name: "Chuột không dây Logitech MX Anywhere 3S",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp5.png",
+    price: 1790000,
+    salebefore: 1990000,
+    baseprice: 1400000,
+    listVersions: [{ name: "Phiên bản", option: ["Không dây"] }],
+    listColors: ["Đen", "Xám", "Hồng"],
+    versions: [
+      {
+        id: "115-den-khongday",
+        color: "Đen",
+        price: 1790000,
+        stock: 40,
+        status: true,
+        sold: "280",
+        version: ["Không dây"],
+      },
+      {
+        id: "115-xam-khongday",
+        color: "Xám",
+        price: 1790000,
+        stock: 35,
+        status: true,
+        sold: "220",
+        version: ["Không dây"],
+      },
+      {
+        id: "115-hong-khongday",
+        color: "Hồng",
+        price: 1790000,
+        stock: 30,
+        status: true,
+        sold: "180",
+        version: ["Không dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp5/1.png",
+      "../user/assets/image/Mouse/sp5/2.png",
+      "../user/assets/image/Mouse/sp5/3.png",
+      "../user/assets/image/Mouse/sp5/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Darkfield High Precision",
+      DPI: "200-8000",
+      "Kết nối": "Bluetooth và USB Logi Bolt",
+      Pin: "Sạc Type-C, dùng 70 ngày",
+      "Nút bấm": "6 nút có thể tùy chỉnh",
+      Cuộn: "MagSpeed Electromagnetic",
+      "Tính năng": "Flow cross-computer control, Quiet Click",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "MX Anywhere 3S là chuột di động cao cấp với cảm biến 8K DPI, con lăn điện từ MagSpeed và công nghệ Quiet Click giảm 90% tiếng ồn. Kết nối đa thiết bị, pin sạc Type-C dùng 70 ngày.",
+  },
+
+  {
+    id: "116",
+    name: "Chuột không dây Logitech M331",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp6.png",
+    price: 299000,
+    salebefore: 399000,
+    baseprice: 200000,
+    listVersions: [{ name: "Phiên bản", option: ["Không dây"] }],
+    listColors: ["Đen", "Xám"],
+    versions: [
+      {
+        id: "116-den-khongday",
+        color: "Đen",
+        price: 299000,
+        stock: 150,
+        status: true,
+        sold: "5.2k",
+        version: ["Không dây"],
+      },
+      {
+        id: "116-xam-khongday",
+        color: "Xám",
+        price: 299000,
+        stock: 120,
+        status: true,
+        sold: "4.8k",
+        version: ["Không dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp6/1.png",
+      "../user/assets/image/Mouse/sp6/2.png",
+      "../user/assets/image/Mouse/sp6/3.png",
+      "../user/assets/image/Mouse/sp6/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "1000",
+      "Kết nối": "USB Nano receiver",
+      Pin: "1 viên AA, dùng 24 tháng",
+      "Nút bấm": "3 nút",
+      "Độ ồn": "Silent Click",
+      "Tương thích": "Windows, macOS, Linux",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Chuột không dây M331 với thiết kế đơn giản, êm ái với công nghệ Silent Click. Pin AA dùng lâu đến 24 tháng, kết nối đơn giản qua USB nano receiver, phù hợp làm việc văn phòng.",
+  },
+
+  {
+    id: "117",
+    name: "Chuột gaming Logitech Pro X Superlight 2",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp7.png",
+    price: 3290000,
+    salebefore: 3590000,
+    baseprice: 2800000,
+    listVersions: [{ name: "Phiên bản", option: ["Lightspeed"] }],
+    listColors: ["Đen", "Hồng", "Trắng"],
+    versions: [
+      {
+        id: "117-den-lightspeed",
+        color: "Đen",
+        price: 3290000,
+        stock: 35,
+        status: true,
+        sold: "220",
+        version: ["Lightspeed"],
+      },
+      {
+        id: "117-hong-lightspeed",
+        color: "Hồng",
+        price: 3290000,
+        stock: 30,
+        status: true,
+        sold: "180",
+        version: ["Lightspeed"],
+      },
+      {
+        id: "117-trang-lightspeed",
+        color: "Trắng",
+        price: 3290000,
+        stock: 25,
+        status: true,
+        sold: "150",
+        version: ["Lightspeed"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp7/1.png",
+      "../user/assets/image/Mouse/sp7/2.png",
+      "../user/assets/image/Mouse/sp7/3.png",
+      "../user/assets/image/Mouse/sp7/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "HERO 25K",
+      DPI: "100-25600",
+      "Kết nối": "Lightspeed Wireless",
+      Pin: "Sạc USB-C, dùng 95 giờ",
+      "Nút bấm": "5 nút có thể lập trình",
+      "Tần số phản hồi": "2000Hz",
+      "Trọng lượng": "60g",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Pro X Superlight 2 là chuột gaming không dây siêu nhẹ 60g với cảm biến HERO 25K, tần số quét 2000Hz và công nghệ Lightspeed. Pin sạc USB-C dùng 95 giờ, thiết kế tối ưu cho game thủ chuyên nghiệp.",
+  },
+
+  {
+    id: "118",
+    name: "Chuột không dây Logitech Signature M650 L",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp8.png",
+    price: 690000,
+    salebefore: 790000,
+    baseprice: 500000,
+    listVersions: [{ name: "Phiên bản", option: ["Size L"] }],
+    listColors: ["Đen", "Xám"],
+    versions: [
+      {
+        id: "118-den-sizel",
+        color: "Đen",
+        price: 690000,
+        stock: 60,
+        status: true,
+        sold: "420",
+        version: ["Size L"],
+      },
+      {
+        id: "118-xam-sizel",
+        color: "Xám",
+        price: 690000,
+        stock: 55,
+        status: true,
+        sold: "380",
+        version: ["Size L"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp8/1.png",
+      "../user/assets/image/Mouse/sp8/2.png",
+      "../user/assets/image/Mouse/sp8/3.png",
+      "../user/assets/image/Mouse/sp8/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "400-4000",
+      "Kết nối": "Bluetooth hoặc USB",
+      Pin: "1 viên AA, dùng 24 tháng",
+      "Nút bấm": "5 nút (có SmartWheel)",
+      "Tương thích": "Windows, macOS, ChromeOS",
+      "Kích thước": "Size L cho tay lớn",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Signature M650 L là phiên bản cỡ lớn dành cho người có bàn tay to, với thiết kế công thái học và công nghệ SmartWheel thông minh. Kết nối đa nền tảng, pin AA dùng 24 tháng.",
+  },
+
+  {
+    id: "119",
+    name: "Chuột không dây Logitech MX Master 3S",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp9.png",
+    price: 2790000,
+    salebefore: 2990000,
+    baseprice: 2200000,
+    listVersions: [{ name: "Phiên bản", option: ["Không dây"] }],
+    listColors: ["Đen", "Xám"],
+    versions: [
+      {
+        id: "119-den-khongday",
+        color: "Đen",
+        price: 2790000,
+        stock: 40,
+        status: true,
+        sold: "280",
+        version: ["Không dây"],
+      },
+      {
+        id: "119-xam-khongday",
+        color: "Xám",
+        price: 2790000,
+        stock: 35,
+        status: true,
+        sold: "240",
+        version: ["Không dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp9/1.png",
+      "../user/assets/image/Mouse/sp9/2.png",
+      "../user/assets/image/Mouse/sp9/3.png",
+      "../user/assets/image/Mouse/sp9/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Darkfield 8K DPI",
+      DPI: "200-8000",
+      "Kết nối": "Bluetooth và USB Logi Bolt",
+      Pin: "Sạc Type-C, dùng 70 ngày",
+      "Nút bấm": "7 nút có thể tùy chỉnh",
+      Cuộn: "MagSpeed Electromagnetic",
+      "Tính năng": "Flow, Quiet Click, Easy-Switch",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "MX Master 3S là phiên bản nâng cấp với cảm biến 8K DPI, công nghệ Quiet Click giảm 90% tiếng ồn và con lăn MagSpeed. Thiết kế công thái học cao cấp, đa kết nối với 3 thiết bị.",
+  },
+
+  {
+    id: "120",
+    name: "Chuột không dây Logitech MX Master 4",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp10.png",
+    price: 3490000,
+    salebefore: 3990000,
+    baseprice: 2900000,
+    listVersions: [{ name: "Phiên bản", option: ["Không dây"] }],
+    listColors: ["Đen", "Xám"],
+    versions: [
+      {
+        id: "120-den-khongday",
+        color: "Đen",
+        price: 3490000,
+        stock: 30,
+        status: true,
+        sold: "150",
+        version: ["Không dây"],
+      },
+      {
+        id: "120-xam-khongday",
+        color: "Xám",
+        price: 3490000,
+        stock: 25,
+        status: true,
+        sold: "120",
+        version: ["Không dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp10/1.png",
+      "../user/assets/image/Mouse/sp10/2.png",
+      "../user/assets/image/Mouse/sp10/3.png",
+      "../user/assets/image/Mouse/sp10/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Darkfield 8K DPI thế hệ mới",
+      DPI: "200-8000",
+      "Kết nối": "Bluetooth và USB Logi Bolt",
+      Pin: "Sạc Type-C nhanh, dùng 80 ngày",
+      "Nút bấm": "8 nút có thể tùy chỉnh",
+      Cuộn: "MagSpeed Electromagnetic thế hệ 2",
+      "Tính năng": "Flow 2.0, Smart Actions, Gesture button",
+      "Bảo hành": "36 tháng",
+    },
+    overview:
+      "MX Master 4 là phiên bản mới nhất với thiết kế tinh chỉnh, cảm biến nâng cấp và thêm nhiều tính năng thông minh. Sạc nhanh Type-C, pin dùng 80 ngày và hỗ trợ Smart Actions tự động hóa.",
+  },
+
+  {
+    id: "121",
+    name: "Chuột không dây Rapoo 8000M (combo)",
+    brand: "Rapoo",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp11.png",
+    price: 450000,
+    salebefore: 590000,
+    baseprice: 300000,
+    listVersions: [{ name: "Phiên bản", option: ["Combo"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "121-den-combo",
+        color: "Đen",
+        price: 450000,
+        stock: 120,
+        status: true,
+        sold: "420",
+        version: ["Combo"],
+      },
+      {
+        id: "121-trang-combo",
+        color: "Trắng",
+        price: 450000,
+        stock: 120,
+        status: true,
+        sold: "420",
+        version: ["Combo"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp11/1.png",
+      "../user/assets/image/Mouse/sp11/2.png",
+      "../user/assets/image/Mouse/sp11/3.png",
+      "../user/assets/image/Mouse/sp11/4.png",
+    ],
+    infoDetail: {
+      Loại: "Combo bàn phím + chuột",
+      "Kết nối": "2.4GHz",
+      Pin: "Chuột dùng pin AAA",
+      "Tính năng": "Tiết kiệm, dễ dùng",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Combo Rapoo 8000M gồm bàn phím và chuột không dây nhỏ gọn, phù hợp văn phòng và học tập.",
+  },
+
+  {
+    id: "122",
+    name: "Chuột không dây Bluetooth Logitech Pebble M350s",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp12.png",
+    price: 349000,
+    salebefore: 429000,
+    baseprice: 220000,
+    listVersions: [{ name: "Phiên bản", option: ["Bluetooth"] }],
+    listColors: ["Đen", "Trắng", "Xanh"],
+    versions: [
+      {
+        id: "122-den-bluetooth",
+        color: "Đen",
+        price: 349000,
+        stock: 140,
+        status: true,
+        sold: "1k",
+        version: ["Bluetooth"],
+      },
+      {
+        id: "122-trang-bluetooth",
+        color: "Trắng",
+        price: 349000,
+        stock: 80,
+        status: true,
+        sold: "700",
+        version: ["Bluetooth"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp12/1.png",
+      "../user/assets/image/Mouse/sp12/2.png",
+      "../user/assets/image/Mouse/sp12/3.png",
+      "../user/assets/image/Mouse/sp12/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "1000",
+      "Kết nối": "Bluetooth",
+      Pin: "2 x AAA, dùng lâu",
+      "Độ ồn": "Silent click",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Logitech Pebble M350s nhỏ gọn, thiết kế tối giản, kết nối Bluetooth ổn định, phù hợp cho người di chuyển và làm việc văn phòng.",
+  },
+
+  {
+    id: "123",
+    name: "Chuột chơi game có dây Logitech G502 HERO",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp13.png",
+    price: 1290000,
+    salebefore: 1590000,
+    baseprice: 900000,
+    listVersions: [{ name: "Phiên bản", option: ["Có dây"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "123-den-coday",
+        color: "Đen",
+        price: 1290000,
+        stock: 60,
+        status: true,
+        sold: "2k",
+        version: ["Có dây"],
+      },
+      {
+        id: "123-trang-coday",
+        color: "Trắng",
+        price: 1290000,
+        stock: 60,
+        status: true,
+        sold: "2k",
+        version: ["Có dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp13/1.png",
+      "../user/assets/image/Mouse/sp13/2.png",
+      "../user/assets/image/Mouse/sp13/3.png",
+      "../user/assets/image/Mouse/sp13/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "HERO",
+      DPI: "100-16000",
+      "Kết nối": "USB có dây",
+      "Nút bấm": "11 nút có thể lập trình",
+      "Trọng lượng": "121g (tùy chỉnh)",
+      "Bảo hành": "24 tháng",
+    },
+    overview:
+      "Logitech G502 HERO là chuột gaming thịnh hành với cảm biến HERO chính xác, nhiều nút tùy chỉnh và trọng lượng có thể điều chỉnh phù hợp game thủ.",
+  },
+
+  {
+    id: "124",
+    name: "Chuột Apple Magic Mouse 3",
+    brand: "Apple",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp14.png",
+    price: 2490000,
+    salebefore: 2690000,
+    baseprice: 2000000,
+    listVersions: [{ name: "Phiên bản", option: ["Bluetooth"] }],
+    listColors: ["Trắng", "Đen"],
+    versions: [
+      {
+        id: "124-trang-bluetooth",
+        color: "Trắng",
+        price: 2490000,
+        stock: 30,
+        status: true,
+        sold: "320",
+        version: ["Bluetooth"],
+      },
+      {
+        id: "124-den-bluetooth",
+        color: "Đen",
+        price: 2490000,
+        stock: 30,
+        status: true,
+        sold: "320",
+        version: ["Bluetooth"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp14/1.png",
+      "../user/assets/image/Mouse/sp14/2.png",
+      "../user/assets/image/Mouse/sp14/3.png",
+      "../user/assets/image/Mouse/sp14/4.png",
+    ],
+    infoDetail: {
+      Loại: "Chuột cảm ứng đa điểm",
+      "Kết nối": "Bluetooth",
+      Pin: "Sạc Lightning",
+      "Tương thích": "macOS, iPadOS",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Apple Magic Mouse 3 với thiết kế mỏng, bề mặt cảm ứng đa điểm và tinh tế, tối ưu cho người dùng Apple.",
+  },
+
+  {
+    id: "125",
+    name: "Combo bàn phím + chuột không dây Logitech MK240",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp15.png",
+    price: 390000,
+    salebefore: 499000,
+    baseprice: 250000,
+    listVersions: [{ name: "Phiên bản", option: ["Combo"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "125-den-combo",
+        color: "Đen",
+        price: 390000,
+        stock: 180,
+        status: true,
+        sold: "1.5k",
+        version: ["Combo"],
+      },
+      {
+        id: "125-trang-combo",
+        color: "Trắng",
+        price: 390000,
+        stock: 180,
+        status: true,
+        sold: "1.5k",
+        version: ["Combo"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp15/1.png",
+      "../user/assets/image/Mouse/sp15/2.png",
+      "../user/assets/image/Mouse/sp15/3.png",
+      "../user/assets/image/Mouse/sp15/4.png",
+    ],
+    infoDetail: {
+      Loại: "Combo bàn phím + chuột",
+      "Kết nối": "2.4GHz USB receiver",
+      Pin: "Chuột dùng pin AA",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Combo Logitech MK240 nhỏ gọn, đáng tin cậy cho văn phòng và học tập, kết nối qua USB receiver.",
+  },
+
+  {
+    id: "126",
+    name: "Chuột không dây Dareu LM106G",
+    brand: "Dareu",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp16.png",
+    price: 399000,
+    salebefore: 499000,
+    baseprice: 250000,
+    listVersions: [{ name: "Phiên bản", option: ["Không dây"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "126-den-khongday",
+        color: "Đen",
+        price: 399000,
+        stock: 140,
+        status: true,
+        sold: "900",
+        version: ["Không dây"],
+      },
+      {
+        id: "126-trang-khongday",
+        color: "Trắng",
+        price: 399000,
+        stock: 140,
+        status: true,
+        sold: "900",
+        version: ["Không dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp16/1.png",
+      "../user/assets/image/Mouse/sp16/2.png",
+      "../user/assets/image/Mouse/sp16/3.png",
+      "../user/assets/image/Mouse/sp16/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "800-6400",
+      "Kết nối": "2.4GHz",
+      Pin: "Sạc hoặc pin AAA",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Dareu LM106G là chuột không dây hiệu năng tốt trong tầm giá, phù hợp cho gaming nhẹ và sử dụng hàng ngày.",
+  },
+
+  {
+    id: "127",
+    name: "Chuột không dây Bluetooth UGREEN Silent MU006",
+    brand: "UGREEN",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp17.png",
+    price: 299000,
+    salebefore: 399000,
+    baseprice: 180000,
+    listVersions: [{ name: "Phiên bản", option: ["Bluetooth"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "127-den-bluetooth",
+        color: "Đen",
+        price: 299000,
+        stock: 200,
+        status: true,
+        sold: "1.2k",
+        version: ["Bluetooth"],
+      },
+      {
+        id: "127-trang-bluetooth",
+        color: "Trắng",
+        price: 299000,
+        stock: 200,
+        status: true,
+        sold: "1.2k",
+        version: ["Bluetooth"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp17/1.png",
+      "../user/assets/image/Mouse/sp17/2.png",
+      "../user/assets/image/Mouse/sp17/3.png",
+      "../user/assets/image/Mouse/sp17/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "800-1600",
+      "Kết nối": "Bluetooth",
+      "Độ ồn": "Silent click",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "UGREEN MU006 là chuột Bluetooth yên tĩnh, thiết kế mảnh và tiện lợi cho văn phòng và học tập.",
+  },
+
+  {
+    id: "128",
+    name: "Chuột có dây Logitech B100",
+    brand: "Logitech",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp18.png",
+    price: 129000,
+    salebefore: 179000,
+    baseprice: 80000,
+    listVersions: [{ name: "Phiên bản", option: ["Có dây"] }],
+    listColors: ["Đen", "Trắng"],
+    versions: [
+      {
+        id: "128-den-coday",
+        color: "Đen",
+        price: 129000,
+        stock: 400,
+        status: true,
+        sold: "6k",
+        version: ["Có dây"],
+      },
+      {
+        id: "128-trang-coday",
+        color: "Trắng",
+        price: 129000,
+        stock: 400,
+        status: true,
+        sold: "6k",
+        version: ["Có dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp18/1.png",
+      "../user/assets/image/Mouse/sp18/2.png",
+      "../user/assets/image/Mouse/sp18/3.png",
+      "../user/assets/image/Mouse/sp18/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "800",
+      "Kết nối": "USB",
+      "Độ bền": "3 triệu click",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Logitech B100 là chuột có dây cơ bản, bền, dễ dùng cho văn phòng và máy tính phổ thông.",
+  },
+
+  {
+    id: "129",
+    name: "Chuột không dây UGREEN Silent MU006 (Phiên bản 2)",
+    brand: "UGREEN",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp19.png",
+    price: 319000,
+    salebefore: 399000,
+    baseprice: 190000,
+    listVersions: [{ name: "Phiên bản", option: ["Bluetooth / 2.4GHz"] }],
+    listColors: ["Trắng", "Đen"],
+    versions: [
+      {
+        id: "129-trang-bluetooth",
+        color: "Trắng",
+        price: 319000,
+        stock: 120,
+        status: true,
+        sold: "530",
+        version: ["Bluetooth / 2.4GHz"],
+      },
+      {
+        id: "129-den-bluetooth",
+        color: "Đen",
+        price: 319000,
+        stock: 120,
+        status: true,
+        sold: "530",
+        version: ["Bluetooth / 2.4GHz"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp19/1.png",
+      "../user/assets/image/Mouse/sp19/2.png",
+      "../user/assets/image/Mouse/sp19/3.png",
+      "../user/assets/image/Mouse/sp19/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "1000",
+      "Kết nối": "Bluetooth / 2.4GHz",
+      "Độ ồn": "Silent click",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Phiên bản khác của UGREEN MU006 với tuỳ chọn kết nối 2.4GHz hoặc Bluetooth, phù hợp nhiều thiết bị.",
+  },
+
+  {
+    id: "130",
+    name: "Chuột không dây Dareu LM115G",
+    brand: "Dareu",
+    category: "Chuột",
+    status: true, thumbnail: "../user/assets/image/Mouse/sp20.png",
+    price: 459000,
+    salebefore: 549000,
+    baseprice: 300000,
+    listVersions: [{ name: "Phiên bản", option: ["Không dây"] }],
+    listColors: ["Đen", "Xám"],
+    versions: [
+      {
+        id: "130-den-khongday",
+        color: "Đen",
+        price: 459000,
+        stock: 90,
+        status: true,
+        sold: "260",
+        version: ["Không dây"],
+      },
+      {
+        id: "130-xam-khongday",
+        color: "Xám",
+        price: 459000,
+        stock: 90,
+        status: true,
+        sold: "260",
+        version: ["Không dây"],
+      },
+    ],
+    imgDetail: [
+      "../user/assets/image/Mouse/sp20/1.png",
+      "../user/assets/image/Mouse/sp20/2.png",
+      "../user/assets/image/Mouse/sp20/3.png",
+      "../user/assets/image/Mouse/sp20/4.png",
+    ],
+    infoDetail: {
+      "Cảm biến": "Optical",
+      DPI: "800-6400",
+      "Kết nối": "2.4GHz",
+      Pin: "Sạc Type-C / AAA",
+      "Bảo hành": "12 tháng",
+    },
+    overview:
+      "Dareu LM115G là chuột không dây đa dụng, thiết kế công thái học, phù hợp chơi game và làm việc.",
   },
 
 
+
   {
-    id: "63",
+    id: "163",
     name: "Đồng hồ thông minh Huawei Watch Fit 4",
     brand: "Huawei",
     category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp1.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/SmartWatch/sp1.png",
     price: 2640000,
     salebefore: 3090000,
     baseprice: 2200000, // giá nhập vào 
@@ -3107,27 +7101,27 @@ const Initial = [
     listColors: ["Đen", "Trắng", "Tím"],
     versions: [
       {
-        id: "63-den-thuong-caosu",
+        id: "163-den-thuong-caosu",
         color: "Đen",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 10,
         status: true,
         sold: "1.2k",
         version: ["Thường", "Cao su"],
       },
       {
-        id: "63-trang-thuong-caosu",
+        id: "163-trang-thuong-caosu",
         color: "Trắng",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 8,
         status: true,
         sold: "900",
         version: ["Thường", "Cao su"],
       },
       {
-        id: "63-tim-thuong-caosu",
+        id: "163-tim-thuong-caosu",
         color: "Tím",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 5,
         status: true,
         sold: "500",
@@ -3135,27 +7129,27 @@ const Initial = [
       },
 
       {
-        id: "63-den-thuong-nylon",
+        id: "163-den-thuong-nylon",
         color: "Đen",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 10,
         status: true,
         sold: "1.2k",
         version: ["Thường", "Nylon"],
       },
       {
-        id: "63-trang-thuong-nylon",
+        id: "163-trang-thuong-nylon",
         color: "Trắng",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 8,
         status: true,
         sold: "900",
         version: ["Thường", "Nylon"],
       },
       {
-        id: "63-tim-thuong-nylon",
+        id: "163-tim-thuong-nylon",
         color: "Tím",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 5,
         status: true,
         sold: "500",
@@ -3163,27 +7157,27 @@ const Initial = [
       },
 
       {
-        id: "63-den-pro-caosu",
+        id: "163-den-pro-caosu",
         color: "Đen",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 10,
         status: true,
         sold: "1.2k",
         version: ["Pro", "Cao su"],
       },
       {
-        id: "63-trang-pro-caosu",
+        id: "163-trang-pro-caosu",
         color: "Trắng",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 8,
         status: true,
         sold: "900",
         version: ["Pro", "Cao su"],
       },
       {
-        id: "63-tim-pro-caosu",
+        id: "163-tim-pro-caosu",
         color: "Tím",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 5,
         status: true,
         sold: "500",
@@ -3191,27 +7185,27 @@ const Initial = [
       },
 
       {
-        id: "63-den-pro-nylon",
+        id: "163-den-pro-nylon",
         color: "Đen",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 10,
         status: true,
         sold: "1.2k",
         version: ["Pro", "Nylon"],
       },
       {
-        id: "63-trang-pro-nylon",
+        id: "163-trang-pro-nylon",
         color: "Trắng",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 8,
         status: true,
         sold: "900",
         version: ["Pro", "Nylon"],
       },
       {
-        id: "63-tim-pro-nylon",
+        id: "163-tim-pro-nylon",
         color: "Tím",
-        price: 2740000,
+        priceBase: 2740000,
         stock: 5,
         status: true,
         sold: "500",
@@ -3242,16 +7236,15 @@ const Initial = [
       "Vỏ": "Hợp kim nhôm",
       "Hãng sản xuất": "Huawei"
     },
-    overview: ` Huawei Watch Fit 4 sở hữu màn hình AMOLED 1.82 inch sắc nét, vỏ hợp kim nhôm, trọng lượng nhẹ chỉ 27g.Đồng hồ hỗ trợ Bluetooth 5.2, GPS, kháng nước 5ATM, pin dùng tối đa 10 ngày.Tích hợp hơn 100 chế độ luyện tập, theo dõi sức khỏe 24/7, đo nhịp tim, SPO2, stress, giấc ngủ, chu kỳ kinh nguyệt. Tùy biến mặt đồng hồ bằng sticker, dây đeo nhiều màu phù hợp nhiều kích thước cổ tay. Sản phẩm tương thích Android 8.0/iOS 13 trở lên, hỗ trợ nghe gọi qua Bluetooth, trả lời tin nhắn nhanh, điều khiển chụp ảnh từ xa, đồng bộ dữ liệu với Huawei Health.`
+    overview: `Huawei Watch Fit 4 sở hữu màn hình AMOLED 1.82 inch sắc nét, vỏ hợp kim nhôm, trọng lượng nhẹ chỉ 27g.Đồng hồ hỗ trợ Bluetooth 5.2, GPS, kháng nước 5ATM, pin dùng tối đa 10 ngày.Tích hợp hơn 100 chế độ luyện tập, theo dõi sức khỏe 24/7, đo nhịp tim, SPO2, stress, giấc ngủ, chu kỳ kinh nguyệt. Tùy biến mặt đồng hồ bằng sticker, dây đeo nhiều màu phù hợp nhiều kích thước cổ tay. Sản phẩm tương thích Android 8.0/iOS 13 trở lên, hỗ trợ nghe gọi qua Bluetooth, trả lời tin nhắn nhanh, điều khiển chụp ảnh từ xa, đồng bộ dữ liệu với Huawei Health.`
   },
 
-
   {
-    id: "64",
+    id: "164",
     name: "Đồng hồ thông minh Huawei Watch Fit 3",
     brand: "Huawei",
     category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp2.png",
+    status: true, thumbnail: "../user/assets/image/sanpham/SmartWatch/sp2.png",
     price: 1990000,
     salebefore: 2990000,
     baseprice: 1700000,
@@ -3260,15 +7253,14 @@ const Initial = [
     ],
     listColors: ["Đen", "Trắng", "Hồng", "Xanh lá"],
     versions: [
-      { id: "64-den-silicon", color: "Đen", price: 1990000, stock: 12, status: true, sold: "1.5k", version: ["Silicon"] },
-      { id: "64-trang-silicon", color: "Trắng", price: 1990000, stock: 10, status: true, sold: "1.2k", version: ["Silicon"] },
-      { id: "64-hong-silicon", color: "Hồng", price: 1990000, stock: 8, status: true, sold: "900", version: ["Silicon"] },
-      { id: "64-xanhla-silicon", color: "Xanh lá", price: 1990000, stock: 7, status: true, sold: "700", version: ["Silicon"] },
-
-      { id: "64-den-da", color: "Đen", price: 1990000, stock: 12, status: true, sold: "1.5k", version: ["Da"] },
-      { id: "64-trang-da", color: "Trắng", price: 1990000, stock: 10, status: true, sold: "1.2k", version: ["Da"] },
-      { id: "64-hong-da", color: "Hồng", price: 1990000, stock: 8, status: true, sold: "900", version: ["Da"] },
-      { id: "64-xanhla-da", color: "Xanh lá", price: 1990000, stock: 7, status: true, sold: "700", version: ["Da"] }
+      { id: "164-den-silicon", color: "Đen", priceBase: 1990000, stock: 12, status: true, sold: "1.5k", version: ["Silicon"] },
+      { id: "164-trang-silicon", color: "Trắng", priceBase: 1990000, stock: 10, status: true, sold: "1.2k", version: ["Silicon"] },
+      { id: "164-hong-silicon", color: "Hồng", priceBase: 1990000, stock: 8, status: true, sold: "900", version: ["Silicon"] },
+      { id: "164-xanhla-silicon", color: "Xanh lá", priceBase: 1990000, stock: 7, status: true, sold: "700", version: ["Silicon"] },
+      { id: "164-den-da", color: "Đen", priceBase: 1990000, stock: 12, status: true, sold: "1.5k", version: ["Da"] },
+      { id: "164-trang-da", color: "Trắng", priceBase: 1990000, stock: 10, status: true, sold: "1.2k", version: ["Da"] },
+      { id: "164-hong-da", color: "Hồng", priceBase: 1990000, stock: 8, status: true, sold: "900", version: ["Da"] },
+      { id: "164-xanhla-da", color: "Xanh lá", priceBase: 1990000, stock: 7, status: true, sold: "700", version: ["Da"] }
     ],
     imgDetail: [
       "../user/assets/image/sanpham/SmartWatch/sp2/1.png",
@@ -3298,3711 +7290,11 @@ const Initial = [
   },
 
 
-  {
-    id: "65",
-    name: "Đồng hồ thông minh Huawei Watch GT 6",
-    brand: "Huawei",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp3.png",
-    price: 4990000,
-    salebefore: 5490000,
-    baseprice: 4000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["46mm", "41mm"] },
-      { name: "Dây", option: ["Cao su", "Da", "Vải", "Titan"] }
-    ],
-    listColors: ["Đen", "Tím"],
-    versions: [
-      {
-        id: "65-den-46-caosu",
-        color: "Đen",
-        price: 4990000,
-        stock: 15,
-        status: true,
-        sold: "2.1k",
-        version: ["46mm", "Cao su"]
-      },
-      {
-        id: "65-tim-41-caosu",
-        color: "Tím",
-        price: 4990000,
-        stock: 12,
-        status: true,
-        sold: "1.8k",
-        version: ["41mm", "Cao su"]
-      },
-
-      {
-        id: "65-den-46-da",
-        color: "Đen",
-        price: 4990000,
-        stock: 15,
-        status: true,
-        sold: "2.1k",
-        version: ["46mm", "Da"]
-      },
-      {
-        id: "65-tim-41-da",
-        color: "Tím",
-        price: 4990000,
-        stock: 12,
-        status: true,
-        sold: "1.8k",
-        version: ["41mm", "Da"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp3/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp3/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp3/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp3/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp3/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp3/6.png",
-      "../user/assets/image/sanpham/SmartWatch/sp3/7.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "46mm: 1.47 inch, 41mm: 1.32 inch",
-      "Độ phân giải": "466 x 466 pixel",
-      "Độ sáng": "3000 nit",
-      "Đường kính mặt": "46mm hoặc 41mm",
-      "Kích thước cổ tay phù hợp": "46mm: 140-210mm, 41mm: 120-180mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích sức khoẻ": "Theo dõi giấc ngủ, Đếm bước chân, Đo mức độ stress, Cảnh báo nhịp tim bất thường, Theo dõi chu kỳ, Tình trạng HRV, Bài tập thư giãn",
-      "Tương thích": "Android 9.0 trở lên, iOS 13.0 trở lên",
-      "Thời lượng pin": "46mm: Tối đa 21 ngày, thường xuyên 12 ngày, AOD 7 ngày; 41mm: Tối đa 14 ngày, thường xuyên 7 ngày, AOD 5 ngày",
-      "Kháng nước": "5 ATM",
-      "Kết nối": "Bluetooth 5.2, GPS",
-      "Vỏ": "Thép không gỉ",
-      "Hãng sản xuất": "Huawei"
-    },
-    overview: "Huawei Watch GT 6 là thế hệ smartwatch mới với nhiều cải tiến đáng giá. Sản phẩm có màn hình AMOLED 1.47 inch độ sáng 3000 nit, viền thép không gỉ bền bỉ và dây đeo cao su thoải mái. Pin ấn tượng với thời gian sử dụng tối đa 21 ngày cho bản 46mm. Đồng hồ tích hợp đầy đủ tính năng theo dõi sức khỏe 24/7 như đo nhịp tim, SpO2, stress, giấc ngủ cùng nhiều chế độ tập luyện thể thao. Hỗ trợ nghe gọi qua Bluetooth, GPS định vị chính xác và khả năng kháng nước 5 ATM. Sản phẩm tương thích với Android 9/iOS 13 trở lên, đồng bộ dữ liệu qua ứng dụng Huawei Health."
-  },
-
-
-  {
-    id: "66",
-    name: "Đồng hồ thông minh Huawei Watch 5",
-    brand: "Huawei",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp4.png",
-    price: 8830000,
-    salebefore: 9990000,
-    baseprice: 7500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["46mm", "42mm"] },
-      { name: "Kiểu", option: ["Thép", "Thép Lưng Gốm", "Titanium"] }
-    ],
-    listColors: ["Đen"],
-    versions: [
-      {
-        id: "66-den-46-thep",
-        color: "Đen",
-        price: 8830000,
-        stock: 20,
-        status: true,
-        sold: "1.3k",
-        version: ["46mm", "Thép"]
-      },
-      {
-        id: "66-den-46-titanium",
-        color: "Đen",
-        price: 8830000,
-        stock: 20,
-        status: true,
-        sold: "1.3k",
-        version: ["46mm", "Titanium"]
-      },
-
-      {
-        id: "66-den-42-thep",
-        color: "Đen",
-        price: 8830000,
-        stock: 20,
-        status: true,
-        sold: "1.3k",
-        version: ["42mm", "Thép"]
-      },
-      {
-        id: "66-den-46-titanium",
-        color: "Đen",
-        price: 8830000,
-        stock: 20,
-        status: true,
-        sold: "1.3k",
-        version: ["42mm", "Titanium"]
-      },
-
-
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp4/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp4/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp4/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp4/4.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED LTPO 2.0",
-      "Kích thước màn hình": "1.5 inch",
-      "Đường kính mặt": "46 mm",
-      "Kích thước cổ tay phù hợp": "140-210 mm",
-      "Nghe,gọi": "Nghe gọi qua eSim",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Tính calo tiêu thụ, Tính quãng đường chạy, Đo mức độ stress, Cảm biến nhiệt độ, Đo điện tâm đồ, Theo dõi chu kỳ, Tình trạng HRV",
-      "Tương thích": "Android 9.0 trở lên, iOS 13.0 trở lên",
-      "Thời lượng pin": "Chế độ tiêu chuẩn: 4.5 ngày, AOD: 3 ngày, Tiết kiệm pin tối đa: 11 ngày",
-      "Kháng nước": "5 ATM",
-      "Kết nối": "Bluetooth, GPS, eSIM",
-      "Vỏ": "Thép không gỉ 316L",
-      "Hãng sản xuất": "Huawei"
-    },
-    overview: "Huawei Watch 5 là smartwatch cao cấp với màn hình AMOLED LTPO 2.0 1.5 inch, vỏ thép không gỉ 316L sang trọng. Nổi bật với công nghệ X-TAP đa cảm biến, theo dõi sức khỏe toàn diện trong 3 giây. Hỗ trợ eSIM cho phép nghe gọi độc lập, tính năng Tap to Next điều khiển không chạm tiện lợi. Pin bền bỉ đến 11 ngày ở chế độ tiết kiệm, tích hợp hơn 100 chế độ luyện tập cùng các tính năng theo dõi sức khỏe chuyên sâu như ECG, SpO2, nhịp tim 24/7. Kháng nước 5 ATM, tương thích với Android 9/iOS 13 trở lên."
-  },
-
-
-  {
-    id: "67",
-    name: "Vòng đeo tay thông minh Huawei Band 10",
-    brand: "Huawei",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp5.png",
-    price: 780000,
-    salebefore: 990000,
-    baseprice: 600000,
-    listVersions: [
-      { name: "Khung", option: ["Polyme", "Hợp kim nhôm"] }
-    ],
-    listColors: ["Đen", "Hồng", "Tím", "Trắng", "Xanh dương", "Xanh lá"],
-    versions: [
-      {
-        id: "67-den-polyme",
-        color: "Đen",
-        price: 780000,
-        stock: 15,
-        status: true,
-        sold: "500",
-        version: ["Polyme"]
-      },
-      {
-        id: "67-hong-polyme",
-        color: "Hồng",
-        price: 780000,
-        stock: 12,
-        status: true,
-        sold: "300",
-        version: ["Polyme"]
-      },
-
-      {
-        id: "67-tim-hopkimnhom",
-        color: "Tím",
-        price: 870000,
-        stock: 10,
-        status: true,
-        sold: "200",
-        version: ["Hợp kim nhôm"]
-      },
-      {
-        id: "67-trang-hopkimnhom",
-        color: "Trắng",
-        price: 870000,
-        stock: 8,
-        status: true,
-        sold: "150",
-        version: ["Hợp kim nhôm"]
-      },
-      {
-        id: "67-xanhduong-hopkimnhom",
-        color: "Xanh dương",
-        price: 870000,
-        stock: 8,
-        status: true,
-        sold: "180",
-        version: ["Hợp kim nhôm"]
-      },
-      {
-        id: "67-xanhla-hopkimnhom",
-        color: "Xanh lá",
-        price: 870000,
-        stock: 8,
-        status: true,
-        sold: "120",
-        version: ["Hợp kim nhôm"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp5/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp5/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp5/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp5/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp5/5.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "1.47 inch",
-      "Kích thước cổ tay phù hợp": "Từ 13 - 21 cm",
-      "Nghe,gọi": "Không",
-      "Tiện ích sức khoẻ": "Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đo mức độ stress, Cảnh báo nhịp tim bất thường, Theo dõi chu kỳ, Tình trạng HRV (Heart Rate Variability), Bài tập thở, Bài tập thư giãn",
-      "Tương thích": "Android 9.0 trở lên, iOS 13.0 trở lên",
-      "Thời lượng pin": "Thời lượng sử dụng tối đa 14 ngày, Thời lượng sử dụng thường xuyên 8 ngày, Thời lượng sử dụng khi bật AOD 3 ngày",
-      "Kháng nước": "5 ATM",
-      "Kết nối": "Bluetooth",
-      "Trọng lượng": "15g (chưa dây đeo)",
-      "Vỏ": "Polyme hoặc Hợp kim nhôm",
-      "Hãng sản xuất": "Huawei"
-    },
-    overview: "Huawei Band 10 là vòng đeo tay thông minh tiên tiến với thiết kế nhẹ nhàng 15g và màn hình AMOLED 1.47 inch sắc nét. Kháng nước 5ATM cho phép sử dụng khi bơi lội, thời lượng pin ấn tượng lên đến 14 ngày. Tích hợp nhiều tính năng theo dõi sức khỏe như đo nhịp tim, SpO2, stress, giấc ngủ TruSleep và hơn 100 chế độ luyện tập. Thiết bị tương thích với cả Android và iOS, hỗ trợ hiển thị thông báo từ điện thoại và điều khiển phát nhạc. Với thiết kế thoải mái, đa dạng màu sắc và dây đeo dễ thay thế, Huawei Band 10 là người bạn đồng hành lý tưởng cho cuộc sống năng động."
-  },
-
-
-  {
-    id: "68",
-    name: "Đồng hồ thông minh Huawei Watch GT 6 Pro",
-    brand: "Huawei",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp6.png",
-    price: 7690000,
-    salebefore: 8490000,
-    baseprice: 6500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["46mm"] },
-      { name: "Dây", option: ["Cao su", "Vải", "Titan"] }
-    ],
-    listColors: ["Đen"],
-    versions: [
-      {
-        id: "68-den-46-caosu",
-        color: "Đen",
-        price: 7690000,
-        stock: 25,
-        status: true,
-        sold: "800",
-        version: ["46mm", "Cao su"]
-      },
-      {
-        id: "68-den-46-vai",
-        color: "Đen",
-        price: 7690000,
-        stock: 25,
-        status: true,
-        sold: "800",
-        version: ["46mm", "Vải"]
-      },
-      {
-        id: "68-den-46-titan",
-        color: "Đen",
-        price: 7690000,
-        stock: 25,
-        status: true,
-        sold: "800",
-        version: ["46mm", "Titan"]
-      },
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp6/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp6/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp6/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp6/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp6/5.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "1.47 inch",
-      "Đường kính mặt": "46mm",
-      "Độ phân giải": "466 x 466 pixel",
-      "Kích thước cổ tay phù hợp": "140-210 mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đếm bước chân, Tính calo tiêu thụ, Tính quãng đường chạy, Đo mức độ stress, Đo huyết áp, Theo dõi chu kỳ, Tình trạng HRV (Heart Rate Variability), ECG",
-      "Tương thích": "Android 9.0 trở lên, iOS 13.0 trở lên",
-      "Thời lượng pin": "Sử dụng tối đa: 21 ngày, Sử dụng thường xuyên: 12 ngày, Khi bật AOD: 7 ngày, Khi bật chế độ tập luyện ngoài trời: 40 giờ",
-      "Kháng nước": "5 ATM",
-      "Kết nối": "Bluetooth 5.2, GPS",
-      "Vỏ": "Titan hàng không vũ trụ",
-      "Mặt kính": "Sapphire",
-      "Hãng sản xuất": "Huawei"
-    },
-    overview: "Huawei Watch GT 6 Pro là smartwatch cao cấp với khung viền titan hàng không vũ trụ và mặt kính Sapphire bền bỉ. Màn hình AMOLED 1.47 inch sắc nét, thời lượng pin ấn tượng lên đến 21 ngày. Tích hợp hơn 100 chế độ luyện tập và đa dạng tính năng theo dõi sức khỏe như đo ECG, SpO2, nhịp tim 24/7, huyết áp, stress và giấc ngủ. Công nghệ định vị Sunflower System cải tiến cho độ chính xác cao hơn 20%. Hỗ trợ đo công suất ảo khi đạp xe, phân tích độ dốc thời gian thực khi chạy bộ. Kháng nước 5 ATM, tương thích với Android 9/iOS 13 trở lên. Ngoài ra còn có các tiện ích như nghe gọi qua Bluetooth, ghi chú bằng giọng nói và điều khiển chụp ảnh từ xa."
-  },
-
-
-  {
-    id: "69",
-    name: "Đồng hồ thông minh Samsung Galaxy Watch 8",
-    brand: "Samsung",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp7.png",
-    price: 7690000,
-    salebefore: 9990000,
-    baseprice: 6500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["40mm LTE", "44mm BT"] },
-      { name: "Dây", option: ["Cao su"] }
-    ],
-    listColors: ["Xám", "Bạc"],
-    versions: [
-      {
-        id: "69-xam-40-caosu",
-        color: "Xám",
-        price: 7690000,
-        stock: 20,
-        status: true,
-        sold: "4.3k",
-        version: ["40mm LTE", "Cao su"]
-      },
-      {
-        id: "69-bac-40-caosu",
-        color: "Bạc",
-        price: 7690000,
-        stock: 18,
-        status: true,
-        sold: "4.1k",
-        version: ["40mm LTE", "Cao su"]
-      },
-
-      {
-        id: "69-xam-44-caosu",
-        color: "Xám",
-        price: 7690000,
-        stock: 20,
-        status: true,
-        sold: "4.3k",
-        version: ["44mm LTE", "Cao su"]
-      },
-      {
-        id: "69-bac-44-caosu",
-        color: "Bạc",
-        price: 7690000,
-        stock: 18,
-        status: true,
-        sold: "4.1k",
-        version: ["44mm LTE", "Cao su"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp7/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp7/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp7/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp7/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp7/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp7/6.png",
-      "../user/assets/image/sanpham/SmartWatch/sp7/7.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "Super AMOLED",
-      "Kích thước màn hình": "1.34 inch",
-      "Độ sáng": "3000 nits",
-      "Đường kính mặt": "40 mm",
-      "Nghe,gọi": "Nghe gọi qua eSim",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Tính calo tiêu thụ, Tính quãng đường chạy, Đo mức độ stress, Cảnh báo nhịp tim bất thường, Đo điện tâm đồ, Đo VO2 max, Đo huyết áp, Theo dõi chu kỳ, Phân tích thành phần cơ thể",
-      "Tương thích": "Android 12.0 trở lên (với bộ nhớ tối thiểu 1.5GB)",
-      "Thời lượng pin": "Khoảng 40 giờ (Khi tắt Always-On-Display), Khoảng 30 giờ (Khi mở Always-On Display)",
-      "Kháng nước": "5ATM & IP68",
-      "Kết nối": "Bluetooth 5.2, GPS, LTE (eSIM)",
-      "Vỏ": "Aluminum Armor",
-      "Hãng sản xuất": "Samsung Chính hãng"
-    },
-    overview: "Samsung Galaxy Watch 8 LTE là smartwatch cao cấp với màn hình Super AMOLED 1.34 inch độ sáng 3000 nits. Thiết kế mỏng chỉ 8.6mm với khung viền Armor Aluminum bền bỉ. Tích hợp Galaxy AI làm trợ lý sức khỏe cá nhân toàn diện với các tính năng như phân tích giấc ngủ, đo ECG, SpO2, huyết áp, stress và hơn 100 chế độ luyện tập. Hỗ trợ eSIM cho phép nghe gọi độc lập, kháng nước 5ATM & IP68. Pin 325mAh sử dụng đến 30 giờ khi bật Always-On Display. Tương thích với Android 12 trở lên, tích hợp nhiều tiện ích thông minh từ hệ sinh thái Galaxy."
-  },
-
-
-  {
-    id: "70",
-    name: "Đồng hồ thông minh Amazfit Balance 2",
-    brand: "Amazfit",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp8.png",
-    price: 7490000,
-    salebefore: 7990000,
-    baseprice: 6500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["47mm"] },
-      { name: "Dây", option: ["Cao su", "Titan"] }
-    ],
-    listColors: ["Đen"],
-    versions: [
-      {
-        id: "70-den-47-caosu",
-        color: "Đen",
-        price: 7490000,
-        stock: 25,
-        status: true,
-        sold: "1.2k",
-        version: ["47mm", "Cao su"]
-      },
-
-      {
-        id: "70-den-47-titan",
-        color: "Đen",
-        price: 7490000,
-        stock: 25,
-        status: true,
-        sold: "1.2k",
-        version: ["47mm", "Titan"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp8/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/6.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/7.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/8.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/9.png",
-      "../user/assets/image/sanpham/SmartWatch/sp8/10.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "1.5 inch",
-      "Độ sáng": "2000 nits",
-      "Đường kính mặt": "47 mm",
-      "Kích thước cổ tay phù hợp": "140-210 mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Tính calo tiêu thụ, Tính quãng đường chạy, Đo mức độ stress, Cảnh báo nhịp tim bất thường, Theo dõi chu kỳ, Tình trạng HRV, Bài tập thở, Đo điện tâm đồ",
-      "Tương thích": "Android 7.0 trở lên, iOS 15.0 trở lên",
-      "Thời lượng pin": "Sử dụng thông thường: 21 ngày, Sử dụng nhiều: 10 ngày, GPS chính xác: 33 giờ, GPS tiết kiệm: 67 giờ",
-      "Kháng nước": "10 ATM",
-      "Kết nối": "Bluetooth 5.2, GPS",
-      "Vỏ": "Hợp kim nhôm",
-      "Mặt kính": "Sapphire",
-      "Hãng sản xuất": "Amazfit"
-    },
-    overview: "Amazfit Balance 2 là smartwatch cao cấp với màn hình AMOLED 1.5 inch độ sáng 2000 nits và mặt kính sapphire chống xước. Thiết kế bền bỉ với chuẩn quân sự MIL-STD-810G và chống nước 10ATM. Hỗ trợ hơn 170 chế độ luyện tập bao gồm HYROX, được trang bị cảm biến BioTracker 6.0 PPG theo dõi sức khỏe 24/7. Pin ấn tượng sử dụng đến 21 ngày, tích hợp GPS băng tần kép và trợ lý Zepp Flow điều khiển bằng giọng nói. Hỗ trợ thanh toán NFC qua Zepp Pay, tương thích với Android 7.0/iOS 15.0 trở lên và đồng bộ dữ liệu với nhiều nền tảng fitness phổ biến."
-  },
-
-
-  {
-    id: "71",
-    name: "Đồng hồ thông minh Apple Watch SE 2024",
-    brand: "Apple",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp9.png",
-    price: 6490000,
-    salebefore: 6990000,
-    baseprice: 5500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["40mm GPS", "44mm GPS"] },
-      { name: "Dây", option: ["Cao su", "Vải"] }
-    ],
-    listColors: ["Trắng", "Đen", "Hồng"],
-    versions: [
-      {
-        id: "71-trang-40-caosu",
-        color: "Trắng",
-        price: 6490000,
-        stock: 20,
-        status: true,
-        sold: "2.1k",
-        version: ["40mm GPS", "Cao su"]
-      },
-      {
-        id: "71-den-40-caosu",
-        color: "Đen",
-        price: 6490000,
-        stock: 18,
-        status: true,
-        sold: "1.9k",
-        version: ["40mm GPS", "Cao su"]
-      },
-      {
-        id: "71-hong-40-caosu",
-        color: "Hồng",
-        price: 6490000,
-        stock: 15,
-        status: true,
-        sold: "1.5k",
-        version: ["40mm GPS", "Cao su"]
-      },
-
-      {
-        id: "71-trang-40-vai",
-        color: "Trắng",
-        price: 6490000,
-        stock: 20,
-        status: true,
-        sold: "2.1k",
-        version: ["40mm GPS", "Vải"]
-      },
-      {
-        id: "71-den-44-vai",
-        color: "Đen",
-        price: 6490000,
-        stock: 18,
-        status: true,
-        sold: "1.9k",
-        version: ["44mm GPS", "Vải"]
-      },
-      {
-        id: "71-hong-40-vai",
-        color: "Hồng",
-        price: 6490000,
-        stock: 15,
-        status: true,
-        sold: "1.5k",
-        version: ["40mm GPS", "Vải"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp9/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp9/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp9/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp9/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp9/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp9/6.png",
-      "../user/assets/image/sanpham/SmartWatch/sp9/7.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "OLED",
-      "Kích thước màn hình": "1.57 inch (40mm) / 1.78 inch (44mm)",
-      "Độ sáng": "1000 nits",
-      "Đường kính mặt": "40 mm / 44 mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích sức khoẻ": "Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Tính calo tiêu thụ, Tính quãng đường chạy, Phát hiện té ngã, Nhắc nhở rửa tay, Nhắc nhở thở, Theo dõi chu kỳ, Fall Detection, Crash Detection",
-      "Tương thích": "iPhone 8 trở lên với iOS 17.0 trở lên",
-      "Thời lượng pin": "Lên đến 18 giờ sử dụng thông thường, Sạc nhanh 0-80% trong 45 phút",
-      "Kháng nước": "50m theo tiêu chuẩn ISO",
-      "Kết nối": "Bluetooth 5.3, WiFi, GPS",
-      "Vỏ": "Nhôm tái chế 100%",
-      "Mặt kính": "Ion-X strengthened glass",
-      "Hãng sản xuất": "Apple"
-    },
-    overview: "Apple Watch SE 2024 là phiên bản giá rẻ mới nhất của dòng smartwatch Apple, với thiết kế bền bỉ từ nhôm tái chế thân thiện môi trường. Màn hình OLED sắc nét với độ sáng 1000 nits, chip S9 SiP cho hiệu năng mạnh mẽ và Siri tích hợp trên thiết bị. Hỗ trợ đầy đủ tính năng theo dõi sức khỏe và an toàn như phát hiện tai nạn, té ngã, theo dõi nhịp tim và giấc ngủ. Pin sử dụng đến 18 giờ với sạc nhanh 0-80% trong 45 phút. Kháng nước 50m, tương thích với iPhone 8 trở lên chạy iOS 17, tích hợp hoàn hảo vào hệ sinh thái Apple."
-  },
-
-
-  {
-    id: "72",
-    name: "Đồng hồ thông minh Apple Watch Series 11",
-    brand: "Apple",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp10.png",
-    price: 12990000,
-    salebefore: 13990000,
-    baseprice: 11000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["42mm GPS", "42mm GPS+Cellular"] },
-      { name: "Dây", option: ["Cao su", "Da", "Thép"] }
-    ],
-    listColors: ["Đen", "Trắng", "Bạc"],
-    versions: [
-      {
-        id: "72-den-42-caosu",
-        color: "Đen",
-        price: 12990000,
-        stock: 30,
-        status: true,
-        sold: "3.2k",
-        version: ["42mm GPS", "Cao su"]
-      },
-      {
-        id: "72-trang-42-caosu",
-        color: "Trắng",
-        price: 12990000,
-        stock: 25,
-        status: true,
-        sold: "2.8k",
-        version: ["42mm GPS", "Cao su"]
-      },
-      {
-        id: "72-bac-42-caosu",
-        color: "Bạc",
-        price: 12990000,
-        stock: 20,
-        status: true,
-        sold: "2.5k",
-        version: ["42mm GPS", "Cao su"]
-      },
-
-      {
-        id: "72-den-42-da",
-        color: "Đen",
-        price: 12990000,
-        stock: 30,
-        status: true,
-        sold: "3.2k",
-        version: ["42mm GPS", "Da"]
-      },
-      {
-        id: "72-trang-42-da",
-        color: "Trắng",
-        price: 12990000,
-        stock: 25,
-        status: true,
-        sold: "2.8k",
-        version: ["42mm GPS", "Da"]
-      },
-      {
-        id: "72-bac-42-da",
-        color: "Bạc",
-        price: 12990000,
-        stock: 20,
-        status: true,
-        sold: "2.5k",
-        version: ["42mm GPS", "Da"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp10/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp10/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp10/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp10/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp10/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp10/6.png",
-      "../user/assets/image/sanpham/SmartWatch/sp10/7.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "LTPO OLED Retina",
-      "Kích thước màn hình": "1.9 inch",
-      "Độ phân giải": "484 x 396 pixel",
-      "Độ sáng": "2000 nits",
-      "Đường kính mặt": "42 mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth (GPS) / eSIM (GPS+Cellular)",
-      "Tiện ích sức khoẻ": "Đo điện tâm đồ ECG, Đo SpO2, Theo dõi giấc ngủ, Đo nhịp tim 24/7, Phát hiện ngã, Phát hiện tai nạn, Đo chu kỳ kinh nguyệt, Theo dõi thể dục, Đo nhiệt độ da, Theo dõi thời gian phục hồi, Double Tap",
-      "Tương thích": "iPhone XS trở lên với iOS 17.0 trở lên",
-      "Thời lượng pin": "Lên đến 36 giờ sử dụng thông thường, 72 giờ ở chế độ tiết kiệm pin",
-      "Kháng nước": "WR50 (Bơi ở độ sâu tối đa 50m)",
-      "Kết nối": "5G, WiFi 6, Bluetooth 5.3, UWB, GPS/GNSS, NFC",
-      "Vỏ": "Titanium cao cấp",
-      "Mặt kính": "Sapphire Crystal",
-      "Cảm biến": "Gia tốc kế, Con quay hồi chuyển, La bàn, Độ cao kế, Ánh sáng môi trường",
-      "Chip xử lý": "Apple S9 SiP",
-      "Bộ nhớ": "64GB",
-      "Hãng sản xuất": "Apple"
-    },
-    overview: "Apple Watch Series 11 là thế hệ smartwatch cao cấp nhất của Apple với thiết kế sang trọng từ Titanium và mặt kính Sapphire Crystal siêu bền. Màn hình LTPO OLED Retina 1.9 inch với độ sáng 2000 nits cung cấp khả năng hiển thị tuyệt vời trong mọi điều kiện ánh sáng. Trang bị chip S9 SiP mạnh mẽ cùng bộ nhớ 64GB rộng rãi. Hỗ trợ đầy đủ tính năng sức khỏe cao cấp như ECG, SpO2, theo dõi giấc ngủ và nhiệt độ da. Tính năng Double Tap mới cho phép điều khiển bằng cử chỉ, cùng khả năng phát hiện tai nạn và ngã tự động. Pin sử dụng lên đến 36 giờ, hỗ trợ kết nối 5G và tích hợp hoàn hảo với hệ sinh thái Apple. Chống nước WR50 cho phép bơi ở độ sâu tối đa 50m."
-  },
-
-
-  {
-    id: "73",
-    name: "Đồng hồ thông minh Apple Watch SE 3 40mm",
-    brand: "Apple",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp11.png",
-    price: 6790000,
-    salebefore: 6990000,
-    baseprice: 5500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["40mm GPS", "40mm 5G"] },
-      { name: "Dây", option: ["Cao su", "Vải", "Thép"] }
-    ],
-    listColors: ["Đêm xanh thẳm", "Ánh sao"],
-    versions: [
-      {
-        id: "73-dem-40-caosu",
-        color: "Đêm xanh thẳm",
-        price: 6790000,
-        stock: 40,
-        status: true,
-        sold: "1.8k",
-        version: ["40mm GPS", "Cao su"]
-      },
-      {
-        id: "73-anhsao-40-caosu",
-        color: "Ánh sao",
-        price: 6990000,
-        stock: 30,
-        status: true,
-        sold: "1.2k",
-        version: ["40mm GPS", "Cao su"]
-      },
-
-      {
-        id: "73-dem-405G-vai",
-        color: "Đêm xanh thẳm",
-        price: 6790000,
-        stock: 40,
-        status: true,
-        sold: "1.8k",
-        version: ["40mm 5G", "Vải"]
-      },
-      {
-        id: "73-anhsao-40-vai",
-        color: "Ánh sao",
-        price: 6990000,
-        stock: 30,
-        status: true,
-        sold: "1.2k",
-        version: ["40mm GPS", "Vải"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp11/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp11/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp11/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp11/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp11/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp11/6.png",
-      "../user/assets/image/sanpham/SmartWatch/sp11/7.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "Retina Always-On (OLED, LTPO)",
-      "Kích thước màn hình": "~1.57 inch",
-      "Độ sáng": "Lên đến 1000 nits",
-      "Đường kính mặt": "40 mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Tính calo tiêu thụ, Cảm biến nhiệt độ cổ tay, Theo dõi chu kỳ, Nhắc nhở ít vận động, Phát hiện va chạm/Crash Detection",
-      "Tương thích": "iPhone 11 trở lên, iOS 26 trở lên",
-      "Thời lượng pin": "Lên đến 18 giờ sử dụng thông thường, 32 giờ ở Chế Độ Nguồn Điện Thấp",
-      "Kháng nước": "50m",
-      "Kết nối": "Bluetooth 5.3, GPS, WiFi",
-      "Vỏ": "Nhôm",
-      "Mặt kính": "Ion-X strengthened glass",
-      "Chip xử lý": "Apple S10",
-      "Hãng sản xuất": "Apple"
-    },
-    overview: "Apple Watch SE 3 40mm là phiên bản SE nâng cấp với màn hình Always‑On, cảm biến nhiệt độ cổ tay và tính năng phát hiện va chạm. Thiết bị phù hợp cho người dùng cần trải nghiệm Apple Watch đầy đủ tính năng sức khỏe với mức giá hợp lý."
-  },
-
-
-  {
-    id: "74",
-    name: "Vòng đeo tay thông minh Xiaomi Mi Band 10",
-    brand: "Xiaomi",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp12.png",
-    price: 1070000,
-    salebefore: 1190000,
-    baseprice: 850000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Tiêu chuẩn"] },
-      { name: "Dây", option: ["TPU", "Lụa", "Da"] }
-    ],
-    listColors: ["Hồng", "Đen", "Bạc"],
-    versions: [
-      { id: "74-hong-tieuchuan-tpu", color: "Hồng", price: 1070000, stock: 60, status: true, sold: "4.5k", version: ["Tiêu chuẩn", "TPU"] },
-      { id: "74-den-tieuchuan-tpu", color: "Đen", price: 1070000, stock: 80, status: true, sold: "6.1k", version: ["Tiêu chuẩn", "TPU"] },
-      { id: "74-bac-tieuchuan-tpu", color: "Bạc", price: 1070000, stock: 50, status: true, sold: "3.2k", version: ["Tiêu chuẩn", "TPU"] },
-
-      { id: "74-hong-tieuchuan-lua", color: "Hồng", price: 1070000, stock: 60, status: true, sold: "4.5k", version: ["Tiêu chuẩn", "Lụa"] },
-      { id: "74-den-tieuchuan-lua", color: "Đen", price: 1070000, stock: 80, status: true, sold: "6.1k", version: ["Tiêu chuẩn", "Lụa"] },
-      { id: "74-bac-tieuchuan-lua", color: "Bạc", price: 1070000, stock: 50, status: true, sold: "3.2k", version: ["Tiêu chuẩn", "Lụa"] },
-
-      { id: "74-hong-tieuchuan-da", color: "Hồng", price: 1070000, stock: 60, status: true, sold: "4.5k", version: ["Tiêu chuẩn", "Da"] },
-      { id: "74-den-tieuchuan-da", color: "Đen", price: 1070000, stock: 80, status: true, sold: "6.1k", version: ["Tiêu chuẩn", "Da"] },
-      { id: "74-bac-tieuchuan-da", color: "Bạc", price: 1070000, stock: 50, status: true, sold: "3.2k", version: ["Tiêu chuẩn", "Da"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp12/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp12/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp12/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp12/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp12/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp12/6.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "1.72 inch",
-      "Kích thước cổ tay phù hợp": "135–210 mm",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo SpO2, Đo mức độ stress, Đo VO2 max, Theo dõi chu kỳ, Bài tập thở",
-      "Tương thích": "Android 8.0 trở lên, iOS 14.0 trở lên",
-      "Thời lượng pin": "21 ngày (thông thường), 9 ngày (AOD), 8 ngày (cường độ cao)",
-      "Kháng nước": "5 ATM",
-      "Kết nối": "Bluetooth 5.4",
-      "Dung lượng pin": "233mAh",
-      "Hãng sản xuất": "Xiaomi"
-    },
-    overview: "Xiaomi Mi Band 10 là vòng đeo tay thông minh nhỏ gọn với màn hình AMOLED 1.72 inch, hơn 150 chế độ luyện tập, theo dõi giấc ngủ nâng cao, đo nhịp tim và SpO2, thời lượng pin lên đến 21 ngày và chuẩn kháng nước 5ATM. Thích hợp cho người dùng muốn thiết bị theo dõi sức khỏe hiệu quả với mức giá tốt."
-  },
-
-
-  {
-    id: "75",
-    name: "Đồng hồ thông minh Xiaomi Redmi Watch 5 Active",
-    brand: "Xiaomi",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp13.png",
-    price: 650000,
-    salebefore: 790000,
-    baseprice: 500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Tiêu chuẩn"] }
-    ],
-    listColors: ["Đen", "Xám"],
-    versions: [
-      { id: "74-den-tieuchuan", color: "Đen", price: 650000, stock: 50, status: true, sold: "800", version: ["Tiêu chuẩn"] },
-      { id: "74-xam-tieuchuan", color: "Xám", price: 650000, stock: 45, status: true, sold: "600", version: ["Tiêu chuẩn"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp13/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp13/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp13/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp13/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp13/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp13/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "LCD",
-      "Kích thước màn hình": "2.0 inch",
-      "Đường kính mặt": "49.1 mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Đo mức độ stress",
-      "Tương thích": "Android 6.0 trở lên, iOS 11 trở lên",
-      "Thời lượng pin": "14 ngày",
-      "Kháng nước": "5 ATM",
-      "Kết nối": "Bluetooth",
-      "Hãng sản xuất": "Xiaomi"
-    },
-    overview: "Redmi Watch 5 Active có màn hình LCD 2.0 inch rõ nét, hơn 100 chế độ tập luyện, theo dõi sức khỏe toàn diện với đo nhịp tim, SpO2 và giấc ngủ. Pin bền bỉ 14 ngày, chống nước 5ATM, hỗ trợ nghe gọi qua Bluetooth."
-  },
-
-  {
-    id: "75",
-    name: "Apple Watch Series 10 42mm",
-    brand: "Apple",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp14.png",
-    price: 10290000,
-    salebefore: 10990000,
-    baseprice: 9000000,
-    listVersions: [
-      { name: "Size", option: ["S/M", "M/L"] },
-      { name: "Dây", option: ["Cao su", "Vải"] }
-    ],
-    listColors: ["Đen", "Bạc", "Hồng"],
-    versions: [
-      { id: "75-den-sm-caosu", color: "Đen", price: 10290000, stock: 35, status: true, sold: "1.2k", version: ["S/M", "Cao su"] },
-      { id: "75-bac-sm-caosu", color: "Bạc", price: 10290000, stock: 30, status: true, sold: "900", version: ["S/M", "Cao su"] },
-      { id: "75-hong-sm-caosu", color: "Hồng", price: 10290000, stock: 25, status: true, sold: "800", version: ["S/M", "Cao su"] },
-
-      { id: "75-den-ml-caosu", color: "Đen", price: 10290000, stock: 35, status: true, sold: "1.2k", version: ["M/L", "Cao su"] },
-      { id: "75-bac-ml-caosu", color: "Bạc", price: 10290000, stock: 30, status: true, sold: "900", version: ["M/L", "Cao su"] },
-      { id: "75-hong-ml-caosu", color: "Hồng", price: 10290000, stock: 25, status: true, sold: "800", version: ["M/L", "Cao su"] },
-
-      { id: "75-den-sm-vai", color: "Đen", price: 10290000, stock: 35, status: true, sold: "1.2k", version: ["S/M", "Vải"] },
-      { id: "75-bac-sm-vai", color: "Bạc", price: 10290000, stock: 30, status: true, sold: "900", version: ["S/M", "Vải"] },
-      { id: "75-hong-sm-vai", color: "Hồng", price: 10290000, stock: 25, status: true, sold: "800", version: ["S/M", "Vải"] },
-
-      { id: "75-den-ml-vai", color: "Đen", price: 10290000, stock: 35, status: true, sold: "1.2k", version: ["M/L", "Vải"] },
-      { id: "75-bac-ml-vai", color: "Bạc", price: 10290000, stock: 30, status: true, sold: "900", version: ["M/L", "Vải"] },
-      { id: "75-hong-ml-vai", color: "Hồng", price: 10290000, stock: 25, status: true, sold: "800", version: ["M/L", "Vải"] }
-
-
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp14/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp14/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp14/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp14/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp14/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp14/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "Màn hình Retina LTPO3 OLED",
-      "Kích thước màn hình": "989 mm",
-      "Đường kính mặt": "42 mm",
-      "Kích thước cổ tay phù hợp": "13 - 18 cm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Tính calo tiêu thụ, Tính quãng đường chạy, Đo mức độ stress, Cảm biến nhiệt độ, Phát hiện té ngã, Cảnh báo nhịp tim bất thường, Đo điện tâm đồ, Theo dõi chu kỳ",
-      "Tương thích": "iPhone Xs trở lên với iOS 18 trở lên",
-      "Thời lượng pin": "Chế độ thường: 18 giờ, Chế Độ Nguồn Điện Thấp: 36 giờ",
-      "Kháng nước": "WR50",
-      "Vỏ": "Nhôm",
-      "Hãng sản xuất": "Apple"
-    },
-    overview: "Apple Watch Series 10 42mm có màn hình Retina LTPO3 OLED sáng hơn 40% so với thế hệ trước, đa dạng tính năng theo dõi sức khỏe và an toàn. Pin sử dụng 18 giờ, chống nước WR50, tương thích iPhone Xs trở lên."
-  },
-
-  {
-    id: "76",
-    name: "Đồng hồ thông minh Xiaomi Redmi Watch 4",
-    brand: "Xiaomi",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp15.png",
-    price: 1640000,
-    salebefore: 2690000,
-    baseprice: 1400000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Tiêu chuẩn"] }
-    ],
-    listColors: ["Đen", "Bạc"],
-    versions: [
-      { id: "76-den-tieuchuan", color: "Đen", price: 1640000, stock: 40, status: true, sold: "2.1k", version: ["Tiêu chuẩn"] },
-      { id: "76-bac-tieuchuan", color: "Bạc", price: 1640000, stock: 35, status: true, sold: "1.8k", version: ["Tiêu chuẩn"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp15/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp15/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp15/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp15/4.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "1.97 inch",
-      "Đường kính mặt": "47.5 mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích": "Màn hình cảm ứng, Theo dõi giấc ngủ, Đo nhịp tim, Đo SpO2, Theo dõi stress",
-      "Thời lượng pin": "470mAh, 20 ngày (thông thường), 30 ngày (tiết kiệm), 10 ngày (AOD)",
-      "Kháng nước": "5 ATM",
-      "Hệ điều hành": "HyperOS",
-      "Hãng sản xuất": "Xiaomi"
-    },
-    overview: "Xiaomi Redmi Watch 4 có màn hình AMOLED 1.97 inch sắc nét, hệ điều hành HyperOS mới, pin 470mAh dùng đến 20 ngày. Hỗ trợ hơn 150 chế độ thể thao, đo nhịp tim, SpO2 và theo dõi giấc ngủ."
-  },
-
-  {
-    id: "77",
-    name: "Đồng hồ thông minh Xiaomi Redmi Watch 5 Lite",
-    brand: "Xiaomi",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp16.png",
-    price: 1170000,
-    salebefore: 1390000,
-    baseprice: 950000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Tiêu chuẩn"] }
-    ],
-    listColors: ["Đen", "Xanh"],
-    versions: [
-      { id: "76-den-tieuchuan", color: "Đen", price: 1170000, stock: 45, status: true, sold: "1.5k", version: ["Tiêu chuẩn"] },
-      { id: "76-xanh-tieuchuan", color: "Xanh", price: 1170000, stock: 40, status: true, sold: "1.2k", version: ["Tiêu chuẩn"] }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp16/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp16/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp16/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp16/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp16/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp16/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "1.96 inch",
-      "Đường kính mặt": "48.2 mm",
-      "Nghe,gọi": "Nghe gọi qua Bluetooth",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Đo mức độ stress, Cảnh báo nhịp tim bất thường, Theo dõi chu kỳ",
-      "Tương thích": "Android 6.0 trở lên iOS 11 trở lên",
-      "Thời lượng pin": "18 ngày sử dụng liên tục (không có AOD)",
-      "Kháng nước": "5 ATM",
-      "Hãng sản xuất": "Xiaomi"
-    },
-    overview: "Redmi Watch 5 Lite có màn hình AMOLED 1.96 inch, pin dùng 18 ngày, chống nước 5ATM. Tích hợp đầy đủ tính năng theo dõi sức khỏe như đo nhịp tim, SpO2, stress và giấc ngủ."
-  },
-
-  {
-    id: "77",
-    name: "Đồng hồ thông minh Garmin Forerunner 165",
-    brand: "Garmin",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp17.png",
-    price: 4610000,
-    salebefore: 4990000,
-    baseprice: 4000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Thường", "Music"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      { id: "77-den-thuong", color: "Đen", price: 4610000, stock: 30, status: true, sold: "400", version: ["Thường"] },
-      { id: "77-trang-thuong", color: "Trắng", price: 4610000, stock: 25, status: true, sold: "350", version: ["Thường"] },
-
-      { id: "77-den-music", color: "Đen", price: 4610000, stock: 30, status: true, sold: "400", version: ["Music"] },
-      { id: "77-trang-music", color: "Trắng", price: 4610000, stock: 25, status: true, sold: "350", version: ["Music"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp17/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp17/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp17/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp17/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp17/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp17/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "1.2 inch",
-      "Đường kính mặt": "43mm",
-      "Nghe,gọi": "Không",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Tính calo tiêu thụ, Tính quãng đường chạy, Đo mức độ stress, Cảnh báo nhịp tim bất thường, Tính tuổi thể chất, Đo chỉ số năng lượng cơ thể, Đo VO2 max, Theo dõi chu kỳ",
-      "Tương thích": "Android, iOS",
-      "Chất liệu": "Khung polymer cốt sợi, viền bezel thép không gỉ, dây silicon",
-      "Tính năng thể thao": "25 chế độ thể thao",
-      "Kháng nước": "5 ATM",
-      "Hãng sản xuất": "Garmin"
-    },
-    overview: "Garmin Forerunner 165 là đồng hồ chuyên chạy bộ với màn hình AMOLED 1.2 inch, tích hợp 25 chế độ thể thao và các tính năng theo dõi sức khỏe chuyên sâu. Thiết kế bền bỉ với khung polymer cốt sợi và bezel thép không gỉ."
-  },
-
-  {
-    id: "78",
-    name: "Đồng hồ thông minh Huawei Watch Ultimate 2",
-    brand: "Huawei",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp18.png",
-    price: 17990000,
-    salebefore: 19990000,
-    baseprice: 15000000,
-    listVersions: [
-      { name: "Size", option: ["48.5mm", "47.8mm"] }
-    ],
-    listColors: ["Đen"],
-    versions: [
-      { id: "78-den-48.5", color: "Đen", price: 17990000, stock: 20, status: true, sold: "150", version: ["48.5mm"] },
-      { id: "78-den-47.8", color: "Đen", price: 17990000, stock: 20, status: true, sold: "150", version: ["47.8mm"] }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp18/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp18/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp18/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp18/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp18/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp18/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "LTPO 2.0 AMOLED",
-      "Kích thước màn hình": "1.5 inch",
-      "Kích thước cổ tay phù hợp": "14-21 cm",
-      "Nghe,gọi": "Nghe gọi qua eSim",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đo lượng oxy trong máu, Đếm bước chân, Tính calo tiêu thụ, Tính quãng đường chạy, Đo mức độ stress, Cảm biến nhiệt độ, Phát hiện té ngã, Cảnh báo nhịp tim bất thường, Đo điện tâm đồ, Tình trạng HRV, Bài tập thở, Thiền",
-      "Tương thích": "Android 9.0 trở lên iOS 13.0 trở lên",
-      "Thời lượng pin": "Android: 4.5 ngày (thông thường) / 3 ngày (AOD), iPhone: 3.5 ngày / 2.5 ngày (AOD)",
-      "Kháng nước": "5 ATM",
-      "Tính năng đặc biệt": "Lặn sâu 150m, Cảm biến sonar, Chế độ thám hiểm",
-      "Hãng sản xuất": "Huawei"
-    },
-    overview: "Huawei Watch Ultimate 2 là smartwatch cao cấp có màn hình LTPO 2.0 AMOLED 1.5 inch, hỗ trợ eSIM, chống nước 5ATM và lặn sâu 150m. Trang bị đầy đủ tính năng theo dõi sức khỏe, thể thao chuyên nghiệp với thuật toán Bühlmann ZHL-16C cho lặn."
-  },
-
-  {
-    id: "79",
-    name: "Đồng hồ thông minh trẻ em MyKid 4G Lite V2",
-    brand: "Viettel",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp19.png",
-    price: 1360000,
-    salebefore: 1490000,
-    baseprice: 1100000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Tiêu chuẩn"] }
-    ],
-    listColors: ["Đen", "Xanh dương", "Tím"],
-    versions: [
-      { id: "79-den-tieuchuan", color: "Đen", price: 1360000, stock: 50, status: true, sold: "2.5k", version: ["Tiêu chuẩn"] },
-      { id: "79-xanhduong-tieuchuan", color: "Xanh dương", price: 1360000, stock: 45, status: true, sold: "2.2k", version: ["Tiêu chuẩn"] },
-      { id: "79-tim-tieuchuan", color: "Tím", price: 1360000, stock: 40, status: true, sold: "1.8k", version: ["Tiêu chuẩn"] }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp19/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp19/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp19/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp19/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp19/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp19/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Kích thước màn hình": "1.4 inch",
-      "Đường kính mặt": "57.1 mm",
-      "Nghe,gọi": "Nghe gọi qua Nano Sim",
-      "Tiện ích": "Đếm bước chân",
-      "Tương thích": "Android, iOS",
-      "Thời lượng pin": "2-3 ngày sử dụng, 3-4 ngày chờ",
-      "Định vị": "GPS, A-GPS, Wifi, LBS",
-      "Pin": "680mAh",
-      "Kháng nước": "IP67",
-      "Hãng sản xuất": "Viettel"
-    },
-    overview: "MyKid 4G Lite V2 là đồng hồ định vị trẻ em với màn hình IPS 1.4 inch, pin 680mAh dùng 2-3 ngày, hỗ trợ đa dạng công nghệ định vị GPS/A-GPS/WiFi/LBS. Tích hợp nghe gọi 2 chiều qua Nano SIM, chống nước bụi IP67."
-  },
-
-  {
-    id: "80",
-    name: "Đồng hồ Samsung Galaxy Fit 3",
-    brand: "Samsung",
-    category: "SmartWatch",
-    thumbnail: "../user/assets/image/sanpham/SmartWatch/sp20.png",
-    price: 690000,
-    salebefore: 990000,
-    baseprice: 500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Tiêu chuẩn"] }
-    ],
-    listColors: ["Đen", "Bạc", "Hồng"],
-    versions: [
-      { id: "80-tim-tieuchuan", color: "Đen", price: 690000, stock: 60, status: true, sold: "4.2k", version: ["Tiêu chuẩn"] },
-      { id: "80-bac-tieuchuan", color: "Bạc", price: 690000, stock: 55, status: true, sold: "3.8k", version: ["Tiêu chuẩn"] },
-      { id: "80-hong-tieuchuan", color: "Hồng", price: 690000, stock: 50, status: true, sold: "3.5k", version: ["Tiêu chuẩn"] }
-    ],
-    imgDetail: [
-      "../user/assets/image/sanpham/SmartWatch/sp20/1.png",
-      "../user/assets/image/sanpham/SmartWatch/sp20/2.png",
-      "../user/assets/image/sanpham/SmartWatch/sp20/3.png",
-      "../user/assets/image/sanpham/SmartWatch/sp20/4.png",
-      "../user/assets/image/sanpham/SmartWatch/sp20/5.png",
-      "../user/assets/image/sanpham/SmartWatch/sp20/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "AMOLED",
-      "Kích thước màn hình": "1.6 inch",
-      "Tiện ích sức khoẻ": "Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đếm bước chân, Đo mức độ stress, Phát hiện té ngã",
-      "Tương thích": "Android 10.0 trở lên, không tương thích iOS",
-      "Thời lượng pin": "Lên đến 13 ngày",
-      "Kháng nước": "5ATM, IP68",
-      "Vỏ": "Nhôm",
-      "Trọng lượng": "36.8g",
-      "Hãng sản xuất": "Samsung"
-    },
-    overview: "Samsung Galaxy Fit 3 là vòng đeo tay thông minh với màn hình AMOLED 1.6 inch, vỏ nhôm cao cấp, trọng lượng 36.8g. Pin dùng đến 13 ngày, kháng nước 5ATM/IP68, hỗ trợ hơn 100 bài tập và đa dạng tính năng theo dõi sức khỏe."
-  },
-
-  {
-    id: "81",
-    name: "Màn hình Dahua LM25-E231 25 inch",
-    brand: "Dahua",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp1.png",
-    price: 1990000,
-    salebefore: 2990000,
-    baseprice: 1500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["25 inch"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "81-den-25",
-        color: "Đen",
-        price: 1990000,
-        stock: 50,
-        status: true,
-        sold: "500",
-        version: ["25 inch"]
-      },
-      {
-        id: "81-trang-25",
-        color: "Trắng",
-        price: 1990000,
-        stock: 50,
-        status: true,
-        sold: "500",
-        version: ["25 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp1/1.png",
-      "../user/assets/image/Screen/sp1/2.png",
-      "../user/assets/image/Screen/sp1/3.png",
-      "../user/assets/image/Screen/sp1/4.png",
-      "../user/assets/image/Screen/sp1/5.png",
-      "../user/assets/image/Screen/sp1/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "25 inches",
-      "Tần số quét": "180 Hz",
-      "Thời gian phản hồi": "5ms",
-      "Góc nhìn": "178°/178°",
-      "Cổng kết nối": "1x DP 1.4, 1x HDMI 2.0, 1x USB (only upgrade), 1x Audio out",
-      "Khối lượng": "4.7 kg",
-      "Phụ kiện": "Cáp nguồn, Cáp HDMI, Sách hướng dẫn",
-      "Tính năng": "Khử nhấp nháy, Chống lóa, GameMode",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Màn hình Dahua LM25-E231 25 inch mang đến trải nghiệm hình ảnh sắc nét với tấm nền IPS và độ phân giải Full HD. Tần số quét 180Hz cùng thời gian phản hồi 5ms đảm bảo chuyển động mượt mà, phù hợp cho gaming. Thiết kế phẳng hiện đại với chân đế vững chắc, tích hợp nhiều cổng kết nối đa dạng."
-  },
-
-  {
-    id: "82",
-    name: "Màn hình Gaming LG UltraGear 24GS65F 24 inch",
-    brand: "LG",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp2.png",
-    price: 2990000,
-    salebefore: 3490000,
-    baseprice: 2500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["24 inch"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "82-den-24",
-        color: "Đen",
-        price: 2990000,
-        stock: 45,
-        status: true,
-        sold: "800",
-        version: ["24 inch"]
-      },
-      {
-        id: "82-trang-24",
-        color: "Trắng",
-        price: 2990000,
-        stock: 45,
-        status: true,
-        sold: "800",
-        version: ["24 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp2/1.png",
-      "../user/assets/image/Screen/sp2/2.png",
-      "../user/assets/image/Screen/sp2/3.png",
-      "../user/assets/image/Screen/sp2/4.png",
-      "../user/assets/image/Screen/sp2/5.png",
-      "../user/assets/image/Screen/sp2/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "24 inch",
-      "Tần số quét": "180Hz",
-      "Thời gian phản hồi": "1ms (GtG)",
-      "Góc nhìn": "178°/178°",
-      "HDR": "HDR10",
-      "Cổng kết nối": "2x HDMI, 1x DisplayPort, 1x Jack 3.5mm",
-      "Tính năng": "AMD FreeSync Premium, Dynamic Action Sync, Black Stabilizer, Crosshair",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Màn hình gaming LG UltraGear 24GS65F được trang bị tấm nền IPS chất lượng cao cùng tần số quét 180Hz và thời gian phản hồi 1ms, mang đến trải nghiệm chơi game mượt mà, không bị xé hình. Công nghệ AMD FreeSync Premium và các tính năng gaming chuyên dụng giúp tối ưu hóa hiệu suất chơi game."
-  },
-
-  {
-    id: "83",
-    name: "Màn hình Gaming LG UltraGear 24GS50F-B 24 inch",
-    brand: "LG",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp3.png",
-    price: 2490000,
-    salebefore: 2990000,
-    baseprice: 2000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["24 inch"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "83-den-24",
-        color: "Đen",
-        price: 2490000,
-        stock: 40,
-        status: true,
-        sold: "1.2k",
-        version: ["24 inch"]
-      },
-      {
-        id: "83-trang-24",
-        color: "Trắng",
-        price: 2490000,
-        stock: 40,
-        status: true,
-        sold: "1.2k",
-        version: ["24 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp3/1.png",
-      "../user/assets/image/Screen/sp3/2.png",
-      "../user/assets/image/Screen/sp3/3.png",
-      "../user/assets/image/Screen/sp3/4.png",
-      "../user/assets/image/Screen/sp3/5.png",
-      "../user/assets/image/Screen/sp3/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "VA",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "24 inch",
-      "Tần số quét": "180Hz",
-      "Thời gian phản hồi": "1ms (MBR)",
-      "Độ sáng": "250 nits",
-      "Cổng kết nối": "2x HDMI 2.0, 1x DisplayPort 1.4",
-      "Tính năng": "AMD FreeSync Premium, Black Stabilizer, Dynamic Action Sync, Flicker Safe",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Màn hình LG UltraGear 24GS50F-B với tấm nền VA 24 inch, tần số quét 180Hz cho trải nghiệm gaming mượt mà. Tích hợp công nghệ AMD FreeSync Premium chống xé hình, cùng các tính năng gaming tiện ích như Black Stabilizer và Dynamic Action Sync."
-  },
-
-  {
-    id: "84",
-    name: "Màn hình E-DRA EGM22F100H 22 inch",
-    brand: "E-DRA",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp4.png",
-    price: 1290000,
-    salebefore: 1490000,
-    baseprice: 1000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["22 inch"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "84-den-22",
-        color: "Đen",
-        price: 1290000,
-        stock: 55,
-        status: true,
-        sold: "2.5k",
-        version: ["22 inch"]
-      },
-      {
-        id: "84-trang-22",
-        color: "Trắng",
-        price: 1290000,
-        stock: 55,
-        status: true,
-        sold: "2.5k",
-        version: ["22 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp4/1.png",
-      "../user/assets/image/Screen/sp4/2.png",
-      "../user/assets/image/Screen/sp4/3.png",
-      "../user/assets/image/Screen/sp4/4.png",
-      "../user/assets/image/Screen/sp4/5.png",
-      "../user/assets/image/Screen/sp4/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "22 inch",
-      "Tần số quét": "100Hz",
-      "Thời gian phản hồi": "5ms",
-      "Độ sáng": "250 nits",
-      "Cổng kết nối": "1x HDMI, 1x VGA",
-      "Tính năng": "Low Blue Light, Flicker Free, FreeSync",
-      "Góc nhìn": "178°/178°",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Màn hình E-DRA EGM22F100H 22 inch sử dụng tấm nền IPS cho góc nhìn rộng và màu sắc chân thực. Tần số quét 100Hz cùng công nghệ FreeSync giúp trải nghiệm gaming mượt mà hơn. Thiết kế viền mỏng hiện đại, tích hợp các tính năng bảo vệ mắt."
-  },
-
-  {
-    id: "85",
-    name: "Màn hình Gaming Philips 27M2N8500 27 inch",
-    brand: "Philips",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp5.png",
-    price: 16990000,
-    salebefore: 17990000,
-    baseprice: 15000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["27 inch"] }
-    ],
-    listColors: ["Đen", "Vàng"],
-    versions: [
-      {
-        id: "85-den-27",
-        color: "Đen",
-        price: 16990000,
-        stock: 20,
-        status: true,
-        sold: "100",
-        version: ["27 inch"]
-      },
-      {
-        id: "85-vang-27",
-        color: "Vàng",
-        price: 16990000,
-        stock: 20,
-        status: true,
-        sold: "100",
-        version: ["27 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp5/1.png",
-      "../user/assets/image/Screen/sp5/2.png",
-      "../user/assets/image/Screen/sp5/3.png",
-      "../user/assets/image/Screen/sp5/4.png",
-      "../user/assets/image/Screen/sp5/5.png",
-      "../user/assets/image/Screen/sp5/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "QD OLED",
-      "Độ phân giải": "2560 x 1440 pixels",
-      "Kích thước": "27 inch",
-      "Tần số quét": "360Hz",
-      "Thời gian phản hồi": "0.03ms GtG",
-      "HDR": "DisplayHDR True Black 400",
-      "Độ tương phản": "1,500,000:1",
-      "Độ sáng": "450 nits",
-      "Cổng kết nối": "2x HDMI 2.1, 1x DisplayPort 1.4, 4x USB 3.2",
-      "Tính năng": "AMD FreeSync Premium Pro, NVIDIA G-SYNC Compatible",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình Philips 27M2N8500 sử dụng tấm nền QD OLED cao cấp với độ tương phản cực cao và màu sắc sống động. Tần số quét 360Hz cùng thời gian phản hồi siêu nhanh 0.03ms mang lại trải nghiệm gaming cực mượt. Tích hợp đầy đủ công nghệ đồng bộ khung hình và các tính năng gaming chuyên nghiệp."
-  },
-
-  {
-    id: "86",
-    name: "Màn hình ASUS VU249CFE 24 inch",
-    brand: "ASUS",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp6.png",
-    price: 2590000,
-    salebefore: 3990000,
-    baseprice: 2000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["24 inch"] }
-    ],
-    listColors: ["Hồng", "Đen"],
-    versions: [
-      {
-        id: "86-hong-24",
-        color: "Hồng",
-        price: 2590000,
-        stock: 30,
-        status: true,
-        sold: "450",
-        version: ["24 inch"]
-      },
-      {
-        id: "86-den-24",
-        color: "Đen",
-        price: 2590000,
-        stock: 35,
-        status: true,
-        sold: "500",
-        version: ["24 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp6/1.png",
-      "../user/assets/image/Screen/sp6/2.png",
-      "../user/assets/image/Screen/sp6/3.png",
-      "../user/assets/image/Screen/sp6/4.png",
-      "../user/assets/image/Screen/sp6/5.png",
-      "../user/assets/image/Screen/sp6/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "24 inch",
-      "Tần số quét": "100Hz",
-      "Thời gian phản hồi": "1ms MPRT",
-      "Độ sáng": "250 nits",
-      "Góc nhìn": "178°/178°",
-      "Cổng kết nối": "1x HDMI 1.4, 1x VGA, 1x Audio In",
-      "Tính năng": "ASUS Eye Care, Flicker Free, Low Blue Light",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình ASUS VU249CFE với thiết kế thanh lịch và phối màu độc đáo. Tấm nền IPS cho màu sắc chân thực, tần số quét 100Hz mang lại chuyển động mượt mà. Tích hợp công nghệ bảo vệ mắt ASUS Eye Care và nhiều tính năng tiện ích."
-  },
-
-  {
-    id: "87",
-    name: "Màn hình Dell U2424H 24 inch",
-    brand: "Dell",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp7.png",
-    price: 5990000,
-    salebefore: 6490000,
-    baseprice: 5000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["24 inch"] }
-    ],
-    listColors: ["Xám", "Nâu"],
-    versions: [
-      {
-        id: "87-xam-24",
-        color: "Xám",
-        price: 5990000,
-        stock: 25,
-        status: true,
-        sold: "200",
-        version: ["24 inch"]
-      },
-      {
-        id: "87-nau-24",
-        color: "Nâu",
-        price: 5990000,
-        stock: 25,
-        status: true,
-        sold: "200",
-        version: ["24 inch"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp7/1.png",
-      "../user/assets/image/Screen/sp7/2.png",
-      "../user/assets/image/Screen/sp7/3.png",
-      "../user/assets/image/Screen/sp7/4.png",
-      "../user/assets/image/Screen/sp7/5.png",
-      "../user/assets/image/Screen/sp7/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "24 inch",
-      "Tần số quét": "120Hz",
-      "Thời gian phản hồi": "5ms",
-      "Độ sáng": "300 nits",
-      "Độ phủ màu": "100% sRGB, 100% BT.709",
-      "Cổng kết nối": "1x DisplayPort, 1x HDMI, 4x USB Type-A, 1x USB Type-C",
-      "Tính năng": "ComfortView Plus, Picture-in-Picture, Picture-by-Picture",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình Dell U2424H thuộc dòng UltraSharp cao cấp với độ chính xác màu sắc cao, phù hợp cho công việc đồ họa chuyên nghiệp. Trang bị đa dạng cổng kết nối hiện đại và tính năng tiện ích như ComfortView Plus bảo vệ mắt."
-  },
-
-  {
-    id: "88",
-    name: "Màn hình Gaming Samsung Odyssey G5 LS27CG552 27 inch",
-    brand: "Samsung",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp8.png",
-    price: 5590000,
-    salebefore: 5990000,
-    baseprice: 4800000,
-    listVersions: [
-      { name: "Phiên bản", option: ["27 inch"] }
-    ],
-    listColors: ["Đen", "Đỏ"],
-    versions: [
-      {
-        id: "88-den-27",
-        color: "Đen",
-        price: 5590000,
-        stock: 30,
-        status: true,
-        sold: "350",
-        version: ["27 inch"]
-      },
-      {
-        id: "88-do-27",
-        color: "Đỏ",
-        price: 5590000,
-        stock: 30,
-        status: true,
-        sold: "350",
-        version: ["27 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp8/1.png",
-      "../user/assets/image/Screen/sp8/2.png",
-      "../user/assets/image/Screen/sp8/3.png",
-      "../user/assets/image/Screen/sp8/4.png",
-      "../user/assets/image/Screen/sp8/5.png",
-      "../user/assets/image/Screen/sp8/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "VA",
-      "Độ phân giải": "2560 x 1440 pixels",
-      "Kích thước": "27 inch",
-      "Tần số quét": "165Hz",
-      "Thời gian phản hồi": "1ms (MPRT)",
-      "HDR": "HDR10",
-      "Độ cong": "1000R",
-      "Cổng kết nối": "1x DisplayPort 1.2, 2x HDMI 2.0",
-      "Tính năng": "AMD FreeSync Premium, Game Mode, Eye Saver Mode",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Màn hình Samsung Odyssey G5 với thiết kế màn hình cong 1000R cho trải nghiệm gaming đắm chìm. Tần số quét 165Hz, độ phân giải 2K và công nghệ AMD FreeSync Premium mang lại gameplay mượt mà, sắc nét. Tích hợp nhiều tính năng gaming và bảo vệ mắt."
-  },
-
-  {
-    id: "89",
-    name: "Màn hình di động MSI Pro MP165 E6 16 inch",
-    brand: "MSI",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp9.png",
-    price: 2690000,
-    salebefore: 3090000,
-    baseprice: 2200000,
-    listVersions: [
-      { name: "Phiên bản", option: ["16 inch"] }
-    ],
-    listColors: ["Đen", "Tím"],
-    versions: [
-      {
-        id: "89-den-16",
-        color: "Đen",
-        price: 2690000,
-        stock: 40,
-        status: true,
-        sold: "180",
-        version: ["16 inch"]
-      },
-      {
-        id: "89-tim-16",
-        color: "Tím",
-        price: 2690000,
-        stock: 40,
-        status: true,
-        sold: "180",
-        version: ["16 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp9/1.png",
-      "../user/assets/image/Screen/sp9/2.png",
-      "../user/assets/image/Screen/sp9/3.png",
-      "../user/assets/image/Screen/sp9/4.png",
-      "../user/assets/image/Screen/sp9/5.png",
-      "../user/assets/image/Screen/sp9/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "16 inch",
-      "Tần số quét": "60Hz",
-      "Thời gian phản hồi": "5ms",
-      "Độ sáng": "250 nits",
-      "Kích thước": "356.5 x 13.85 x 210.35 mm",
-      "Trọng lượng": "0.78 kg",
-      "Cổng kết nối": "2x USB Type-C, Mini-HDMI",
-      "Tính năng": "MSI Display Kit, Less Blue Light PRO",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Màn hình di động MSI Pro MP165 E6 với thiết kế siêu mỏng nhẹ, dễ dàng mang theo. Tấm nền IPS cho góc nhìn rộng và màu sắc chân thực. Đa dạng cổng kết nối và tích hợp công nghệ bảo vệ mắt, phù hợp cho làm việc di động."
-  },
-
-  {
-    id: "90",
-    name: "Màn hình Xiaomi A27i 27 inch",
-    brand: "Xiaomi",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp10.png",
-    price: 3420000,
-    salebefore: 3990000,
-    baseprice: 2900000,
-    listVersions: [
-      { name: "Phiên bản", option: ["27 inch"] }
-    ],
-    listColors: ["Xám", "Đen"],
-    versions: [
-      {
-        id: "90-xam-27",
-        color: "Xám",
-        price: 3420000,
-        stock: 35,
-        status: true,
-        sold: "250",
-        version: ["27 inch"]
-      },
-      {
-        id: "90-den-27",
-        color: "Đen",
-        price: 3420000,
-        stock: 35,
-        status: true,
-        sold: "250",
-        version: ["27 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp10/1.png",
-      "../user/assets/image/Screen/sp10/2.png",
-      "../user/assets/image/Screen/sp10/3.png",
-      "../user/assets/image/Screen/sp10/4.png",
-      "../user/assets/image/Screen/sp10/5.png",
-      "../user/assets/image/Screen/sp10/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "27 inch",
-      "Tần số quét": "100Hz",
-      "Thời gian phản hồi": "6ms",
-      "Độ sáng": "300 nits",
-      "Độ phủ màu": "100% sRGB",
-      "Cổng kết nối": "1x HDMI 1.4, 1x DisplayPort 1.2, 1x Audio Out",
-      "Tính năng": "Low Blue Light, Flicker Free",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình Xiaomi A27i với tấm nền IPS 27 inch, độ phủ màu 100% sRGB cho chất lượng hiển thị tốt. Tần số quét 100Hz mang lại chuyển động mượt mà, tích hợp công nghệ bảo vệ mắt. Thiết kế tối giản với chân đế vững chắc."
-  },
-
-  {
-    id: "91",
-    name: "Màn hình LG UltraWide 29WP60G-B 29 inch",
-    brand: "LG",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp11.png",
-    price: 5590000,
-    salebefore: 6290000,
-    baseprice: 4900000,
-    listVersions: [
-      { name: "Phiên bản", option: ["29 inch"] }
-    ],
-    listColors: ["Đen", "Hồng"],
-    versions: [
-      {
-        id: "91-den-29",
-        color: "Đen",
-        price: 5590000,
-        stock: 25,
-        status: true,
-        sold: "150",
-        version: ["29 inch"]
-      },
-      {
-        id: "91-hong-29",
-        color: "Hồng",
-        price: 5590000,
-        stock: 25,
-        status: true,
-        sold: "150",
-        version: ["29 inch"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp11/1.png",
-      "../user/assets/image/Screen/sp11/2.png",
-      "../user/assets/image/Screen/sp11/3.png",
-      "../user/assets/image/Screen/sp11/4.png",
-      "../user/assets/image/Screen/sp11/5.png",
-      "../user/assets/image/Screen/sp11/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "2560 x 1080 pixels",
-      "Kích thước": "29 inch",
-      "Tỉ lệ": "21:9 UltraWide",
-      "Tần số quét": "100Hz",
-      "Thời gian phản hồi": "5ms",
-      "Độ sáng": "250 nits",
-      "Độ phủ màu": "99% sRGB",
-      "HDR": "HDR10",
-      "Cổng kết nối": "1x DisplayPort 1.4, 2x HDMI 2.0, 1x USB-C",
-      "Tính năng": "AMD FreeSync, Dynamic Action Sync, Black Stabilizer",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Màn hình LG UltraWide 29WP60G-B với tỉ lệ 21:9 siêu rộng cho không gian làm việc thoải mái. Tấm nền IPS với độ phủ màu 99% sRGB cùng công nghệ HDR10 mang lại chất lượng hiển thị xuất sắc. Tích hợp cổng USB-C đa năng và nhiều tính năng tiện ích."
-  },
-
-  {
-    id: "92",
-    name: "Màn hình Gaming Acer Nitro VG271U3 27 inch",
-    brand: "Acer",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp12.png",
-    price: 7990000,
-    salebefore: 8990000,
-    baseprice: 7000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["27 inch"] }
-    ],
-    listColors: ["Đen", "Xám"],
-    versions: [
-      {
-        id: "92-den-27",
-        color: "Đen",
-        price: 7990000,
-        stock: 30,
-        status: true,
-        sold: "220",
-        version: ["27 inch"]
-      },
-      {
-        id: "92-xam-27",
-        color: "Xám",
-        price: 7990000,
-        stock: 30,
-        status: true,
-        sold: "220",
-        version: ["27 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp12/1.png",
-      "../user/assets/image/Screen/sp12/2.png",
-      "../user/assets/image/Screen/sp12/3.png",
-      "../user/assets/image/Screen/sp12/4.png",
-      "../user/assets/image/Screen/sp12/5.png",
-      "../user/assets/image/Screen/sp12/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "2560 x 1440 pixels",
-      "Kích thước": "27 inch",
-      "Tần số quét": "170Hz",
-      "Thời gian phản hồi": "1ms (VRB)",
-      "HDR": "VESA DisplayHDR 400",
-      "Độ sáng": "400 nits",
-      "Độ phủ màu": "95% DCI-P3",
-      "Cổng kết nối": "2x HDMI 2.0, 1x DisplayPort 1.4",
-      "Tính năng": "AMD FreeSync Premium, BlueLightShield, Flicker-free",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình gaming Acer Nitro VG271U3 với độ phân giải 2K và tần số quét 170Hz mang lại trải nghiệm chơi game sắc nét, mượt mà. Công nghệ HDR400 và độ phủ màu rộng cho hình ảnh sống động. Tích hợp nhiều tính năng gaming và bảo vệ mắt."
-  },
-
-  {
-    id: "93",
-    name: "Màn hình Asus TUF Gaming VG27AQZ 27 inch",
-    brand: "ASUS",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp13.png",
-    price: 8490000,
-    salebefore: 8990000,
-    baseprice: 7500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["27 inch"] }
-    ],
-    listColors: ["Đen", "Nâu"],
-    versions: [
-      {
-        id: "93-den-27",
-        color: "Đen",
-        price: 8490000,
-        stock: 20,
-        status: true,
-        sold: "280",
-        version: ["27 inch"]
-      },
-      {
-        id: "93-nau-27",
-        color: "Nâu",
-        price: 8490000,
-        stock: 20,
-        status: true,
-        sold: "280",
-        version: ["27 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp13/1.png",
-      "../user/assets/image/Screen/sp13/2.png",
-      "../user/assets/image/Screen/sp13/3.png",
-      "../user/assets/image/Screen/sp13/4.png",
-      "../user/assets/image/Screen/sp13/5.png",
-      "../user/assets/image/Screen/sp13/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "Fast IPS",
-      "Độ phân giải": "2560 x 1440 pixels",
-      "Kích thước": "27 inch",
-      "Tần số quét": "165Hz",
-      "Thời gian phản hồi": "1ms (GTG)",
-      "HDR": "HDR10",
-      "Độ sáng": "350 nits",
-      "Cổng kết nối": "2x HDMI 2.0, 1x DisplayPort 1.2",
-      "Tính năng": "ASUS ELMB SYNC, G-SYNC Compatible, GamePlus",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình ASUS TUF Gaming VG27AQZ với tấm nền Fast IPS cho tốc độ phản hồi nhanh và màu sắc chính xác. Tần số quét 165Hz và công nghệ ELMB SYNC mang lại gameplay mượt mà, không bị xé hình. Thiết kế gaming đặc trưng của dòng TUF với độ bền cao."
-  },
-
-  {
-    id: "94",
-    name: "Màn hình HKC MB24V9 24 inch",
-    brand: "HKC",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp14.png",
-    price: 2090000,
-    salebefore: 2490000,
-    baseprice: 1800000,
-    listVersions: [
-      { name: "Phiên bản", option: ["24 inch"] }
-    ],
-    listColors: ["Đen", "Đỏ"],
-    versions: [
-      {
-        id: "94-den-24",
-        color: "Đen",
-        price: 2090000,
-        stock: 45,
-        status: true,
-        sold: "320",
-        version: ["24 inch"]
-      },
-      {
-        id: "94-do-24",
-        color: "Đỏ",
-        price: 2090000,
-        stock: 45,
-        status: true,
-        sold: "320",
-        version: ["24 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp14/1.png",
-      "../user/assets/image/Screen/sp14/2.png",
-      "../user/assets/image/Screen/sp14/3.png",
-      "../user/assets/image/Screen/sp14/4.png",
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "VA",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "24 inch",
-      "Tần số quét": "75Hz",
-      "Thời gian phản hồi": "5ms",
-      "Độ sáng": "250 nits",
-      "Góc nhìn": "178°/178°",
-      "Cổng kết nối": "1x HDMI, 1x VGA",
-      "Tính năng": "Low Blue Light, Flicker Free",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Màn hình HKC MB24V9 với thiết kế viền mỏng hiện đại, tấm nền VA cho độ tương phản cao. Tần số quét 75Hz mang lại trải nghiệm xem mượt mà hơn màn hình thông thường. Tích hợp các công nghệ bảo vệ mắt, phù hợp cho văn phòng và giải trí."
-  },
-
-  {
-    id: "95",
-    name: "Màn hình ViewSonic VA2432-H 24 inch",
-    brand: "ViewSonic",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp15.png",
-    price: 3290000,
-    salebefore: 3690000,
-    baseprice: 2800000,
-    listVersions: [
-      { name: "Phiên bản", option: ["24 inch"] }
-    ],
-    listColors: ["Đen", "Tím"],
-    versions: [
-      {
-        id: "95-den-24",
-        color: "Đen",
-        price: 3290000,
-        stock: 35,
-        status: true,
-        sold: "180",
-        version: ["24 inch"]
-      },
-      {
-        id: "95-tim-24",
-        color: "Tím",
-        price: 3290000,
-        stock: 35,
-        status: true,
-        sold: "180",
-        version: ["24 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp15/1.png",
-      "../user/assets/image/Screen/sp15/2.png",
-      "../user/assets/image/Screen/sp15/3.png",
-      "../user/assets/image/Screen/sp15/4.png",
-      "../user/assets/image/Screen/sp15/5.png",
-      "../user/assets/image/Screen/sp15/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "1920 x 1080 pixels",
-      "Kích thước": "24 inch",
-      "Tần số quét": "100Hz",
-      "Thời gian phản hồi": "4ms",
-      "Độ sáng": "300 nits",
-      "Góc nhìn": "178°/178°",
-      "Cổng kết nối": "1x HDMI 1.4, 1x DisplayPort 1.2, 1x VGA",
-      "Tính năng": "ViewMode, Blue Light Filter, Flicker-Free",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình ViewSonic VA2432-H với tấm nền IPS cho màu sắc chân thực và góc nhìn rộng. Tần số quét 100Hz cùng thời gian phản hồi 4ms đảm bảo trải nghiệm mượt mà. Tích hợp nhiều chế độ xem và tính năng bảo vệ mắt."
-  },
-
-  {
-    id: "96",
-    name: "Màn hình cong Samsung LC49G95 49 inch",
-    brand: "Samsung",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp16.png",
-    price: 29990000,
-    salebefore: 32990000,
-    baseprice: 25000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["49 inch"] }
-    ],
-    listColors: ["Trắng", "Đen"],
-    versions: [
-      {
-        id: "96-trang-49",
-        color: "Trắng",
-        price: 29990000,
-        stock: 10,
-        status: true,
-        sold: "50",
-        version: ["49 inch"]
-      },
-      {
-        id: "96-den-49",
-        color: "Đen",
-        price: 29990000,
-        stock: 10,
-        status: true,
-        sold: "50",
-        version: ["49 inch"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp16/1.png",
-      "../user/assets/image/Screen/sp16/2.png",
-      "../user/assets/image/Screen/sp16/3.png",
-      "../user/assets/image/Screen/sp16/4.png",
-      "../user/assets/image/Screen/sp16/5.png",
-      "../user/assets/image/Screen/sp16/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "VA",
-      "Độ phân giải": "5120 x 1440 pixels",
-      "Kích thước": "49 inch",
-      "Tỉ lệ": "32:9 Super Ultra-Wide",
-      "Độ cong": "1000R",
-      "Tần số quét": "240Hz",
-      "Thời gian phản hồi": "1ms (GTG)",
-      "HDR": "HDR1000",
-      "Độ sáng": "1000 nits",
-      "Độ phủ màu": "95% DCI-P3",
-      "Cổng kết nối": "2x DisplayPort 1.4, 1x HDMI 2.0, 2x USB 3.0",
-      "Tính năng": "G-SYNC Compatible, FreeSync Premium Pro",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình Samsung LC49G95 với kích thước khổng lồ 49 inch, tỉ lệ 32:9 và độ cong 1000R mang lại trải nghiệm đắm chìm tối đa. Tần số quét 240Hz cùng HDR1000 cho chất lượng gaming tuyệt vời. Thiết kế Odyssey độc đáo với hiệu ứng LED Infinity Core."
-  },
-
-  {
-    id: "97",
-    name: "Màn hình Dell P2723QE 27 inch",
-    brand: "Dell",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp17.png",
-    price: 12990000,
-    salebefore: 13990000,
-    baseprice: 11000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["27 inch"] }
-    ],
-    listColors: ["Bạc", "Đen"],
-    versions: [
-      {
-        id: "97-den-27",
-        color: "Đen",
-        price: 12990000,
-        stock: 15,
-        status: true,
-        sold: "80",
-        version: ["27 inch"]
-      },
-      {
-        id: "97-bac-27",
-        color: "Bạc",
-        price: 12990000,
-        stock: 15,
-        status: true,
-        sold: "80",
-        version: ["27 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp17/1.png",
-      "../user/assets/image/Screen/sp17/2.png",
-      "../user/assets/image/Screen/sp17/3.png",
-      "../user/assets/image/Screen/sp17/4.png",
-      "../user/assets/image/Screen/sp17/5.png",
-      "../user/assets/image/Screen/sp17/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "3840 x 2160 pixels",
-      "Kích thước": "27 inch",
-      "Tần số quét": "60Hz",
-      "Thời gian phản hồi": "5ms",
-      "Độ sáng": "350 nits",
-      "Độ phủ màu": "99% sRGB, 99% REC 709",
-      "Cổng kết nối": "1x HDMI 2.0, 1x DisplayPort 1.4, 1x USB-C (90W PD), 4x USB 3.2",
-      "Tính năng": "ComfortView Plus, Picture-in-Picture, Picture-by-Picture, KVM",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình Dell P2723QE chuyên nghiệp với độ phân giải 4K và độ chính xác màu cao. Cổng USB-C hỗ trợ sạc laptop 90W và truyền dữ liệu. Tích hợp tính năng KVM và nhiều chế độ hiển thị linh hoạt, phù hợp cho công việc đòi hỏi chi tiết cao."
-  },
-
-  {
-    id: "98",
-    name: "Màn hình BenQ MOBIUZ EX3210U 32 inch",
-    brand: "BenQ",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp18.png",
-    price: 25990000,
-    salebefore: 27990000,
-    baseprice: 23000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["32 inch"] }
-    ],
-    listColors: ["Trắng", "Đen"],
-    versions: [
-      {
-        id: "98-trang-32",
-        color: "Trắng",
-        price: 25990000,
-        stock: 8,
-        status: true,
-        sold: "30",
-        version: ["32 inch"]
-      },
-      {
-        id: "98-den-32",
-        color: "Đen",
-        price: 25990000,
-        stock: 8,
-        status: true,
-        sold: "30",
-        version: ["32 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp18/1.png",
-      "../user/assets/image/Screen/sp18/2.png",
-      "../user/assets/image/Screen/sp18/3.png",
-      "../user/assets/image/Screen/sp18/4.png",
-      "../user/assets/image/Screen/sp18/5.png",
-      "../user/assets/image/Screen/sp18/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "3840 x 2160 pixels",
-      "Kích thước": "32 inch",
-      "Tần số quét": "144Hz",
-      "Thời gian phản hồi": "1ms (MPRT)",
-      "HDR": "HDR600",
-      "Độ sáng": "600 nits",
-      "Độ phủ màu": "98% DCI-P3",
-      "Cổng kết nối": "2x HDMI 2.1, 1x DisplayPort 1.4, 4x USB 3.0, 1x USB-C",
-      "Tính năng": "AMD FreeSync Premium Pro, HDRi, Light Tuner",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình BenQ MOBIUZ EX3210U là màn hình gaming cao cấp với độ phân giải 4K và tần số quét 144Hz. Công nghệ HDRi thông minh tự động điều chỉnh HDR theo điều kiện ánh sáng. Tích hợp loa 2.1 kênh và nhiều tính năng gaming chuyên nghiệp."
-  },
-
-  {
-    id: "99",
-    name: "Màn hình AOC CQ27G3S 27 inch",
-    brand: "AOC",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp19.png",
-    price: 5990000,
-    salebefore: 6490000,
-    baseprice: 5200000,
-    listVersions: [
-      { name: "Phiên bản", option: ["27 inch"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "99-den-27",
-        color: "Đen",
-        price: 5990000,
-        stock: 25,
-        status: true,
-        sold: "150",
-        version: ["27 inch"]
-      },
-      {
-        id: "99-trang-27",
-        color: "Trắng",
-        price: 5990000,
-        stock: 25,
-        status: true,
-        sold: "150",
-        version: ["27 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp19/1.png",
-      "../user/assets/image/Screen/sp19/2.png",
-      "../user/assets/image/Screen/sp19/3.png",
-      "../user/assets/image/Screen/sp19/4.png",
-      "../user/assets/image/Screen/sp19/5.png",
-      "../user/assets/image/Screen/sp19/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "VA",
-      "Độ phân giải": "2560 x 1440 pixels",
-      "Kích thước": "27 inch",
-      "Tần số quét": "165Hz",
-      "Thời gian phản hồi": "1ms MPRT",
-      "Độ cong": "1500R",
-      "HDR": "HDR10",
-      "Độ sáng": "300 nits",
-      "Cổng kết nối": "2x HDMI 2.0, 1x DisplayPort 1.2",
-      "Tính năng": "AMD FreeSync Premium, AOC Game Color, Shadow Control",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình gaming AOC CQ27G3S với thiết kế màn hình cong 1500R và độ phân giải 2K cho trải nghiệm chơi game đắm chìm. Tần số quét 165Hz và công nghệ AMD FreeSync Premium đảm bảo gameplay mượt mà. Tích hợp nhiều tính năng tối ưu cho gaming."
-  },
-
-  {
-    id: "100",
-    name: "Màn hình MSI PRO MP273QP 27 inch",
-    brand: "MSI",
-    category: "Màn hình",
-    thumbnail: "../user/assets/image/Screen/sp20.png",
-    price: 6990000,
-    salebefore: 7490000,
-    baseprice: 6000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["27 inch"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "100-den-27",
-        color: "Đen",
-        price: 6990000,
-        stock: 20,
-        status: true,
-        sold: "120",
-        version: ["27 inch"]
-      },
-      {
-        id: "100-trang-27",
-        color: "Trắng",
-        price: 6990000,
-        stock: 20,
-        status: true,
-        sold: "120",
-        version: ["27 inch"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Screen/sp20/1.png",
-      "../user/assets/image/Screen/sp20/2.png",
-      "../user/assets/image/Screen/sp20/3.png",
-      "../user/assets/image/Screen/sp20/4.png",
-      "../user/assets/image/Screen/sp20/5.png",
-      "../user/assets/image/Screen/sp20/6.png"
-    ],
-    infoDetail: {
-      "Công nghệ màn hình": "IPS",
-      "Độ phân giải": "2560 x 1440 pixels",
-      "Kích thước": "27 inch",
-      "Tần số quét": "75Hz",
-      "Thời gian phản hồi": "5ms",
-      "Độ sáng": "300 nits",
-      "Độ phủ màu": "99% sRGB, 81% AdobeRGB",
-      "Cổng kết nối": "1x HDMI 1.4, 1x DisplayPort 1.2, 1x USB Type-C",
-      "Tính năng": "Less Blue Light PRO, Anti-Flicker, Reading Mode",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "Màn hình MSI PRO MP273QP với độ phân giải 2K và độ chính xác màu cao, phù hợp cho công việc thiết kế và đồ họa. Tích hợp cổng USB-C đa năng và các công nghệ bảo vệ mắt. Thiết kế chuyên nghiệp với chân đế điều chỉnh linh hoạt."
-  },
-
-
-  {
-    id: "101",
-    name: "Bàn phím cơ Aula S2022 Blue Switch",
-    brand: "Aula",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp1.png",
-    price: 520000,
-    salebefore: 599000,
-    baseprice: 320000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Fullsize"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "101-den-fullsize",
-        color: "Đen",
-        price: 520000,
-        stock: 120,
-        status: true,
-        sold: "430",
-        version: ["Fullsize"]
-      },
-      {
-        id: "101-trang-fullsize",
-        color: "Trắng",
-        price: 520000,
-        stock: 120,
-        status: true,
-        sold: "430",
-        version: ["Fullsize"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp1/1.png",
-      "../user/assets/image/KeyBoard/sp1/2.png",
-      "../user/assets/image/KeyBoard/sp1/3.png",
-      "../user/assets/image/KeyBoard/sp1/4.png",
-      "../user/assets/image/KeyBoard/sp1/5.png",
-      "../user/assets/image/KeyBoard/sp1/6.png"
-    ],
-    infoDetail: {
-      "Loại switch": "Blue",
-      "Kết nối": "USB Type-C",
-      "LED": "RGB",
-      "Layout": "Fullsize",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Bàn phím cơ Aula S2022 trang bị Blue switch cho cảm giác gõ rõ ràng, LED RGB và kết nối USB Type-C, phù hợp chơi game và gõ phím hàng ngày."
-  },
-
-  {
-    id: "102",
-    name: "Bàn phím cơ không dây Aula S100 Pro",
-    brand: "Aula",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp2.png",
-    price: 890000,
-    salebefore: 999000,
-    baseprice: 600000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Wireless"] }
-    ],
-    listColors: ["Xanh dương", "Đen"],
-    versions: [
-      {
-        id: "102-xanhduong-wireless",
-        color: "Xanh dương",
-        price: 890000,
-        stock: 80,
-        status: true,
-        sold: "210",
-        version: ["Wireless"]
-      },
-      {
-        id: "102-den-wireless",
-        color: "Đen",
-        price: 890000,
-        stock: 80,
-        status: true,
-        sold: "210",
-        version: ["Wireless"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp2/1.png",
-      "../user/assets/image/KeyBoard/sp2/2.png",
-      "../user/assets/image/KeyBoard/sp2/3.png",
-      "../user/assets/image/KeyBoard/sp2/4.png",
-      "../user/assets/image/KeyBoard/sp2/5.png",
-      "../user/assets/image/KeyBoard/sp2/6.png"
-    ],
-    infoDetail: {
-      "Loại switch": "Blue/Optical (phiên bản)",
-      "Kết nối": "Bluetooth / 2.4GHz",
-      "Pin": "2000 mAh",
-      "LED": "RGB",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Bàn phím không dây Aula S100 Pro hỗ trợ Bluetooth và 2.4GHz, thiết kế gọn, nhiều màu, phù hợp làm việc lẫn giải trí."
-  },
-
-  {
-    id: "103",
-    name: "Bàn phím gaming MSI Forge GK100 RGB",
-    brand: "MSI",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp3.png",
-    price: 1299000,
-    salebefore: 1499000,
-    baseprice: 900000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Fullsize"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "103-den-fullsize",
-        color: "Đen",
-        price: 1299000,
-        stock: 60,
-        status: true,
-        sold: "95",
-        version: ["Fullsize"]
-      },
-      {
-        id: "103-trang-fullsize",
-        color: "Trắng",
-        price: 1299000,
-        stock: 60,
-        status: true,
-        sold: "95",
-        version: ["Fullsize"]
-      }
-
-
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp3/1.png",
-      "../user/assets/image/KeyBoard/sp3/2.png",
-      "../user/assets/image/KeyBoard/sp3/3.png",
-      "../user/assets/image/KeyBoard/sp3/4.png",
-      "../user/assets/image/KeyBoard/sp3/5.png",
-      "../user/assets/image/KeyBoard/sp3/6.png"
-    ],
-    infoDetail: {
-      "Loại switch": "Mechanical (Red/Optical)",
-      "Kết nối": "USB Type-C",
-      "LED": "Per-key RGB",
-      "Tính năng": "Anti-Ghosting, NKRO",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "MSI Forge GK100 là bàn phím gaming với LED RGB toàn phím, switch tuyến tính hoặc quang học tùy model, phù hợp game thủ muốn build setup đồng bộ."
-  },
-
-  {
-    id: "104",
-    name: "Bàn phím gaming không dây Logitech G915 X Lightspeed TKL",
-    brand: "Logitech",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp4.png",
-    price: 4299000,
-    salebefore: 4999000,
-    baseprice: 3500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["TKL Low Profile"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "104-den-tkllowprofile",
-        color: "Đen",
-        price: 4299000,
-        stock: 20,
-        status: true,
-        sold: "60",
-        version: ["TKL Low Profile"]
-      },
-      {
-        id: "104-trang-tkllowprofile",
-        color: "Trắng",
-        price: 4299000,
-        stock: 20,
-        status: true,
-        sold: "60",
-        version: ["TKL Low Profile"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp4/1.png",
-      "../user/assets/image/KeyBoard/sp4/2.png",
-      "../user/assets/image/KeyBoard/sp4/3.png",
-      "../user/assets/image/KeyBoard/sp4/4.png",
-      "../user/assets/image/KeyBoard/sp4/5.png",
-      "../user/assets/image/KeyBoard/sp4/6.png"
-    ],
-    infoDetail: {
-      "Loại switch": "Low-profile mechanical",
-      "Kết nối": "Lightspeed Wireless / Bluetooth",
-      "LED": "RGB",
-      "Tính năng": "Low profile, TKL, Media keys",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Logitech G915 X Lightspeed TKL là bàn phím không dây cao cấp với thiết kế low-profile, thời gian phản hồi nhanh dành cho game thủ chuyên nghiệp."
-  },
-
-  {
-    id: "105",
-    name: "Bàn phím cơ E-Dra EK398W Trắng",
-    brand: "E-Dra",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp5.png",
-    price: 750000,
-    salebefore: 899000,
-    baseprice: 500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["87 Key"] }
-    ],
-    listColors: ["Trắng", "Đen"],
-    versions: [
-      {
-        id: "105-trang-87key",
-        color: "Trắng",
-        price: 750000,
-        stock: 90,
-        status: true,
-        sold: "340",
-        version: ["87 Key"]
-      },
-      {
-        id: "105-den-87key",
-        color: "Đen",
-        price: 750000,
-        stock: 90,
-        status: true,
-        sold: "340",
-        version: ["87 Key"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp5/1.png",
-      "../user/assets/image/KeyBoard/sp5/2.png",
-      "../user/assets/image/KeyBoard/sp5/3.png",
-      "../user/assets/image/KeyBoard/sp5/4.png",
-      "../user/assets/image/KeyBoard/sp5/5.png",
-    ],
-    infoDetail: {
-      "Loại switch": "Outemu Blue/Red",
-      "Kết nối": "USB",
-      "LED": "RGB",
-      "Layout": "TKL/87-key",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "E-Dra EK398W là bàn phím cơ màu trắng thanh lịch, switch tactile phù hợp gõ phím và chơi game, độ bền cao và giá hợp lý."
-  },
-
-  {
-    id: "106",
-    name: "Bàn phím gaming Logitech G515 Lightspeed TKL",
-    brand: "Logitech",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp6.png",
-    price: 3499000,
-    salebefore: 3999000,
-    baseprice: 2900000,
-    listVersions: [
-      { name: "Phiên bản", option: ["TKL"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "106-den-tkl",
-        color: "Đen",
-        price: 3499000,
-        stock: 30,
-        status: true,
-        sold: "110",
-        version: ["TKL"]
-      },
-      {
-        id: "106-trang-tkl",
-        color: "Trắng",
-        price: 3499000,
-        stock: 30,
-        status: true,
-        sold: "110",
-        version: ["TKL"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp6/1.png",
-      "../user/assets/image/KeyBoard/sp6/2.png",
-      "../user/assets/image/KeyBoard/sp6/3.png",
-      "../user/assets/image/KeyBoard/sp6/4.png",
-      "../user/assets/image/KeyBoard/sp6/5.png",
-      "../user/assets/image/KeyBoard/sp6/6.png"
-    ],
-    infoDetail: {
-      "Loại switch": "Tactile/Linear tùy model",
-      "Kết nối": "Lightspeed Wireless / USB",
-      "LED": "RGB",
-      "Tính năng": "Low-profile, Media wheel",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Logitech G515 là bàn phím gaming cao cấp với kết nối Lightspeed, build chắc chắn và cảm giác gõ thoải mái cho các phiên chơi game dài."
-  },
-
-  {
-    id: "107",
-    name: "Bàn phím cơ không dây Aula F108 Pro",
-    brand: "Aula",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp7.png",
-    price: 1190000,
-    salebefore: 1390000,
-    baseprice: 800000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Wireless"] }
-    ],
-    listColors: ["Đen Gradient", "Trắng"],
-    versions: [
-
-      {
-        id: "107-den-wireless",
-        color: "Đen Gradient",
-        price: 1190000,
-        stock: 50,
-        status: true,
-        sold: "75",
-        version: ["Wireless"]
-      },
-      {
-        id: "107-trang-wireless",
-        color: "Trắng",
-        price: 1190000,
-        stock: 50,
-        status: true,
-        sold: "75",
-        version: ["Wireless"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp7/1.png",
-      "../user/assets/image/KeyBoard/sp7/2.png",
-      "../user/assets/image/KeyBoard/sp7/3.png",
-      "../user/assets/image/KeyBoard/sp7/4.png",
-      "../user/assets/image/KeyBoard/sp7/5.png",
-      "../user/assets/image/KeyBoard/sp7/6.png"
-    ],
-    infoDetail: {
-      "Loại switch": "Blue/Red tùy chọn",
-      "Kết nối": "Bluetooth / 2.4GHz",
-      "LED": "RGB",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Aula F108 Pro là bàn phím cơ không dây với thiết kế gradient bắt mắt, nhiều tùy chọn switch và pin dùng lâu."
-  },
-
-  {
-    id: "108",
-    name: "Bàn phím cơ không dây Leobog HI75C Pro",
-    brand: "Leobog",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp8.png",
-    price: 1590000,
-    salebefore: 1790000,
-    baseprice: 1000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["75%"] }
-    ],
-    listColors: ["Be/Trắng/Nâu", "Đen/Xanh/Xám"],
-    versions: [
-
-      {
-        id: "108-be/trang/nau-75",
-        color: "Be/Trắng/Nâu",
-        price: 1590000,
-        stock: 40,
-        status: true,
-        sold: "33",
-        version: ["75%"]
-      },
-      {
-        id: "108-den/xanh/xam-75",
-        color: "Đen/Xanh/Xám",
-        price: 1590000,
-        stock: 40,
-        status: true,
-        sold: "33",
-        version: ["75%"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp8/1.png",
-      "../user/assets/image/KeyBoard/sp8/2.png",
-      "../user/assets/image/KeyBoard/sp8/3.png",
-      "../user/assets/image/KeyBoard/sp8/4.png",
-      "../user/assets/image/KeyBoard/sp8/5.png",
-    ],
-    infoDetail: {
-      "Loại switch": "Mechanical (Hot-swap tùy model)",
-      "Kết nối": "Bluetooth / USB-C",
-      "LED": "RGB",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Leobog HI75C Pro là bàn phím 75% không dây với thiết kế màu trung tính, phù hợp người dùng thích tiết kiệm không gian nhưng vẫn đủ phím chức năng."
-  },
-
-  {
-    id: "109",
-    name: "Bàn phím gaming ASUS ROG Azoth",
-    brand: "ASUS",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp9.png",
-    price: 4999000,
-    salebefore: 5499000,
-    baseprice: 4200000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Wireless / Wired"] }
-    ],
-    listColors: ["Đen"],
-    versions: [
-
-      {
-        id: "109-den-wireless",
-        color: "Đen",
-        price: 4999000,
-        stock: 22,
-        status: true,
-        sold: "40",
-        version: ["Wireless"]
-      },
-      {
-        id: "109-den-Wired",
-        color: "Đen",
-        price: 4999000,
-        stock: 22,
-        status: true,
-        sold: "40",
-        version: ["Wired"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp9/1.png",
-      "../user/assets/image/KeyBoard/sp9/2.png",
-      "../user/assets/image/KeyBoard/sp9/3.png",
-      "../user/assets/image/KeyBoard/sp9/4.png",
-      "../user/assets/image/KeyBoard/sp9/5.png",
-      "../user/assets/image/KeyBoard/sp9/6.png"
-    ],
-    infoDetail: {
-      "Loại switch": "ROG GX Switch / Optical",
-      "Kết nối": "Wireless / USB",
-      "LED": "Aura Sync RGB",
-      "Tính năng": "Hot-swap, NKRO, Onboard memory",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "ASUS ROG Azoth là bàn phím gaming cao cấp, hỗ trợ Aura Sync, hot-swap và kết nối đa dạng dành cho người chơi chuyên nghiệp."
-  },
-
-  {
-    id: "110",
-    name: "Combo bàn phím + chuột gaming Aula T102",
-    brand: "Aula",
-    category: "Bàn phím",
-    thumbnail: "../user/assets/image/KeyBoard/sp10.png",
-    price: 299000,
-    salebefore: 399000,
-    baseprice: 180000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Combo"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "110-den-combo",
-        color: "Đen",
-        price: 299000,
-        stock: 200,
-        status: true,
-        sold: "520",
-        version: ["Combo"]
-      },
-      {
-        id: "110-trang-combo",
-        color: "Trắng",
-        price: 299000,
-        stock: 200,
-        status: true,
-        sold: "520",
-        version: ["Combo"]
-      }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/KeyBoard/sp10/1.png",
-      "../user/assets/image/KeyBoard/sp10/2.png",
-      "../user/assets/image/KeyBoard/sp10/3.png",
-      "../user/assets/image/KeyBoard/sp10/4.png",
-      "../user/assets/image/KeyBoard/sp10/5.png",
-      "../user/assets/image/KeyBoard/sp10/6.png"
-    ],
-    infoDetail: {
-      "Loại switch": "Membrane (combo)",
-      "Kết nối": "USB",
-      "LED": "RGB",
-      "Tính năng": "Combo bàn phím + chuột gaming cơ bản",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Combo Aula T102 gồm bàn phím và chuột gaming với LED RGB, là lựa chọn tiết kiệm cho người mới chơi game."
-  },
-
-  {
-    id: "111",
-    name: "Chuột không dây Logitech MX Master 2S",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp1.png",
-    price: 1990000,
-    salebefore: 2490000,
-    baseprice: 1500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Không dây"] }
-    ],
-    listColors: ["Đen", "Xám"],
-    versions: [
-      {
-        id: "111-den-khongday",
-        color: "Đen",
-        price: 1990000,
-        stock: 50,
-        status: true,
-        sold: "320",
-        version: ["Không dây"]
-      },
-      {
-        id: "111-xam-khongday",
-        color: "Xám",
-        price: 1990000,
-        stock: 45,
-        status: true,
-        sold: "280",
-        version: ["Không dây"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp1/1.png",
-      "../user/assets/image/Mouse/sp1/2.png",
-      "../user/assets/image/Mouse/sp1/3.png",
-      "../user/assets/image/Mouse/sp1/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "Darkfield Laser",
-      "DPI": "200-4000",
-      "Kết nối": "Bluetooth và USB Unifying",
-      "Pin": "Sạc 500mAh, dùng 70 ngày",
-      "Nút bấm": "7 nút có thể tùy chỉnh",
-      "Tương thích": "Windows, macOS",
-      "Tính năng": "Flow cross-computer control, Gesture button",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Chuột không dây cao cấp Logitech MX Master 2S với cảm biến Darkfield chính xác trên mọi bề mặt, pin sạc dùng 70 ngày và khả năng điều khiển đa thiết bị Flow. Thiết kế công thái học cho cảm giác cầm thoải mái."
-  },
-
-  {
-    id: "112",
-    name: "Chuột gaming không dây Logitech G304 Lightspeed",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp2.png",
-    price: 790000,
-    salebefore: 990000,
-    baseprice: 600000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Không dây"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "112-den-khongday",
-        color: "Đen",
-        price: 790000,
-        stock: 100,
-        status: true,
-        sold: "2.5k",
-        version: ["Không dây"]
-      },
-      {
-        id: "112-trang-khongday",
-        color: "Trắng",
-        price: 790000,
-        stock: 80,
-        status: true,
-        sold: "1.8k",
-        version: ["Không dây"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp2/1.png",
-      "../user/assets/image/Mouse/sp2/2.png",
-      "../user/assets/image/Mouse/sp2/3.png",
-      "../user/assets/image/Mouse/sp2/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "HERO",
-      "DPI": "200-12000",
-      "Kết nối": "Lightspeed Wireless",
-      "Pin": "1 viên AA, dùng 250 giờ",
-      "Nút bấm": "6 nút có thể lập trình",
-      "Tần số phản hồi": "1ms",
-      "Trọng lượng": "99g",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Chuột gaming G304 với công nghệ không dây Lightspeed độ trễ 1ms, cảm biến HERO 12000 DPI và thời lượng pin ấn tượng 250 giờ. Thiết kế đơn giản nhưng hiệu năng cao cho game thủ."
-  },
-
-  {
-    id: "113",
-    name: "Chuột không dây Logitech Signature M650",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp3.png",
-    price: 590000,
-    salebefore: 690000,
-    baseprice: 450000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Size M"] }
-    ],
-    listColors: ["Đen", "Hồng", "Trắng"],
-    versions: [
-      {
-        id: "113-den-sizem",
-        color: "Đen",
-        price: 590000,
-        stock: 70,
-        status: true,
-        sold: "850",
-        version: ["Size M"]
-      },
-      {
-        id: "113-hong-sizem",
-        color: "Hồng",
-        price: 590000,
-        stock: 50,
-        status: true,
-        sold: "420",
-        version: ["Size M"]
-      },
-      {
-        id: "113-trang-sizem",
-        color: "Trắng",
-        price: 590000,
-        stock: 55,
-        status: true,
-        sold: "380",
-        version: ["Size M"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp3/1.png",
-      "../user/assets/image/Mouse/sp3/2.png",
-      "../user/assets/image/Mouse/sp3/3.png",
-      "../user/assets/image/Mouse/sp3/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "400-4000",
-      "Kết nối": "Bluetooth hoặc USB",
-      "Pin": "1 viên AA, dùng 24 tháng",
-      "Nút bấm": "5 nút (có SmartWheel)",
-      "Tương thích": "Windows, macOS, ChromeOS",
-      "Độ ồn": "Silent Touch, giảm 90% tiếng click",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Chuột Signature M650 với thiết kế thoải mái cỡ trung bình, cuộn SmartWheel và công nghệ Silent Touch giảm 90% tiếng click. Pin AA dùng đến 24 tháng, kết nối linh hoạt qua Bluetooth hoặc USB."
-  },
-
-  {
-    id: "114",
-    name: "Chuột gaming có dây Logitech G102 Lightsync",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp4.png",
-    price: 399000,
-    salebefore: 499000,
-    baseprice: 300000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Có dây"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "114-den-coday",
-        color: "Đen",
-        price: 399000,
-        stock: 200,
-        status: true,
-        sold: "15k",
-        version: ["Có dây"]
-      },
-      {
-        id: "114-trang-coday",
-        color: "Trắng",
-        price: 399000,
-        stock: 150,
-        status: true,
-        sold: "12k",
-        version: ["Có dây"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp4/1.png",
-      "../user/assets/image/Mouse/sp4/2.png",
-      "../user/assets/image/Mouse/sp4/3.png",
-      "../user/assets/image/Mouse/sp4/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "Mercury",
-      "DPI": "200-8000",
-      "Kết nối": "USB",
-      "LED": "RGB LIGHTSYNC",
-      "Nút bấm": "6 nút có thể lập trình",
-      "Tần số phản hồi": "1000Hz",
-      "Trọng lượng": "85g",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Chuột gaming G102 Lightsync là lựa chọn phổ biến với cảm biến Mercury 8000 DPI, 6 nút có thể lập trình và đèn RGB 16.8 triệu màu. Thiết kế nhẹ 85g cùng giá thành hợp lý cho game thủ."
-  },
-
-  {
-    id: "115",
-    name: "Chuột không dây Logitech MX Anywhere 3S",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp5.png",
-    price: 1790000,
-    salebefore: 1990000,
-    baseprice: 1400000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Không dây"] }
-    ],
-    listColors: ["Đen", "Xám", "Hồng"],
-    versions: [
-      {
-        id: "115-den-khongday",
-        color: "Đen",
-        price: 1790000,
-        stock: 40,
-        status: true,
-        sold: "280",
-        version: ["Không dây"]
-      },
-      {
-        id: "115-xam-khongday",
-        color: "Xám",
-        price: 1790000,
-        stock: 35,
-        status: true,
-        sold: "220",
-        version: ["Không dây"]
-      },
-      {
-        id: "115-hong-khongday",
-        color: "Hồng",
-        price: 1790000,
-        stock: 30,
-        status: true,
-        sold: "180",
-        version: ["Không dây"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp5/1.png",
-      "../user/assets/image/Mouse/sp5/2.png",
-      "../user/assets/image/Mouse/sp5/3.png",
-      "../user/assets/image/Mouse/sp5/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "Darkfield High Precision",
-      "DPI": "200-8000",
-      "Kết nối": "Bluetooth và USB Logi Bolt",
-      "Pin": "Sạc Type-C, dùng 70 ngày",
-      "Nút bấm": "6 nút có thể tùy chỉnh",
-      "Cuộn": "MagSpeed Electromagnetic",
-      "Tính năng": "Flow cross-computer control, Quiet Click",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "MX Anywhere 3S là chuột di động cao cấp với cảm biến 8K DPI, con lăn điện từ MagSpeed và công nghệ Quiet Click giảm 90% tiếng ồn. Kết nối đa thiết bị, pin sạc Type-C dùng 70 ngày."
-  },
-
-  {
-    id: "116",
-    name: "Chuột không dây Logitech M331",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp6.png",
-    price: 299000,
-    salebefore: 399000,
-    baseprice: 200000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Không dây"] }
-    ],
-    listColors: ["Đen", "Xám"],
-    versions: [
-      {
-        id: "116-den-khongday",
-        color: "Đen",
-        price: 299000,
-        stock: 150,
-        status: true,
-        sold: "5.2k",
-        version: ["Không dây"]
-      },
-      {
-        id: "116-xam-khongday",
-        color: "Xám",
-        price: 299000,
-        stock: 120,
-        status: true,
-        sold: "4.8k",
-        version: ["Không dây"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp6/1.png",
-      "../user/assets/image/Mouse/sp6/2.png",
-      "../user/assets/image/Mouse/sp6/3.png",
-      "../user/assets/image/Mouse/sp6/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "1000",
-      "Kết nối": "USB Nano receiver",
-      "Pin": "1 viên AA, dùng 24 tháng",
-      "Nút bấm": "3 nút",
-      "Độ ồn": "Silent Click",
-      "Tương thích": "Windows, macOS, Linux",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Chuột không dây M331 với thiết kế đơn giản, êm ái với công nghệ Silent Click. Pin AA dùng lâu đến 24 tháng, kết nối đơn giản qua USB nano receiver, phù hợp làm việc văn phòng."
-  },
-
-  {
-    id: "117",
-    name: "Chuột gaming Logitech Pro X Superlight 2",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp7.png",
-    price: 3290000,
-    salebefore: 3590000,
-    baseprice: 2800000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Lightspeed"] }
-    ],
-    listColors: ["Đen", "Hồng", "Trắng"],
-    versions: [
-      {
-        id: "117-den-lightspeed",
-        color: "Đen",
-        price: 3290000,
-        stock: 35,
-        status: true,
-        sold: "220",
-        version: ["Lightspeed"]
-      },
-      {
-        id: "117-hong-lightspeed",
-        color: "Hồng",
-        price: 3290000,
-        stock: 30,
-        status: true,
-        sold: "180",
-        version: ["Lightspeed"]
-      },
-      {
-        id: "117-trang-lightspeed",
-        color: "Trắng",
-        price: 3290000,
-        stock: 25,
-        status: true,
-        sold: "150",
-        version: ["Lightspeed"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp7/1.png",
-      "../user/assets/image/Mouse/sp7/2.png",
-      "../user/assets/image/Mouse/sp7/3.png",
-      "../user/assets/image/Mouse/sp7/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "HERO 25K",
-      "DPI": "100-25600",
-      "Kết nối": "Lightspeed Wireless",
-      "Pin": "Sạc USB-C, dùng 95 giờ",
-      "Nút bấm": "5 nút có thể lập trình",
-      "Tần số phản hồi": "2000Hz",
-      "Trọng lượng": "60g",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Pro X Superlight 2 là chuột gaming không dây siêu nhẹ 60g với cảm biến HERO 25K, tần số quét 2000Hz và công nghệ Lightspeed. Pin sạc USB-C dùng 95 giờ, thiết kế tối ưu cho game thủ chuyên nghiệp."
-  },
-
-  {
-    id: "118",
-    name: "Chuột không dây Logitech Signature M650 L",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp8.png",
-    price: 690000,
-    salebefore: 790000,
-    baseprice: 500000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Size L"] }
-    ],
-    listColors: ["Đen", "Xám"],
-    versions: [
-      {
-        id: "118-den-sizel",
-        color: "Đen",
-        price: 690000,
-        stock: 60,
-        status: true,
-        sold: "420",
-        version: ["Size L"]
-      },
-      {
-        id: "118-xam-sizel",
-        color: "Xám",
-        price: 690000,
-        stock: 55,
-        status: true,
-        sold: "380",
-        version: ["Size L"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp8/1.png",
-      "../user/assets/image/Mouse/sp8/2.png",
-      "../user/assets/image/Mouse/sp8/3.png",
-      "../user/assets/image/Mouse/sp8/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "400-4000",
-      "Kết nối": "Bluetooth hoặc USB",
-      "Pin": "1 viên AA, dùng 24 tháng",
-      "Nút bấm": "5 nút (có SmartWheel)",
-      "Tương thích": "Windows, macOS, ChromeOS",
-      "Kích thước": "Size L cho tay lớn",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Signature M650 L là phiên bản cỡ lớn dành cho người có bàn tay to, với thiết kế công thái học và công nghệ SmartWheel thông minh. Kết nối đa nền tảng, pin AA dùng 24 tháng."
-  },
-
-  {
-    id: "119",
-    name: "Chuột không dây Logitech MX Master 3S",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp9.png",
-    price: 2790000,
-    salebefore: 2990000,
-    baseprice: 2200000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Không dây"] }
-    ],
-    listColors: ["Đen", "Xám"],
-    versions: [
-      {
-        id: "119-den-khongday",
-        color: "Đen",
-        price: 2790000,
-        stock: 40,
-        status: true,
-        sold: "280",
-        version: ["Không dây"]
-      },
-      {
-        id: "119-xam-khongday",
-        color: "Xám",
-        price: 2790000,
-        stock: 35,
-        status: true,
-        sold: "240",
-        version: ["Không dây"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp9/1.png",
-      "../user/assets/image/Mouse/sp9/2.png",
-      "../user/assets/image/Mouse/sp9/3.png",
-      "../user/assets/image/Mouse/sp9/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "Darkfield 8K DPI",
-      "DPI": "200-8000",
-      "Kết nối": "Bluetooth và USB Logi Bolt",
-      "Pin": "Sạc Type-C, dùng 70 ngày",
-      "Nút bấm": "7 nút có thể tùy chỉnh",
-      "Cuộn": "MagSpeed Electromagnetic",
-      "Tính năng": "Flow, Quiet Click, Easy-Switch",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "MX Master 3S là phiên bản nâng cấp với cảm biến 8K DPI, công nghệ Quiet Click giảm 90% tiếng ồn và con lăn MagSpeed. Thiết kế công thái học cao cấp, đa kết nối với 3 thiết bị."
-  },
-
-  {
-    id: "120",
-    name: "Chuột không dây Logitech MX Master 4",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp10.png",
-    price: 3490000,
-    salebefore: 3990000,
-    baseprice: 2900000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Không dây"] }
-    ],
-    listColors: ["Đen", "Xám"],
-    versions: [
-      {
-        id: "120-den-khongday",
-        color: "Đen",
-        price: 3490000,
-        stock: 30,
-        status: true,
-        sold: "150",
-        version: ["Không dây"]
-      },
-      {
-        id: "120-xam-khongday",
-        color: "Xám",
-        price: 3490000,
-        stock: 25,
-        status: true,
-        sold: "120",
-        version: ["Không dây"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp10/1.png",
-      "../user/assets/image/Mouse/sp10/2.png",
-      "../user/assets/image/Mouse/sp10/3.png",
-      "../user/assets/image/Mouse/sp10/4.png",
-    ],
-    infoDetail: {
-      "Cảm biến": "Darkfield 8K DPI thế hệ mới",
-      "DPI": "200-8000",
-      "Kết nối": "Bluetooth và USB Logi Bolt",
-      "Pin": "Sạc Type-C nhanh, dùng 80 ngày",
-      "Nút bấm": "8 nút có thể tùy chỉnh",
-      "Cuộn": "MagSpeed Electromagnetic thế hệ 2",
-      "Tính năng": "Flow 2.0, Smart Actions, Gesture button",
-      "Bảo hành": "36 tháng"
-    },
-    overview: "MX Master 4 là phiên bản mới nhất với thiết kế tinh chỉnh, cảm biến nâng cấp và thêm nhiều tính năng thông minh. Sạc nhanh Type-C, pin dùng 80 ngày và hỗ trợ Smart Actions tự động hóa."
-  },
-
-  {
-    id: "121",
-    name: "Chuột không dây Rapoo 8000M (combo)",
-    brand: "Rapoo",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp11.png",
-    price: 450000,
-    salebefore: 590000,
-    baseprice: 300000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Combo"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      {
-        id: "121-den-combo",
-        color: "Đen",
-        price: 450000,
-        stock: 120,
-        status: true,
-        sold: "420",
-        version: ["Combo"]
-      },
-      {
-        id: "121-trang-combo",
-        color: "Trắng",
-        price: 450000,
-        stock: 120,
-        status: true,
-        sold: "420",
-        version: ["Combo"]
-      }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp11/1.png",
-      "../user/assets/image/Mouse/sp11/2.png",
-      "../user/assets/image/Mouse/sp11/3.png",
-      "../user/assets/image/Mouse/sp11/4.png"
-    ],
-    infoDetail: {
-      "Loại": "Combo bàn phím + chuột",
-      "Kết nối": "2.4GHz",
-      "Pin": "Chuột dùng pin AAA",
-      "Tính năng": "Tiết kiệm, dễ dùng",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Combo Rapoo 8000M gồm bàn phím và chuột không dây nhỏ gọn, phù hợp văn phòng và học tập."
-  },
-
-  {
-    id: "122",
-    name: "Chuột không dây Bluetooth Logitech Pebble M350s",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp12.png",
-    price: 349000,
-    salebefore: 429000,
-    baseprice: 220000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Bluetooth"] }
-    ],
-    listColors: ["Đen", "Trắng", "Xanh"],
-    versions: [
-      { id: "122-den-bluetooth", color: "Đen", price: 349000, stock: 140, status: true, sold: "1k", version: ["Bluetooth"] },
-      { id: "122-trang-bluetooth", color: "Trắng", price: 349000, stock: 80, status: true, sold: "700", version: ["Bluetooth"] },
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp12/1.png",
-      "../user/assets/image/Mouse/sp12/2.png",
-      "../user/assets/image/Mouse/sp12/3.png",
-      "../user/assets/image/Mouse/sp12/4.png"
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "1000",
-      "Kết nối": "Bluetooth",
-      "Pin": "2 x AAA, dùng lâu",
-      "Độ ồn": "Silent click",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Logitech Pebble M350s nhỏ gọn, thiết kế tối giản, kết nối Bluetooth ổn định, phù hợp cho người di chuyển và làm việc văn phòng."
-  },
-
-  {
-    id: "123",
-    name: "Chuột chơi game có dây Logitech G502 HERO",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp13.png",
-    price: 1290000,
-    salebefore: 1590000,
-    baseprice: 900000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Có dây"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      { id: "123-den-coday", color: "Đen", price: 1290000, stock: 60, status: true, sold: "2k", version: ["Có dây"] },
-      { id: "123-trang-coday", color: "Trắng", price: 1290000, stock: 60, status: true, sold: "2k", version: ["Có dây"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp13/1.png",
-      "../user/assets/image/Mouse/sp13/2.png",
-      "../user/assets/image/Mouse/sp13/3.png",
-      "../user/assets/image/Mouse/sp13/4.png"
-    ],
-    infoDetail: {
-      "Cảm biến": "HERO",
-      "DPI": "100-16000",
-      "Kết nối": "USB có dây",
-      "Nút bấm": "11 nút có thể lập trình",
-      "Trọng lượng": "121g (tùy chỉnh)",
-      "Bảo hành": "24 tháng"
-    },
-    overview: "Logitech G502 HERO là chuột gaming thịnh hành với cảm biến HERO chính xác, nhiều nút tùy chỉnh và trọng lượng có thể điều chỉnh phù hợp game thủ."
-  },
-
-  {
-    id: "124",
-    name: "Chuột Apple Magic Mouse 3",
-    brand: "Apple",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp14.png",
-    price: 2490000,
-    salebefore: 2690000,
-    baseprice: 2000000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Bluetooth"] }
-    ],
-    listColors: ["Trắng", "Đen"],
-    versions: [
-      { id: "124-trang-bluetooth", color: "Trắng", price: 2490000, stock: 30, status: true, sold: "320", version: ["Bluetooth"] },
-      { id: "124-den-bluetooth", color: "Đen", price: 2490000, stock: 30, status: true, sold: "320", version: ["Bluetooth"] }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp14/1.png",
-      "../user/assets/image/Mouse/sp14/2.png",
-      "../user/assets/image/Mouse/sp14/3.png",
-      "../user/assets/image/Mouse/sp14/4.png"
-    ],
-    infoDetail: {
-      "Loại": "Chuột cảm ứng đa điểm",
-      "Kết nối": "Bluetooth",
-      "Pin": "Sạc Lightning",
-      "Tương thích": "macOS, iPadOS",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Apple Magic Mouse 3 với thiết kế mỏng, bề mặt cảm ứng đa điểm và tinh tế, tối ưu cho người dùng Apple."
-  },
-
-  {
-    id: "125",
-    name: "Combo bàn phím + chuột không dây Logitech MK240",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp15.png",
-    price: 390000,
-    salebefore: 499000,
-    baseprice: 250000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Combo"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      { id: "125-den-combo", color: "Đen", price: 390000, stock: 180, status: true, sold: "1.5k", version: ["Combo"] },
-      { id: "125-trang-combo", color: "Trắng", price: 390000, stock: 180, status: true, sold: "1.5k", version: ["Combo"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp15/1.png",
-      "../user/assets/image/Mouse/sp15/2.png",
-      "../user/assets/image/Mouse/sp15/3.png",
-      "../user/assets/image/Mouse/sp15/4.png"
-    ],
-    infoDetail: {
-      "Loại": "Combo bàn phím + chuột",
-      "Kết nối": "2.4GHz USB receiver",
-      "Pin": "Chuột dùng pin AA",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Combo Logitech MK240 nhỏ gọn, đáng tin cậy cho văn phòng và học tập, kết nối qua USB receiver."
-  },
-
-  {
-    id: "126",
-    name: "Chuột không dây Dareu LM106G",
-    brand: "Dareu",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp16.png",
-    price: 399000,
-    salebefore: 499000,
-    baseprice: 250000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Không dây"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      { id: "126-den-khongday", color: "Đen", price: 399000, stock: 140, status: true, sold: "900", version: ["Không dây"] },
-      { id: "126-trang-khongday", color: "Trắng", price: 399000, stock: 140, status: true, sold: "900", version: ["Không dây"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp16/1.png",
-      "../user/assets/image/Mouse/sp16/2.png",
-      "../user/assets/image/Mouse/sp16/3.png",
-      "../user/assets/image/Mouse/sp16/4.png"
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "800-6400",
-      "Kết nối": "2.4GHz",
-      "Pin": "Sạc hoặc pin AAA",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Dareu LM106G là chuột không dây hiệu năng tốt trong tầm giá, phù hợp cho gaming nhẹ và sử dụng hàng ngày."
-  },
-
-  {
-    id: "127",
-    name: "Chuột không dây Bluetooth UGREEN Silent MU006",
-    brand: "UGREEN",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp17.png",
-    price: 299000,
-    salebefore: 399000,
-    baseprice: 180000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Bluetooth"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      { id: "127-den-bluetooth", color: "Đen", price: 299000, stock: 200, status: true, sold: "1.2k", version: ["Bluetooth"] },
-      { id: "127-trang-bluetooth", color: "Trắng", price: 299000, stock: 200, status: true, sold: "1.2k", version: ["Bluetooth"] }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp17/1.png",
-      "../user/assets/image/Mouse/sp17/2.png",
-      "../user/assets/image/Mouse/sp17/3.png",
-      "../user/assets/image/Mouse/sp17/4.png"
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "800-1600",
-      "Kết nối": "Bluetooth",
-      "Độ ồn": "Silent click",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "UGREEN MU006 là chuột Bluetooth yên tĩnh, thiết kế mảnh và tiện lợi cho văn phòng và học tập."
-  },
-
-  {
-    id: "128",
-    name: "Chuột có dây Logitech B100",
-    brand: "Logitech",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp18.png",
-    price: 129000,
-    salebefore: 179000,
-    baseprice: 80000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Có dây"] }
-    ],
-    listColors: ["Đen", "Trắng"],
-    versions: [
-      { id: "128-den-coday", color: "Đen", price: 129000, stock: 400, status: true, sold: "6k", version: ["Có dây"] },
-      { id: "128-trang-coday", color: "Trắng", price: 129000, stock: 400, status: true, sold: "6k", version: ["Có dây"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp18/1.png",
-      "../user/assets/image/Mouse/sp18/2.png",
-      "../user/assets/image/Mouse/sp18/3.png",
-      "../user/assets/image/Mouse/sp18/4.png"
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "800",
-      "Kết nối": "USB",
-      "Độ bền": "3 triệu click",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Logitech B100 là chuột có dây cơ bản, bền, dễ dùng cho văn phòng và máy tính phổ thông."
-  },
-
-  {
-    id: "129",
-    name: "Chuột không dây UGREEN Silent MU006 (Phiên bản 2)",
-    brand: "UGREEN",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp19.png",
-    price: 319000,
-    salebefore: 399000,
-    baseprice: 190000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Bluetooth / 2.4GHz"] }
-    ],
-    listColors: ["Trắng", "Đen"],
-    versions: [
-
-      { id: "129-trang-bluetooth", color: "Trắng", price: 319000, stock: 120, status: true, sold: "530", version: ["Bluetooth / 2.4GHz"] },
-      { id: "129-den-bluetooth", color: "Đen", price: 319000, stock: 120, status: true, sold: "530", version: ["Bluetooth / 2.4GHz"] }
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp19/1.png",
-      "../user/assets/image/Mouse/sp19/2.png",
-      "../user/assets/image/Mouse/sp19/3.png",
-      "../user/assets/image/Mouse/sp19/4.png"
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "1000",
-      "Kết nối": "Bluetooth / 2.4GHz",
-      "Độ ồn": "Silent click",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Phiên bản khác của UGREEN MU006 với tuỳ chọn kết nối 2.4GHz hoặc Bluetooth, phù hợp nhiều thiết bị."
-  },
-
-  {
-    id: "130",
-    name: "Chuột không dây Dareu LM115G",
-    brand: "Dareu",
-    category: "Chuột",
-    thumbnail: "../user/assets/image/Mouse/sp20.png",
-    price: 459000,
-    salebefore: 549000,
-    baseprice: 300000,
-    listVersions: [
-      { name: "Phiên bản", option: ["Không dây"] }
-    ],
-    listColors: ["Đen", "Xám"],
-    versions: [
-      { id: "130-den-khongday", color: "Đen", price: 459000, stock: 90, status: true, sold: "260", version: ["Không dây"] },
-      { id: "130-xam-khongday", color: "Xám", price: 459000, stock: 90, status: true, sold: "260", version: ["Không dây"] }
-
-    ],
-    imgDetail: [
-      "../user/assets/image/Mouse/sp20/1.png",
-      "../user/assets/image/Mouse/sp20/2.png",
-      "../user/assets/image/Mouse/sp20/3.png",
-      "../user/assets/image/Mouse/sp20/4.png"
-    ],
-    infoDetail: {
-      "Cảm biến": "Optical",
-      "DPI": "800-6400",
-      "Kết nối": "2.4GHz",
-      "Pin": "Sạc Type-C / AAA",
-      "Bảo hành": "12 tháng"
-    },
-    overview: "Dareu LM115G là chuột không dây đa dụng, thiết kế công thái học, phù hợp chơi game và làm việc."
-  }
-
 ];
 let listTaiKhoan = [
   {
     hoten: "hoang",
-    sdt: "0000000001",
+    sdt: "0000000002",
     mk: "hoang123",
     gmail: "tieubaobao@gmail.com",
     diachi: "hoa dong",
@@ -7023,10 +7315,9 @@ export function timPhienBanSanPham(id) {
   return null;
 }
 
-
 export function timSanPhamTheoTen(ten) {
   let listSanPham = getListSanPham();
-  let ketQua = listSanPham.filter(sanpham =>
+  let ketQua = listSanPham.filter((sanpham) =>
     sanpham.name.toLowerCase().includes(ten.toLowerCase())
   );
   return ketQua;
@@ -7034,12 +7325,14 @@ export function timSanPhamTheoTen(ten) {
 export function laySanPhamBangLuaChon(id, listpb, mau) {
   let sanpham = timSanPham(id);
   for (let sp of sanpham.versions) {
-    if (sp.color === mau && sp.version.length === listpb.length &&
-      sp.version.every((v, i) => v === listpb[i])) {
-      if (sp.stock <= 0) {
-        return;
+    if (
+      sp.color === mau &&
+      sp.version.length === listpb.length &&
+      sp.version.every((v, i) => v === listpb[i])
+    ) {
+      if (sp.stock <= 0 || sp.status === false) {
+        return null;
       }
-      sp.stock--;
       return sp;
     }
   }
@@ -7051,8 +7344,14 @@ export function setListSanPham(mangsp) {
 }
 
 export function getListSanPham() {
-  const data = JSON.parse(localStorage.getItem("listSanPham"));
-  return data || [];
+  let data = JSON.parse(localStorage.getItem("listSanPham"));
+
+  if (data) {
+    data = data.filter(sanpham => sanpham.status === true);
+  } else {
+    data = [];
+  }
+  return data;
 }
 
 export function getListTaiKhoan() {

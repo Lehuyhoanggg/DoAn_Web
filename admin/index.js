@@ -32,6 +32,7 @@ let StoreList = getStoreList();
 let categories = getCategoryList();
 let orderList = getOrderList();
 let profitList = getProfitList();
+
 // đăng nhâp
 if (localStorage.getItem("statusAdmin") !== "true") {
   window.location.href = "login.html";
@@ -206,6 +207,13 @@ const loadFilter = () => {
 // Render filter
 loadFilter();
 // Đồng bộ dữ liệu
+const findCategory = (c) => {
+  const checkCategory = profitList.find((e) => e.category === c);
+  if (checkCategory) {
+    return [checkCategory.profit, checkCategory.discount];
+  }
+  return [0, 0];
+};
 const mergeProduct = () => {
   const newMangSP = mangsp.map((e) => {
     if (e.versions?.length > 0) {
@@ -225,14 +233,8 @@ const mergeProduct = () => {
 
   setListSanPham(newMangSP);
 };
+mergeProduct();
 
-const findCategory = (c) => {
-  const checkCategory = profitList.find((e) => e.category === c);
-  if (checkCategory) {
-    return [checkCategory.profit, checkCategory.discount];
-  }
-  return [0, 0];
-};
 function homePage() {
   const money = orderList.reduce((acc, curr) => acc + curr.thanhtien, 0);
   const user = getListTaiKhoan().length;
@@ -243,7 +245,7 @@ function homePage() {
   document.querySelector(".home-info-list .numberUser").innerHTML = user;
   document.querySelector(".home-info-list .numberOrder").innerHTML = order;
 }
-// Trang sản phẩm
+
 function productPage() {
   const loadBtn = document.querySelector(".product-reload-btn");
   const createBtn = document.querySelector(".product-create-btn");
@@ -253,6 +255,10 @@ function productPage() {
 
   // Biến lưu search term
   let currentSearchTerm = "";
+  // Biến lưu category filter - lấy từ category "Tất cả"
+  const categoryList = getCategoryList();
+  const allCategory = categoryList.find((cat) => cat.label === "Tất cả");
+  let currentCategoryFilter = allCategory ? allCategory.label : "all";
 
   // Hàm tạo danh sách sản phẩm đã merge
   const createMergeListProduct = () => {
@@ -286,21 +292,35 @@ function productPage() {
     });
   };
 
-  // Hàm lọc sản phẩm theo search term
+  // Hàm lọc sản phẩm theo search term và category
   const filterProducts = (productList) => {
-    if (!currentSearchTerm.trim()) {
-      return productList;
+    let filtered = productList;
+
+    // Lọc theo category
+    const allCategoryLabel = allCategory ? allCategory.label : "all";
+    if (currentCategoryFilter && currentCategoryFilter !== allCategoryLabel) {
+      filtered = filtered.filter((product) => {
+        return (
+          product.category?.toLowerCase() ===
+          currentCategoryFilter.toLowerCase()
+        );
+      });
     }
 
-    const searchLower = currentSearchTerm.toLowerCase().trim();
-    return productList.filter((product) => {
-      return (
-        product.name?.toLowerCase().includes(searchLower) ||
-        product.brand?.toLowerCase().includes(searchLower) ||
-        product.category?.toLowerCase().includes(searchLower) ||
-        product.color?.toLowerCase().includes(searchLower)
-      );
-    });
+    // Lọc theo search term
+    if (currentSearchTerm.trim()) {
+      const searchLower = currentSearchTerm.toLowerCase().trim();
+      filtered = filtered.filter((product) => {
+        return (
+          product.name?.toLowerCase().includes(searchLower) ||
+          product.brand?.toLowerCase().includes(searchLower) ||
+          product.category?.toLowerCase().includes(searchLower) ||
+          product.color?.toLowerCase().includes(searchLower)
+        );
+      });
+    }
+
+    return filtered;
   };
 
   // Hàm render sản phẩm
@@ -326,8 +346,10 @@ function productPage() {
                 <td>${e.color}</td>
                 <td>${e.vI === -1 ? "-" : e.storage || "-"}</td>
                 <td>${e.vI === -1 ? "-" : e.ram || "-"}</td>
-                <td>${e.priceBase.toLocaleString("vi-VN")}</td>
-                <td>${e.price.toLocaleString("vi-VN")}</td>
+                <td>${
+                  e.priceBase ? e.priceBase.toLocaleString("vi-VN") : "-"
+                }</td>
+                <td>${e.price ? e.price.toLocaleString("vi-VN") : "-"}</td>
                 <td>
                     <label class="toggle-wrapper">
                       <input type="checkbox" ${e.status ? "checked" : ""} 
@@ -387,13 +409,9 @@ function productPage() {
     // Status Btn
     const statusBtn = document.querySelectorAll(".toggle-wrapper input");
     statusBtn.forEach((e) => {
-      // Xóa event listener cũ nếu có
-      const newBtn = e.cloneNode(true);
-      e.parentNode.replaceChild(newBtn, e);
-
-      newBtn.addEventListener("click", () => {
-        const pI = Number(newBtn.getAttribute("data-productIndex"));
-        const vI = Number(newBtn.getAttribute("data-versionIndex"));
+      e.addEventListener("click", () => {
+        const pI = Number(e.getAttribute("data-productIndex"));
+        const vI = Number(e.getAttribute("data-versionIndex"));
         const product = mangsp[pI];
         product.versions[vI].status = !product.versions[vI].status;
         setListSanPham(mangsp);
@@ -408,7 +426,42 @@ function productPage() {
   const searchBtn = document.querySelector(
     ".product-wrapper .product-search-btn"
   );
+  const categoryFilter = document.querySelector("#product-filter");
 
+  // Populate category dropdown
+  const populateCategoryFilter = () => {
+    if (!categoryFilter) return;
+
+    const categoryList = getCategoryList();
+    categoryFilter.innerHTML = "";
+
+    // Thêm category "Tất cả" đầu tiên
+    const allCategoryOption = document.createElement("option");
+    allCategoryOption.value = allCategory ? allCategory.label : "all";
+    allCategoryOption.textContent = allCategory ? allCategory.label : "Tất cả";
+    categoryFilter.appendChild(allCategoryOption);
+
+    // Thêm các category khác
+    categoryList.forEach((category) => {
+      if (category.status && category.label !== "Tất cả") {
+        const option = document.createElement("option");
+        option.value = category.label;
+        option.textContent = category.label;
+        categoryFilter.appendChild(option);
+      }
+    });
+  };
+
+  // Event listener cho category filter
+  if (categoryFilter) {
+    categoryFilter.addEventListener("change", (e) => {
+      currentCategoryFilter = e.target.value;
+      renderItem();
+    });
+  }
+
+  // Populate và render
+  populateCategoryFilter();
   renderItem();
 
   // Reload btn
@@ -418,8 +471,14 @@ function productPage() {
     if (searchInput) {
       searchInput.value = "";
     }
+    // Reset category filter
+    currentCategoryFilter = allCategory ? allCategory.label : "all";
+    if (categoryFilter) {
+      categoryFilter.value = currentCategoryFilter;
+    }
     renderItem();
   });
+  let oldID = 164;
 
   // Create Btn
   createBtn.addEventListener("click", () => {
@@ -444,6 +503,11 @@ function productPage() {
 
             <label for="categories">Danh mục sản phẩm</label>
             <select name="categories" id="product-filter"></select>
+
+            <label for="img">Danh mục sản phẩm</label>
+            <input type="file" name="img" >
+
+            <img src="" class="preview" style="width: 200px "/>
 
             <div class="dynamic-form">
               <label>Thông tin chi tiết sản phẩm</label>
@@ -488,6 +552,19 @@ function productPage() {
         e.target.parentElement.remove();
       }
     });
+    // Xử lí hình ảnh
+    const inputImg = modal.querySelector("input[type='file']");
+    const preview = modal.querySelector("img");
+    inputImg.addEventListener("change", () => {
+      const file = inputImg.files[0];
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const base64 = e.target.result;
+        preview.src = base64;
+        localStorage.setItem("myImg", base64);
+      };
+      reader.readAsDataURL(file);
+    });
 
     // Handle create product
     const handleSubmit = () => {
@@ -497,7 +574,9 @@ function productPage() {
         document.querySelector("[name='price']").value.trim()
       );
       const color = document.querySelector("[name='color']").value.trim();
-      const category = document.querySelector("[name='categories']").value;
+      const category =
+        document.querySelector("[name='categories']").value || "";
+      const thumbnail = localStorage.getItem("myImg");
 
       if (!name || !brand || !priceBase || !color) {
         alert("Vui lòng nhập đầy đủ thông tin sản phẩm!");
@@ -525,7 +604,7 @@ function productPage() {
         } else if (key === "storage") {
           storage = value;
         } else if (key === "stock") {
-          stock = Number(value) || 0;
+          stock = value;
         } else if (key === "sold") {
           sold = Number(value) || 0;
         } else if (key === "rating") {
@@ -538,13 +617,18 @@ function productPage() {
       let product = mangsp.find((p) => p.name === name);
       if (!product) {
         product = {
+          id: (++oldID).toString(),
           name,
           brand,
+          thumbnail,
+          salebefore: parseInt(priceBase * 1.1),
+          baseprice: priceBase,
+          price: priceBase,
           category,
-          originCategory: category,
           status: true,
           versions: [],
           infoDetail: {},
+          imgDetail: [thumbnail],
         };
         mangsp.push(product);
       }
@@ -561,12 +645,12 @@ function productPage() {
         let storageCheck = product.versions.find(
           (v) => (v.version[1] || "") === storage
         );
-        let colorCheck = version.colors.find(
+        let colorCheck = product.versions.find(
           (c) => c.color.toLowerCase() === color.toLowerCase()
         );
-        if (ramCheck || storageCheck || colorCheck) {
+        if (!ramCheck || !storageCheck || !colorCheck) {
           const data = {
-            // id: `${product.id}-${ram.slice(0, -2)}-${storage.slice(0, -2)}`,
+            id: `${oldID}-${color}-${ram.slice(0, -2)}-${storage.slice(0, -2)}`,
             color,
             priceBase,
             price: priceBase,
@@ -583,7 +667,7 @@ function productPage() {
         );
         if (!colorCheck) {
           colorCheck = {
-            // id: `${product.id}-${color.trim().replace(/\s+/g, "")}`,
+            id: `${oldID}-${color.trim().replace(/\s+/g, "")}`,
             color,
             priceBase,
             price: priceBase,
@@ -631,7 +715,7 @@ function productPage() {
             <button class="createModal-close-btn"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="product-detail-modal-body">
-            <img src=${product.img || ""} alt="img">
+            <img src=${product.thumbnail || ""} alt="img">
             <div class="product-detail-modal-info">
               <span><b>Tên sản phẩm: </b><input value="${
                 product.name
@@ -791,7 +875,7 @@ function productPage() {
 function userPage() {
   initialTaiKhoan();
   const modal = document.querySelector(".modal");
-  if (!modal) return; // Bảo vệ khỏi null pointer
+  if (!modal) return;
 
   // Lấy danh sách user từ localStorage
   let getListUser;
@@ -808,8 +892,8 @@ function userPage() {
   // Render users
   userTable.innerHTML = getListUser
     .map((user, index) => {
-      if (index !== 0) {
-        return `
+      // if (index !== 0) {hh
+      return `
           <tr>
             <td>${user.hoten}</td>
             <td>${user.gmail}</td>
@@ -825,7 +909,6 @@ function userPage() {
             <td><button class="product-delete-btn"><i class="fa-solid fa-trash"></i></button></td>
           </tr>
         `;
-      }
     })
     .join("");
 
@@ -835,7 +918,7 @@ function userPage() {
     .forEach((btn, index) => {
       let getListUser = JSON.parse(localStorage.getItem("listTaiKhoan")) || [];
       btn.addEventListener("click", () => {
-        const user = getListUser[index + 1];
+        const user = getListUser[index];
         if (!user) return; // Bảo vệ khỏi null user
 
         modal.style.display = "block";
@@ -883,7 +966,7 @@ function userPage() {
             const newData = {};
             inputs.forEach((ip) => (newData[ip.name] = ip.value));
 
-            getListUser[index + 1] = { ...user, ...newData };
+            getListUser[index] = { ...user, ...newData };
             localStorage.setItem("listTaiKhoan", JSON.stringify(getListUser));
             modal.style.display = "none";
             userPage();
@@ -913,8 +996,8 @@ function userPage() {
       ip.addEventListener("change", () => {
         let getListUser =
           JSON.parse(localStorage.getItem("listTaiKhoan")) || [];
-        const user = getListUser[index + 1];
-        if (!user) return; // Bảo vệ khỏi null user
+        const user = getListUser[index];
+        if (!user) return;
         user.status = !!ip.checked;
         localStorage.setItem("listTaiKhoan", JSON.stringify(getListUser));
         userPage();
@@ -925,30 +1008,328 @@ function storePage() {
   StoreList = getStoreList();
   const storeTable = document.querySelector("#store-content tbody");
 
-  storeTable.innerHTML = (StoreList || [])
-    .map((e) => {
-      if (!e || !e.products || !Array.isArray(e.products)) return "";
-      const total = e.products.reduce(
-        (acc, curr) => acc + (curr.priceProduct || 0) * (curr.stock || 0),
-        0
-      );
+  // Hàm render danh sách phiếu nhập hàng
+  const renderStoreList = (storeListToRender) => {
+    storeTable.innerHTML = (storeListToRender || [])
+      .map((e) => {
+        if (!e || !e.products || !Array.isArray(e.products)) return "";
+        const total = e.products.reduce(
+          (acc, curr) => acc + (curr.priceProduct || 0) * curr.stock,
+          0
+        );
 
-      // Kiểm tra xem tất cả sản phẩm đã checked chưa
-      const allChecked =
-        e.products.length > 0 &&
-        e.products.every((product) => product.status === true);
-      const status = allChecked ? "Đã hoàn thành" : "Chưa xác nhận";
-      return `
-      <tr>
-        <td>${e.date}</td>
-        <td>${total.toLocaleString("vi-VN")}</td>
-        <td>${status}</td>
-        <td><button class="product-detail-btn"><i class="fa-solid fa-eye"></i></button></td>
-        <td><button class="product-delete-btn"><i class="fa-solid fa-trash"></i></button></td>
-      </tr>
+        // Kiểm tra xem tất cả sản phẩm đã checked chưa
+        const allChecked =
+          e.products.length > 0 &&
+          e.products.every((product) => product.status === true);
+        const status = allChecked ? "Đã hoàn thành" : "Chưa xác nhận";
+        return `
+        <tr>
+          <td>${e.date}</td>
+          <td>${total.toLocaleString("vi-VN")}</td>
+          <td>${status}</td>
+          <td><button class="product-detail-btn"><i class="fa-solid fa-eye"></i></button></td>
+          <td><button class="product-delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+      `;
+      })
+      .join("");
+
+    // Gắn lại event listener cho các button sau khi render
+    attachStoreEventListeners();
+  };
+
+  // Hàm gắn event listener cho các button
+  const attachStoreEventListeners = () => {
+    // Xử lí detail
+    document
+      .querySelectorAll(".store-wrapper .product-detail-btn")
+      .forEach((btn, index) => {
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+        newBtn.addEventListener("click", () => {
+          showStoreDetailModal(index);
+        });
+      });
+
+    // Xử lí delete
+    document
+      .querySelectorAll(".store-wrapper .product-delete-btn")
+      .forEach((btn, index) => {
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+        newBtn.addEventListener("click", () => {
+          if (confirm("Bạn có chắc chắn muốn xóa hóa đơn này?")) {
+            if (StoreList && StoreList[index]) {
+              StoreList.splice(index, 1);
+              setStoreList(StoreList);
+              storePage();
+            }
+          }
+        });
+      });
+  };
+
+  // Hàm hiển thị modal chi tiết
+  const showStoreDetailModal = (index) => {
+    const pI = index;
+    const modal = document.querySelector(".modal");
+    modal.style.display = "block";
+    modal.innerHTML = `
+      <div class="createModal">
+        <div class="createModal-header">
+          <span class="createModal-title">Thông tin khách hàng</span>
+          <button class="createModal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="createModal-body">
+          <table class="detail-store-table">
+            <thead>
+              <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Trạng thái</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="product-tbody"></tbody>
+          </table>
+        </div>
+
+        <div class="createModal-footer">
+          <button class="createModal-accept-btn">Xác nhận</button>
+        </div>
+      </div>
     `;
-    })
-    .join("");
+
+    document
+      .querySelector(".createModal-close-btn")
+      .addEventListener("click", () => (modal.style.display = "none"));
+
+    const tbody = document.querySelector(".detail-store-table tbody");
+    if (!tbody || !StoreList[index] || !StoreList[index].products) return;
+
+    tbody.innerHTML = StoreList[index].products
+      .map(
+        (e, productIndex) => `
+      <tr>
+        <td>
+          ${e.nameProduct || ""} 
+          ${e.ramProduct ? " - " + e.ramProduct : ""} 
+          ${e.storageProduct ? " - " + e.storageProduct : ""} 
+          ${e.colorProduct ? " - " + e.colorProduct : ""}
+        </td>
+        <td><input type="number" value="${
+          e.stock
+        }" class="stock" data-product-index="${productIndex}" ${
+          e.status ? "disabled" : ""
+        }/></td>
+        <td>
+          <label class="toggle-wrapper">
+            <input type="checkbox" ${
+              e.status ? "checked disabled" : ""
+            } data-product-index="${productIndex}"/>
+            <span class="slider"></span>
+          </label>
+        </td>
+        <td><button class="product-delete-btn" data-product-index="${productIndex}" ${
+          e.status ? "disabled" : ""
+        }><i class="fa-solid fa-trash"></i></button></td>
+      </tr>
+    `
+      )
+      .join("");
+
+    // Xử lý thay đổi stock (chỉ khi chưa checked)
+    tbody.querySelectorAll("input[type='number'].stock").forEach((input) => {
+      input.addEventListener("change", (e) => {
+        if (e.target.disabled) return;
+        const productIndex = Number(
+          e.target.getAttribute("data-product-index")
+        );
+        if (
+          StoreList[pI] &&
+          StoreList[pI].products &&
+          StoreList[pI].products[productIndex]
+        ) {
+          StoreList[pI].products[productIndex].stock =
+            Number(e.target.value) || 0;
+        }
+      });
+    });
+
+    // Xử lý thay đổi status
+    tbody.querySelectorAll("input[type='checkbox']").forEach((checkbox) => {
+      if (checkbox.checked) {
+        checkbox.disabled = true;
+      }
+
+      checkbox.addEventListener("change", (e) => {
+        const productIndex = Number(
+          e.target.getAttribute("data-product-index")
+        );
+        if (
+          StoreList[pI] &&
+          StoreList[pI].products &&
+          StoreList[pI].products[productIndex]
+        ) {
+          const currentStatus = StoreList[pI].products[productIndex].status;
+          if (currentStatus && !e.target.checked) {
+            e.target.checked = true;
+            alert(
+              "Không thể tắt trạng thái xác nhận! Sản phẩm đã được xác nhận nhập hàng."
+            );
+            return;
+          }
+
+          const isChecked = e.target.checked;
+
+          if (isChecked) {
+            checkbox.disabled = true;
+
+            const storeProduct = StoreList[pI].products[productIndex];
+            const stockToAdd = storeProduct.stock;
+
+            const productInMangsp = mangsp.find(
+              (p) => p.name === storeProduct.nameProduct
+            );
+
+            if (productInMangsp && productInMangsp.versions) {
+              const matchingVersion = productInMangsp.versions.find(
+                (version) => {
+                  const colorMatch =
+                    version.color === storeProduct.colorProduct;
+
+                  if (version.version && version.version.length === 2) {
+                    const ramMatch =
+                      !storeProduct.ramProduct ||
+                      version.version[0] === storeProduct.ramProduct;
+                    const storageMatch =
+                      !storeProduct.storageProduct ||
+                      version.version[1] === storeProduct.storageProduct;
+                    return colorMatch && ramMatch && storageMatch;
+                  } else {
+                    return colorMatch;
+                  }
+                }
+              );
+
+              if (matchingVersion) {
+                matchingVersion.stock =
+                  (matchingVersion.stock || 0) + stockToAdd;
+                setListSanPham(mangsp);
+              }
+            }
+          }
+
+          StoreList[pI].products[productIndex].status = isChecked;
+          setStoreList(StoreList);
+
+          const updatedStoreList = getStoreList();
+          StoreList.length = 0;
+          StoreList.push(...updatedStoreList);
+
+          const stockInput = tbody.querySelector(
+            `input.stock[data-product-index="${productIndex}"]`
+          );
+          const deleteBtn = tbody.querySelector(
+            `button.product-delete-btn[data-product-index="${productIndex}"]`
+          );
+
+          if (stockInput) {
+            stockInput.disabled = isChecked;
+          }
+          if (deleteBtn) {
+            deleteBtn.disabled = isChecked;
+          }
+
+          const allChecked =
+            StoreList[pI] &&
+            StoreList[pI].products.length > 0 &&
+            StoreList[pI].products.every((product) => product.status === true);
+
+          if (allChecked) {
+            setTimeout(() => {
+              storePage();
+              setTimeout(() => {
+                const detailBtns = document.querySelectorAll(
+                  ".store-wrapper .product-detail-btn"
+                );
+                if (detailBtns[pI]) {
+                  detailBtns[pI].click();
+                }
+              }, 50);
+            }, 100);
+          }
+        }
+      });
+
+      checkbox.addEventListener("click", (e) => {
+        if (e.target.disabled) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      });
+    });
+
+    // Xử lý xóa sản phẩm
+    tbody.querySelectorAll(".product-delete-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        if (btn.disabled) {
+          alert("Không thể xóa sản phẩm đã được xác nhận!");
+          return;
+        }
+
+        const productIndex = Number(btn.getAttribute("data-product-index"));
+        if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi hóa đơn?")) {
+          if (
+            StoreList[pI] &&
+            StoreList[pI].products &&
+            StoreList[pI].products[productIndex]
+          ) {
+            StoreList[pI].products.splice(productIndex, 1);
+
+            if (StoreList[pI].products.length === 0) {
+              StoreList.splice(pI, 1);
+              setStoreList(StoreList);
+              modal.style.display = "none";
+              storePage();
+              return;
+            }
+
+            setStoreList(StoreList);
+            const updatedStoreList = getStoreList();
+            StoreList.length = 0;
+            StoreList.push(...updatedStoreList);
+            setTimeout(() => {
+              const detailBtns = document.querySelectorAll(
+                ".store-wrapper .product-detail-btn"
+              );
+              if (detailBtns[pI]) {
+                detailBtns[pI].click();
+              }
+            }, 100);
+          }
+        }
+      });
+    });
+
+    // Xử lý submit
+    const acceptBtn = modal.querySelector(".createModal-accept-btn");
+    if (acceptBtn) {
+      acceptBtn.addEventListener("click", () => {
+        setStoreList(StoreList);
+        modal.style.display = "none";
+        storePage();
+      });
+    }
+  };
+
+  // Render lần đầu
+  renderStoreList(StoreList);
 
   // tạo phiếu nhập hàng
   const createStoreBtn = document.querySelector(
@@ -1293,7 +1674,7 @@ function storePage() {
           return;
         }
 
-        if (!stockInput || !stockInput.value || Number(stockInput.value) <= 0) {
+        if (!stockInput || !stockInput.value || stockInput.value <= 0) {
           alert("Vui lòng nhập số lượng hợp lệ!");
           return;
         }
@@ -1309,7 +1690,7 @@ function storePage() {
             : "";
         const priceProduct = Number(priceInput.value);
         const colorProduct = colorSelect.value;
-        const stock = Number(stockInput.value) || 0;
+        const stock = stockInput.value;
 
         if (priceProduct <= 0) {
           alert("Giá sản phẩm phải lớn hơn 0!");
@@ -1326,8 +1707,26 @@ function storePage() {
           const originalProductIndex = mangsp.findIndex(
             (p) => p.name === nameProduct
           );
-          const originalProduct =
-            originalProductIndex >= 0 ? mangsp[originalProductIndex] : null;
+
+          // Kiểm tra sản phẩm có tồn tại không
+          if (originalProductIndex < 0) {
+            console.warn(
+              `Sản phẩm "${nameProduct}" không tìm thấy trong mangsanpham`
+            );
+            return;
+          }
+
+          const originalProduct = mangsp[originalProductIndex];
+
+          // Kiểm tra sản phẩm có versions không
+          if (
+            !originalProduct.versions ||
+            originalProduct.versions.length === 0
+          ) {
+            console.warn(`Sản phẩm "${nameProduct}" không có versions`);
+            return;
+          }
+
           let options = {
             ram: [],
             storage: [],
@@ -1336,51 +1735,47 @@ function storePage() {
           let listColors = [];
           let listVersions = [];
 
-          if (originalProduct.versions[0].version.length == 2) {
-            // Kiểm tra sản phẩm có versions hay không
-            if (
-              originalProduct.versions &&
-              originalProduct.versions.length > 0
-            ) {
-              // Sản phẩm có versions - lấy tất cả RAM và Storage
-              const allRam = [
-                ...new Set(
-                  originalProduct.versions
-                    .map((v) => v.version[0])
-                    .filter(Boolean)
-                ),
-              ];
-              const allStorage = [
-                ...new Set(
-                  originalProduct.versions
-                    .map((v) => v.version[1])
-                    .filter(Boolean)
-                ),
-              ];
+          // Kiểm tra version đầu tiên có đủ 2 phần tử không (RAM và Storage)
+          const firstVersion = originalProduct.versions[0];
+          if (
+            firstVersion &&
+            firstVersion.version &&
+            firstVersion.version.length === 2
+          ) {
+            // Sản phẩm có versions với RAM và Storage - lấy tất cả RAM và Storage
+            const allRam = [
+              ...new Set(
+                originalProduct.versions
+                  .map((v) => v.version && v.version[0])
+                  .filter(Boolean)
+              ),
+            ];
+            const allStorage = [
+              ...new Set(
+                originalProduct.versions
+                  .map((v) => v.version && v.version[1])
+                  .filter(Boolean)
+              ),
+            ];
 
-              // Lấy tất cả colors từ tất cả versions
-              const allColors = [];
-              originalProduct.versions.forEach((version) => {
-                if (version.color && !allColors.includes(version.color)) {
-                  allColors.push(version.color);
-                }
-              });
+            // Lấy tất cả colors từ tất cả versions
+            const allColors = [];
+            originalProduct.versions.forEach((version) => {
+              if (version.color && !allColors.includes(version.color)) {
+                allColors.push(version.color);
+              }
+            });
 
-              options.ram = allRam;
-              options.storage = allStorage;
-              options.listColor = allColors;
-              const listVersionProduct = [
-                { name: "ram", option: options.ram },
-                { name: "dung lượng", option: options.storage },
-              ];
-              const listColorProduct = options.listColor;
-              listColors = listColorProduct;
-              listVersions = listVersionProduct;
-            }
-
-            // Cập nhật options vào sản phẩm trong mangsanpham
-
-            setListSanPham(mangsp);
+            options.ram = allRam;
+            options.storage = allStorage;
+            options.listColor = allColors;
+            const listVersionProduct = [
+              { name: "ram", option: options.ram },
+              { name: "dung lượng", option: options.storage },
+            ];
+            const listColorProduct = options.listColor;
+            listColors = listColorProduct;
+            listVersions = listVersionProduct;
           } else {
             // Sản phẩm đơn giản - chỉ có colors
             listColors = originalProduct.versions
@@ -1388,10 +1783,13 @@ function storePage() {
               .filter(Boolean);
           }
 
+          // Cập nhật options vào sản phẩm trong mangsanpham
           mangsp[originalProductIndex].listColors = listColors;
           mangsp[originalProductIndex].listVersions = listVersions;
+
+          // Lưu lại mangsanpham vào localStorage
+          setListSanPham(mangsp);
         };
-        // Lưu lại mangsanpham vào localStorage bằng hàm setListSanPham
 
         addListToProduct();
 
@@ -1402,7 +1800,7 @@ function storePage() {
           nameProduct,
           ramProduct,
           storageProduct,
-          stock: stock.toString(),
+          stock: Number(stock),
           colorProduct,
           priceProduct: priceProduct.toString(),
           status: false, // Mặc định chưa xác nhận
@@ -1422,7 +1820,7 @@ function storePage() {
           );
 
           if (isExist) {
-            isExist.stock = (Number(isExist.stock) + stock).toString();
+            isExist.stock = (isExist.stock + stock).toString();
             setStoreList(StoreList);
             closeModal();
             storePage();
@@ -1440,350 +1838,160 @@ function storePage() {
       });
     }
   });
-  // Xử lí detail
-  document
-    .querySelectorAll(".store-wrapper .product-detail-btn")
-    .forEach((btn, index) => {
-      btn.addEventListener("click", () => {
-        const pI = index;
-        modal.style.display = "block";
-        modal.innerHTML = `
-      <div class="createModal">
-        <div class="createModal-header">
-          <span class="createModal-title">Thông tin khách hàng</span>
-          <button class="createModal-close-btn"><i class="fa-solid fa-xmark"></i></button>
-        </div>
 
-        <div class="createModal-body">
-          <table class="detail-store-table">
-            <thead>
-              <tr>
-                <th>Sản phẩm</th>
-                <th>Số lượng</th>
-                <th>Trạng thái</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody class="product-tbody"></tbody>
-          </table>
-        </div>
+  // Hàm parse date từ format "dd/mm/yyyy" sang "yyyy-mm-dd" để so sánh
+  const parseDate = (dateStr) => {
+    if (!dateStr) return null;
+    // Nếu đã ở định dạng "yyyy-mm-dd" thì trả về luôn
+    if (dateStr.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      return dateStr;
+    }
+    // Nếu ở định dạng "dd/mm/yyyy" thì chuyển đổi
+    if (dateStr.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
+      const [d, m, y] = dateStr.split("/");
+      return `${y}-${m}-${d}`;
+    }
+    return null;
+  };
 
-        <div class="createModal-footer">
-          <button class="createModal-accept-btn">Xác nhận</button>
-        </div>
-      </div>
-    `;
+  // Hàm kiểm tra date có trong khoảng thời gian không
+  const isDateInRange = (storeDate, fromDate, toDate) => {
+    if (!storeDate) return false;
+    const parsedStoreDate = parseDate(storeDate);
+    if (!parsedStoreDate) return false;
 
-        document
-          .querySelector(".createModal-close-btn")
-          .addEventListener("click", () => (modal.style.display = "none"));
+    if (fromDate && parsedStoreDate < fromDate) return false;
+    if (toDate && parsedStoreDate > toDate) return false;
+    return true;
+  };
 
-        const tbody = document.querySelector(".detail-store-table tbody");
-        if (!tbody || !StoreList[index] || !StoreList[index].products) return;
+  // Biến lưu filter hiện tại
+  let currentStatusFilter = "all";
+  let currentFromDate = null;
+  let currentToDate = null;
 
-        tbody.innerHTML = StoreList[index].products
-          .map(
-            (e, productIndex) => `
-      <tr>
-        <td>
-          ${e.nameProduct || ""} 
-          ${e.ramProduct ? " - " + e.ramProduct : ""} 
-          ${e.storageProduct ? " - " + e.storageProduct : ""} 
-          ${e.colorProduct ? " - " + e.colorProduct : ""}
-        </td>
-        <td><input type="number" value="${
-          e.stock || 0
-        }" class="stock" data-product-index="${productIndex}" ${
-              e.status ? "disabled" : ""
-            }/></td>
-        <td>
-          <label class="toggle-wrapper">
-            <input type="checkbox" ${
-              e.status ? "checked disabled" : ""
-            } data-product-index="${productIndex}"/>
-            <span class="slider"></span>
-          </label>
-        </td>
-        <td><button class="product-delete-btn" data-product-index="${productIndex}" ${
-              e.status ? "disabled" : ""
-            }><i class="fa-solid fa-trash"></i></button></td>
-      </tr>
-    `
-          )
-          .join("");
+  // Hàm áp dụng tất cả filter
+  const applyAllFilters = () => {
+    let filtered = StoreList;
 
-        // Xử lý thay đổi stock (chỉ khi chưa checked)
-        tbody
-          .querySelectorAll("input[type='number'].stock")
-          .forEach((input) => {
-            input.addEventListener("change", (e) => {
-              if (e.target.disabled) return; // Không cho phép thay đổi nếu đã disabled
-              const productIndex = Number(
-                e.target.getAttribute("data-product-index")
-              );
-              if (
-                StoreList[pI] &&
-                StoreList[pI].products &&
-                StoreList[pI].products[productIndex]
-              ) {
-                StoreList[pI].products[productIndex].stock =
-                  Number(e.target.value) || 0;
-              }
-            });
-          });
-
-        // Xử lý thay đổi status - enable/disable stock và delete button
-        // Lưu ý: Khi đã checked thì không thể uncheck nữa
-        tbody.querySelectorAll("input[type='checkbox']").forEach((checkbox) => {
-          // Kiểm tra nếu đã checked thì disable checkbox luôn
-          if (checkbox.checked) {
-            checkbox.disabled = true;
-          }
-
-          checkbox.addEventListener("change", (e) => {
-            const productIndex = Number(
-              e.target.getAttribute("data-product-index")
-            );
-            if (
-              StoreList[pI] &&
-              StoreList[pI].products &&
-              StoreList[pI].products[productIndex]
-            ) {
-              // Kiểm tra nếu đang cố uncheck một sản phẩm đã checked trước đó
-              const currentStatus = StoreList[pI].products[productIndex].status;
-              if (currentStatus && !e.target.checked) {
-                // Không cho phép uncheck nếu đã checked
-                e.target.checked = true;
-                alert(
-                  "Không thể tắt trạng thái xác nhận! Sản phẩm đã được xác nhận nhập hàng."
-                );
-                return;
-              }
-
-              const isChecked = e.target.checked;
-
-              // Nếu đang check (từ false -> true), disable checkbox luôn để không thể uncheck
-              if (isChecked) {
-                checkbox.disabled = true;
-
-                // Lấy thông tin sản phẩm từ StoreList
-                const storeProduct = StoreList[pI].products[productIndex];
-                const stockToAdd = Number(storeProduct.stock) || 0;
-
-                // Tìm sản phẩm trong mangsp
-                const productInMangsp = mangsp.find(
-                  (p) => p.name === storeProduct.nameProduct
-                );
-
-                if (productInMangsp && productInMangsp.versions) {
-                  // Tìm version tương ứng dựa trên ram, storage, color
-                  const matchingVersion = productInMangsp.versions.find(
-                    (version) => {
-                      // Kiểm tra color
-                      const colorMatch =
-                        version.color === storeProduct.colorProduct;
-
-                      // Kiểm tra version (ram, storage) nếu có
-                      if (version.version && version.version.length === 2) {
-                        const ramMatch =
-                          !storeProduct.ramProduct ||
-                          version.version[0] === storeProduct.ramProduct;
-                        const storageMatch =
-                          !storeProduct.storageProduct ||
-                          version.version[1] === storeProduct.storageProduct;
-                        return colorMatch && ramMatch && storageMatch;
-                      } else {
-                        // Sản phẩm đơn giản không có version
-                        return colorMatch;
-                      }
-                    }
-                  );
-
-                  if (matchingVersion) {
-                    // Cộng stock vào version tương ứng
-                    matchingVersion.stock =
-                      (Number(matchingVersion.stock) || 0) + stockToAdd;
-                    // Lưu lại mangsp
-                    setListSanPham(mangsp);
-                  }
-                }
-              }
-
-              StoreList[pI].products[productIndex].status = isChecked;
-
-              // Lưu thay đổi vào localStorage
-              setStoreList(StoreList);
-
-              // Cập nhật lại StoreList từ localStorage để đảm bảo đồng bộ
-              const updatedStoreList = getStoreList();
-              StoreList.length = 0;
-              StoreList.push(...updatedStoreList);
-
-              // Tìm các element tương ứng
-              const stockInput = tbody.querySelector(
-                `input.stock[data-product-index="${productIndex}"]`
-              );
-              const deleteBtn = tbody.querySelector(
-                `button.product-delete-btn[data-product-index="${productIndex}"]`
-              );
-
-              // Enable/disable stock input và delete button
-              if (stockInput) {
-                stockInput.disabled = isChecked;
-              }
-              if (deleteBtn) {
-                deleteBtn.disabled = isChecked;
-              }
-
-              // Kiểm tra xem tất cả sản phẩm đã checked chưa và cập nhật lại bảng danh sách
-              const allChecked =
-                StoreList[pI] &&
-                StoreList[pI].products.length > 0 &&
-                StoreList[pI].products.every(
-                  (product) => product.status === true
-                );
-
-              // Nếu tất cả sản phẩm đã checked, reload lại storePage để cập nhật trạng thái "Đã hoàn thành"
-              if (allChecked) {
-                setTimeout(() => {
-                  storePage();
-                  // Mở lại detail modal sau khi reload
-                  setTimeout(() => {
-                    const detailBtns = document.querySelectorAll(
-                      ".store-wrapper .product-detail-btn"
-                    );
-                    if (detailBtns[pI]) {
-                      detailBtns[pI].click();
-                    }
-                  }, 50);
-                }, 100);
-              }
-            }
-          });
-
-          // Ngăn chặn click nếu đã disabled
-          checkbox.addEventListener("click", (e) => {
-            if (e.target.disabled) {
-              e.preventDefault();
-              e.stopPropagation();
-              return false;
-            }
-          });
-        });
-
-        // Xử lý xóa sản phẩm trong chi tiết hóa đơn (chỉ khi chưa checked)
-        tbody.querySelectorAll(".product-delete-btn").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            e.stopPropagation(); // Ngăn event bubbling
-
-            // Không cho phép xóa nếu button đã disabled
-            if (btn.disabled) {
-              alert("Không thể xóa sản phẩm đã được xác nhận!");
-              return;
-            }
-
-            const productIndex = Number(btn.getAttribute("data-product-index"));
-            if (
-              confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi hóa đơn?")
-            ) {
-              if (
-                StoreList[pI] &&
-                StoreList[pI].products &&
-                StoreList[pI].products[productIndex]
-              ) {
-                StoreList[pI].products.splice(productIndex, 1);
-
-                // Nếu không còn sản phẩm nào, xóa luôn hóa đơn
-                if (StoreList[pI].products.length === 0) {
-                  StoreList.splice(pI, 1);
-                  setStoreList(StoreList);
-                  modal.style.display = "none";
-                  storePage();
-                  return;
-                }
-
-                setStoreList(StoreList);
-                // Reload lại StoreList từ localStorage để đảm bảo đồng bộ
-                const updatedStoreList = getStoreList();
-                // Cập nhật lại StoreList trong memory
-                StoreList.length = 0;
-                StoreList.push(...updatedStoreList);
-                // Reload lại detail modal bằng cách trigger lại detail button
-                setTimeout(() => {
-                  const detailBtns = document.querySelectorAll(
-                    ".store-wrapper .product-detail-btn"
-                  );
-                  if (detailBtns[pI]) {
-                    detailBtns[pI].click();
-                  }
-                }, 100);
-              }
-            }
-          });
-        });
-
-        // Xử lý submit (lưu thay đổi)
-        const acceptBtn = modal.querySelector(".createModal-accept-btn");
-        if (acceptBtn) {
-          acceptBtn.addEventListener("click", () => {
-            setStoreList(StoreList);
-            modal.style.display = "none";
-            storePage();
-          });
+    // Filter theo trạng thái
+    if (currentStatusFilter !== "all") {
+      filtered = filtered.filter((store) => {
+        if (currentStatusFilter === "true") {
+          return (
+            store.products &&
+            store.products.length > 0 &&
+            store.products.every((product) => product.status === true)
+          );
+        } else {
+          return (
+            !store.products ||
+            store.products.length === 0 ||
+            store.products.some((product) => product.status === false)
+          );
         }
       });
-    });
+    }
 
-  // Xử lí delete hóa đơn (phiếu nhập hàng)
-  const deleteStoreBtns = document.querySelectorAll(
-    ".store-wrapper .product-delete-btn"
-  );
-  deleteStoreBtns.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      if (confirm("Bạn có chắc chắn muốn xóa hóa đơn này?")) {
-        if (StoreList && StoreList[index]) {
-          StoreList.splice(index, 1);
-          setStoreList(StoreList);
-          storePage();
-        }
-      }
+    // Filter theo ngày
+    if (currentFromDate || currentToDate) {
+      filtered = filtered.filter((store) =>
+        isDateInRange(store.date, currentFromDate, currentToDate)
+      );
+    }
+
+    renderStoreList(filtered);
+  };
+
+  // Xử lí lọc trạng thái
+  const statusSelect = document.querySelector(".store-wrapper #user-status");
+  if (statusSelect) {
+    statusSelect.addEventListener("change", (e) => {
+      currentStatusFilter = e.target.value;
+      applyAllFilters();
     });
-  });
+  }
+
+  // Xử lí lọc theo ngày
+  const fromDateInput = document.querySelector(
+    ".store-wrapper input[name='fromDate']"
+  );
+  const toDateInput = document.querySelector(
+    ".store-wrapper input[name='toDate']"
+  );
+  const filterDateBtn = document.querySelector(
+    ".store-wrapper .product-filter-btn"
+  );
+
+  if (filterDateBtn) {
+    filterDateBtn.addEventListener("click", () => {
+      currentFromDate = fromDateInput?.value || null;
+      currentToDate = toDateInput?.value || null;
+      applyAllFilters();
+    });
+  }
+
+  // Xử lí nút reload
+  const reloadBtn = document.querySelector(
+    ".store-wrapper .product-reload-btn"
+  );
+  if (reloadBtn) {
+    reloadBtn.addEventListener("click", () => {
+      // Reload lại StoreList từ localStorage
+      StoreList = getStoreList();
+      currentStatusFilter = "all";
+      currentFromDate = null;
+      currentToDate = null;
+      if (statusSelect) statusSelect.value = "all";
+      if (fromDateInput) fromDateInput.value = "";
+      if (toDateInput) toDateInput.value = "";
+      renderStoreList(StoreList);
+    });
+  }
 }
 function categoryPage() {
-  document.querySelector("#category-content tbody").innerHTML = categories
-    .map(
-      (e, i) => `
+  const render = (categories) => {
+    document.querySelector("#category-content tbody").innerHTML = categories
+      .map(
+        (e, i) => `
         <tr>
           <td>${e.label}</td>
           <td>
               <label class="toggle-wrapper">
                 <input type="checkbox" ${e.status ? "checked" : ""} 
-                ${i == 0 || i == categories.length - 1 ? "disabled" : ""}/>
+                />
                 <span class="slider"></span>
               </label>
           </td>
           <td>${e.createdAt}</td>
           <td>${e.updatedAt}</td>
           <td>
-            <button class="product-detail-btn" ${
-              i == 0 || i == categories.length - 1 ? "disabled" : ""
-            }>
+            <button class="product-detail-btn" >
               <i class="fa-solid fa-eye"></i>
             </button>
           </td>
           <td>
-            <button class="product-delete-btn" ${
-              i == 0 || i == categories.length - 1 ? "disabled" : ""
-            }>
+            <button class="product-delete-btn" >
               <i class="fa-solid fa-trash"></i>
             </button>
           </td>
         </tr>
     `
-    )
-    .join("");
-
+      )
+      .join("");
+  };
+  render(categories);
+  // Xử lí lọc
+  const filter = {
+    all: () => true,
+    true: (e) => e.status == true,
+    false: (e) => e.status == false,
+  };
+  document
+    .querySelector(".category-wrapper #user-status")
+    .addEventListener("change", (e) => {
+      render(categories.filter(filter[e.target.value]));
+    });
   const closeModal = () =>
     modal
       .querySelector(".createModal-close-btn")
@@ -1846,8 +2054,14 @@ function categoryPage() {
       item.addEventListener("click", () => {
         if (confirm("Bạn có chắc chắn muốn xóa?")) {
           categories.splice(index, 1);
+          if (categories[i].label === product.category) {
+            product.status = !product.status;
+            product.versions.map((e) => (e.status = !e.status));
+          }
+          setListSanPham(mangsp);
           setCategoryList(categories);
           categoryPage();
+          productPage();
         }
       });
     });
@@ -1880,21 +2094,11 @@ function categoryPage() {
     .forEach((item, i) => {
       item.addEventListener("change", () => {
         categories[i].status = !categories[i].status;
-        const otherCategoryLabel = categories[categories.length - 1].label; // "Khác"
 
         mangsp.map((product) => {
-          if (
-            !categories[i].status &&
-            product.category === categories[i].label
-          ) {
-            product.category = otherCategoryLabel;
-          }
-          if (
-            categories[i].status &&
-            product.originCategory === categories[i].label &&
-            product.category === otherCategoryLabel
-          ) {
-            product.category = product.originCategory;
+          if (categories[i].label === product.category) {
+            product.status = !product.status;
+            product.versions.map((e) => (e.status = !e.status));
           }
         });
         setListSanPham(mangsp);
@@ -1908,39 +2112,24 @@ function orderPage() {
   // Lấy lại orderList mới nhất từ localStorage
   orderList = getOrderList();
 
-  // Lưu danh sách order gốc để tìm index thực tế
-  const originalOrderList = [...orderList];
-  let currentDisplayedOrders = [...orderList];
-
   const renderOrders = (ordersToRender) => {
-    currentDisplayedOrders = ordersToRender;
     const tbody = document.querySelector(".order-table tbody");
     if (!tbody) return;
 
     tbody.innerHTML = ordersToRender
       .map((e, pI) => {
-        // Tìm index thực tế trong orderList gốc
-        const realIndex = originalOrderList.findIndex(
-          (order) =>
-            order.tenNguoiNhan === e.tenNguoiNhan &&
-            order.thoiGianGiao === e.thoiGianGiao &&
-            order.trangThai === e.trangThai &&
-            order.thanhtien === e.thanhtien
-        );
-        const orderIndex = realIndex >= 0 ? realIndex : pI;
-
         return `
       <tr>
         <td>${e.tenNguoiNhan || ""}</td>
         <td>${e.thoiGianGiao || ""}</td>
         <td>${e.trangThai || ""}</td>
         <td>
-          <button class="product-detail-btn" data-order-index="${orderIndex}">
+          <button class="product-detail-btn" data-order-index="${pI}">
             <i class="fa-solid fa-eye"></i>
           </button>
         </td>
         <td>
-          <button class="product-delete-btn" data-order-index="${orderIndex}">
+          <button class="product-delete-btn" data-order-index="${pI}">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -1954,12 +2143,7 @@ function orderPage() {
 
   // Function hiển thị modal chi tiết đơn hàng
   const showOrderDetailModal = (orderIndex) => {
-    const order = originalOrderList[orderIndex];
-
-    if (!order) {
-      console.error("Order not found at index:", orderIndex);
-      return;
-    }
+    const order = orderList[orderIndex];
 
     modal.innerHTML = `
         <div class="createModal">
@@ -2003,58 +2187,37 @@ function orderPage() {
               </thead>
 
               <tbody>
-              ${(() => {
-                // Xử lý cả hai trường hợp: order.sanpham là array hoặc object có property sanpham
-                let productsArray = [];
-                if (Array.isArray(order.sanpham)) {
-                  productsArray = order.sanpham;
-                } else if (
-                  order.sanpham &&
-                  Array.isArray(order.sanpham.sanpham)
-                ) {
-                  productsArray = order.sanpham.sanpham;
-                }
+              ${orderList[orderIndex].sanpham.sanpham
+                .map((e, itemIndex) => {
+                  const product = mangsp.find((p) => p.id === e.id);
+                  const productName = product ? product.name : `ID: ${e.id}`;
 
-                return productsArray
-                  .map((e, itemIndex) => {
-                    // Tìm sản phẩm từ mangsp dựa trên id
-                    const product = mangsp.find((p) => p.id === e.id);
-                    const productName = product ? product.name : `ID: ${e.id}`;
-
-                    // Xử lý phiên bản từ listphienban và màu
-                    let versionText = "";
-                    if (
-                      e.listphienban &&
-                      Array.isArray(e.listphienban) &&
-                      e.listphienban.length > 0
-                    ) {
-                      versionText = e.listphienban.join(" / ");
-                      if (e.mau) {
-                        versionText += ` / ${e.mau}`;
-                      }
-                    } else if (e.mau) {
-                      versionText = e.mau;
+                  let versionText = "";
+                  if (
+                    e.listphienban &&
+                    Array.isArray(e.listphienban) &&
+                    e.listphienban.length > 0
+                  ) {
+                    versionText = e.listphienban.join(" / ");
+                    if (e.mau) {
+                      versionText += ` / ${e.mau}`;
                     }
+                  } else if (e.mau) {
+                    versionText = e.mau;
+                  }
 
-                    // Tính giá đơn vị từ thanhtien và soLuong
-                    const unitPrice =
-                      e.soLuong > 0
-                        ? Math.round((e.thanhtien || 0) / e.soLuong)
-                        : 0;
-
-                    return `
+                  return `
                     <tr>
                       <td>${itemIndex + 1}</td>
                       <td>${productName}</td>
                       <td>${versionText}</td>
                       <td>${e.soLuong || 0}</td>
-                      <td>${unitPrice.toLocaleString("vi-VN")}</td>
+                      <td>${e.thanhtien.toLocaleString("vi-VN")}</td>
                       <td>${(e.thanhtien || 0).toLocaleString("vi-VN")}</td>
                     </tr>
                     `;
-                  })
-                  .join("");
-              })()}
+                })
+                .join("")}
               </tbody>
             </table>
 
@@ -2089,52 +2252,64 @@ function orderPage() {
     saveModal(orderIndex);
   };
 
-  // Function gắn event listener cho các button
-  const attachEventListeners = () => {
-    // Xóa event listener cũ bằng cách clone node
-    const detailButtons = document.querySelectorAll(
-      ".order-table .product-detail-btn"
-    );
-    detailButtons.forEach((btn) => {
-      const newBtn = btn.cloneNode(true);
-      btn.parentNode.replaceChild(newBtn, btn);
+  document
+    .querySelectorAll(".order-table .product-detail-btn")
+    .forEach((item, index) => {
+      item.addEventListener("click", () => {
+        showOrderDetailModal(index);
+      });
     });
 
-    const deleteButtons = document.querySelectorAll(
-      ".order-table .product-delete-btn"
-    );
-    deleteButtons.forEach((btn) => {
-      const newBtn = btn.cloneNode(true);
-      btn.parentNode.replaceChild(newBtn, btn);
+  document
+    .querySelectorAll(".order-table .product-delete-btn")
+    .forEach((item, index) => {
+      item.addEventListener("click", () => {
+        if (confirm("Bạn có chắc chắn muốn xóa?")) {
+          orderList.splice(index, 1);
+          setOrderList(orderList);
+          orderPage();
+        }
+      });
     });
 
-    // Gắn event listener cho detail button
-    document
-      .querySelectorAll(".order-table .product-detail-btn")
-      .forEach((item) => {
-        item.addEventListener("click", () => {
-          const orderIndex = parseInt(item.dataset.orderIndex);
-          showOrderDetailModal(orderIndex);
-        });
-      });
-
-    // Gắn event listener cho delete button
-    document
-      .querySelectorAll(".order-table .product-delete-btn")
-      .forEach((item) => {
-        item.addEventListener("click", () => {
-          const orderIndex = parseInt(item.dataset.orderIndex);
-          if (confirm("Bạn có chắc chắn muốn xóa?")) {
-            originalOrderList.splice(orderIndex, 1);
-            orderList = [...originalOrderList];
-            setOrderList(orderList);
-            orderPage();
-          }
-        });
-      });
+  // Xử lí lọc theo trạng thái
+  const filer = {
+    all: () => true,
+    "mới đặt": (e) => e.trangThai === "mới đặt",
+    "đã xử lí": (e) => e.trangThai === "đã xử lí",
+    "đã giao": (e) => e.trangThai === "đã giao",
+    hủy: (e) => e.trangThai === "hủy",
   };
+  let filtered = orderList.filter(filer["all"]);
 
-  attachEventListeners();
+  document
+    .querySelector(".order-wrapper #user-status")
+    .addEventListener("change", (e) => {
+      filtered = orderList.filter(filer[e.target.value]);
+      renderOrders(orderList.filter(filer[e.target.value]));
+    });
+  const fromDate = document.querySelector(
+    ".order-wrapper input[name='fromDate']"
+  );
+  const toDate = document.querySelector(".order-wrapper input[name='toDate']");
+  document
+    .querySelector(".order-wrapper .product-create-btn")
+    .addEventListener("click", () => {
+      if (!fromDate.value || !toDate.value) return;
+      renderOrders(
+        filtered.filter(
+          (e) =>
+            e.thoiGianGiao >= fromDate.value && e.thoiGianGiao <= toDate.value
+        )
+      );
+    });
+
+  // Nút khôi phuc
+  document
+    .querySelector(".order-wrapper .product-reload-btn")
+    .addEventListener("click", () => {
+      orderPage();
+    });
 
   const saveModal = (index) => {
     // Xóa event listener cũ nếu có để tránh duplicate
@@ -2145,108 +2320,23 @@ function orderPage() {
     newAcceptBtn.addEventListener("click", () => {
       const value = modal.querySelector("select[name='status']").value;
       // Không cần JSON.parse vì value đã là string
-      originalOrderList[index].trangThai = value;
-      orderList = [...originalOrderList];
-      setOrderList(orderList);
+      orderList[index].trangThai = value;
       modal.style.display = "none";
+      if (value === "đã giao") {
+        orderList[index].sanpham.sanpham.map((p) => {
+          const product = mangsp.find((product) => product.id == p.id);
+          product.versions.find(
+            (op) =>
+              op.version[0] === p.listphienban[0] &&
+              op.version[1] === p.listphienban[1]
+          ).stock -= p.soLuong;
+        });
+      }
+      setOrderList(orderList);
+      setListSanPham(mangsp);
       orderPage();
     });
   };
-
-  // Gắn event listener cho delete button
-  document
-    .querySelectorAll(".order-table .product-delete-btn")
-    .forEach((item) => {
-      item.addEventListener("click", () => {
-        const orderIndex = parseInt(item.dataset.orderIndex);
-        if (confirm("Bạn có chắc chắn muốn xóa?")) {
-          originalOrderList.splice(orderIndex, 1);
-          orderList = [...originalOrderList];
-          setOrderList(orderList);
-          orderPage();
-        }
-      });
-    });
-
-  const statusFilter = {
-    all: (item) => true,
-    "mới đặt": (item) => item.trangThai === "mới đặt",
-    "đã xử lí": (item) => item.trangThai === "đã xử lí",
-    "đã giao": (item) => item.trangThai === "đã giao",
-    hủy: (item) => item.trangThai === "hủy",
-  };
-
-  const parseDate = (date) => {
-    if (!date) return null;
-    // Nếu date đã ở định dạng YYYY-MM-DD thì trả về luôn
-    if (date.match(/^\d{4}-\d{2}-\d{2}$/)) {
-      return date;
-    }
-    // Nếu ở định dạng DD/MM/YYYY thì chuyển đổi
-    const [d, m, y] = date.split("/");
-    return `${y}-${m}-${d}`;
-  };
-
-  // Xóa event listener cũ cho nút lọc
-  const filterBtn = document.querySelector(
-    ".order-wrapper .product-create-btn"
-  );
-  if (filterBtn) {
-    const newFilterBtn = filterBtn.cloneNode(true);
-    filterBtn.parentNode.replaceChild(newFilterBtn, filterBtn);
-  }
-
-  // Xóa event listener cũ cho nút reload
-  const reloadBtn = document.querySelector(
-    ".order-wrapper .product-reload-btn"
-  );
-  if (reloadBtn) {
-    const newReloadBtn = reloadBtn.cloneNode(true);
-    reloadBtn.parentNode.replaceChild(newReloadBtn, reloadBtn);
-  }
-
-  // Nút Lọc
-  document
-    .querySelector(".order-wrapper .product-create-btn")
-    .addEventListener("click", () => {
-      // Lọc trạng thái
-      const value = document.querySelector(".order-wrapper #user-status").value;
-      let result = originalOrderList.filter(statusFilter[value]);
-
-      // Lọc ngày
-      const from = document.querySelector(
-        ".order-wrapper input[name='fromDate']"
-      ).value;
-
-      const to = document.querySelector(
-        ".order-wrapper input[name='toDate']"
-      ).value;
-      if (from && to) {
-        const fromDate = new Date(from);
-        const toDate = new Date(to);
-
-        result = result.filter((e) => {
-          if (!e.thoiGianGiao) return false;
-          const parsedDate = parseDate(e.thoiGianGiao);
-          if (!parsedDate) return false;
-          const dateInData = new Date(parsedDate);
-          return dateInData >= fromDate && dateInData <= toDate;
-        });
-      }
-      renderOrders(result);
-      attachEventListeners();
-    });
-
-  // Nút khôi phuc
-  document
-    .querySelector(".order-wrapper .product-reload-btn")
-    .addEventListener("click", () => {
-      orderList = getOrderList();
-      originalOrderList.length = 0;
-      originalOrderList.push(...orderList);
-      renderOrders(orderList);
-      attachEventListeners();
-    });
 }
 function profitPage() {
   mergeProduct();
@@ -2757,23 +2847,6 @@ function stockPage() {
   // Ngưỡng cảnh báo hết hàng
   const LOW_STOCK_THRESHOLD = 10;
 
-  // Hàm parse date từ format "dd/mm/yyyy"
-  const parseDate = (dateStr) => {
-    if (!dateStr) return null;
-    const [d, m, y] = dateStr.split("/");
-    return new Date(`${y}-${m}-${d}`);
-  };
-
-  // Hàm kiểm tra date có trong khoảng thời gian không
-  const isDateInRange = (dateStr, fromDate, toDate) => {
-    if (!dateStr) return false;
-    const date = parseDate(dateStr);
-    if (!date) return false;
-    if (fromDate && date < fromDate) return false;
-    if (toDate && date > toDate) return false;
-    return true;
-  };
-
   // Hàm tính nhập-xuất-tồn cho một sản phẩm
   const calculateStockMovement = (
     product,
@@ -2783,82 +2856,24 @@ function stockPage() {
   ) => {
     let nhap = 0;
     let xuat = 0;
-    let ton = version.stock || 0;
+    let ton = version.stock;
 
-    // Tính nhập từ StoreList (chỉ sản phẩm đã xác nhận)
-    StoreList.forEach((store) => {
-      if (fromDate || toDate) {
-        if (!isDateInRange(store.date, fromDate, toDate)) return;
-      }
-
-      store.products?.forEach((storeProduct) => {
-        if (storeProduct.status === true) {
-          const matchName = storeProduct.nameProduct === product.name;
-          const matchColor = storeProduct.colorProduct === version.color;
-          let matchVersion = true;
-
-          if (version.version && version.version.length === 2) {
-            matchVersion =
-              storeProduct.ramProduct === version.version[0] &&
-              storeProduct.storageProduct === version.version[1];
-          } else {
-            matchVersion =
-              !storeProduct.ramProduct && !storeProduct.storageProduct;
-          }
-
-          if (matchName && matchColor && matchVersion) {
-            nhap += Number(storeProduct.stock) || 0;
-          }
-        }
-      });
-    });
-
-    // Tính xuất từ orderList (chỉ đơn đã giao)
-    orderList.forEach((order) => {
-      if (order.status !== "đã giao") return;
-      if (fromDate || toDate) {
-        if (!isDateInRange(order.date, fromDate, toDate)) return;
-      }
-
-      order.items?.forEach((item) => {
-        const matchName = item.name === product.name;
-        const matchColor = item.color === version.color;
-        let matchVersion = true;
-
-        if (version.version && version.version.length === 2) {
-          matchVersion =
-            item.ram === version.version[0] &&
-            item.storage === version.version[1];
-        } else {
-          matchVersion = !item.ram && !item.storage;
-        }
-
-        if (matchName && matchColor && matchVersion) {
-          xuat += Number(item.quantity) || 0;
-        }
-      });
-    });
-
-    // Tính tồn khi có filter thời gian
+    // Nếu có filter thời gian: chỉ tính nhập-xuất trong kỳ và tồn đến toDate
     if (fromDate || toDate) {
-      // Tính nhập và xuất trong kỳ
-      let nhapTrongKy = 0;
-      let xuatTrongKy = 0;
-
+      // Tính nhập trong kỳ (từ fromDate đến toDate)
       StoreList.forEach((store) => {
-        const storeDate = parseDate(store.date);
+        const storeDate = store.date;
         if (
           storeDate &&
           (!fromDate || storeDate >= fromDate) &&
           (!toDate || storeDate <= toDate)
         ) {
           store.products?.forEach((storeProduct) => {
-            if (
-              storeProduct.status === true &&
-              storeProduct.nameProduct === product.name &&
-              storeProduct.colorProduct === version.color
-            ) {
+            if (storeProduct.status === true) {
+              const matchName = storeProduct.nameProduct === product.name;
+              const matchColor = storeProduct.colorProduct === version.color;
               let matchVersion = true;
+
               if (version.version && version.version.length === 2) {
                 matchVersion =
                   storeProduct.ramProduct === version.version[0] &&
@@ -2867,8 +2882,126 @@ function stockPage() {
                 matchVersion =
                   !storeProduct.ramProduct && !storeProduct.storageProduct;
               }
-              if (matchVersion) {
-                nhapTrongKy += Number(storeProduct.stock) || 0;
+
+              if (matchName && matchColor && matchVersion) {
+                nhap += Number(storeProduct.stock);
+              }
+            }
+          });
+        }
+      });
+
+      // Tính xuất trong kỳ (từ fromDate đến toDate)
+      orderList.forEach((order) => {
+        if (order.trangThai === "đã giao") {
+          const orderDate = order.thoiGianGiao;
+          if (
+            orderDate &&
+            (!fromDate || orderDate >= fromDate) &&
+            (!toDate || orderDate <= toDate)
+          ) {
+            order.sanpham.sanpham?.forEach((item) => {
+              const matchID = item.id === product.id;
+              const matchColor = item.mau === version.color;
+              let matchVersion = true;
+
+              if (version.version && version.version.length === 2) {
+                matchVersion =
+                  item.listphienban[0] === version.version[0] &&
+                  item.listphienban[1] === version.version[1];
+              } else {
+                matchVersion = !item.listphienban[0] && !item.listphienban[1];
+              }
+
+              if (matchID && matchColor && matchVersion) {
+                xuat += Number(item.soLuong) || 0;
+              }
+            });
+          }
+        }
+      });
+
+      // Tính tồn từ đầu đến toDate
+      let nhapDenDauKy = 0;
+      let xuatDenDauKy = 0;
+
+      // Tính nhập từ đầu đến đầu kỳ (trước fromDate)
+      if (fromDate) {
+        StoreList.forEach((store) => {
+          const storeDate = store.date;
+          if (storeDate && storeDate < fromDate) {
+            store.products?.forEach((storeProduct) => {
+              if (storeProduct.status === true) {
+                const matchName = storeProduct.nameProduct === product.name;
+                const matchColor = storeProduct.colorProduct === version.color;
+                let matchVersion = true;
+
+                if (version.version && version.version.length === 2) {
+                  matchVersion =
+                    storeProduct.ramProduct === version.version[0] &&
+                    storeProduct.storageProduct === version.version[1];
+                } else {
+                  matchVersion =
+                    !storeProduct.ramProduct && !storeProduct.storageProduct;
+                }
+
+                if (matchName && matchColor && matchVersion) {
+                  nhapDenDauKy += Number(storeProduct.stock);
+                }
+              }
+            });
+          }
+        });
+
+        orderList.forEach((order) => {
+          if (order.trangThai === "đã giao") {
+            const orderDate = order.thoiGianGiao;
+            if (orderDate && orderDate < fromDate) {
+              order.sanpham.sanpham?.forEach((item) => {
+                const matchID = item.id === product.id;
+                const matchColor = item.mau === version.color;
+                let matchVersion = true;
+
+                if (version.version && version.version.length === 2) {
+                  matchVersion =
+                    item.listphienban[0] === version.version[0] &&
+                    item.listphienban[1] === version.version[1];
+                } else {
+                  matchVersion = !item.listphienban[0] && !item.listphienban[1];
+                }
+
+                if (matchID && matchColor && matchVersion) {
+                  xuatDenDauKy += Number(item.soLuong) || 0;
+                }
+              });
+            }
+          }
+        });
+      }
+
+      let nhapDenToDate = 0;
+      let xuatDenToDate = 0;
+
+      StoreList.forEach((store) => {
+        const storeDate = store.date;
+        if (storeDate && (!toDate || storeDate <= toDate)) {
+          store.products?.forEach((storeProduct) => {
+            if (storeProduct.status === true) {
+              const matchName = storeProduct.nameProduct === product.name;
+              const matchColor = storeProduct.colorProduct === version.color;
+              let matchVersion = true;
+
+              if (version.version && version.version.length === 2) {
+                matchVersion =
+                  storeProduct.ramProduct === version.version[0] &&
+                  storeProduct.storageProduct === version.version[1];
+              } else {
+                matchVersion =
+                  !storeProduct.ramProduct && !storeProduct.storageProduct;
+              }
+
+              if (matchName && matchColor && matchVersion) {
+                nhapDenToDate += Number(storeProduct.stock);
               }
             }
           });
@@ -2876,35 +3009,127 @@ function stockPage() {
       });
 
       orderList.forEach((order) => {
-        if (order.status === "đã giao") {
-          const orderDate = parseDate(order.date);
-          if (
-            orderDate &&
-            (!fromDate || orderDate >= fromDate) &&
-            (!toDate || orderDate <= toDate)
-          ) {
-            order.items?.forEach((item) => {
-              if (item.name === product.name && item.color === version.color) {
-                let matchVersion = true;
-                if (version.version && version.version.length === 2) {
-                  matchVersion =
-                    item.ram === version.version[0] &&
-                    item.storage === version.version[1];
-                } else {
-                  matchVersion = !item.ram && !item.storage;
-                }
-                if (matchVersion) {
-                  xuatTrongKy += Number(item.quantity) || 0;
-                }
+        if (order.trangThai === "đã giao") {
+          const orderDate = order.thoiGianGiao;
+          if (orderDate && (!toDate || orderDate <= toDate)) {
+            order.sanpham.sanpham?.forEach((item) => {
+              const matchID = item.id === product.id;
+              const matchColor = item.mau === version.color;
+              let matchVersion = true;
+
+              if (version.version && version.version.length === 2) {
+                matchVersion =
+                  item.listphienban[0] === version.version[0] &&
+                  item.listphienban[1] === version.version[1];
+              } else {
+                matchVersion = !item.listphienban[0] && !item.listphienban[1];
+              }
+
+              if (matchID && matchColor && matchVersion) {
+                xuatDenToDate += Number(item.soLuong) || 0;
               }
             });
           }
         }
       });
 
-      // Tính tồn đầu kỳ = tồn hiện tại - nhập trong kỳ + xuất trong kỳ
-      const tonDauKy = (version.stock || 0) - nhapTrongKy + xuatTrongKy;
-      ton = tonDauKy + nhap - xuat;
+      // Tính nhập và xuất từ đầu đến hiện tại (tất cả dữ liệu)
+      let nhapDenHienTai = 0;
+      let xuatDenHienTai = 0;
+
+      StoreList.forEach((store) => {
+        store.products?.forEach((storeProduct) => {
+          if (storeProduct.status === true) {
+            const matchName = storeProduct.nameProduct === product.name;
+            const matchColor = storeProduct.colorProduct === version.color;
+            let matchVersion = true;
+
+            if (version.version && version.version.length === 2) {
+              matchVersion =
+                storeProduct.ramProduct === version.version[0] &&
+                storeProduct.storageProduct === version.version[1];
+            } else {
+              matchVersion =
+                !storeProduct.ramProduct && !storeProduct.storageProduct;
+            }
+
+            if (matchName && matchColor && matchVersion) {
+              nhapDenHienTai += Number(storeProduct.stock);
+            }
+          }
+        });
+      });
+
+      orderList.forEach((order) => {
+        if (order.trangThai === "đã giao") {
+          order.sanpham.sanpham?.forEach((item) => {
+            const matchID = item.id === product.id;
+            const matchColor = item.mau === version.color;
+            let matchVersion = true;
+
+            if (version.version && version.version.length === 2) {
+              matchVersion =
+                item.listphienban[0] === version.version[0] &&
+                item.listphienban[1] === version.version[1];
+            } else {
+              matchVersion = !item.listphienban[0] && !item.listphienban[1];
+            }
+
+            if (matchID && matchColor && matchVersion) {
+              xuatDenHienTai += Number(item.soLuong) || 0;
+            }
+          });
+        }
+      });
+
+      const tonDau = version.stock - nhapDenHienTai + xuatDenHienTai;
+
+      ton = tonDau + nhapDenToDate - xuatDenToDate;
+    } else {
+      StoreList.forEach((store) => {
+        store.products?.forEach((storeProduct) => {
+          if (storeProduct.status === true) {
+            const matchName = storeProduct.nameProduct === product.name;
+            const matchColor = storeProduct.colorProduct === version.color;
+            let matchVersion = true;
+
+            if (version.version && version.version.length === 2) {
+              matchVersion =
+                storeProduct.ramProduct === version.version[0] &&
+                storeProduct.storageProduct === version.version[1];
+            } else {
+              matchVersion =
+                !storeProduct.ramProduct && !storeProduct.storageProduct;
+            }
+
+            if (matchName && matchColor && matchVersion) {
+              nhap += Number(storeProduct.stock);
+            }
+          }
+        });
+      });
+
+      orderList.forEach((order) => {
+        if (order.trangThai === "đã giao") {
+          order.sanpham.sanpham?.forEach((item) => {
+            const matchID = item.id === product.id;
+            const matchColor = item.mau === version.color;
+            let matchVersion = true;
+
+            if (version.version && version.version.length === 2) {
+              matchVersion =
+                item.listphienban[0] === version.version[0] &&
+                item.listphienban[1] === version.version[1];
+            } else {
+              matchVersion = !item.ram && !item.storage;
+            }
+
+            if (matchID && matchColor && matchVersion) {
+              xuat += Number(item.soLuong) || 0;
+            }
+          });
+        }
+      });
     }
 
     return { nhap, xuat, ton };
@@ -2913,8 +3138,6 @@ function stockPage() {
   // Hàm tạo danh sách sản phẩm với thông tin stock
   const createStockList = (fromDate = null, toDate = null) => {
     return mangsp.flatMap((product, pI) => {
-      if (!product.versions || product.versions.length === 0) return [];
-
       return product.versions.map((version, vI) => {
         const movement = calculateStockMovement(
           product,
@@ -3254,11 +3477,9 @@ function stockPage() {
 
   if (filterDateBtn) {
     filterDateBtn.addEventListener("click", () => {
-      if (fromDateInput && toDateInput) {
-        fromDate = fromDateInput.value ? new Date(fromDateInput.value) : null;
-        toDate = toDateInput.value ? new Date(toDateInput.value) : null;
-        renderWithCurrentFilter();
-      }
+      fromDate = fromDateInput.value || null;
+      toDate = toDateInput.value || null;
+      renderWithCurrentFilter();
     });
   }
 

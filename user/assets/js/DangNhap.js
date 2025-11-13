@@ -21,8 +21,8 @@ div.innerHTML = `
 `
 document.querySelector(".main").appendChild(div);
 const box = document.createElement('DIV');
-box.className="boxThongBao";
-box.innerHTML= `<div class="boxThongBao_icon"><i class="fa-solid fa-check"></i></div>
+box.className = "boxThongBao";
+box.innerHTML = `<div class="boxThongBao_icon"><i class="fa-solid fa-check"></i></div>
             <div class="boxThongBao_noidung">
                 <h4>Success</h4>
                 <p>Đăng nhập thành công</p>
@@ -131,8 +131,11 @@ btnLogin.addEventListener('click', function () {
                 const acc = mangtaikhoan.find(account => {
                     return account.sdt === sdt && account.mk === mk;
                 });
-                console.log(acc);
                 if (acc) {
+                    if (!acc.status) {
+                        hienThongBao('error', 'tài khoản này đang bị khóa', 'error');
+                        return;
+                    }
                     hienThongBao('success', 'đăng nhập thành công!', 'sucess');
                     localStorage.setItem('taikhoandangnhap', JSON.stringify(acc));
                     setTimeout(() => window.location.reload(), 1000);
